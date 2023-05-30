@@ -1,0 +1,221 @@
+2014-06-25_04:52:39.205|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=19|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_04:52:39.208|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=58AC3A54912E2752A05DFA90E8813AD2
+2014-06-25_04:52:39.253|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 12:49:48 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard</userName></response>
+2014-06-25_04:52:39.258|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000010|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60032|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=47|TC2=5|TC=52
+2014-06-25_04:52:39.258|I|4146|B3A3E6E0|INFO|package|1|SequenceID=19|toRouter
+2014-06-25_05:10:05.197|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=164|orig_pdu_len=164|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=154|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_05:10:05.199|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard3&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=764A13913BAAD88B15C5F33AE47B6521
+2014-06-25_05:10:05.230|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 123
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 13:07:20 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard3</userName></response>
+2014-06-25_05:10:05.235|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000007|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard3|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard3|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60186|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=32|TC2=5|TC=37
+2014-06-25_05:10:05.235|I|4146|B3A3E6E0|INFO|package|1|SequenceID=154|toRouter
+2014-06-25_05:11:27.181|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=166|orig_pdu_len=166|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=165|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_05:11:27.182|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=andersongg&password=6ca4b545ec99c4edd3293b83078f4c79a9f0a2a9f1ba68ea0351b0d0d4ffae57&sign=2640EC98230C3E08F412CA15CB0D705B
+2014-06-25_05:11:27.264|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 125
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 13:08:43 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>andersongg</userName></response>
+2014-06-25_05:11:27.269|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000006|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=andersongg|Password=640156a929a2966b9f8ec76b15e71994|Send3rdPassword=6ca4b545ec99c4edd3293b83078f4c79a9f0a2a9f1ba68ea0351b0d0d4ffae57|UserID_Union=andersongg|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60218|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=83|TC2=5|TC=88
+2014-06-25_05:11:27.269|I|4146|B3A3E6E0|INFO|package|1|SequenceID=165|toRouter
+2014-06-25_05:43:44.502|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=443|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_05:43:44.504|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=58AC3A54912E2752A05DFA90E8813AD2
+2014-06-25_05:43:44.538|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 13:41:12 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard</userName></response>
+2014-06-25_05:43:44.542|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000010|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60317|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=36|TC2=4|TC=40
+2014-06-25_05:43:44.542|I|4146|B3A3E6E0|INFO|package|1|SequenceID=443|toRouter
+2014-06-25_05:47:28.496|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=474|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_05:47:28.499|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richards1&password=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8&sign=FE8CA9C45E45851C490529108D2DAFE5
+2014-06-25_05:47:28.683|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 124
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 13:44:57 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richards1</userName></response>
+2014-06-25_05:47:28.701|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000098|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richards1|Password=07753ed041bdf1e598507acecb8ad1c1|Send3rdPassword=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8|UserID_Union=richards1|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60346|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=188|TC2=17|TC=205
+2014-06-25_05:47:28.701|I|4146|B3A3E6E0|INFO|package|1|SequenceID=474|toRouter
+2014-06-25_05:50:47.734|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=503|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_05:50:47.736|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=58AC3A54912E2752A05DFA90E8813AD2
+2014-06-25_05:50:47.795|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 13:48:17 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard</userName></response>
+2014-06-25_05:50:47.800|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000010|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60365|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=62|TC2=4|TC=66
+2014-06-25_05:50:47.800|I|4146|B3A3E6E0|INFO|package|1|SequenceID=503|toRouter
+2014-06-25_06:00:53.919|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=164|orig_pdu_len=164|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=582|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_06:00:53.920|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard3&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=764A13913BAAD88B15C5F33AE47B6521
+2014-06-25_06:00:53.969|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 123
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 13:58:27 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard3</userName></response>
+2014-06-25_06:00:53.973|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000007|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard3|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard3|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60388|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=50|TC2=4|TC=54
+2014-06-25_06:00:53.974|I|4146|B3A3E6E0|INFO|package|1|SequenceID=582|toRouter
+2014-06-25_06:11:36.704|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=164|orig_pdu_len=164|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=667|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_06:11:36.707|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard3&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=764A13913BAAD88B15C5F33AE47B6521
+2014-06-25_06:11:36.739|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 123
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 14:09:13 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard3</userName></response>
+2014-06-25_06:11:36.744|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000007|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard3|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard3|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60432|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=36|TC2=4|TC=40
+2014-06-25_06:11:36.744|I|4146|B3A3E6E0|INFO|package|1|SequenceID=667|toRouter
+2014-06-25_06:12:05.268|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=166|orig_pdu_len=166|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=673|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59274
+2014-06-25_06:12:05.269|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=andersongg&password=6ca4b545ec99c4edd3293b83078f4c79a9f0a2a9f1ba68ea0351b0d0d4ffae57&sign=2640EC98230C3E08F412CA15CB0D705B
+2014-06-25_06:12:05.308|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 125
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 14:09:42 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>andersongg</userName></response>
+2014-06-25_06:12:05.312|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000006|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=andersongg|Password=640156a929a2966b9f8ec76b15e71994|Send3rdPassword=6ca4b545ec99c4edd3293b83078f4c79a9f0a2a9f1ba68ea0351b0d0d4ffae57|UserID_Union=andersongg|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=177.47.22.70|User_Port=52697|Client_MAC=00FF836BCE2B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=40|TC2=4|TC=44
+2014-06-25_06:12:05.312|I|4146|B3A3E6E0|INFO|package|1|SequenceID=673|toRouter
+2014-06-25_08:03:28.326|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=371|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_08:03:28.328|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=58AC3A54912E2752A05DFA90E8813AD2
+2014-06-25_08:03:30.704|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 16:01:44 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard</userName></response>
+2014-06-25_08:03:30.709|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000010|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60711|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=2378|TC2=5|TC=2383
+2014-06-25_08:03:30.709|I|4146|B3A3E6E0|INFO|package|1|SequenceID=371|toRouter
+2014-06-25_08:25:36.887|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=539|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_08:25:36.890|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richards1&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=5681D66EB254D57EF8B88DC261874926
+2014-06-25_08:25:36.922|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 128
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 16:24:00 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>-1815</result><adult>1</adult><userName>richards1</userName></response>
+2014-06-25_08:25:36.922|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|-1815|0|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richards1|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=0|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60973|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=35|TC2=0|TC=35
+2014-06-25_08:25:36.923|I|4146|B3A3E6E0|INFO|package|1|SequenceID=539|toRouter
+2014-06-25_08:25:48.526|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=542|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_08:25:48.526|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richards1&password=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8&sign=FE8CA9C45E45851C490529108D2DAFE5
+2014-06-25_08:25:48.558|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 124
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 16:24:12 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richards1</userName></response>
+2014-06-25_08:25:48.562|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000098|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richards1|Password=07753ed041bdf1e598507acecb8ad1c1|Send3rdPassword=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8|UserID_Union=richards1|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60977|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=32|TC2=4|TC=36
+2014-06-25_08:25:48.562|I|4146|B3A3E6E0|INFO|package|1|SequenceID=542|toRouter
+2014-06-25_08:27:02.417|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=166|orig_pdu_len=166|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=555|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_08:27:02.417|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=andersongg&password=6ca4b545ec99c4edd3293b83078f4c79a9f0a2a9f1ba68ea0351b0d0d4ffae57&sign=2640EC98230C3E08F412CA15CB0D705B
+2014-06-25_08:27:02.464|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 125
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 16:25:26 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>andersongg</userName></response>
+2014-06-25_08:27:02.468|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000006|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=andersongg|Password=640156a929a2966b9f8ec76b15e71994|Send3rdPassword=6ca4b545ec99c4edd3293b83078f4c79a9f0a2a9f1ba68ea0351b0d0d4ffae57|UserID_Union=andersongg|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=60988|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=47|TC2=4|TC=51
+2014-06-25_08:27:02.468|I|4146|B3A3E6E0|INFO|package|1|SequenceID=555|toRouter
+2014-06-25_09:02:47.397|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=164|orig_pdu_len=164|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=870|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_09:02:47.400|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard3&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=764A13913BAAD88B15C5F33AE47B6521
+2014-06-25_09:02:47.434|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 123
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 17:01:24 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard3</userName></response>
+2014-06-25_09:02:47.438|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000007|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard3|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard3|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=61254|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=37|TC2=4|TC=41
+2014-06-25_09:02:47.438|I|4146|B3A3E6E0|INFO|package|1|SequenceID=870|toRouter
+2014-06-25_09:38:13.422|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=164|orig_pdu_len=164|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=1139|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_09:38:13.424|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard3&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=764A13913BAAD88B15C5F33AE47B6521
+2014-06-25_09:38:13.462|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 123
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 17:37:02 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard3</userName></response>
+2014-06-25_09:38:13.466|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000007|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard3|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard3|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=61374|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=40|TC2=4|TC=44
+2014-06-25_09:38:13.466|I|4146|B3A3E6E0|INFO|package|1|SequenceID=1139|toRouter
+2014-06-25_10:00:35.978|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=164|orig_pdu_len=164|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=1309|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_10:00:35.979|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=pedrao02&password=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8&sign=6276E19FD2543FDC32D6EB29BFA39EE6
+2014-06-25_10:00:36.053|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 127
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 17:59:33 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>-1812</result><adult>1</adult><userName>pedrao02</userName></response>
+2014-06-25_10:00:36.054|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|-1812|0|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=pedrao02|Password=07753ed041bdf1e598507acecb8ad1c1|Send3rdPassword=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8|UserID_Union=|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=0|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=61428|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=76|TC2=0|TC=76
+2014-06-25_10:00:36.054|I|4146|B3A3E6E0|INFO|package|1|SequenceID=1309|toRouter
+2014-06-25_10:01:04.992|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=1314|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=59286
+2014-06-25_10:01:04.993|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=pedrao2&password=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8&sign=59E7F3F66CDA25F74F30AA5F90663EEE
+2014-06-25_10:01:05.091|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2014 18:00:02 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>pedrao2</userName></response>
+2014-06-25_10:01:05.095|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000023|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=pedrao2|Password=07753ed041bdf1e598507acecb8ad1c1|Send3rdPassword=4a973ecf5d4b1be743e35dd2d03a161f5d53896d6a962cee7c09055c678822a8|UserID_Union=pedrao2|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=61431|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=99|TC2=4|TC=103
+2014-06-25_10:01:05.095|I|4146|B3A3E6E0|INFO|package|1|SequenceID=1314|toRouter

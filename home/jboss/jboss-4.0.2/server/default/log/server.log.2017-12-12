@@ -1,0 +1,55 @@
+2017-12-12 06:00:00,010 INFO  [STDOUT] java.lang.NullPointerException
+2017-12-12 06:00:00,010 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-12-12 06:00:00,011 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-12-12 06:00:00,011 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-12-12 06:00:00,011 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-12-12 06:00:00,011 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-12-12 08:08:02,531 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002F
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-12 22:23:59,959 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-12 22:34:09,775 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-12 22:41:48,941 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-12 22:44:09,728 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-12 22:46:04,617 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-12 22:50:20,672 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)

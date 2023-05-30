@@ -1,0 +1,813 @@
+<?xml version='1.0'?>
+<!DOCTYPE policy PUBLIC
+      "-//JBoss//DTD JBOSS Security Config 3.0//EN"
+      "http://www.jboss.org/j2ee/dtd/security_config.dtd">
+
+<!-- The XML based JAAS login configuration read by the
+org.jboss.security.auth.login.XMLLoginConfig mbean. Add
+an application-policy element for each security domain.
+
+The outline of the application-policy is:
+<application-policy name="security-domain-name">
+  <authentication>
+    <login-module code="login.module1.class.name" flag="control_flag">
+      <module-option name = "option1-name">option1-value</module-option>
+      <module-option name = "option2-name">option2-value</module-option>
+      ...
+    </login-module>
+
+    <login-module code="login.module2.class.name" flag="control_flag">
+      ...
+    </login-module>
+    ...
+  </authentication>
+</application-policy>
+
+$Revision: 1.12.2.2 $
+-->
+
+
+<policy>
+    <!-- Used by clients within the application server VM such as
+    mbeans and servlets that access EJBs.
+    -->
+    
+<application-policy name="eADMonitorDB"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">eadmonitor_app</module-option> 
+         <module-option name="password">1c520d2380aa500905d4b4cff7b9afcb43510f1b5fa1de1c</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=eADMonitor</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2DB"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">egamemaster_app</module-option> 
+         <module-option name="password">-4c8b71e5a1610022837aec06c151a4e77d7d602e07c1a190c4dcbe32633042e2</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_gm</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2wdDB"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">egamemaster_select</module-option> 
+         <module-option name="password">-2918402a4ebd27551fa620d03425e8a2</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_wd_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2ssDB"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_shenshou</module-option> 
+         <module-option name="password">-2be9d1c9c4bc1f02f6d6776bf4e220c0</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ss_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2xydbexp"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_xiyou_app</module-option> 
+         <module-option name="password">7dbf4107509d53cdd89dbbb5af675f0f29b39d2fae59d641df8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_xy_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2klsxexp"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_shenxian_app</module-option> 
+         <module-option name="password">-6abff79ef5e5f3be622f79cc9aede65a3ec243a7c060b9a4207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_klsx_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+
+
+<application-policy name="gmweb2_wddb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_wending_app</module-option> 
+         <module-option name="password">-2918402a4ebd27556f206b48ab4859ac6af936d16c556c51</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_wd</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_ssdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_shenshou_app</module-option> 
+         <module-option name="password">147262def5fd208b90844a32952b609df22891ff3d8a5082dd730cf942055b13</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ss</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_ytdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_yitian_app</module-option> 
+         <module-option name="password">ed1dd29565779059924e8d49ed64e676f68388fff51cbadf8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_yt</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_yt_expdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_yitian_app</module-option> 
+         <module-option name="password">-30df6b5696cd08f5e4c3a8d13c41a1d760a812d40a10714b8693897a9374daa1</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_yt_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_wending_xl"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_wending_xl_app</module-option> 
+         <module-option name="password">-4235fdb7da0a011295122d6f9b344335207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_wd_xl</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="ereportDB"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">ereport_app</module-option> 
+         <module-option name="password">-5758041c7065d3e9758e1e3373fb8ec95e3e1707df5e04f6207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=ereportsds</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_dhwldb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_dahua_app</module-option> 
+         <module-option name="password">-584af05df6e8aacc3b2d6f93c90f51cb437b97eae195724c</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_dhwl</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_dhwl_expdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_dahua_app</module-option> 
+         <module-option name="password">-584af05df6e8aacc3b2d6f93c90f51cb437b97eae195724c</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_dhwl_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+
+<application-policy name="gmweb2_ybtx_expdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_ybtx_app</module-option> 
+         <module-option name="password">d1b5fff2aac0232f19c3a2a95d9e1a6df8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ybtx_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_dxxddb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_dxxd_app</module-option> 
+         <module-option name="password">-1e74483fec916beb8322a59eba28853d207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_dxxd</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_dxxd_expdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_dxxd_app</module-option> 
+         <module-option name="password">-7314c3565fc0853900d73b9b68719dce207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_dxxd_exp</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_dhxydb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_xuanyuan_app</module-option> 
+         <module-option name="password">-160548aebcddbf5c15012acb1d1f6197c43bce979e798625908220a30101d023</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_dhxy</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_ftxydb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_app</module-option> 
+         <module-option name="password">-770965ec2838a122c402a4cc8a5a239bdd2bef39bed3a05f</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_wftxydb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_91_app</module-option> 
+         <module-option name="password">-256def184602f5320fbfe644d7c19634207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_wftxy</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_yt_sddb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_yitian_sd_app</module-option> 
+         <module-option name="password">186cd51eaf0d204a5d15ac6f7056908ff89acedb1735e078</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_yt_sd</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_xydb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_xiyou_app</module-option> 
+         <module-option name="password">-2c712314602339ae9139b63b3b98f4f6207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_xy</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_mhmsdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_mhms_app</module-option> 
+         <module-option name="password">-cd9b2154659532aed1064f8e564a013207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_mhms</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+
+
+<application-policy name="gmweb2_xy_yndb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_xiyou_app</module-option> 
+         <module-option name="password">testerror</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_xy_yn</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_ftxy_verycddb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_verycd_app</module-option> 
+         <module-option name="password">15b63a563dd8fd0daf7cd0a8ecb0e829df8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_verycd</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+
+<application-policy name="gmweb2_ftxy_ppsdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_pps_app</module-option> 
+         <module-option name="password">1735c8287aa2caeb7006e0cc99d508d9df8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_pps</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_ftxy_bfdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_bf_app</module-option> 
+         <module-option name="password">1ba69ad6961da882bc2f3bdfdc13b9d4df8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_bf</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_ftxy_3gmdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_3gm_app</module-option> 
+         <module-option name="password">2cf184c8ccabdd0ff0931aca8f2e5cdfdf8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_3gm</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_ftxy_kugoudb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_kugou_app</module-option> 
+         <module-option name="password">-7e7106e7310dae4d7767e5f0d170badb207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_kugou</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_ftxy_2366db"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_2366_app</module-option> 
+         <module-option name="password">56ae63230cb38a92845b031f8e43b15adf8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_2366</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+<application-policy name="gmweb2_ftxy_duowandb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_duowan_app</module-option> 
+         <module-option name="password">-15494d69510b6eaf84696860c131c29d207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_duowan</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_ftxy_baidudb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_feitian_baidu_app</module-option> 
+         <module-option name="password">1ac1e58e7ed1e630d05035a65e598428df8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_baidu</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+
+<application-policy name="gmweb2_ftxy_youwodb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_feitian_youwo_app</module-option>
+         <module-option name="password">4d03db47aab0c7ae5e439434e7d5fc22df8592078de921bc</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_youwo</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+<application-policy name="gmweb2_ftxy_isdb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_feitian_is_app</module-option>
+         <module-option name="password">-40288479b082b9f33d3dde5157aed968207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_is</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+
+
+<application-policy name="gmweb2_ftxy_kuwodb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_feitian_kuwo_app</module-option>
+         <module-option name="password">-4e77f5fbb4979a36fe5441a05b8d62c207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_kuwo</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+<application-policy name="gmweb2_yt2db">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_yt2_app</module-option>
+         <module-option name="password">-5747f83ee3ea1e61774d06fdf979ad27207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_yt2</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+<application-policy name="gmweb2_bidb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">ebi_app</module-option>
+         <module-option name="password">-7358d00c82368b2057cb1f2f297667f2207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_bi</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+<application-policy name="gmweb2_ftxy_jiuweidb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_feitian_jiuwei_app</module-option>
+         <module-option name="password">-16b95d8749d4caaa9870268ed1080791207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_jiuwei</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+<application-policy name="gmweb2_ftxy_hmdb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_feitian_hm_app</module-option>
+         <module-option name="password">-16b95d8749d4caaa9870268ed1080791207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_hm</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+<application-policy name="gmweb2_ftxy_pplivedb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_feitian_pplive_app</module-option>
+         <module-option name="password">-16b95d8749d4caaa9870268ed1080791207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_pplive</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+<application-policy name="gmweb2_ftxy_528daydb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_feitian_528day_app</module-option>
+         <module-option name="password">-16b95d8749d4caaa9870268ed1080791207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_ftxy_528day</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+<application-policy name="gmweb2_xy_baidudb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_xiyou_baidu_app</module-option>
+         <module-option name="password">58ee9e12f7a43475a9ae731c26494146645d15e35fd84db4</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_xy_baidu</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+
+<application-policy name="gmweb2_kxdl_expdb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">trial_kxdl_app</module-option>
+         <module-option name="password">-142869c0d8f6a99480c7ddf68ca3f415207a6df87216de44</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_kxdl_exp</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+
+<application-policy name="gmweb2_shenxiandb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_shenxian_app</module-option>
+         <module-option name="password">442d3e887417bcbb8064d60db50e8556df8592078de921bc</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_shenxian</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+<application-policy name="gmweb2_xhlm_appdb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">trial_xhlm_app</module-option>
+         <module-option name="password">35962cdbb4b1ee7d9178f982a33afbbadf8592078de921bc</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_xhlm_app</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+<application-policy name="gmweb2_rxxy_appdb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">trial_rxxy_app</module-option>
+         <module-option name="password">305fc3c5fb0bf4347ae4e7c2b6d4c4fcdf8592078de921bc</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_rxxy_app</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+<application-policy name="gmweb2_xy_xianzdb">
+     <authentication>
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"
+         flag="required">
+         <module-option name="username">erating_xiyou_xianz_app</module-option>
+         <module-option name="password">58ee9e12f7a43475a9ae731c26494146645d15e35fd84db4</module-option>
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_xy_xianz</module-option>       
+       </login-module>
+     </authentication>
+</application-policy>
+
+<application-policy name="gmweb2_trial_mswsdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_msws_app</module-option> 
+         <module-option name="password">-70bd41f43144fc9ab21129791d3ad796207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_trial_msws</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+
+<application-policy name="gmweb2_txdx_appdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_txdx_app</module-option> 
+         <module-option name="password">39df5ecc3e1ccd28949b95332d028d6ddf8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_txdx_app</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+
+<application-policy name="gmweb2_erating_mswsdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_msws_app</module-option> 
+         <module-option name="password">-454888acb4ff43117bd23780a0ac57a3207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_erating_msws</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+
+<application-policy name="gmweb2_erating_rxxydb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_rxxy_app</module-option> 
+         <module-option name="password">-4334c4e2c6ae1bd46d1ad5bc7fac7ee5207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_erating_rxxy</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+
+<application-policy name="gmweb2_trial_maoxwdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">trial_hymx_app</module-option>
+         <module-option name="password">7cf4f4bb958c763c71f1b38710c5fa72</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_trial_maoxw</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+<application-policy name="gmweb2_erating_ybtxdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_ybtx_app</module-option>
+         <module-option name="password">-1d2058926de79ec2763e592823ac7187207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_erating_ybtx</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+<application-policy name="gmweb2_erating_moszdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_mosz_app</module-option>
+         <module-option name="password">18db4b1abaf38f88e34fc5bc553c274ddf8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_erating_mosz</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+
+<application-policy name="gmweb2_erating_hymxdb"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_hymx_app</module-option>
+         <module-option name="password">4d2b3d88af931e454b111978a7175824df8592078de921bc</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_erating_hymx</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy>
+
+
+<application-policy name="gmweb2dxxdgreenDB"> 
+     <authentication>  
+       <login-module code="org.jboss.resource.security.SecureIdentityLoginModule"    
+         flag="required">  
+         <module-option name="username">erating_dxxd_green_app</module-option> 
+         <module-option name="password">-1e74483fec916beb8322a59eba28853d207a6df87216de44</module-option> 
+         <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=gmweb2_erating_dxxdgreen</module-option>          
+       </login-module>  
+     </authentication>  
+</application-policy> 
+
+    <application-policy name = "client-login">
+       <authentication>
+          <login-module code = "org.jboss.security.ClientLoginModule"
+             flag = "required">
+          </login-module>
+       </authentication>
+    </application-policy>
+
+    <!-- Security domain for JBossMQ -->
+    <application-policy name = "jbossmq">
+       <authentication>
+          <login-module code = "org.jboss.security.auth.spi.DatabaseServerLoginModule"
+             flag = "required">
+             <module-option name = "unauthenticatedIdentity">guest</module-option>
+             <module-option name = "dsJndiName">java:/DefaultDS</module-option>
+             <module-option name = "principalsQuery">SELECT PASSWD FROM JMS_USERS WHERE USERID=?</module-option>
+             <module-option name = "rolesQuery">SELECT ROLEID, 'Roles' FROM JMS_ROLES WHERE USERID=?</module-option>
+          </login-module>
+       </authentication>
+    </application-policy>
+
+    <!-- Security domain for JBossMQ when using file-state-service.xml
+    <application-policy name = "jbossmq">
+       <authentication>
+          <login-module code = "org.jboss.mq.sm.file.DynamicLoginModule"
+             flag = "required">
+             <module-option name = "unauthenticatedIdentity">guest</module-option>
+             <module-option name = "sm.objectname">jboss.mq:service=StateManager</module-option>
+          </login-module>
+       </authentication>
+    </application-policy>
+    -->
+
+    <!-- Security domains for testing new jca framework -->
+    <application-policy name = "HsqlDbRealm">
+       <authentication>
+          <login-module code = "org.jboss.resource.security.ConfiguredIdentityLoginModule"
+             flag = "required">
+             <module-option name = "principal">sa</module-option>
+             <module-option name = "userName">sa</module-option>
+             <module-option name = "password"></module-option>
+             <module-option name = "managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=DefaultDS</module-option>
+          </login-module>
+       </authentication>
+    </application-policy>
+
+    <application-policy name = "JmsXARealm">
+       <authentication>
+          <login-module code = "org.jboss.resource.security.ConfiguredIdentityLoginModule"
+             flag = "required">
+             <module-option name = "principal">guest</module-option>
+             <module-option name = "userName">guest</module-option>
+             <module-option name = "password">guest</module-option>
+             <module-option name = "managedConnectionFactoryName">jboss.jca:service=TxCM,name=JmsXA</module-option>
+          </login-module>
+       </authentication>
+    </application-policy>
+
+    <!-- A template configuration for the jmx-console web application. This
+      defaults to the UsersRolesLoginModule the same as other and should be
+      changed to a stronger authentication mechanism as required.
+    -->
+    <application-policy name = "jmx-console">
+       <authentication>
+          <login-module code="org.jboss.security.auth.spi.UsersRolesLoginModule"
+             flag = "required">
+           <module-option name="usersProperties">props/jmx-console-users.properties</module-option>
+           <module-option name="rolesProperties">props/jmx-console-roles.properties</module-option>
+          </login-module>
+       </authentication>
+    </application-policy>
+
+    <!-- A template configuration for the web-console web application. This
+      defaults to the UsersRolesLoginModule the same as other and should be
+      changed to a stronger authentication mechanism as required.
+    -->
+    <application-policy name = "web-console">
+       <authentication>
+          <login-module code="org.jboss.security.auth.spi.UsersRolesLoginModule"
+             flag = "required">
+             <module-option name="usersProperties">users.properties</module-option>
+             <module-option name="rolesProperties">roles.properties</module-option>
+          </login-module>
+       </authentication>
+    </application-policy>
+
+    <!-- A template configuration for the JBossWS web application (and transport layer!).
+      This defaults to the UsersRolesLoginModule the same as other and should be
+      changed to a stronger authentication mechanism as required.
+    -->
+    <application-policy name="JBossWS">
+      <authentication>
+        <login-module code="org.jboss.security.auth.spi.UsersRolesLoginModule"
+          flag="required">
+          <module-option name="unauthenticatedIdentity">anonymous</module-option>
+        </login-module>
+      </authentication>
+    </application-policy>
+
+    <!-- The default login configuration used by any security domain that
+    does not have a application-policy entry with a matching name
+    -->
+    <application-policy name = "other">
+       <!-- A simple server login module, which can be used when the number 
+       of users is relatively small. It uses two properties files:
+       users.properties, which holds users (key) and their password (value).
+       roles.properties, which holds users (key) and a comma-separated list of
+       their roles (value).
+       The unauthenticatedIdentity property defines the name of the principal
+       that will be used when a null username and password are presented as is
+       the case for an unuathenticated web client or MDB. If you want to
+       allow such users to be authenticated add the property, e.g.,
+       unauthenticatedIdentity="nobody"
+       -->
+       <authentication>
+          <login-module code = "org.jboss.security.auth.spi.UsersRolesLoginModule"
+             flag = "required" />
+       </authentication>
+    </application-policy>
+
+</policy>
+

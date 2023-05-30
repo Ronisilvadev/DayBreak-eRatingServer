@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="GBK" ?>
+
+<xxx_svr>
+    <DB>
+        <!-- dbtype = 1:mysql, 其他:oracle-->
+        <dbtype>0</dbtype>
+        <tnsname>UOSDEV_201</tnsname>
+        <host>192.168.41.201</host>
+        <port>3306</port>
+        <db_name>erating</db_name>
+        <user>erating_xiyou</user>
+        <pwd>001e4cfecedddf424f7d</pwd>
+        <time_out>30</time_out>
+        <use_pool>1</use_pool>
+        <min_conn>1</min_conn>
+        <max_conn>10</max_conn>
+        <cache_size>1024</cache_size>
+    </DB>
+
+    <PASSPORT>
+        <address>http://192.168.41.43:8080/oversea-mid/xmlRpcServerServlet</address>
+        <key>linekongline</key>
+        <time_out unit="ms">3000</time_out>
+    </PASSPORT>
+
+    <game_id default="0">20</game_id>
+
+    <env_encoding>utf8</env_encoding>
+    <recv_encoding>utf8</recv_encoding>
+    <mysql_db_encoding>utf8</mysql_db_encoding>
+    <db_encoding>utf8</db_encoding>
+    <once_load>10000</once_load>
+    <detail_flag>1</detail_flag>
+    <send_flag>0</send_flag>
+    <open_role_list>0</open_role_list>
+    <open_dcode>0</open_dcode>
+    <load_ip>1</load_ip>
+    <lower_user_name>1</lower_user_name>
+    <auth_drop_interval>3</auth_drop_interval>    
+    <!-- for ePayAuditServer -->
+    <scan_cycle default="30" unit="m">30</scan_cycle>
+    <refresh_cycle default="60" unit="s">10</refresh_cycle>
+    <subject_id>5</subject_id>
+
+<!--
+    <service>
+        <gateway_id default="0">202901</gateway_id>
+    </service>
+-->
+</xxx_svr>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<form-beans>
+	<!-- 配置字典FORM begin -->
+		<form-bean name="dictionaryConfigForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="code" type="java.lang.String"></form-property>
+			<form-property name="name" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 配置字典FORM end -->
+	
+	<!-- 配置网关FORM begin -->
+		<form-bean name="gatewayForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="gatewayProvider" type="java.lang.String"></form-property>
+			<form-property name="gatewayName" type="java.lang.String"></form-property>
+			<form-property name="gatewayUrl" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 配置网关FORM end -->
+	
+	<!-- 配置服务器FORM begin -->
+		<form-bean name="gameServerForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="serverName" type="java.lang.String"></form-property>
+			<form-property name="groupId" type="java.lang.String"></form-property>
+			<form-property name="serverUrl" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 配置服务器FORM end -->
+	
+	<!-- 配置托管IpFORM begin -->
+		<form-bean name="trusteeIpForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="ipName" type="java.lang.String"></form-property>
+			<form-property name="ip" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 配置托管IpFORM end -->
+	<!-- 添加游戏FORM begin -->
+		<form-bean name="addGameForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gameId" type="java.lang.String"></form-property>
+			<form-property name="gameName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 添加游戏FORM end -->
+	<form-bean name="addBiActivityForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="beginTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="activityDesc" type="java.lang.String"></form-property>
+	</form-bean>
+</form-beans>
+	
+	<action-mappings>
+		<!-- 配置联盟 begin -->
+		<action path="/showLeagueInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showLeagueInfo" scope="request">
+			<forward name="dictionaryConfig" path="/WEB-INF/jsp/dictionaryConfig/dictionaryConfig.jsp" />
+		</action>
+		<action path="/showAddLeague" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddLeague" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/addLeague" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addLeague" scope="request" name="dictionaryConfigForm" validate="true" input="/showAddLeague.do">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/modifyLeague" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyLeague" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/delLeague" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delLeague" scope="request">
+		</action>
+		<!-- 配置联盟 end -->
+		
+		<!-- 配置频道 begin -->
+		<action path="/showChannelInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showChannelInfo" scope="request">
+			<forward name="dictionaryConfig" path="/WEB-INF/jsp/dictionaryConfig/dictionaryConfig.jsp" />
+		</action>
+		<action path="/showAddChannel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddChannel" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/addChannel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addChannel" scope="request" name="dictionaryConfigForm" validate="true" input="/showAddChannel.do">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/modifyChannel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyChannel" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/delChannel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delChannel" scope="request">
+		</action>
+		<!-- 配置频道 end -->
+		
+		<!-- 配置职业 begin -->
+		<action path="/showOccupationInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOccupationInfo" scope="request">
+			<forward name="dictionaryConfig" path="/WEB-INF/jsp/dictionaryConfig/dictionaryConfig.jsp" />
+		</action>
+		<action path="/showAddOccupation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddOccupation" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/addOccupation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addOccupation" scope="request" name="dictionaryConfigForm" validate="true" input="/showAddOccupation.do">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/modifyOccupation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyOccupation" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/delOccupation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delOccupation" scope="request">
+		</action>
+		<!-- 配置职业 end -->
+		
+		<!-- 配置场景 begin -->
+		<action path="/showSceneInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSceneInfo" scope="request">
+			<forward name="dictionaryConfig" path="/WEB-INF/jsp/dictionaryConfig/dictionaryConfig.jsp" />
+		</action>
+		<action path="/showAddScene" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddScene" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/addScene" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addScene" scope="request" name="dictionaryConfigForm" validate="true" input="/showAddScene.do">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/modifyScene" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyScene" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/delScene" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delScene" scope="request">
+		</action>
+		<!-- 配置场景 end -->
+		
+		<!-- 配置经验类型 begin -->
+		<action path="/showExperienceType" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showExperienceType" scope="request">
+			<forward name="dictionaryConfig" path="/WEB-INF/jsp/dictionaryConfig/dictionaryConfig.jsp" />
+		</action>
+		<action path="/showAddExperienceType" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddExperienceType" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/addExperienceType" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addExperienceType" scope="request" name="dictionaryConfigForm" validate="true" input="/showAddExperienceType.do">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/modifyExperienceType" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyExperienceType" scope="request">
+			<forward name="addDictionary" path="/WEB-INF/jsp/dictionaryConfig/addDictionary.jsp" />
+		</action>
+		<action path="/delExperienceType" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delExperienceType" scope="request">
+		</action>
+		<!-- 配置经验类型 end -->
+		
+		<!-- 配置网关 begin -->
+		<action path="/showGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGateway" scope="request">
+			<forward name="gatewayConfig" path="/WEB-INF/jsp/dictionaryConfig/gatewayConfig.jsp" />
+		</action>
+		<action path="/showAddGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddGateway" scope="request">
+			<forward name="addGateway" path="/WEB-INF/jsp/dictionaryConfig/addGateway.jsp" />
+		</action>
+		<action path="/addGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addGateway" scope="request" name="gatewayForm" validate="true" input="/showAddGateway.do">
+			<forward name="addGateway" path="/WEB-INF/jsp/dictionaryConfig/addGateway.jsp" />
+		</action>
+		<action path="/showModifyGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyGateway" scope="request">
+			<forward name="modifyGateway" path="/WEB-INF/jsp/dictionaryConfig/modifyGateway.jsp" />
+		</action>
+		<action path="/modifyGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyGateway" scope="request" name="gatewayForm" validate="true" input="/showModifyGateway.do">
+			<forward name="modifyGateway" path="/WEB-INF/jsp/dictionaryConfig/modifyGateway.jsp" />
+		</action>
+		<action path="/delGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delGateway" scope="request">
+		</action>
+		<!-- 配置网关 end -->
+		
+		<!-- 配置服务器 begin -->
+		<action path="/showGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGameServer" scope="request">
+			<forward name="gameServerConfig" path="/WEB-INF/jsp/dictionaryConfig/gameServerConfig.jsp" />
+		</action>
+		<action path="/showAddGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddGameServer" scope="request">
+			<forward name="addGameServer" path="/WEB-INF/jsp/dictionaryConfig/addGameServer.jsp" />
+		</action>
+		<action path="/addGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addGameServer" scope="request" name="gameServerForm" validate="true" input="/showAddGameServer.do">
+			<forward name="addGameServer" path="/WEB-INF/jsp/dictionaryConfig/addGameServer.jsp" />
+		</action>
+		<action path="/showModifyGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyGameServer" scope="request">
+			<forward name="modifyGameServer" path="/WEB-INF/jsp/dictionaryConfig/modifyGameServer.jsp" />
+		</action>
+		<action path="/modifyGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyGameServer" scope="request" name="gameServerForm" validate="true" input="/showModifyGameServer.do">
+			<forward name="modifyGameServer" path="/WEB-INF/jsp/dictionaryConfig/modifyGameServer.jsp" />
+		</action>
+		<action path="/delGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delGameServer" scope="request">
+		</action>
+		<!-- 配置服务器 end -->
+		
+		<!-- 配置托管Ip begin -->
+		<action path="/showTrusteeIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showTrusteeIp" scope="request">
+			<forward name="trusteeIp" path="/WEB-INF/jsp/dictionaryConfig/trusteeIp.jsp" />
+		</action>
+		<action path="/showAddTrusteeIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddTrusteeIp" scope="request">
+			<forward name="addTrusteeIp" path="/WEB-INF/jsp/dictionaryConfig/addTrusteeIp.jsp" />
+		</action>
+		<action path="/addTrusteeIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addTrusteeIp" scope="request" name="trusteeIpForm" validate="true" input="/showAddTrusteeIp.do">
+			<forward name="addTrusteeIp" path="/WEB-INF/jsp/dictionaryConfig/addTrusteeIp.jsp" />
+		</action>
+		<action path="/showModifyTrusteeIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyTrusteeIp" scope="request">
+			<forward name="modifyTrusteeIp" path="/WEB-INF/jsp/dictionaryConfig/modifyTrusteeIp.jsp" />
+		</action>
+		<action path="/modifyTrusteeIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyTrusteeIp" scope="request" name="trusteeIpForm" validate="true" input="/showModifyTrusteeIp.do">
+			<forward name="modifyTrusteeIp" path="/WEB-INF/jsp/dictionaryConfig/modifyTrusteeIp.jsp" />
+		</action>
+		<action path="/delTrusteeIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delTrusteeIp" scope="request">
+		</action>
+		<!-- 配置托管Ip end -->
+		
+		<!-- 配置游戏 begin -->
+		<action path="/showGame" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGame" scope="request">
+			<forward name="game" path="/WEB-INF/jsp/dictionaryConfig/game.jsp" />
+		</action>
+		<action path="/showAddGame" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddGame" scope="request">
+			<forward name="addGame" path="/WEB-INF/jsp/dictionaryConfig/addGame.jsp" />
+		</action>
+		<action path="/addGame" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addGame" scope="request" validate="true" name="addGameForm" input="/showAddGame.do">
+			<forward name="addGame" path="/WEB-INF/jsp/dictionaryConfig/addGame.jsp" />
+		</action>
+		<action path="/modifyGame" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyGame" scope="request">
+			<forward name="addGame" path="/WEB-INF/jsp/dictionaryConfig/addGame.jsp" />
+		</action>
+		<!-- 配置游戏 end -->
+		<action path="/showSynGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSynGameServer">
+			<forward name="synGameServer" path="/WEB-INF/jsp/dictionaryConfig/synGameServer.jsp"></forward>
+		</action>
+	
+		<action path="/synGameServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="synGameServer">
+		</action>
+	
+		<action path="/showSynGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSynGateway">
+			<forward name="synGateway" path="/WEB-INF/jsp/dictionaryConfig/synGateway.jsp"></forward>
+		</action>
+	
+		<action path="/synGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="synGateway">
+		</action>
+		
+		<action path="/showAddRelationGames" parameter="showAddRelationGames" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="addRelationGame" path="/WEB-INF/jsp/dictionaryConfig/addGameRelation.jsp"></forward>
+		</action>
+		
+		<action path="/addRelationGame" parameter="addRelationGame" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		
+		<action path="/delRelationGame" parameter="delRelationGame" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		
+		<action path="/showImportFromFile" parameter="showImportFromFile" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="importFromFile" path="/WEB-INF/jsp/dictionaryConfig/importItem.jsp"></forward>
+		</action>
+		
+		<action path="/importFromFile" parameter="importFromFile" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		
+		<action path="/showSynGameItem" parameter="showSynGameItem"  type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="synGameItem" path="/WEB-INF/jsp/dictionaryConfig/synGameItem.jsp"></forward>
+		</action>
+		
+		<action path="/synGameItem" parameter="synGameItem" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		
+		<action path="/showConfigOption" parameter="showConfigOption" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="configOption" path="/WEB-INF/jsp/dictionaryConfig/configOption.jsp"></forward>
+		</action>
+		<action path="/showConfigOptionInfo" parameter="showConfigOptionInfo" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		<action path="/updateConfigOptionInfo" parameter="updateConfigOptionInfo" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		
+		
+		
+		<action path="/showBiActivity" parameter="showBiActivity" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="showBiactivity" path="/WEB-INF/jsp/dictionaryConfig/biActivity.jsp"></forward>
+		</action>
+		<action path="/showAddBiActivity" parameter="showAddBiActivity" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="addBiActivity" path="/WEB-INF/jsp/dictionaryConfig/biActivity.jsp"></forward>
+		</action>
+		
+		<action path="/addBiActivity" parameter="addBiActivity" type="org.springframework.web.struts.DelegatingActionProxy" name="addBiActivityForm">
+		</action>
+		
+		<action path="/showConfigGateway" parameter="showConfigGateway" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="configGateway" path="/WEB-INF/jsp/dictionaryConfig/configBiGateway.jsp"></forward>
+		</action>
+		
+		<action path="/addConfigGateway" parameter="addConfigGateway" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		<action path="/delConfigGateway" parameter="delConfigGateway" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		
+		<action path="/idContanis" parameter="idContanis" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+	</action-mappings>
+</struts-config>

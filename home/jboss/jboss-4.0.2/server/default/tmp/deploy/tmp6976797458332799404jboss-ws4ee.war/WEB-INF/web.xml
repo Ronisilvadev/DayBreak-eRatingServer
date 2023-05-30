@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+  A web application that installs the basic Axis servlets and their security environment
+
+  $Id: web.xml,v 1.2.2.2 2005/04/22 10:22:10 tdiesler Exp $
+-->
+
+<web-app>
+
+  <display-name>JBoss Axis</display-name>
+
+  <servlet>
+    <servlet-name>ServiceEndpointServlet</servlet-name>
+    <display-name>service endpoint</display-name>
+    <servlet-class>org.jboss.webservice.server.ServiceEndpointServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>PortComponentLinkServlet</servlet-name>
+    <display-name>PortComponentLink Servlet</display-name>
+    <servlet-class>org.jboss.webservice.server.PortComponentLinkServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>JBossAxisAdminServlet</servlet-name>
+    <display-name>JBoss-Axis Admin Servlet</display-name>
+    <servlet-class>org.jboss.webservice.server.JBossAdminServlet</servlet-class>
+  </servlet>
+
+  <!--
+  <servlet>
+    <servlet-name>SOAPMonitorServlet</servlet-name>
+    <display-name>SOAPMonitorService</display-name>
+    <servlet-class>org.jboss.axis.monitor.SOAPMonitorService</servlet-class>
+    <init-param>
+      <param-name>SOAPMonitorPort</param-name>
+      <param-value>5001</param-value>
+    </init-param>
+  </servlet>
+  -->
+
+  <!-- now the mappings -->
+
+  <servlet-mapping>
+    <servlet-name>ServiceEndpointServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PortComponentLinkServlet</servlet-name>
+    <url-pattern>/pclink</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>JBossAxisAdminServlet</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+
+  <!--
+  <servlet-mapping>
+    <servlet-name>SOAPMonitorServlet</servlet-name>
+    <url-pattern>/monitor</url-pattern>
+  </servlet-mapping>
+  -->
+
+  <!-- currently the W3C havent settled on a media type for WSDL;
+  http://www.w3.org/TR/2003/WD-wsdl12-20030303/#ietf-draft
+  for now we go with the basic 'it's XML' response -->
+  <mime-mapping>
+    <extension>wsdl</extension>
+    <mime-type>text/xml</mime-type>
+  </mime-mapping>
+
+  <mime-mapping>
+    <extension>xsd</extension>
+    <mime-type>text/xml</mime-type>
+  </mime-mapping>
+
+  <welcome-file-list id="WelcomeFileList">
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <!-- we add a security constraint -->
+  <security-constraint>
+
+    <!-- for every exposed service -->
+    <web-resource-collection>
+      <web-resource-name>Secured</web-resource-name>
+      <description>Authenticate every call</description>
+      <url-pattern>/services</url-pattern>
+      <http-method>HEAD</http-method>
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+      <http-method>PUT</http-method>
+      <http-method>DELETE</http-method>
+    </web-resource-collection>
+
+    <!-- Currently we let through every user, authenticated or not, because
+         we rely on the service-specific security handlers to do authentiation
+         and authorization. Commented out, because Jetty would not
+         accept the * role. -->
+    <!-- <auth-constraint>
+           <role-name>*</role-name>
+         </auth-constraint> -->
+
+    <!-- no user data constraint here, this should be done for the individual services -->
+  </security-constraint>
+
+  <!-- we do BASIC authentication for now -->
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>Axis basic authentication</realm-name>
+  </login-config>
+
+</web-app>

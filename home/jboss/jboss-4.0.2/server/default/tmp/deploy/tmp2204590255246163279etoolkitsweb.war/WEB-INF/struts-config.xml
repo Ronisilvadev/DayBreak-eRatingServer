@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	
+	<global-exceptions />
+	
+	<global-forwards>
+		<forward name="error" path="/error.jsp" />
+	</global-forwards>
+	
+	<action-mappings>
+	
+		<action path="/login"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false" name="" parameter="method">
+			<forward name="login" path="/WEB-INF/jsp/login.jsp" />
+			<forward name="success" path="/WEB-INF/jsp/index.jsp" />
+		</action>
+		
+		<action path="/generateRandomCode"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		
+		<action path="/showFrame"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false" name="" parameter="method">
+			<forward name="top" path="/WEB-INF/jsp/top.jsp" />
+			<forward name="middle" path="/WEB-INF/jsp/middle.jsp" />
+			<forward name="bottom" path="/WEB-INF/jsp/bottom.jsp" />
+			<forward name="left" path="/WEB-INF/jsp/left.jsp" />
+			<forward name="welcome" path="/WEB-INF/jsp/welcome.jsp" />
+			<forward name="tab" path="/WEB-INF/jsp/tab.jsp" />
+		</action>
+		
+		<action path="/logManage"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false" name="" parameter="method">
+			<forward name="log" path="/WEB-INF/jsp/purview/log.jsp" />
+			<forward name="roleLog" path="/WEB-INF/jsp/purview/roleLog.jsp" />
+		</action>
+		
+		<action path="/instancyBulletin"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false" name="" parameter="method">
+			<forward name="login" path="/WEB-INF/jsp/instancyBulletin/login.jsp" />
+			<forward name="instancyBulletin" path="/WEB-INF/jsp/instancyBulletin/instancyBulletin.jsp" />
+		</action>
+		
+		
+	</action-mappings>
+	
+	<message-resources parameter="com.linekong.gmweb2.web.ApplicationResources" />
+	<message-resources parameter="com.linekong.gmweb2.web.PageResources" key="pageResources"/>
+	<message-resources parameter="com.linekong.gmweb2.web.MenuResources" key="menuResources"/>
+	
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/springBeans.xml,
+			/WEB-INF/ConfigXML/PlayerQuery/springBeans-playQuery.xml,
+			/WEB-INF/ConfigXML/RoleOperation/springBeans-roleOperation.xml,
+			/WEB-INF/ConfigXML/DictionaryConfig/springBeans-dictionaryConfig.xml,
+			/WEB-INF/ConfigXML/WorldOperation/springBeans-worldOperation.xml,
+			/WEB-INF/ConfigXML/Purview/springBeans-purview.xml,
+			/WEB-INF/ConfigXML/RoleCompensate/springBeans-roleCompensate.xml" />
+	</plug-in>
+	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+  		<set-property property="pathnames" 
+  			value="/WEB-INF/validator-rules.xml,
+  			/WEB-INF/ConfigXML/PlayerQuery/validation-playQueay.xml,
+  			/WEB-INF/ConfigXML/RoleOperation/validation-roleOperation.xml,
+  			/WEB-INF/ConfigXML/DictionaryConfig/validation-dictionaryConfig.xml,
+  			/WEB-INF/ConfigXML/Purview/validation-purview.xml,
+  			/WEB-INF/ConfigXML/RoleCompensate/validation-roleCompensate.xml,
+  			/WEB-INF/ConfigXML/WorldOperation/validation-worldOperation.xml" />
+    </plug-in>
+  
+</struts-config>
+

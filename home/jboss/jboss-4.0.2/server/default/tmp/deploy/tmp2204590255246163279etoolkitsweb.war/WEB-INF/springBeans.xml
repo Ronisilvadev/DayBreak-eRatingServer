@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 属性文件读入-->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>/WEB-INF/conf/instancyUser.properties</value>
+			</list>
+		</property>
+		<property name="fileEncoding" value="utf-8"></property>
+	</bean>
+
+	<bean name="/login" class="com.linekong.gmweb2.web.action.LoginAction">
+		<property name="loginService" ref="loginService" />
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+	</bean>
+	
+	<bean name="/generateRandomCode" class="com.linekong.gmweb2.web.action.GenerateRandomCodeAction" />
+
+	<bean name="/showFrame" class="com.linekong.gmweb2.web.action.ShowFrameAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/instancyBulletin" class="com.linekong.gmweb2.web.action.InstancyBulletinAction">
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="userName" value="${instancy.userName}" />
+		<property name="password" value="${instancy.password}" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	
+	<bean name="/logManage" class="com.linekong.gmweb2.web.action.LogManageAction">
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+</beans>

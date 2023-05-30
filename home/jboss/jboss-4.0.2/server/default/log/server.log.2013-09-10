@@ -1,0 +1,16 @@
+2013-09-10 06:07:40,633 INFO  [STDOUT] java.lang.NullPointerException
+2013-09-10 06:07:40,633 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2013-09-10 06:07:40,633 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2013-09-10 06:07:40,633 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2013-09-10 06:07:40,633 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2013-09-10 06:07:40,633 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2013-09-10 08:28:57,912 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 17231
+2013-09-10 08:28:57,912 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)

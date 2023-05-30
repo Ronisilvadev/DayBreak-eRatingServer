@@ -1,0 +1,26 @@
+<?php
+
+$lang = array(
+	'Illegal_call_way' => '非法的调用方式',
+	'interface_call_validation_fails' => '接口调用参数验证失败',
+	'interface_parameters_validation_fails' => '接口参数验证失败',
+	'signatures_are_not_supported' => '蓝港在线暂时只支持MD5的签名方式',
+	'config_failed_to_load_intermodal' => '载入联运商扩展配置失败',
+	'config_failed_to_parse_intermodal' => '解析联运配置失败',
+	'username_empty' => '用户名为空',
+	'invalid_username' => '用户名无效',
+	'invalid_time' => '无效的登陆时间',
+	'invalid_serverid' => '无效的服务器ID',
+	'load_sign_drivers_fail' => '载入联运签名驱动失败',
+	'load_mcache_fail' => '载入缓存失败',
+	'get_server_list_fail' => '获取联运服务器列表失败',
+	'get_server_config_fail' => '获取服务器配置失败',
+	'class_autoexec_default_verify_api_param' => '接口数据验证失败',
+	'class_autoexec_get_server_info' => '获取联运服务器失败',
+	'login_api_server_id_illegal' => '登陆获取区服信息失败',
+	'login_api_login_param_validate_fail' => '登陆参数检测失败',
+	'index_login_param_validate_fail' => '进入游戏验证参数失败',
+	'prohibit_access' => '非法IP， 禁止访问',
+	'the_intermodal_get_role_count_interface_sign_verification_failed' => 0,
+	'user_role_information_not_found_executed' => 0,
+);

@@ -1,0 +1,31 @@
+2015-01-12 17:28:24,551 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2015-01-12 17:28:24,551 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:24,552 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:28,029 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2015-01-12 17:28:35,806 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&gameId=1204&validCode=9j99n&method=login&passportName=spacecowboy&
+2015-01-12 17:28:35,807 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:36,231 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2015-01-12 17:28:36,231 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:36,240 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2015-01-12 17:28:36,240 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:36,240 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2015-01-12 17:28:36,240 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:36,406 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2015-01-12 17:28:36,407 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:36,407 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2015-01-12 17:28:36,407 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:36,408 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2015-01-12 17:28:36,408 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2015-01-12 17:28:42,496 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2015-01-12 17:29:01,704 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514091258&version=new&
+2015-01-12 17:29:12,782 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/delActivityModel.do?activityId=1514091258&oper=1&version=new&
+2015-01-12 17:29:17,700 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072555&version=new&
+2015-01-12 17:29:21,989 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072555&oper=2&version=new&
+2015-01-12 17:29:24,811 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072555&oper=2&version=new&
+2015-01-12 17:29:26,171 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2015-01-12 17:39:50,672 INFO  [STDOUT] java.lang.NullPointerException
+2015-01-12 17:39:50,672 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2015-01-12 17:39:50,672 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2015-01-12 17:39:50,672 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2015-01-12 17:39:50,672 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2015-01-12 17:39:50,672 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

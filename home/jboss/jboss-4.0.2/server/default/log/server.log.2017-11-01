@@ -1,0 +1,27 @@
+2017-11-01 02:29:25,503 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:258)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:317)
+	at java.io.ObjectInputStream$PeekInputStream.read(ObjectInputStream.java:2265)
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2278)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:2749)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:779)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-11-01 02:29:26,492 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002A
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-11-01 06:00:00,008 INFO  [STDOUT] java.lang.NullPointerException
+2017-11-01 06:00:00,008 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-11-01 06:00:00,008 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-11-01 06:00:00,009 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-11-01 06:00:00,009 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-11-01 06:00:00,009 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

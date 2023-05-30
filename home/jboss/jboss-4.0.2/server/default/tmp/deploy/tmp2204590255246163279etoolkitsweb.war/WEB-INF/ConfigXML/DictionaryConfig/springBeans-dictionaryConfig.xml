@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<!-- 配置联盟 begin -->
+	<bean name="/showLeagueInfo" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddLeague" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addLeague" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyLeague" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delLeague" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置联盟end -->
+	
+	<!-- 配置频道 begin -->
+	<bean name="/showChannelInfo" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddChannel" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addChannel" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyChannel" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delChannel" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置频道end -->
+	
+	<!-- 配置职业 begin -->
+	<bean name="/showOccupationInfo" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddOccupation" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addOccupation" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyOccupation" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delOccupation" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置职业end -->
+	
+	<!-- 配置场景 begin -->
+	<bean name="/showSceneInfo" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddScene" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addScene" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyScene" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delScene" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置场景end -->
+	
+	<!-- 配置经验类型 begin -->
+	<bean name="/showExperienceType" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddExperienceType" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addExperienceType" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyExperienceType" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delExperienceType" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置经验类型end -->
+	
+	<!-- 配置网关 begin -->
+	<bean name="/showGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/showModifyGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置网关end -->
+	
+	<!-- 配置服务器 begin -->
+	<bean name="/showGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/showModifyGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置服务器end -->
+	
+	<!-- 配置托管Ip begin -->
+	<bean name="/showTrusteeIp" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddTrusteeIp" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addTrusteeIp" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/showModifyTrusteeIp" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyTrusteeIp" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/delTrusteeIp" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置托管Ip end -->
+	
+	<!-- 配置游戏 begin -->
+	<bean name="/showGame" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showAddGame" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>		
+	<bean name="/addGame" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/modifyGame" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="dictionaryService" ref="dictionaryService" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<!-- 配置游戏end -->
+	
+	<bean name="/showSynGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/synGameServer" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	
+	<bean name="/showSynGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/synGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showAddRelationGames" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/addRelationGame" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/delRelationGame" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<!-- 导入 物品信息 -->
+	<bean name="/showImportFromFile" class="com.linekong.gmweb2.web.action.DictionaryAction">
+	</bean>
+	
+	<bean name="/importFromFile" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<!-- 同步物品 -->
+	<bean name="/showSynGameItem"  class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/synGameItem"  class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/showConfigOption" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/showConfigOptionInfo" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/updateConfigOptionInfo" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/showBiActivity" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/showAddBiActivity" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/addBiActivity" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/showConfigGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/addConfigGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/delConfigGateway" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/idContanis" class="com.linekong.gmweb2.web.action.DictionaryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+</beans>

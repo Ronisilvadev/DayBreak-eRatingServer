@@ -1,0 +1,26 @@
+2014-05-31_09:37:45.157|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=40082|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=47990
+2014-05-31_09:37:45.160|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=richard&password=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f&sign=58AC3A54912E2752A05DFA90E8813AD2
+2014-05-31_09:37:45.305|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Fri, 30 May 2014 14:06:51 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>richard</userName></response>
+2014-05-31_09:37:45.309|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000010|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=richard|Password=b45441068b0371dad184621bf09b7e4e|Send3rdPassword=d5ddbff4995734213c9aeb61d8227b0ac40d17a0ca5b52789caeb0b50722b46f|UserID_Union=richard|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=187.21.153.49|User_Port=63912|Client_MAC=00FF6B35BD7B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=147|TC2=4|TC=151
+2014-05-31_09:37:45.309|I|4146|B3A3E6E0|INFO|package|1|SequenceID=40082|toRouter
+2014-05-31_11:38:52.727|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=164|orig_pdu_len=164|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=40991|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=47990
+2014-05-31_11:38:52.730|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=bibizika&password=9ba9fabc6c990b3ec88b7079c3d7c6c98f51f9be26954a28358f8b478c516b0d&sign=62358966EF21A31FD364EC8034C3D092
+2014-05-31_11:38:52.773|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 123
+Content-Type: text/html; charset=utf-8
+Date: Fri, 30 May 2014 16:08:41 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>bibizika</userName></response>
+2014-05-31_11:38:52.778|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000052|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=bibizika|Password=c3febbdcb0130af4807bf0941fa4acc4|Send3rdPassword=9ba9fabc6c990b3ec88b7079c3d7c6c98f51f9be26954a28358f8b478c516b0d|UserID_Union=bibizika|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=177.47.22.70|User_Port=52137|Client_MAC=00FFB00A839B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=46|TC2=5|TC=51
+2014-05-31_11:38:52.778|I|4146|B3A3E6E0|INFO|package|1|SequenceID=40991|toRouter

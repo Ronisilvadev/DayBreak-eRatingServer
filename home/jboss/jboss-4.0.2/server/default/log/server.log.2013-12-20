@@ -1,0 +1,40 @@
+2013-12-20 07:29:46,344 INFO  [STDOUT] java.lang.NullPointerException
+2013-12-20 07:29:46,346 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2013-12-20 07:29:46,346 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2013-12-20 07:29:46,346 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2013-12-20 07:29:46,346 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2013-12-20 07:29:46,346 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2013-12-20 17:55:40,337 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2013-12-20 17:55:40,337 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:55:40,338 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:55:40,543 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2013-12-20 17:56:18,812 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=qkfav&gameId=1204&method=login&passportName=globalgames1&
+2013-12-20 17:56:18,812 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:56:19,264 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showTop&
+2013-12-20 17:56:19,264 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:56:19,280 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showMiddle&
+2013-12-20 17:56:19,280 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:56:19,281 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showBottom&
+2013-12-20 17:56:19,281 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:56:19,516 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showLeft&
+2013-12-20 17:56:19,516 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:56:19,518 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showTab&
+2013-12-20 17:56:19,518 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:56:19,518 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showWelcome&
+2013-12-20 17:56:19,518 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:56:27,759 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryPlayerInfo.do?
+2013-12-20 17:56:37,137 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/getPlayerInfo.do?playerName=globalgames&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2013-12-20 17:56:54,869 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryPlayerInfo.do?
+2013-12-20 17:56:59,558 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/getPlayerInfo.do?playerName=pedrao6&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2013-12-20 17:57:10,206 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryPlayerInfo.do?
+2013-12-20 17:57:28,190 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showIssueBulletin.do?
+2013-12-20 17:57:30,901 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showRoleAdd.do?
+2013-12-20 17:57:38,858 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showRoleManage.do?
+2013-12-20 17:58:42,521 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?
+2013-12-20 17:58:53,169 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/getPlayerPurchaseDetail.do?playerName=polaris13&search=Submit&endDate=2013-12-20&beginDate=2013-11-05&
+2013-12-20 17:58:53,206 INFO  [STDOUT] select  c.purchase_id,       c.role_id,       c.role_name,            c.product_code,       d.product_name,        c.product_num,       c.purchase_time,       c.subject_id,       c.cost_amount from(select a.product_id ,a.purchase_id,       a.role_id,       b.role_name,       a.purchase_ip,       a.product_code,       a.product_num,       a.purchase_time,       a.subject_id,       a.cost_amount from UMS_USER_PURCHASE_DETAIL a,     UMS_ROLE b where a.game_id = b.game_id and   a.role_id = b.role_id and   a.user_id =1500000020 and   a.game_id =1204 and a.purchase_time >= DATE_FORMAT('2013-11-05', '%Y-%m-%d') and a.purchase_time < DATE_FORMAT('2013-12-20', '%Y-%m-%d') order by a.purchase_time desc ) c left join(select product_name, product_code,product_id from   SYS_PRODUCT) d on c.product_code = d.product_code
+2013-12-20 17:58:58,773 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?
+2013-12-20 17:59:06,531 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/login.do?method=login&
+2013-12-20 17:59:06,532 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:59:06,532 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-12-20 17:59:06,723 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/generateRandomCode.do?

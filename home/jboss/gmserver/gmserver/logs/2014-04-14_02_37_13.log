@@ -1,0 +1,38 @@
+2014-04-14_02:37:13.447|U|6081|06D0EB90|[NORMAL][Process] Recv from GMWeb: UpdateGS?game_id=1204
+2014-04-14_02:37:13.466|U|6081|06D0EB90|[NORMAL][Process] Go to update gs info.
+2014-04-14_02:37:13.467|U|6081|06D0EB90|[NORMAL][CmdProcessor.UpdateGS] Load gs info done.
+2014-04-14_02:37:13.469|U|6081|06D0EB90|[NORMAL][Process] Update GS finish, response to GMWeb:
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Send to GMWeb-->
+<Response>
+    <result>1</result>
+</Response>
+
+2014-04-14_02:37:13.469|U|6081|06D0EB90|[NORMAL][CmdProcessor.UpdateGS] UpdateGS finish.
+2014-04-14_02:37:33.275|U|6081|06D0EB90|[NORMAL][Process] Recv from GMWeb: UpdateGS?game_id=1204
+2014-04-14_02:37:33.286|U|6081|06D0EB90|[NORMAL][Process] Go to update gs info.
+2014-04-14_02:37:33.287|U|6081|06D0EB90|[NORMAL][CmdProcessor.UpdateGS] Load gs info done.
+2014-04-14_02:37:33.289|U|6081|06D0EB90|[NORMAL][Process] Update GS finish, response to GMWeb:
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Send to GMWeb-->
+<Response>
+    <result>1</result>
+</Response>
+
+2014-04-14_02:37:33.289|U|6081|06D0EB90|[NORMAL][CmdProcessor.UpdateGS] UpdateGS finish.
+2014-04-14_02:38:35.612|U|6081|06D0EB90|[NORMAL][Process] Recv from GMWeb: PostBulletin?record_id=3&content=test&gateway_id=104001&server_id=0&start_time=0&total_num=6&interval=21600&sync=0&game_id=1204
+2014-04-14_02:38:35.620|U|6081|06D0EB90|[NORMAL][Process] Send to GS: keyword: PostBulletin | gs_url: 177.47.22.92:18008 | content: times=1&interval=21600&game_id=1204&gateway_id=104001&content=test
+2014-04-14_02:38:45.628|U|6081|06D0EB90|[GAMEERROR2][Process] Error code:-302. Error msg:Recv from GS time out, game_id=1204, gateway_id=104001, Uri=177.47.22.92:18008,exception msg:No message received
+2014-04-14_02:38:45.630|U|6081|06D0EB90|[ERROR][Process] Cmd finish, game_id=1204, gateway_id=104001, cmd key=PostBulletin, cmd_id=3, record_id=3, result=-302, response to GMWeb:
+HTTP/1.1 200 OK
+User-Agent: eGMServer1.1
+Content-Type: text/xml
+Content-Length: 110
+
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Send to GMWeb-->
+<Response>
+    <result>-302</result>
+</Response>
+
+

@@ -1,0 +1,2337 @@
+#!/bin/bash
+
+#
+# @Author:  Joiky.G
+# @Date:    2010-08-11
+#
+    # 版本号
+VERSION=1.9
+    # 作者
+AUTHOR=Joiky.G
+    # 反馈
+FEEDBACK=gaoguodong@linekong.com
+    # 修订历史
+# v1.9 2013-02-27
+#	加入addapp delapp 命令添加或者删除当前端口下某game_id下某服务，加入克隆命令下的子命令app 克隆当前端口下某game_id或者全部game_id下某服务
+# v1.8 2012-08-30
+#   多svr合1版本
+# v1.7 2011-10-21
+#   修改game.conf中可以增加多game_id.
+# v1.6 2011-03-04
+#   加入force-kill-all子命令，强制杀掉当前目录下所有pid文件所对应的进程，并删除pid文件。
+# v1.5 2011-02-25
+#   加入top子命令，可以在top中查看属于个进程信息。
+# v1.4 2010-12-17
+#   加入对 智冠手机锁认证 需要的配置文件 gameflier.xml 的部署支持。
+# v1.3 2010-11-16
+#   加入对 pay_svr 和 vtc.xml 的部署操作。
+
+#
+# 使用时酌情设置
+#
+    # 掩码
+#UMASK=022
+    # 可执行文件权限
+#CHMOD_PERM="u+x"
+    # 一级子命令
+    # 生成新环境（仅用于所有文件在同一目录时）（1）
+MAKE_NEW=(-m mk make -gen generate)
+    # 克隆(2)
+CLONE_NEW=(-c cl clone)
+    # 启动(3)
+START_NEW=(-s start)
+    # 停止(4)
+STOP_NEW=(stop)
+    # 状态(5)
+STATUS_NEW=(-st st status check)
+    # 帮助(6)
+HELP_NEW=(-h help)
+    # 详细信息
+VERBOSE_NEW=(-v verbose)
+    # 重启
+RESTART_NEW=(-r restart)
+    # UOS环境下获取所有文件
+GET_ALL_NEW=(tar get)
+    # 运行环境下用top查看进程信息
+UOS_TOP=(top)
+    # 根据存在的PID文件强制kill掉相应的进程，然后删除PID文件
+UOS_FORCE_KILL_ALL=(force-kill-all)
+
+  # 显示服务
+LIST_SERVICES=(-l list)
+    # 启动指定game_id下的一个APP
+APP_START=(astart)
+    # 停止指定game_id下的一个APP
+APP_STOP=(astop)
+    #向game.conf中加入新的app服务程序
+APP_NODE=(addapp)
+	#把game.conf中对应的app服务程序删除掉
+DEL_APP_NODE=(delapp)
+    # 硬拷贝至根目录下的文件列表
+FILE_GLOBAL_CN=
+    # 符号链接至根目录下的文件列表
+FILE_GLOBAL_CL="set_env.sh $(basename $0)"
+    # 硬拷贝至子目录下的文件列表
+FILE_SUB_CN=
+    # 符号链接至子目录下的文件列表
+FILE_SUB_CL=
+
+    # 新环境监听端口最小值（默认1000）
+#MIN_PORT=1000
+
+    # 打包目标文件
+readonly TAR_FILE="eRating_Mysql.$VERSION.tgz"
+readonly TAR_OPTION="zcf"
+    # 可执行文件
+readonly GATE="gate"
+readonly ROUTER="router_logic"
+readonly UN_SVR="un_svr"
+readonly ALL_SVR="all_svr_mysql"
+readonly AGIP_KEY="AGIP.key"
+readonly SET_ENV="set_env.sh"
+
+    # 配置文件名
+readonly ERATING_CONF="eRating.conf"
+readonly ERATING_3C_CONF="eRating3C.conf"
+readonly GAME_CONF="game.conf"
+readonly VTC_CONF="vtc.xml"
+readonly INGAMBA_CONF="ingamba.xml"
+readonly GF_CONF="gameflier.xml"
+readonly TNSNAMES_ORA="tnsnames.ora"
+
+    # Absolute path of setting-files
+readonly PATH_ERATING_CONF="router_logic/$ERATING_CONF"
+readonly PATH_ERATING_3C_CONF="config_loader/$ERATING_3C_CONF"
+readonly PATH_GAME_CONF="gate_base_logic/$GAME_CONF"
+readonly PATH_TNSNAME_FILE="gate_base_logic/$TNSNAMES_ORA"
+readonly PATH_VTC_CONF="vtc/$VTC_CONF"
+readonly PATH_INGAMBA_CONF="ingamba/$INGAMBA_CONF"
+readonly PATH_GF_CONF="gameflier/$GF_CONF"
+
+    # 用于打包
+PKG_BIN=($GATE $ROUTER $UN_SVR $ALL_SVR)
+PKG_CONF=($PATH_ERATING_CONF $PATH_ERATING_3C_CONF $PATH_GAME_CONF $PATH_TNSNAME_FILE $PATH_VTC_CONF $PATH_INGAMBA_CONF $PATH_GF_CONF)
+PKG_OTHER=($AGIP_KEY $SET_ENV)
+
+    # 颜色设置
+SUCCESS_COLOR="\033[01;32m"
+WARNING_COLOR="\033[01;31m"
+FAILED_COLOR="\033[01;31m"
+ERROR_COLOR="\033[41;37m"
+TIPS_COLOR="\033[01;36m"
+OPTION_COLOR="\033[01;33m"
+EXCLAMATION_COLOR="\033[01;31;5m"
+EXIST_COLOR="\033[01;32m"
+AC_3S_COLOR="\033[1m"
+MAKE_COLOR="\033[1m"
+CLONE_COLOR="\033[1m"
+
+COLOR_YELLOW="\033[01;33;46m"
+COLOR_RED="\033[01;31m"
+COLOR_GREEN="\033[01;32m"
+COLOR_END="\033[0m"
+
+    #
+REPORT_SUCCESS="${SUCCESS_COLOR}SUCCESS:$COLOR_END"
+REPORT_WARNING="${WARNING_COLOR}WARNING:$COLOR_END"
+REPORT_FAILED="${FAILED_COLOR}FAILED:$COLOR_END"
+REPORT_ERROR="${ERROR_COLOR}ERROR:$COLOR_END"
+REPORT_EXIST="${EXIST_COLOR}^$COLOR_END"
+REPORT_EXCLAMATION="${EXCLAMATION_COLOR}!$COLOR_END"
+REPORT_START="${AC_3S_COLOR}start$COLOR_END"
+REPORT_STOP="${AC_3S_COLOR}stop$COLOR_END"
+REPORT_MAKE="${MAKE_COLOR}generate$COLOR_END"
+REPORT_CLONE="${CLONE_COLOR}clone$COLOR_END"
+REPORT_CLONE_SUB="${CLONE_COLOR}clone sub$COLOR_END"
+
+    # Game ID
+readonly GAME_ID_THIRD_PURCHASE="746 753 760 761 762 763 764 911"
+readonly GAME_ID_GF="752"
+
+    # 错误码
+readonly E_SUCESS=0
+readonly E_MISSED_ARGA=1
+readonly E_UNKNOWN_OPTION=10
+readonly E_VALUE_ARGS=11
+readonly E_COMMAND_DOUBLE=12
+readonly E_MUTEX=13
+readonly E_POSITION=14
+readonly E_MISSED_FILE=15
+readonly E_TYPE_FILE=16
+readonly E_NONE_GAME_ID=17
+readonly E_MKDIR_FAILED=18
+readonly E_NO_EXIST_DIR=19
+readonly E_START_FAILED=20
+readonly E_PORT_ERROR=21
+
+readonly E_UNKNOWN_ERROR=126
+### --------------------------------------------------
+
+
+#
+# 以下设置请勿修改
+#
+    # 所有可执行文件
+BIN_ALL=($GATE $ROUTER $UN_SVR $ALL_SVR)
+    # 根目录链接文件（可执行文件）
+BIN_GLOBAL_L=($GATE $ROUTER $UN_SVR)
+    # 根目录下链接文件（非可执行文件）
+FILE_GLOBAL_L=(AGIP.key)
+    # 根目录下普通文件
+FILE_GLOBAL_N=($ERATING_CONF $TNSNAMES_ORA $ERATING_3C_CONF)
+    # 子目录下链接文件（可执行文件，根据$GAME_CONF产生）
+BIN_SUB_L=()
+    # BIN_SUB_L 对应的app的 app_id
+ID_SUB_L=()
+	#$GAME_CONF下所有的协议标示即tag
+TAG_SUB_L=()	
+# 子目录下链接文件（非可执行文件）
+FILE_SUB_L=($AGIP_KEY)
+    # 子目录下普通文件
+FILE_SUB_N=($GAME_CONF $INGAMBA_CONF $VTC_CONF $GF_CONF)
+
+    # 执行动作
+readonly ACTION_MAKE=1
+readonly ACTION_CLONE=$(( $ACTION_MAKE + 1 ))
+readonly ACTION_START=$(( $ACTION_MAKE + 2 ))
+readonly ACTION_STOP=$(( $ACTION_MAKE + 3 ))
+readonly ACTION_STATUS=$(( $ACTION_MAKE + 4 ))
+readonly ACTION_HELP=$(( $ACTION_MAKE + 5 ))
+readonly ACTION_VERBOSE=$(( $ACTION_MAKE + 6 ))
+readonly ACTION_RESTART=$(( $ACTION_MAKE + 7 ))
+readonly ACTION_GET_ALL=$(( $ACTION_MAKE + 8 ))
+readonly ACTION_UOS_TOP=$(( $ACTION_MAKE + 9 ))
+readonly ACTION_LIST=$(( $ACTION_MAKE + 10 ))
+readonly ACTION_APP_START=$(( $ACTION_MAKE + 11 ))
+readonly ACTION_APP_STOP=$(( $ACTION_MAKE + 12 ))
+readonly ACTION_UOS_FORCE_KILL_ALL=$(( $ACTION_MAKE + 13 ))
+readonly ACTION_APP_NODE=$(( $ACTION_MAKE + 14 ))
+readonly ACTION_DEL_APP_NODE=$(( $ACTION_MAKE + 15 ))
+
+ARG_ARR[${#ARG_ARR[@]}]=${MAKE_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${CLONE_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${START_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${STOP_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${STATUS_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${HELP_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${VERBOSE_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${RESTART_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${GET_ALL_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${UOS_TOP[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${LIST_SERVICES[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${APP_START[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${APP_STOP[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${UOS_FORCE_KILL_ALL[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${APP_NODE[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${DEL_APP_NODE[@]}
+
+## --------------------------------------------------
+#
+# 初始化
+#
+	#用于app del 命令执行过程日志,用于调试
+CMD_LOG=command.log
+rm -f $CMD_LOG
+    # 端口号
+MAX_PORT=9999
+MIN_PORT=${MIN_PORT:=1000}
+    # 游戏ID
+MAX_GAME_ID=9999
+
+readonly CLONE_INIT="init"
+readonly CLONE_PORT="port"
+readonly CLONE_GAME="gameid"
+readonly CLONE_APP="appnode"
+
+exec_script=
+exec_script_action=
+
+exec_dest_port=()
+exec_dest_game_id=()
+exec_dest_dir=()
+exec_src=
+exec_index=0
+exec_src_app_name=
+exec_dest_app_name=
+exec_dest_app_id=
+exec_dest_app_tag=()
+    # global下的可执行文件启动
+exec_global_new=
+
+flag_verbose=false
+flag_3s_all=true
+flag_clone_sub=$CLONE_INIT
+flag_app=false
+
+readonly ARG_INIT="\b"
+
+PROGRAM=$(basename $0)
+
+export LANG=zh_CN.gbk
+
+[ -z "$1" ] && {
+    set "help"
+}
+
+function checkNumber()
+{
+    echo "$1" | grep -v "[^[:digit:]]" >/dev/null && return 0
+    return 1
+}
+
+function sysExit()
+{
+    [ -n "$2" ] && {
+        echo    "------------------------------------"
+        echo -e $2
+        echo    "------------------------------------"
+    }
+    [ -n "$1" ] && exit $1
+    exit $E_UNKNOWN_ERROR
+}
+
+function errExit()
+{
+    sysExit $1 "$REPORT_ERROR $2"
+}
+
+# 根据 GAME_CONF 更新 BIN_SUB_L
+function refresh_bin_sub_l()
+{
+    file=${1-.}/$GAME_CONF
+    if [ -f $file ]; then
+        BIN_SUB_L=(`cat $file | grep "app_name" | sed -e "s:<.*>\(.*\)<.*>:\1:g" -e "s:\s\+::g" `)
+    fi
+}
+
+# 根据 pid 文件更新 BIN_SUB_L
+function refresh_bin_sub_l_by_pid()
+{
+    BIN_SUB_L=(`ls *.pid|sed -e "s:\.pid::g"`)
+}
+
+# 获取 BIN_SUB_L 中 app 对应的app_id
+function refresh_id_sub_l()
+{
+    if [ -z $1 ]; then
+        file=$(pwd)/$GAME_CONF
+    else
+        file=$(pwd)/$1/$GAME_CONF
+    fi
+
+    if ! [ -f $file ]; then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} 未找到配置文件: ${OPTION_COLOR}$file$COLOR_END"
+        exit $E_VALUE_ARGS
+    fi
+
+    for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+    do
+        app_svr=(`cat $file | grep "\<${BIN_SUB_L[i]}\>" -1 | grep "app_name\|app_id" | sed -e "s:<.*>\(.*\)<.*>:\1:g" -e "s:\s\+::g" `)
+        if [ -z $app_svr ]; then
+            echo -e "${ERROR_COLOR}Error:${COLOR_END} $file 中未找到 ${OPTION_COLOR}${BIN_SUB_L[i]}$COLOR_END"
+            exit $E_VALUE_ARGS
+        fi
+        ID_SUB_L[${#ID_SUB_L[@]}]=${app_svr[1]}
+    done
+}
+
+# 打印 BIN_SUB_L
+function display_bin_sub_l()
+{
+    for ((i=0; i<${#BIN_SUB_L[@]};))
+    do
+        echo ${BIN_SUB_L[i]} ${BIN_SUB_L[i+1]}
+        ((i+=2))
+    done
+}
+
+function exec_result_report()
+{
+    TMP=${1:?"未知参数引入"}
+    echo    "------------------------------------"
+    echo -e "$@"
+    echo    "------------------------------------"
+}
+
+    # 参数较验
+function exec_arg_make_check()
+{
+    exec_dest_dir=${exec_dest_dir:=.}
+    if $flag_verbose; then
+        exec_result_report "$COLOR_GREEN$PROGRAM ${MAKE_NEW[0]} port: ${exec_dest_port[@]} game_id: ${exec_dest_game_id[@]} directory: ${exec_dest_dir[@]}$COLOR_END"
+    fi
+
+    [ -z "$exec_dest_port" ] && errExit $E_MISSED_ARGA "缺少目标端口"
+    [ -z "$exec_dest_game_id" ] && errExit $E_MISSED_ARGA "缺少目标游戏ID"
+}
+
+function exec_arg_clone_check()
+{
+    if [ $flag_clone_sub = $CLONE_GAME ]; then
+        exec_dest_dir=${exec_dest_dir:=.}
+
+        exec_src=${exec_dest_game_id[0]};
+        [ -z $exec_src ] && errExit $E_MISSED_ARGA "缺少源游戏ID"
+        exec_dest_game_id[0]=
+        if $flag_verbose; then
+            exec_result_report "$COLOR_GREEN$PROGRAM ${CLONE_NEW[0]} sub src_game_id: $exec_src dest_game_id:${exec_dest_game_id[@]} directory: ${exec_dest_dir[@]}$COLOR_END"
+        fi
+
+        [ ! -d $exec_src ] && errExit $E_VALUE_ARGS "错误的源game_id，当前环境未处理该游戏 - '$exec_src'"
+
+        [ -z "${exec_dest_game_id[*]}" ] && errExit $E_MISSED_ARGA "缺少目标游戏ID"
+
+    else
+        exec_dest_dir=${exec_dest_dir:=..}
+        if $flag_verbose; then
+            exec_result_report "$COLOR_GREEN$PROGRAM ${CLONE_NEW[0]} port: ${exec_dest_port[@]} directory: ${exec_dest_dir[@]}$COLOR_END"
+        fi
+
+        [ -z "$exec_dest_port" ] && errExit $E_MISSED_ARGA "缺少目标端口"
+
+    fi
+}
+
+    # 获取当前环境game_id
+function exec_game_id_dir_get()
+{
+#exec_sub_game_id=($(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v [^[:digit:]]))
+    exec_sub_game_id=()
+    for id in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v [^[:digit:]])
+    do
+        exec_sub_game_id[${#exec_sub_game_id[@]}]=$id
+    done
+
+    [ -z "${exec_sub_game_id[*]}" ] && errExit $E_NONE_GAME_ID "当前环境未处理任何游戏"
+}
+
+# 判断是否为同VTC合作的游戏
+function is_third_purchase_game()
+{
+    echo $GAME_ID_THIRD_PURCHASE | grep -q "\b$1\b"
+    return $?
+}
+
+# 判断是否为同智冠合作的游戏
+function is_gf_game()
+{
+    echo $GAME_ID_GF | grep -q "\b$1\b"
+    return $?
+}
+
+    # 文件检测
+function exec_exist_file_check()
+{
+    [ ! -f $1 ] && errExit $E_MISSED_FILE "缺少必要文件 - '$1'"
+}
+
+function exec_exist_sub_check()
+{
+    TMP=${1:?"未知参数引入"}
+    for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+    do
+        if [ "x$VTC_CONF" = "x$_file" ] ; then
+            if is_third_purchase_game $1 ; then
+                exec_exist_file_check $1/$_file
+            fi
+        elif [ "x$GF_CONF" = "x$_file" ] ; then
+            if is_gf_game $1 ; then
+                exec_exist_file_check $1/$_file
+            fi
+        elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+            if is_third_purchase_game $1 ; then
+                exec_exist_file_check $1/$_file
+            fi
+        else
+            exec_exist_file_check $1/$_file
+        fi
+    done
+
+    refresh_bin_sub_l $1
+    for _file in $FILE_SUB_CL ${FILE_SUB_L[@]} ${BIN_SUB_L[@]}
+    do
+        exec_exist_file_check $1/$_file
+        [ ! -h $1/$_file ] && errExit $E_TYPE_FILE "文件类型错误，该文件必须为链接 - '$_file'"
+    done
+}
+
+function exec_exist_global_check()
+{
+    for _file in $FILE_GLOBAL_CN ${FILE_GLOBAL_N[@]}
+    do
+        exec_exist_file_check $_file
+    done
+
+    for _file in $FILE_GLOBAL_CL ${BIN_GLOBAL_L[@]} ${FILE_GLOBAL_L[@]}
+    do
+        exec_exist_file_check $_file
+        [ ! -h $_file ] && {
+            [ -n "$1" ] && { echo "$_file"; return ; }
+            errExit $E_TYPE_FILE "文件类型错误，该文件必须为链接 - '$_file'"
+        }
+    done
+}
+
+function exec_exist_make_check()
+{
+    for _file in $FILE_GLOBAL_CN $FILE_SUB_CN ${FILE_GLOBAL_N[@]} ${FILE_SUB_N[@]}
+    do
+        exec_exist_file_check $_file
+    done
+
+    for _file in $FILE_GLOBAL_CL $FILE_SUB_CL \
+        ${BIN_ALL[@]} ${FILE_GLOBAL_L[@]} ${FILE_SUB_L[@]} ${FILE_SUB_N[@]}
+    do
+        exec_exist_file_check $_file
+        [ -h $_file ] && errExit $E_TYPE_FILE "文件类型错误，该文件不能为链接 - '$_file'"
+    done
+
+    for _file in ${BIN_ALL[@]}
+    do
+        [ ! -x $_file ] && chmod ${CHMOD_PERM:=u+x} $_file
+    done
+}
+
+function exec_exist_clone_check()
+{
+    if [ $flag_clone_sub = $CLONE_GAME ]; then
+        exec_exist_sub_check $exec_src
+    else
+        exec_game_id_dir_get
+        exec_exist_global_check
+        for game_dir in ${exec_sub_game_id[@]}
+        do
+            exec_exist_sub_check $game_dir
+        done
+    fi
+}
+
+function showHelpAndExit()
+{
+    printf "$COLOR_RED$PROGRAM$COLOR_END - 配置化改进的eRatingServer环境控制工具
+  @author : $AUTHOR
+  @version: $VERSION
+  @contact: $FEEDBACK
+${COLOR_RED}Format$COLOR_END:
+  ./$PROGRAM $(echo ${MAKE_NEW[@]} | sed 's/ /|/g') -p port1 [-p port2 ...] -g game_id1 [-g game_id2 ...] -d directory1 [-d directory2 ...]
+  ./$PROGRAM $(echo ${CLONE_NEW[@]} | sed 's/ /|/g') src-port dest-port1 [dest-port2 ...]
+  ./$PROGRAM $(echo ${CLONE_NEW[@]} | sed 's/ /|/g') sub src-game_id dest-game_id1 [dest-game_id2 ...]
+  ./$PROGRAM $(echo ${CLONE_NEW[@]} | sed 's/ /|/g') app [-g game_id1 -g game_id2 ...] src-app_name dest-app_name dest-app_id
+  ./$PROGRAM $(echo ${START_NEW[@]} | sed 's/ /|/g') [all] | game_id1 [game_id2 ...]
+  ./$PROGRAM $(echo ${STOP_NEW[@]} | sed 's/ /|/g') [all]|game_id1 [game_id2 ...]
+  ./$PROGRAM $(echo ${RESTART_NEW[@]} | sed 's/ /|/g') [all]|game_id1 [game_id2 ...][-a|--app app_svr1 [app_svr2 ...]]
+  ./$PROGRAM $(echo ${STATUS_NEW[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${GET_ALL_NEW[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${UOS_TOP[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${LIST_SERVICES[@]} | sed 's/ /|/g') [all] | game_id1 [game_id2 ...]
+  ./$PROGRAM $(echo ${APP_START[@]} | sed 's/ /|/g') game_id app_name1 [app_name2 ...]
+  ./$PROGRAM $(echo ${APP_STOP[@]} | sed 's/ /|/g') game_id app_name1 [app_name2 ...]
+  ./$PROGRAM $(echo ${HELP_NEW[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${UOS_FORCE_KILL_ALL[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${APP_NODE[@]} | sed 's/ /|/g') [-g game_id1 -g game_id2 ...] app_name app_id [cmd1 cmd2 ...]
+  ./$PROGRAM $(echo ${DEL_APP_NODE[@]} | sed 's/ /|/g') [-g game_id1 -g game_id2 ...] app_name
+${COLOR_RED}Option$COLOR_END:
+  $OPTION_COLOR$(echo ${MAKE_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            从全局目录中新建一套eRatingServer环境
+  $OPTION_COLOR$(echo ${CLONE_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            从当前环境克隆一套完全一样的eRatingServer环境
+            sub，在当前环境中克隆game_id
+  $OPTION_COLOR$(echo ${START_NEW[@]} | sed 's/ /|/g'),$(echo ${STOP_NEW[@]} | sed 's/ /|/g'),$(echo ${RESTART_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            启动、停止、重启当前环境
+            all，当前环境；game_id[s]，针对指定的game_id
+  $OPTION_COLOR$(echo ${STATUS_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            查看当前环境运行状态
+  $OPTION_COLOR$(echo ${GET_ALL_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            UOS环境下打包所有相关文件
+  $OPTION_COLOR$(echo ${UOS_TOP[@]} | sed 's/ /|/g')$COLOR_END
+            查看当前进程信息
+  $OPTION_COLOR$(echo ${LIST_SERVICES[@]} | sed 's/ /|/g')$COLOR_END
+            显示当前环境的服务
+            all，当前环境；game_id[s]，针对指定的game_id
+  $OPTION_COLOR$(echo ${APP_START[@]} | sed 's/ /|/g')$COLOR_END
+            启动指定game_id 的指定app
+  $OPTION_COLOR$(echo ${APP_STOP[@]} | sed 's/ /|/g')$COLOR_END
+            停止指定game_id 的指定app
+  $OPTION_COLOR$(echo ${HELP_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            显示当前帮助信息
+  $OPTION_COLOR$(echo ${VERBOSE_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            显示详细的执行过程
+  $OPTION_COLOR$(echo ${UOS_FORCE_KILL_ALL[@]} | sed 's/ /|/g')$COLOR_END
+            杀掉pid文件对应的进程并删除pid文件
+  $OPTION_COLOR$(echo ${APP_NODE[@]} | sed 's/ /|/g')$COLOR_END
+            向某个game_id下添加处理指定协议的服务
+  $OPTION_COLOR$(echo ${DEL_APP_NODE[@]} | sed 's/ /|/g')$COLOR_END
+            删除某个game_id下指定程序名的服务
+"
+
+    sysExit 0
+}
+
+function checkUOSEnvAndCopy()
+{
+    if [ -z $UOS_BASE ]; then
+        if [ ! -f ../export.sh ]; then
+            exec_result_report $REPORT_ERROR "必须在uos环境中才可以执行打包任务（尝试先：export UOS_BASE='/path/to/uos'）"
+            sysExit $E_MISS_FILE
+        else
+            export UOS_BASE=$(dirname $(pwd))
+        fi
+    fi
+
+    for file_bin in ${PKG_BIN[@]}
+    do
+        _file=$UOS_BASE/$file_bin/$file_bin
+        if ! [ -f "$_file" -a -h "$_file" ]; then
+            make -C $(dirname $_file)
+        fi
+
+        if [ -f "$_file" -a -h "$_file" ]; then
+            cp -L -v $_file .
+            if $flag_verbose; then
+                exec_result_report $REPORT_SUCCESS "正打检测并复制文件 - '$file_bin'"
+            fi
+        else
+            errExit $E_MISS_FILE "不存在文件 - '$_file'"
+        fi
+    done
+
+    for file_other in ${PKG_CONF[@]} ${PKG_OTHER[@]}
+    do
+        _file=$UOS_BASE/$file_other
+        if [ -f $_file ]; then
+            cp -L -v $_file .
+        else
+            errExit $E_MISSED_FILE "no such file '$(basename $_file)' in $(dirname $_file)"
+        fi
+    done
+
+    [ -f $UOS_BASE/set_env.sh ] && cp -L $UOS_BASE/set_env.sh .
+
+    cp -L $UOS_BASE/AGIP.key .
+}
+
+function getAllFileAndExit()
+{
+    checkUOSEnvAndCopy
+
+    if [ -f $TAR_FILE ]; then
+        rm $TAR_FILE
+    fi
+
+    tar $TAR_OPTION $TAR_FILE * --exclude="*.tgz" --exclude="erating"
+
+    exec_result_report $REPORT_SUCCESS "eRatingServer系统文件打包成功 - '$COLOR_GREEN$TAR_FILE$COLOR_END'"
+
+    rm -rf `ls | grep -E -v "erating|$TAR_FILE"`
+
+    sysExit 0
+}
+
+function exec_is_start()
+{
+    TMP=${1:?"未知参数引入"}
+    #[ -f $1.pid ] && ps x | grep -P "$(cat $1.pid)(?= )" >/dev/null && return 0
+    [ -f $1.pid ] && ps x | grep "$(cat $1.pid)" | grep -v grep >/dev/null && return 0
+    return 1
+}
+
+function exec_port_get()
+{
+    port=$(sed -n "s:.*<port>\(.*\)</.*:\1:p" $1/$ERATING_CONF)
+}
+
+function exec_game_id_get()
+{
+
+    exec_game_id=()
+    for id in $(sed -n "/<game_id/s/.*>\(.*\)<.*/\1/p" $1/$GAME_CONF)
+    do
+        exec_game_id[${#exec_game_id[@]}]=$id
+    done
+
+}
+
+function showTopAndExit()
+{
+    pids=`pgrep -d, "_svr|gate|router"`
+    top -c -d 10 -p $pids
+    sysExit 0
+}
+
+function forceKillAndRemovePIDFile()
+{
+    for pid_file in `find . -name "*.pid" `; do
+        pid=`cat $pid_file`;
+        echo "Killing $pid_file : $pid";
+        kill -9 $pid;
+        echo "Removed file \'$pid_file\'";
+        rm -f $pid_file;
+    done
+    echo "Done.";
+    sysExit 0
+}
+
+function showStatus()
+{
+    exec_result_report " ||| $COLOR_YELLOW${STATUS_NEW[0]}只能在eRatingServer环境目录下使用才有效$COLOR_END ||| "
+
+    if $flag_verbose; then
+        result="登录用户名：$(whoami)"
+        result="$result\n绝对路径：$(pwd)"
+
+        echo    "------------------------------------"
+        printf "$result\n"
+        echo    "------------------------------------"
+    fi
+
+    # 相关信息
+    exec_port_get .
+    port_path=$(basename $(pwd))
+    if checkNumber $port_path; then
+        if [ "$port" -eq "$port_path" ]; then
+            exec_result_report $REPORT_SUCCESS "目录名：$port_path 端口号：$port"
+        else
+            exec_result_report $REPORT_FAILED "目录名：$port_path 端口号：$port"
+        fi
+    else
+         exec_result_report $REPORT_FAILED "eRatingServer部署环境目录名推荐使用端口号 - '$port'"
+    fi
+
+    # 文件检测
+    exec_exist_clone_check
+    exec_result_report $REPORT_SUCCESS "所有文件类型正常"
+
+    # 当前环境的game_id
+    exec_game_id_dir_get
+
+    # 执行检测
+    # 根目录文件
+    arga=$ARG_INIT
+    bool_start=true
+    bool_start_2=false
+    for bin_global in ${BIN_GLOBAL_L[@]}
+    do
+        if exec_is_start $bin_global; then
+            bool_start_2=true
+            arga="$arga $bin_global[$REPORT_EXIST$(cat $bin_global.pid)]"
+        else
+            bool_start=false
+            arga="$arga $bin_global$REPORT_EXCLAMATION"
+        fi
+    done
+
+    if $bool_start; then
+        exec_result_report "$REPORT_SUCCESS" "主文件状态正常 $arga"
+    else
+        if $bool_start_2; then
+            exec_result_report "$REPORT_FAILED" "主文件状态异常 $arga"
+        else
+            exec_result_report "$REPORT_SUCCESS" "主文件未启动$REPORT_EXCLAMATION"
+        fi
+    fi
+
+    # 子目录文件
+    arga=$ARG_INIT
+    bool_start_sub=true
+    bool_start_sub_2=false
+#exec_game_id_dir_get
+    for game_id_dir in ${exec_sub_game_id[@]}
+    do
+        (
+            cd $game_id_dir
+            exec_game_id_get .
+            exec_result_report $REPORT_SUCCESS "处理游戏列表：${game_id_dir} [$COLOR_GREEN${exec_game_id[@]}$COLOR_END] "
+            result="游戏服务 [ $COLOR_GREEN${exec_game_id[@]}$COLOR_END ]"
+
+            flag=false;
+            for game_id in ${exec_game_id[@]}
+            do
+                if [ $game_id_dir = $game_id ];then
+                flag=true;
+                fi
+            done
+
+            if $flag ;then
+                result="$result\n$REPORT_SUCCESS '$GAME_CONF'中'game_id'配置正常"
+            else
+                 result="$result\n$REPORT_FAILED '$GAME_CONF'中'game_id[$COLOR_RED$game_id_dir$COLOR_END]'配置异常"
+            fi
+
+            refresh_bin_sub_l
+            for _file in ${BIN_SUB_L[@]}
+            do
+                if exec_is_start $_file; then
+                    bool_start_sub_2=true
+                    arga="$arga $_file[$REPORT_EXIST$(cat $_file.pid)]"
+                else
+                    bool_start_sub=false
+                    arga="$arga $_file[$REPORT_EXCLAMATION]"
+                fi
+            done
+
+            if $bool_start; then
+                if $bool_start_sub; then
+                    result="$result\n$REPORT_SUCCESS 服务状态正常\n\t$arga"
+                else
+                    result="$result\n$REPORT_FAILED 服务状态异常\n\t$arga"
+                fi
+            else
+                if $bool_start_sub_2; then
+                    result="$result\n$REPORT_FAILED 主服务已完全停止，游戏服务进程僵死\n\r$arga"
+                else
+                    result="$result\n$REPORT_SUCCESS 服务已完全停止"
+                fi
+            fi
+
+            echo    "------------------------------------"
+            printf "$result\n"
+            echo    "------------------------------------"
+        )
+    done
+
+    sysExit 0
+}
+
+    # 读取命令行参数
+while [ -n "$1" ]
+do
+    exec_arg_check=false
+    for (( i=0; i<${#ARG_ARR[@]}; ++i ))
+    do
+        for arg1 in ${ARG_ARR[$i][@]}
+        do
+            if [ "$1" = "$arg1" ]; then
+                exec_script=$(( $ACTION_MAKE + $i ))
+                [ -n "$exec_script_action" -a \
+                    ! \( $exec_script -eq $ACTION_VERBOSE -o $exec_script -eq $ACTION_HELP \) ] && {
+                    errExit $E_COMMAND_DOUBLE "无法执行多重命令 - '$1'"
+                }
+
+                exec_arg_check=true
+                break 2
+            fi
+        done
+    done
+
+    ! $exec_arg_check && errExit $E_UNKNOWN_OPTION "未知选项 - '$1'"
+
+    shift
+
+    case $exec_script in
+    $ACTION_GET_ALL)
+        getAllFileAndExit
+        ;;
+    $ACTION_HELP)
+        showHelpAndExit
+        ;;
+    $ACTION_STATUS)
+        showStatus
+        continue
+        ;;
+    $ACTION_UOS_TOP)
+        showTopAndExit
+        ;;
+    $ACTION_UOS_FORCE_KILL_ALL)
+        forceKillAndRemovePIDFile
+        ;;
+    $ACTION_VERBOSE)
+        flag_verbose=true
+        continue
+        ;;
+    $ACTION_CLONE)
+        exec_script_action=$exec_script
+        flag_clone_sub=$CLONE_INIT
+        while [ -n "$1" ]
+        do
+            case $1 in
+            sub)
+                ! [ $flag_clone_sub = "$CLONE_INIT" ] && errExit $E_POSITION "错误的子命令格式 - 'sub'"
+                flag_clone_sub=$CLONE_GAME
+                ;;
+            -d|--directory)
+                [ -z "$2" ] && {
+                    echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供目标目录"
+                    exit $E_MISSED_ARGA
+                }
+
+                shift
+                exec_dest_dir[${#exec_dest_dir[@]}]=$1
+                ;;
+			app)
+				echo "exec_script_action=$exec_script">>$CMD_LOG
+				
+				echo "flag_clone_sub=$CLONE_APP">>$CMD_LOG
+				flag_clone_sub=$CLONE_APP
+				
+				echo "shift">>$CMD_LOG
+				shift
+				
+				echo "break 2">>$CMD_LOG
+				break 2
+				;;
+            *)
+                # 克隆game_id
+                if [ $flag_clone_sub = $CLONE_GAME ]; then
+                    if checkNumber $1; then
+                        if [ $1 -ge 1 -a $1 -lt $MAX_GAME_ID ]; then
+                            exec_dest_game_id[${#exec_dest_game_id[@]}]=$1
+                        else
+                            echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+                            exit $E_VALUE_ARGS
+                        fi
+                    else
+                        break
+                    fi
+                else
+                    flag_clone_sub=$CLONE_PORT
+                    if checkNumber $1; then
+                        if [ $1 -ge $MIN_PORT -a $1 -le $MAX_PORT ]; then
+                            exec_dest_port[${#exec_dest_port[@]}]=$1
+                        else
+                            echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标端口号在范围[$MIN_PORT,$MAX_PORT]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+                            exit $E_VALUE_ARGS
+                        fi
+                    else
+                        break
+                    fi
+                fi
+                ;;
+            esac
+
+            shift
+        done
+        continue
+        ;;
+    esac
+
+    exec_script_action=$exec_script
+    if [ $exec_script -eq $ACTION_APP_START -o $exec_script -eq $ACTION_APP_STOP -o $exec_script -eq $ACTION_APP_NODE -o $exec_script -eq $ACTION_DEL_APP_NODE ]; then
+        break    # app_start app_stop app_node del_app_node的参数解析在独立函数中进行
+    fi
+    if [ $exec_script -eq $ACTION_START -o $exec_script -eq $ACTION_STOP -o $exec_script -eq $ACTION_RESTART -o $exec_script -eq $ACTION_LIST ]; then
+        while [ -n "$1" ]
+        do
+            case $1 in
+            all)
+                ! $flag_3s_all && errExit $E_MUTEX "错误的参数引用，使用all命令时不能指定game_id"
+                flag_3s_all=true
+                shift
+                break
+                ;;
+            *)
+                if checkNumber $1; then
+                    if [ $1 -ge 1 -a $1 -lt $MAX_GAME_ID ]; then
+                        [ ! -d $1 ] && errExit $E_VALUE_ARGS "当前环境不处理game_id为'$1'的游戏"
+                        exec_dest_game_id[${#exec_dest_game_id[@]}]=$1
+                        flag_3s_all=false
+                    else
+                        echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+                        exit $E_VALUE_ARGS
+                    fi
+                else
+                    break
+                fi
+            esac
+
+            shift
+        done
+        #continue
+    fi
+
+    while [ -n "$1" ]
+    do
+        case $1 in
+        -p|--port)
+            [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供端口号"
+                exit $E_MISSED_ARGA
+            }
+
+            shift
+            if checkNumber $1; then
+                if [ $1 -ge $MIN_PORT -a $1 -le $MAX_PORT ]; then
+                    exec_dest_port[${#exec_dest_port[@]}]=$1
+                else
+                    echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标端口号在范围[$MIN_PORT,$MAX_PORT]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+                    exit $E_VALUE_ARGS
+                fi
+            else
+                errExit $E_VALUE_ARGS "错误的参数值，port必须为数字 - '$1'"
+            fi
+            ;;
+        -g|--gameid)
+            [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供端口号"
+                exit $E_MISSED_ARGA
+            }
+
+            shift
+            if checkNumber $1; then
+                if [ $1 -ge 1 -a $1 -lt $MAX_GAME_ID ]; then
+                    exec_dest_game_id[${#exec_dest_game_id[@]}]=$1
+                else
+                    echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+                    exit $E_VALUE_ARGS
+                fi
+            else
+                errExit $E_VALUE_ARGS "错误的参数值，game_id必须为数字 - '$1'"
+            fi
+            ;;
+        -d|--directory)
+            [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供目标目录"
+                exit $E_MISSED_ARGA
+            }
+
+            shift
+            exec_dest_dir[${#exec_dest_dir[@]}]=$1
+            ;;
+        -a|--app)
+            shift
+            flag_app=true
+            BIN_SUB_L=($*)
+            shift $#
+            ;;
+        *)
+            break
+            ;;
+        esac
+
+        shift
+    done
+done
+
+function createDir()
+{
+    mkdir -p $1 2>/dev/null || errExit $E_MKDIR_FAILED "目录创建失败 - '$1'"
+}
+
+function existDir()
+{
+    exec_result_report $REPORT_WARNING "目录已存在 - '$1'"
+
+    if $flag_verbose; then
+        echo -n -e "  是否重写该目录相应文件[Y/N]? ${COLOR_RED}y${COLOR_END}"
+        read result
+        if ! [ -z "$result" -o X$result = Xy -o X$result = XY ]; then
+            sysExit 0
+        fi
+    else
+        sysExit 0
+    fi
+}
+
+function dest_path_check()
+{
+    if [ -d $1 ]; then
+        existDir $1
+    else
+        createDir $1
+    fi
+
+    return 0
+}
+
+    # 配置文件修改
+function exec_erating_conf_modify()
+{
+    TMP=${1:?"未知参数引用"}
+    TMP=${2:?"未知参数引用"}
+    # $1=port, $2=path
+    exec_port_get $(pwd)
+    sed -i "/<port/s:$port:$1:" $2/$ERATING_CONF
+}
+
+function exec_game_conf_modify()
+{
+    [ -n "$3" ] && exec_game_id_get $3
+    ArrayLen=${#exec_game_id[@]}
+
+    if [ $ArrayLen -eq 1 ];then
+        game_id=${exec_game_id[0]}
+        ! [ $game_id -eq $1 ] && sed -i "/<game_id/s/$game_id/$1/" $2/$1/$GAME_CONF 2>/dev/null
+
+    else
+        sed -i "/<game_id/d" $2/$1/$GAME_CONF 2>/dev/null
+        #在第52行之前插入一行game_id配置
+        line=52
+        sed -i ${line}i\ "\ \ \  <game_id default=\"0\">$1</game_id>" $2/$1/$GAME_CONF 2>/dev/null
+    fi
+}
+
+    # 执行
+function exec_make_run()
+{
+    exec_game_id_get .
+
+    refresh_bin_sub_l
+    for dest_dir in ${exec_dest_dir[@]}
+    do
+        [ ! -d $dest_dir ] && createDir $dest_dir
+
+        for dest_port in ${exec_dest_port[@]}
+        do
+            dest_path=$dest_dir/$dest_port
+            dest_path_check $dest_path
+
+            for _file in $FILE_GLOBAL_CN ${FILE_GLOBAL_N[@]}
+            do
+                cp -L $_file $dest_path/$_file
+            done
+
+            exec_erating_conf_modify $dest_port $dest_path
+
+            for _file in $FILE_GLOBAL_CL ${BIN_GLOBAL_L[@]} ${FILE_GLOBAL_L[@]}
+            do
+                ln -sf $(pwd)/$_file $dest_path/$_file
+            done
+
+            for dest_game in ${exec_dest_game_id[@]}
+            do
+                dest_game_path=$dest_path/$dest_game
+                dest_path_check $dest_game_path
+
+                for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+                do
+                    if [ "x$VTC_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $_file $dest_game_path/$_file
+                        fi
+                    elif [ "x$GF_CONF" = "x$_file" ] ; then
+                        if is_gf_game $dest_game ; then
+                            cp -L $_file $dest_game_path/$_file
+                        fi
+                    elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $_file $dest_game_path/$_file
+                        fi
+                    else
+                        cp -L $_file $dest_game_path/$_file
+                    fi
+                done
+
+                exec_game_conf_modify $dest_game $dest_path
+
+                for _file in $FILE_SUB_CL ${FILE_SUB_L[@]}
+                do
+                    ln -sf $(pwd)/$_file $dest_game_path/$_file
+                done
+                
+                for _file in ${BIN_SUB_L[@]}
+                do
+                    ln -sf $(pwd)/$ALL_SVR $dest_game_path/$_file
+                done
+            done
+
+            exec_result_report $REPORT_SUCCESS "$REPORT_MAKE $dest_path"
+        done
+    done
+}
+
+function exec_clone_run()
+{
+    if [ $flag_clone_sub = $CLONE_GAME ]; then
+        exec_game_id_get $exec_src
+
+        for dest_dir in ${exec_dest_dir[@]}
+        do
+            [ ! -d $dest_dir ] && errExit $E_NO_EXIST_DIR "clone sub时目录必须存在"
+
+            for dest_game in ${exec_dest_game_id[@]}
+            do
+                dest_path=$dest_dir/$dest_game
+                dest_path_check $dest_path
+
+                for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+                do
+                    if [ "x$VTC_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $exec_src/$_file $dest_path/$_file
+                        fi
+                    elif [ "x$GF_CONF" = "x$_file" ] ; then
+                        if is_gf_game $dest_game ; then
+                            cp -L $exec_src/$_file $dest_path/$_file
+                        fi
+                    elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $exec_src/$_file $dest_path/$_file
+                        fi
+                    else
+                        cp -L $exec_src/$_file $dest_path/$_file
+                    fi
+                done
+
+                exec_game_conf_modify $dest_game $dest_dir
+
+                refresh_bin_sub_l $exec_src
+
+                for _file in $FILE_SUB_CL ${FILE_SUB_L[@]} ${BIN_SUB_L[@]}
+                do
+                    cp -d $exec_src/$_file $dest_path/$_file
+                done
+
+                exec_result_report $REPORT_SUCCESS "$REPORT_CLONE_SUB $dest_path"
+            done
+        done
+    else
+        exec_game_id_dir_get
+
+        for dest_dir in ${exec_dest_dir[@]}
+        do
+            [ ! -d $dest_dir ] && createDir $dest_dir
+
+            for dest_port in ${exec_dest_port[@]}
+            do
+                dest_path=$dest_dir/$dest_port
+                dest_path_check $dest_path
+
+                for _file in $FILE_GLOBAL_CN ${FILE_GLOBAL_N[@]}
+                do
+                    cp -L $_file $dest_path/$_file
+                done
+
+                exec_erating_conf_modify $dest_port $dest_path
+
+                for _file in $FILE_GLOBAL_CL ${BIN_GLOBAL_L[@]} ${FILE_GLOBAL_L[@]}
+                do
+                    cp -d $(pwd)/$_file $dest_path/$_file
+                done
+
+                for game_id_dir in ${exec_sub_game_id[@]}
+                do
+                    dest_sub_path=$dest_path/$game_id_dir
+                    dest_path_check $dest_sub_path
+
+                    for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+                    do
+                        if [ "x$VTC_CONF" = "x$_file" ] ; then
+                            if is_third_purchase_game $game_id_dir ; then
+                                cp -L $game_id_dir/$_file $dest_sub_path/$_file
+                            fi
+                        elif [ "x$GF_CONF" = "x$_file" ] ; then
+                            if is_gf_game $game_id_dir ; then
+                                cp -L $game_id_dir/$_file $dest_sub_path/$_file
+                            fi
+                        elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+                            if is_third_purchase_game $game_id_dir ; then
+                                cp -L $game_id_dir/$_file $dest_sub_path/$_file
+                            fi
+                        else
+                            cp -L $game_id_dir/$_file $dest_sub_path/$_file
+                        fi
+                    done
+
+                    refresh_bin_sub_l
+                    for _file in $FILE_SUB_CL ${FILE_SUB_L[@]} ${BIN_SUB_L[@]}
+                    do
+                        cp -d $game_id_dir/$_file $dest_sub_path/$_file
+                    done
+                done
+            done
+
+            exec_result_report $REPORT_SUCCESS "$REPORT_CLONE $dest_path"
+        done
+    fi
+}
+
+function exec_stop_global()
+{
+    arga=$ARG_INIT
+    bool_start=false
+    bool_stop_ok=true
+    for (( i=${#BIN_GLOBAL_L[@]}; i>0; --i ))
+    do
+        bin_global=${BIN_GLOBAL_L[$i-1]}
+        if [ -f $bin_global.pid ]; then
+            bool_start=true
+            if kill $(cat $bin_global.pid) 2>/dev/null; then
+                arga="$arga $bin_global"
+                sleep 1
+            else
+                bool_stop_ok=false
+                arga="$arga $bin_global[${REPORT_EXCLAMATION}$(cat $bin_global.pid)]"
+            fi
+        fi
+    done
+
+    $bool_start && {
+        if $bool_stop_ok; then
+            exec_result_report "$REPORT_SUCCESS" "$REPORT_STOP $arga"
+        else
+            exec_result_report "$REPORT_FAILED" "$REPORT_STOP $arga"
+        fi
+    }
+}
+
+function exec_stop_1()
+{
+    TMP=${1:?"未知参数引入"}
+    (
+        cd $1
+        arga=$ARG_INIT
+        bool_start=false
+        if ! $flag_app; then
+            refresh_bin_sub_l_by_pid
+        fi
+
+        for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+        do
+            _file=${BIN_SUB_L[i]}
+
+            app_list[${#app_list[@]}]=$_file
+            if [ -f $_file.pid ]; then
+                bool_start=true
+                if kill $2 $(cat $_file.pid) 2>/dev/null; then
+                    sleep 1
+                else
+                    arga="$arga $_file[${REPORT_EXCLAMATION}$(cat $_file.pid)]"
+                fi
+            fi
+        done
+
+        if $bool_start; then
+            if [ X"$arga" = X"$ARG_INIT" ]; then
+                exec_result_report "$REPORT_SUCCESS" "$REPORT_STOP $1 ${app_list[*]}"
+            else
+                exec_result_report "$REPORT_FAILED" "$REPORT_STOP $1 | $arga"
+            fi
+        else
+            exec_result_report "$REPORT_SUCCESS" "$REPORT_STOP $1 ${app_list[*]} ${WARNING_COLOR}not run$COLOR_END"
+        fi
+    )
+}
+
+function checkSetEnvSH()
+{
+    if [ ! -f set_env.sh ]; then
+        [ -z $LD_LIBRARY_PATH ] && errExit $REPORT_ERROR "当前目录没有.set_env.sh文件，并且没有设置环境变量 - 'LD_LIBRARY_PATH'"
+    else
+        . set_env.sh
+    fi
+}
+
+function exec_port_check()
+{
+    TMP=${1:?"未知参数引入"}
+    if netstat -an | grep "0\.0\.0\.0:$1" >/dev/null; then
+        exec_result_report $REPORT_WARNING "[$EXIST_COLOR$1$COLOR_END]端口被监听，请检测各环境配置"
+        sysExit $E_PORT_ERROR
+    fi
+}
+
+function exec_start_global()
+{
+    result=$(exec_exist_global_check XX)
+    if [ -n "$result" ]; then
+        errExit $E_MISSED_FILE "文件类型有误[$result]，请务必在eRatingServer环境中使用start命令"
+    fi
+
+    checkSetEnvSH
+    exec_port_get .
+
+    arga=$ARG_INIT
+    bool_start=true
+    exec_global_new=false
+    bool_port_listen=false
+    for bin_global in ${BIN_GLOBAL_L[@]}
+    do
+        if exec_is_start $bin_global; then
+            arga="$arga $bin_global[$REPORT_EXIST$(cat $bin_global.pid)]"
+        else
+            if ! $bool_port_listen && [ "$bin_global" != "un_svr" ]; then
+                exec_port_check $port
+                bool_port_listen=true
+            fi
+
+            if [ "$bin_global" == "un_svr" ]; then
+                ./$bin_global -a 2 $port 1>/dev/null 2>&1
+            else
+                ./$bin_global $port 1>/dev/null 2>&1
+            fi
+            sleep 1
+
+            if [ -f $bin_global.pid ] && ps xuf | grep "\b$(cat $bin_global.pid)\b" | grep -v grep >/dev/null; then
+                exec_global_new=true
+                arga="$arga $bin_global"
+            else
+                arga="$arga $bin_global[$REPORT_EXCLAMATION]"
+                bool_start=false
+                break
+            fi
+        fi
+    done
+
+    if $bool_start; then
+        exec_result_report "$REPORT_SUCCESS" "$REPORT_START $arga"
+    else
+        exec_result_report "$REPORT_FAILED" "$REPORT_START $arga"
+        errExit $E_START_FAILED "启动失败"
+    fi
+}
+
+function exec_start_1()
+{
+    TMP=${1:?"未知参数引入"}
+    (
+        cd $1
+        arga=$ARG_INIT
+        bool_start=false
+        if ! $flag_app; then
+            refresh_bin_sub_l
+        fi
+        refresh_id_sub_l
+
+        for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+        do
+            _file=${BIN_SUB_L[i]}
+            _app_id=${ID_SUB_L[i]}
+
+            # 自动创建连接
+            if ! [ -f $_file ]; then
+                _all_svr=$(dirname $(dirname $PWD))/all_svr_mysql
+                if ! [ -f $_all_svr ]; then
+                    exec_result_report "$REPORT_FAILED" "未找到:$_all_svr"
+                    errExit $E_START_FAILED "启动失败"
+                fi
+                ln -svf $_all_svr ./$_file
+            fi
+
+            app_list[${#app_list[@]}]=$_file
+            if exec_is_start $_file; then
+                if $exec_global_new; then
+                    kill -9 $(cat $_file.pid) && sleep 1
+                else
+                    continue
+                fi
+            fi
+
+            ./$_file -a $_app_id -u $1 $port 1>/dev/null 2>&1
+            sleep 1
+
+            if [ -f $_file.pid ] && ps xuf | grep "\b$(cat $_file.pid)\b" | grep -v grep >/dev/null; then
+                :;
+            else
+                arga="$arga $_file[$REPORT_EXCLAMATION]"
+                bool_start=true
+            fi
+        done
+
+        if ! $bool_start; then
+            exec_result_report "$REPORT_SUCCESS" "$REPORT_START $1 ${app_list[*]}"
+        else
+            exec_result_report "$REPORT_FAILED" "$REPORT_START $1 | $arga"
+        fi
+    )
+}
+
+function exec_start_all()
+{
+    exec_game_id_dir_get
+
+    exec_start_global
+    for game_id in ${exec_sub_game_id[@]}
+    do
+        exec_start_1 $game_id
+    done
+}
+
+function exec_start_false()
+{
+    exec_start_global
+    for game_id in ${exec_dest_game_id[@]}
+    do
+        exec_start_1 $game_id
+    done
+}
+
+function exec_stop_all()
+{
+    exec_game_id_dir_get
+    for game_id in ${exec_sub_game_id[@]}
+    do
+        exec_stop_1 $game_id
+    done
+
+    exec_stop_global
+}
+
+function exec_stop_false()
+{
+    for game_id in ${exec_dest_game_id[@]}
+    do
+        exec_stop_1 $game_id
+    done
+}
+
+function exec_start_run()
+{
+    if $flag_3s_all; then
+        exec_start_all
+    else
+        exec_start_false
+    fi
+}
+
+function exec_stop_run()
+{
+    if $flag_3s_all; then
+        exec_stop_all
+    else
+        exec_stop_false
+    fi
+}
+
+function exec_restart_run()
+{
+    if $flag_3s_all; then
+        exec_stop_all
+        exec_start_all
+    else
+        exec_stop_false
+        exec_start_false
+    fi
+}
+
+function exec_list_1()
+{
+    TMP=${1:?"未知参数引入"}
+    (
+        echo $1
+        refresh_bin_sub_l $1
+        for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+        do
+            echo "    "${BIN_SUB_L[i]}
+        done
+    )
+}
+
+function exec_list_all()
+{
+    exec_game_id_dir_get
+    for game_id in ${exec_sub_game_id[@]}
+    do
+        exec_list_1 $game_id
+    done
+}
+
+function exec_list_select()
+{
+    exec_game_id_dir_get
+    for game_id in ${exec_dest_game_id[@]}
+    do
+        exec_list_1 $game_id
+    done
+}
+
+function exec_list_run()
+{
+    if $flag_3s_all; then
+        exec_list_all
+    else
+        exec_list_select
+    fi
+}
+
+function exec_app_param_analyze()
+{
+    [ -z $1 ] && {
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少 ${OPTION_COLOR}game_id$COLOR_END"
+        exit $E_VALUE_ARGS
+    }
+
+    if checkNumber $1; then
+        if [ $1 -ge 1 -a $1 -lt $MAX_GAME_ID ]; then
+            [ ! -d $1 ] && errExit $E_VALUE_ARGS "当前环境不处理game_id为'$1'的游戏"
+            exec_dest_game_id[${#exec_dest_game_id[@]}]=$1
+        else
+            echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+            exit $E_VALUE_ARGS
+        fi
+    else
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+        exit $E_VALUE_ARGS
+    fi
+
+    shift
+    [ -z $1 ] && {
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少 ${OPTION_COLOR}服务名$COLOR_END"
+        exit $E_VALUE_ARGS
+    }
+
+    BIN_SUB_L=($*)
+    refresh_id_sub_l ${exec_dest_game_id[0]}
+
+    flag_app=true
+}
+function exec_app_node_param_analyze()
+{
+	exec_result_report " ||| $COLOR_YELLOW${APP_NODE[0]}只能在eRatingServer环境目录下使用才有效$COLOR_END ||| "
+	echo "exec_dest_game_id=()">>$CMD_LOG
+	exec_dest_game_id=()
+	while [ -n "$1" ]
+	do
+		case $1 in
+			-g)
+				[ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供game_id号.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供game_id号."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+
+				shift
+				if checkNumber $1; then
+					if [ $1 -ge 1 -a $1 -lt $MAX_GAME_ID ]; then
+						[ ! -d $1 ] && echo "errExit $E_VALUE_ARGS "当前环境不处理game_id为'$1'的游戏"">>$CMD_LOG
+						[ ! -d $1 ] && errExit $E_VALUE_ARGS "当前环境不处理game_id为'$1'的游戏"
+						
+						echo "exec_dest_game_id[${#exec_dest_game_id[@]}]=$1">>$CMD_LOG
+						exec_dest_game_id[${#exec_dest_game_id[@]}]=$1
+					else
+						echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END\"">>$CMD_LOG
+						echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+						
+						echo "exit $E_VALUE_ARGS">>$CMD_LOG
+						exit $E_VALUE_ARGS
+					fi
+				else
+					echo "errExit $E_VALUE_ARGS \"错误的参数值，game_id必须为数字 - '$1'\"">>$CMD_LOG
+					errExit $E_VALUE_ARGS "错误的参数值，game_id必须为数字 - '$1'"
+				fi
+				
+				shift
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+	
+	[ -z "$1" ] && {
+		 echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少 ${OPTION_COLOR}app_name$COLOR_END"
+		 exit $E_VALUE_ARGS
+	}
+	
+	echo "exec_dest_app_name=$1">>$CMD_LOG
+	exec_dest_app_name=$1
+	
+	[ -z "$2" ] && {
+		 echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少 ${OPTION_COLOR}app_id$COLOR_END"
+		 exit $E_VALUE_ARGS
+	}
+	echo "exec_dest_app_id=$2">>$CMD_LOG
+	exec_dest_app_id=$2
+	
+	if checkNumber $exec_dest_app_id; then
+		if [ $exec_dest_app_id -lt 3 -o $exec_dest_app_id -gt 15 ]; then
+				echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的app_id参数值，必须在数字[3,15]中 - ${OPTION_COLOR}'$exec_dest_app_id'$COLOR_END"
+				exit $E_VALUE_ARGS
+		fi
+	else
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的app_id参数值，必须在数字[3,15]中 - ${OPTION_COLOR}'$exec_dest_app_id'$COLOR_END"
+		exit $E_VALUE_ARGS
+	fi
+	shift 2
+	
+	echo "exec_dest_app_tag=()">>$CMD_LOG
+	exec_dest_app_tag=()
+	while [ -n "$1" ]
+	do	
+		echo "exec_dest_app_tag[${#exec_dest_app_tag[@]}]=$1">>$CMD_LOG
+		exec_dest_app_tag[${#exec_dest_app_tag[@]}]=$1
+		
+		echo "shift">>$CMD_LOG
+		shift
+	done
+	
+}
+
+function exec_del_app_node_param_analyze()
+{
+
+    exec_result_report " ||| $COLOR_YELLOW${DEL_APP_NODE[0]}只能在eRatingServer环境目录下使用才有效$COLOR_END ||| "
+	echo "exec_dest_game_id=()">>$CMD_LOG
+	exec_dest_game_id=()
+	while [ -n "$1" ]
+	do
+		case $1 in
+			-g)
+				[ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供game_id号.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供game_id号."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+
+				shift
+				if checkNumber $1; then
+					if [ $1 -ge 1 -a $1 -lt $MAX_GAME_ID ]; then
+						[ ! -d $1 ] && echo "errExit $E_VALUE_ARGS \"当前环境不处理game_id为'$1'的游戏.\"">>$CMD_LOG
+						[ ! -d $1 ] && errExit $E_VALUE_ARGS "当前环境不处理game_id为'$1'的游戏."
+						
+						echo "exec_dest_game_id[${#exec_dest_game_id[@]}]=$1">>$CMD_LOG
+						exec_dest_game_id[${#exec_dest_game_id[@]}]=$1
+					else
+						echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END\"">>$CMD_LOG
+						echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+						
+						echo "exit $E_VALUE_ARGS">>$CMD_LOG
+						exit $E_VALUE_ARGS
+					fi
+				else
+					echo "errExit $E_VALUE_ARGS \"错误的参数值，game_id必须为数字 - '$1'\"">>$CMD_LOG
+					errExit $E_VALUE_ARGS "错误的参数值，game_id必须为数字 - '$1'"
+				fi
+				
+				shift
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+	
+	[ -z $1 ] && {
+		 echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供要删除的服务名app_name\"">>$CMD_LOG
+		 echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供要删除的服务名app_name"
+		 
+		 echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		 exit $E_VALUE_ARGS
+	}
+	echo "exec_dest_app_name=$1">>$CMD_LOG
+	exec_dest_app_name=$1
+	shift
+	[ -n "$1" ] && {
+		 echo -e "${ERROR_COLOR}Error:${COLOR_END} 参数多余: ${OPTION_COLOR}$*$COLOR_END"
+		 exit $E_VALUE_ARGS
+	}
+}
+
+function refresh_tag_sub_l()
+{
+	if [ -z $1 ]; then
+		echo "file=$(pwd)/$GAME_CONF">>$CMD_LOG
+        file=$(pwd)/$GAME_CONF
+    else
+		echo "file=$(pwd)/$1/$GAME_CONF">>$CMD_LOG
+        file=$(pwd)/$1/$GAME_CONF
+    fi
+    if [ -f $file ]; then
+		echo "TAG_SUB_L=(`cat $file | grep \"cmd\" | sed -e \"s:<.*=.\(.*\).>.*<.*>:\1:g\" -e \"s:\s\+::g\" | sort | uniq `)">>$CMD_LOG
+        TAG_SUB_L=(`cat $file | grep "cmd" | sed -e "s:<.*=.\(.*\).>.*<.*>:\1:g" -e "s:\s\+::g" | sort | uniq `)
+	else
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 未找到配置文件: ${OPTION_COLOR}$file$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 未找到配置文件: ${OPTION_COLOR}$file$COLOR_END"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+        exit $E_VALUE_ARGS
+    fi	
+}
+
+
+function check_id_name_tag_is_exist()
+{
+	echo "local i">>$CMD_LOG
+	local i
+	for ((i=0; i<${#BIN_SUB_L[@]};))
+    do
+		echo "local app_name=${BIN_SUB_L[i]}">>$CMD_LOG
+		local app_name=${BIN_SUB_L[i]}
+		
+        if [ $exec_dest_app_name = $app_name ];then
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 游戏$1下服务程序$app_name已经存在: ${OPTION_COLOR}$exec_dest_app_name$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} 游戏$1下服务程序$app_name已经存在: ${OPTION_COLOR}$exec_dest_app_name$COLOR_END"
+			
+			echo "return $E_VALUE_ARGS">>$CMD_LOG
+			return $E_VALUE_ARGS
+		fi
+        ((i+=1))
+    done
+	
+	for ((i=0; i<${#ID_SUB_L[@]};))
+    do
+		echo "local app_id=${ID_SUB_L[i]}">>$CMD_LOG
+		local app_id=${ID_SUB_L[i]}
+		
+        if [ $exec_dest_app_id = $app_id ];then
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 游戏$1下服务程序ID号$app_id已经存在: ${OPTION_COLOR}$exec_dest_app_id$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} 游戏$1下服务程序ID号$app_id已经存在: ${OPTION_COLOR}$exec_dest_app_id$COLOR_END"
+			
+			echo "return $E_VALUE_ARGS">>$CMD_LOG
+			return $E_VALUE_ARGS
+		fi
+        ((i+=1))
+    done
+	
+	local j
+	for((j=0;j<${#exec_dest_app_tag[@]};++j))
+	do	
+		echo "local tag_exist_flag=false" >>$CMD_LOG
+		local tag_exist_flag=false
+		for ((i=0; i<${#TAG_SUB_L[@]};))
+		do
+			echo "local tag=${TAG_SUB_L[i]}">>$CMD_LOG
+			local tag=${TAG_SUB_L[i]}
+			
+			if [ ${exec_dest_app_tag[j]} = $tag ];then
+				echo "tag_exist_flag=true">>$CMD_LOG
+				tag_exist_flag=true
+				
+				echo "break">>$CMD_LOG
+				break
+			fi
+			((i+=1))
+		done
+		if ! $tag_exist_flag; then
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 游戏$1下协议不存在: ${OPTION_COLOR}${exec_dest_app_tag[j]}$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} 游戏$1下协议不存在: ${OPTION_COLOR}${exec_dest_app_tag[j]}$COLOR_END"
+			
+			echo "return $E_VALUE_ARGS">>$CMD_LOG
+			return $E_VALUE_ARGS
+		fi
+	done
+	echo "return $E_SUCESS">>$CMD_LOG
+	return $E_SUCESS
+	
+}
+function check_name_is_exist()
+{
+	echo "app_name_exist_flag=true">>$CMD_LOG
+	app_name_exist_flag=true
+	
+	for ((i=0; i<${#BIN_SUB_L[@]};++i))
+    do
+		echo "app_name=${BIN_SUB_L[i]}">>$CMD_LOG
+		app_name=${BIN_SUB_L[i]}
+		
+        if [ $2 = $app_name ];then
+			echo "app_name_exist_flag=false">>$CMD_LOG
+			app_name_exist_flag=false
+			
+			echo "break">>$CMD_LOG
+			break
+		fi
+    done
+	if $app_name_exist_flag ;then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 游戏$1下app_name不存在: ${OPTION_COLOR}$2$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 游戏$1下app_name不存在: ${OPTION_COLOR}$2$COLOR_END"
+		
+		echo "return $E_VALUE_ARGS">>$CMD_LOG
+		return $E_VALUE_ARGS
+	fi
+	echo "return $E_SUCESS">>$CMD_LOG
+	return $E_SUCESS
+}
+function add_new_add_node_into_game_conf()
+{
+	if [ -z $1 ]; then
+		echo "file=$(pwd)/$GAME_CONF">>$CMD_LOG
+        file=$(pwd)/$GAME_CONF
+    else
+		echo "file=$(pwd)/$1/$GAME_CONF">>$CMD_LOG
+        file=$(pwd)/$1/$GAME_CONF
+    fi
+	
+	echo "local game_id=$1">>$CMD_LOG
+	local game_id=$1
+	
+	echo "local app_name=$2">>$CMD_LOG
+	local app_name=$2
+	
+	echo "local app_id=$3">>$CMD_LOG
+	local app_id=$3
+	
+	echo "local tag=()">>$CMD_LOG
+	local tag=()
+	
+	echo "local dest_path=$(pwd)/$1">>$CMD_LOG
+    local dest_path=$(pwd)/$1
+	
+	echo "local src_file=$(dirname $PWD)/all_svr_mysql">>$CMD_LOG
+    local src_file=$(dirname $PWD)/all_svr_mysql
+
+	while [ $# -gt 3 ]
+	do
+		echo "tag[${#tag[@]}]=$4">>$CMD_LOG
+		tag[${#tag[@]}]=$4
+		
+		echo "shift">>$CMD_LOG
+		shift
+	done
+	if [ ${#tag[@]} -eq 0 ];then
+		echo "sed -i \"/<\/svr>/i\\ \ \ \ \ \ \ \ <app>\n<app_name>$app_name<\/app_name>\n<app_id>$app_id<\/app_id>\n<include>\n<\/include>\n<exclude>\n<\/exclude>\n<\/app>\" $file">>$CMD_LOG
+		sed -i "/<\/svr>/i\\ \ \ \ \ \ \ \ <app>\n<app_name>$app_name<\/app_name>\n<app_id>$app_id<\/app_id>\n<include>\n<\/include>\n<exclude>\n<\/exclude>\n<\/app>" $file
+	else
+		echo "sed -i \"/<\/svr>/i\\ \ \ \ \ \ \ \ <app>\n\
+        \ \ \ \ <app_name>$app_name<\/app_name>\n\
+		<app_id>$app_id<\/app_id>\n\
+		<include>\" $file">>$CMD_LOG
+		
+		sed -i "/<\/svr>/i\\ \ \ \ \ \ \ \ <app>\n\
+        \ \ \ \ <app_name>$app_name<\/app_name>\n\
+		<app_id>$app_id<\/app_id>\n\
+		<include>" $file
+		
+		
+		
+		for ((i=0;i<${#tag[@]};++i))
+		do
+			echo "local cmd_num=(`cat $file | grep \"${tag[i]}\" | sed -e \"s:<.*>\(.*\)<.*>:\1:g\" -e \"s:\s\+::g\" `)">>$CMD_LOG
+			local cmd_num=(`cat $file | grep "${tag[i]}" | sed -e "s:<.*>\(.*\)<.*>:\1:g" -e "s:\s\+::g" `)
+			
+			echo "sed -i \"/<\/svr>/i\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <cmd tag=\"${tag[i]}\">$cmd_num<\/cmd>\" $file">>$CMD_LOG
+			sed -i "/<\/svr>/i\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <cmd tag=\"${tag[i]}\">$cmd_num<\/cmd>" $file
+		done
+		echo "sed -i \"/<\/svr>/i\\ \ \ \ \ \ \ \ \ \ \ \ <\/include>\n\
+		\ \ \ \ <exclude>\n\
+		\ \ \ \ <\/exclude>\n\
+		<\/app>\" $file">>$CMD_LOG
+		
+		sed -i "/<\/svr>/i\\ \ \ \ \ \ \ \ \ \ \ \ <\/include>\n\
+		\ \ \ \ <exclude>\n\
+		\ \ \ \ <\/exclude>\n\
+		<\/app>" $file
+	fi
+	echo "exec_result_report $REPORT_SUCCESS \"游戏$game_id下服务程序$app_name添加成功!\"">>$CMD_LOG
+	exec_result_report $REPORT_SUCCESS "游戏$game_id下服务程序$app_name添加成功!"
+	
+    if ! [ -f $src_file ]; then
+		echo "exec_result_report \"$REPORT_FAILED\" \"未找到:$src_file\"">>$CMD_LOG
+        exec_result_report "$REPORT_FAILED" "未找到:$src_file"
+		
+		echo "errExit $E_UNKNOWN_ERROR  \"创建连接失败\"">>$CMD_LOG
+        errExit $E_UNKNOWN_ERROR  "创建连接失败"
+    fi
+	echo "ln -sf $src_file $dest_path/$app_name">>$CMD_LOG
+    ln -sf $src_file $dest_path/$app_name
+	
+	echo "exec_result_report $REPORT_SUCCESS \"创建$dest_path/$app_name连接成功!\"">>$CMD_LOG
+    exec_result_report $REPORT_SUCCESS "创建$dest_path/$app_name连接成功!"
+}
+function del_add_node_from_game_conf()
+{
+	if [ -z $1 ]; then
+		echo "file=$(pwd)/$GAME_CONF">>$CMD_LOG
+        file=$(pwd)/$GAME_CONF
+    else
+		echo "file=$(pwd)/$1/$GAME_CONF">>$CMD_LOG
+        file=$(pwd)/$1/$GAME_CONF
+    fi
+	echo "app_name=$2">>$CMD_LOG
+	app_name=$2
+	
+	echo "dest_path=$(pwd)/$1">>$CMD_LOG
+    dest_path=$(pwd)/$1
+	
+	echo "dest_file=$dest_path/$app_name">>$CMD_LOG
+    dest_file=$dest_path/$app_name
+	
+	echo "app_name_line=\$(sed -n -e \"/<app_name>$app_name<\/app_name>/=\" $file)">>$CMD_LOG
+	app_name_line=$(sed -n -e "/<app_name>$app_name<\/app_name>/=" $file)
+	
+	echo "app_line=$(($app_name_line-1))">>$CMD_LOG
+	app_line=$(($app_name_line-1))
+	
+	echo "sed -i \"$app_line,/<\/app>/d\" $file">>$CMD_LOG
+	sed -i "$app_line,/<\/app>/d" $file
+	
+	echo "exec_result_report $REPORT_SUCCESS \"游戏$1下服务程序$app_name删除成功!\"">>$CMD_LOG
+	exec_result_report $REPORT_SUCCESS "游戏$1下服务程序$app_name删除成功!"
+	
+    if ! [ -f $dest_file ]; then
+		echo "exec_result_report \"$REPORT_FAILED\" \"未找到:$dest_file\"">>$CMD_LOG
+        exec_result_report "$REPORT_FAILED" "未找到:$dest_file"
+		
+		echo "errExit $E_UNKNOWN_ERROR  \"删除连接失败\"">>$CMD_LOG
+        errExit $E_UNKNOWN_ERROR  "删除连接失败"
+    fi
+	
+	echo "rm -f $dest_file">>$CMD_LOG
+    rm -f $dest_file
+	
+	echo "exec_result_report $REPORT_SUCCESS \"连接$dest_file删除成功!\"">>$CMD_LOG
+    exec_result_report $REPORT_SUCCESS "连接$dest_file删除成功!"
+}
+function exec_app_run()
+{
+	
+	
+	if [ ${#exec_dest_game_id[@]} -eq 0 ]; then
+	
+		for id in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v [^[:digit:]])
+		do
+			echo "exec_dest_game_id[${#exec_dest_game_id[@]}]=$id">>$CMD_LOG
+			exec_dest_game_id[${#exec_dest_game_id[@]}]=$id
+		done
+		
+		[ -z "${exec_dest_game_id[*]}" ] && echo "errExit $E_NONE_GAME_ID \"当前环境未处理任何游戏.\"">>$CMD_LOG
+		[ -z "${exec_dest_game_id[*]}" ] && errExit $E_NONE_GAME_ID "当前环境未处理任何游戏."	
+	fi
+	
+	echo "local k">>$CMD_LOG
+	local k	
+	for (( k=0;k<${#exec_dest_game_id[@]};++k))
+	do
+		echo "local game_id=${exec_dest_game_id[k]}">>$CMD_LOG
+		local game_id=${exec_dest_game_id[k]}
+		
+		echo "BIN_SUB_L=()">>$CMD_LOG
+		BIN_SUB_L=()
+		echo "refresh_bin_sub_l $game_id">>$CMD_LOG
+		refresh_bin_sub_l $game_id		
+		
+		echo "ID_SUB_L=()">>$CMD_LOG
+		ID_SUB_L=()
+		echo "refresh_id_sub_l $game_id">>$CMD_LOG
+		refresh_id_sub_l $game_id
+			
+		echo "TAG_SUB_L=()">>$CMD_LOG
+		TAG_SUB_L=()
+		echo "refresh_tag_sub_l $game_id">>$CMD_LOG
+		refresh_tag_sub_l $game_id
+		
+		echo "check_id_name_tag_is_exist $game_id">>$CMD_LOG
+		check_id_name_tag_is_exist $game_id
+		
+		local return_value=$?
+		echo "local return_value=$return_value">>$CMD_LOG
+		
+		if [ $return_value -eq $E_SUCESS ];then
+			echo "add_new_add_node_into_game_conf $game_id $exec_dest_app_name $exec_dest_app_id ${exec_dest_app_tag[@]}">>$CMD_LOG
+			add_new_add_node_into_game_conf $game_id $exec_dest_app_name $exec_dest_app_id ${exec_dest_app_tag[@]}
+		fi
+	done
+	
+	
+}
+function exec_del_run()
+{
+	
+	if [ ${#exec_dest_game_id[@]} -eq 0 ]; then
+	
+		for id in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v [^[:digit:]])
+		do
+			echo "exec_dest_game_id[${#exec_dest_game_id[@]}]=$id">>$CMD_LOG
+			exec_dest_game_id[${#exec_dest_game_id[@]}]=$id
+		done
+		
+		[ -z "${exec_dest_game_id[*]}" ] && echo "errExit $E_NONE_GAME_ID \"当前环境未处理任何游戏.\"">>$CMD_LOG
+		[ -z "${exec_dest_game_id[*]}" ] && errExit $E_NONE_GAME_ID "当前环境未处理任何游戏."	
+	fi
+	
+	echo "local k">>$CMD_LOG
+	local k	
+	for (( k=0;k<${#exec_dest_game_id[@]};++k))
+	do
+		echo "local game_id=${exec_dest_game_id[k]}">>$CMD_LOG
+		local game_id=${exec_dest_game_id[k]}
+		
+		echo "refresh_bin_sub_l $game_id">>$CMD_LOG
+		refresh_bin_sub_l $game_id
+		
+		echo "check_name_is_exist $game_id $exec_dest_app_name">>$CMD_LOG
+		check_name_is_exist $game_id $exec_dest_app_name
+		
+		
+		local return_value=$?
+		echo  "local return_value=$return_value" >>$CMD_LOG
+		
+		if [ $return_value -eq $E_SUCESS ];then
+			echo "del_add_node_from_game_conf $game_id $exec_dest_app_name">>$CMD_LOG
+			del_add_node_from_game_conf $game_id $exec_dest_app_name
+		fi
+	done
+}
+
+function exec_arg_clone_app_check()
+{
+	echo "exec_dest_game_id=()">>$CMD_LOG
+	exec_dest_game_id=()
+	while [ -n "$1" ]
+	do
+		case $1 in
+			-g)
+				[ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供game_id号.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供game_id号."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+
+				shift
+				if checkNumber $1; then
+					if [ $1 -ge 1 -a $1 -lt $MAX_GAME_ID ]; then
+						[ ! -d $1 ] && echo "errExit $E_VALUE_ARGS "当前环境不处理game_id为'$1'的游戏"">>$CMD_LOG
+						[ ! -d $1 ] && errExit $E_VALUE_ARGS "当前环境不处理game_id为'$1'的游戏"
+						
+						echo "exec_dest_game_id[${#exec_dest_game_id[@]}]=$1">>$CMD_LOG
+						exec_dest_game_id[${#exec_dest_game_id[@]}]=$1
+					else
+						echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END\"">>$CMD_LOG
+						echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的参数值，目标游戏ID必须在[1,$MAX_GAME_ID]中 - ${OPTION_COLOR}'$1'$COLOR_END"
+						
+						echo "exit $E_VALUE_ARGS">>$CMD_LOG
+						exit $E_VALUE_ARGS
+					fi
+				else
+					echo "errExit $E_VALUE_ARGS \"错误的参数值，game_id必须为数字 - '$1'\"">>$CMD_LOG
+					errExit $E_VALUE_ARGS "错误的参数值，game_id必须为数字 - '$1'"
+				fi
+				
+				shift
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+	
+	if [ -z "$1" ];then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供源服务名. \"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供源服务名."
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+	echo "exec_src_app_name=$1">>$CMD_LOG
+	exec_src_app_name=$1
+	
+	if [ -z "$2" ];then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供目的服务名. \"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供目的服务名."
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+	echo "exec_dest_app_name=$2">>$CMD_LOG
+	exec_dest_app_name=$2
+	
+	if [ -z "$3" ];then
+	
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供目的服务ID\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 缺少必要参数，必须提供目的服务ID"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+	echo "exec_dest_app_id=$3">>$CMD_LOG
+	exec_dest_app_id=$3
+	
+	if [ $1 = $2 ];then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 源服务名和目的服务名不能相同:${OPTION_COLOR}$1 $2 $COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 源服务名和目的服务名不能相同:${OPTION_COLOR}$1 $2 $COLOR_END"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+	if checkNumber $3; then
+		if [ $3 -lt 3 -o $3 -gt 15 ]; then
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 错误的目的服务ID参数值，必须在数字[3,15]中 - ${OPTION_COLOR}'$3'$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的目的服务ID参数值，必须在数字[3,15]中 - ${OPTION_COLOR}'$3'$COLOR_END"
+			
+			echo "exit $E_VALUE_ARGS">>$CMD_LOG
+			exit $E_VALUE_ARGS
+		fi
+    else
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 错误的目的服务ID参数值，必须在数字[3,15]中 - ${OPTION_COLOR}'$3'$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 错误的目的服务ID参数值，必须在数字[3,15]中 - ${OPTION_COLOR}'$3'$COLOR_END"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+    fi
+	if [ -n "$4" ];then
+		shift 3
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 多余的参数 - ${OPTION_COLOR}'$*'$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 多余的参数- ${OPTION_COLOR}'$*'$COLOR_END"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+}
+function clone_app_node_from_gameid()
+{
+	echo "game_id=$1">>$CMD_LOG
+	game_id=$1
+	
+	echo "src_app_name=$2">>$CMD_LOG
+	src_app_name=$2
+	
+	echo "dest_app_name=$3">>$CMD_LOG
+	dest_app_name=$3
+	
+	echo "dest_app_id=$4">>$CMD_LOG
+	dest_app_id=$4
+	
+	echo "BIN_SUB_L=()">>$CMD_LOG
+	BIN_SUB_L=()
+	echo "refresh_bin_sub_l $*">>$CMD_LOG
+	refresh_bin_sub_l $*
+	
+	echo "ID_SUB_L=()">>$CMD_LOG
+	ID_SUB_L=()
+	echo "refresh_id_sub_l $*">>$CMD_LOG
+	refresh_id_sub_l $*
+	
+	echo "arg_correct=true">>$CMD_LOG
+	arg_correct=true
+	
+	echo "src_name_ill=true">>$CMD_LOG
+	src_name_ill=true
+	
+	echo "dest_name_ill=false">>$CMD_LOG
+	dest_name_ill=false
+	
+	echo "dest_id_ill=false">>$CMD_LOG
+	dest_id_ill=false
+	
+	echo "local i">>$CMD_LOG
+	local i
+	for((i=0;i<${#BIN_SUB_L[@]};++i))
+	do
+		if [ $src_app_name = ${BIN_SUB_L[i]} ];then
+			echo "src_name_ill=false">>$CMD_LOG
+			src_name_ill=false
+		fi
+	done
+	if $src_name_ill;then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 游戏$game_id下不存在src-app_name值:${OPTION_COLOR}'$src_app_name'$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} 游戏$game_id下不存在src-app_name值:${OPTION_COLOR}'$src_app_name'$COLOR_END"	
+		
+		echo "arg_correct=false">>$CMD_LOG
+		arg_correct=false
+	fi
+	for((i=0;i<${#BIN_SUB_L[@]};++i))
+	do
+		if [ $dest_app_name = ${BIN_SUB_L[i]} ];then
+			echo "dest_name_ill=true">>$CMD_LOG
+			dest_name_ill=true
+			
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 游戏$game_id下已存在dest-app_name值:${OPTION_COLOR}'$dest_app_name'$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} 游戏$game_id下已存在dest-app_name值:${OPTION_COLOR}'$dest_app_name'$COLOR_END"
+		
+			echo "arg_correct=false">>$CMD_LOG
+			arg_correct=false
+			echo "break">>$CMD_LOG
+			break
+		fi
+		if [ $dest_app_id -eq ${ID_SUB_L[i]} ];then
+			echo "dest_id_ill=true">>$CMD_LOG
+			dest_id_ill=true
+			
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} 游戏$game_id下已存在dest-app_id值:${OPTION_COLOR}'$dest_app_id'$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} 游戏$game_id下已存在dest-app_id值:${OPTION_COLOR}'$dest_app_id'$COLOR_END"	
+		
+			echo "arg_correct=false">>$CMD_LOG
+			arg_correct=false
+			
+			echo "break">>$CMD_LOG
+			break
+		fi
+	done
+	
+	if $arg_correct;then
+	
+		tag_from_app_name=($(sed -n  "/<app_name>$src_app_name<\/app_name>/,/<\/include>/p" $file | grep "tag=" | sed -e "s:<.*=.\(.*\).>.*<.*>:\1:" -e "s:\s\+::"))
+		if [ -z $tag_from_app_name ]; then
+			echo "add_new_add_node_into_game_conf $game_id $dest_app_name $dest_app_id">>$CMD_LOG
+			add_new_add_node_into_game_conf $game_id $dest_app_name $dest_app_id
+		else
+			echo "add_new_add_node_into_game_conf $game_id $dest_app_name $dest_app_id ${tag_from_app_name[@]}">>$CMD_LOG
+			add_new_add_node_into_game_conf $game_id $dest_app_name $dest_app_id ${tag_from_app_name[@]}
+		fi
+		
+		echo "echo -e \"${SUCCESS_COLOR}SUCCESS:${COLOR_END} 游戏$game_id下完成克隆$src_app_name\"">>$CMD_LOG
+		echo -e "${SUCCESS_COLOR}SUCCESS:${COLOR_END} 游戏$game_id下完成克隆$src_app_name"
+	fi
+	
+		
+} 
+function exec_clone_app_run()
+{	
+	if [ ${#exec_dest_game_id[@]} -eq 0 ]; then
+	
+		for id in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v [^[:digit:]])
+		do
+			echo "exec_dest_game_id[${#exec_dest_game_id[@]}]=$id">>$CMD_LOG
+			exec_dest_game_id[${#exec_dest_game_id[@]}]=$id
+		done
+		
+		[ -z "${exec_dest_game_id[*]}" ] && echo "errExit $E_NONE_GAME_ID \"当前环境未处理任何游戏.\"">>$CMD_LOG
+		[ -z "${exec_dest_game_id[*]}" ] && errExit $E_NONE_GAME_ID "当前环境未处理任何游戏."	
+	fi
+	echo "local k">>$CMD_LOG
+	local k	
+	for (( k=0;k<${#exec_dest_game_id[@]};++k))
+	do
+		echo "game_id=${exec_dest_game_id[k]}">>$CMD_LOG
+		game_id=${exec_dest_game_id[k]}
+		
+		echo "clone_app_node_from_gameid $game_id $exec_src_app_name $exec_dest_app_name $exec_dest_app_id">>$CMD_LOG
+		clone_app_node_from_gameid $game_id $exec_src_app_name $exec_dest_app_name $exec_dest_app_id
+	done
+	
+}
+umask ${UMASK:=022}
+
+case $exec_script_action in
+$ACTION_MAKE)
+    exec_arg_make_check
+    exec_exist_make_check
+    exec_make_run
+    ;;
+$ACTION_CLONE)
+	if [ $flag_clone_sub = $CLONE_APP ];then
+		echo "exec_arg_clone_app_check $*">>$CMD_LOG
+		exec_arg_clone_app_check $*
+		
+		echo "exec_clone_app_run $*">>$CMD_LOG
+		exec_clone_app_run $*
+	else
+		exec_arg_clone_check
+		exec_exist_clone_check
+		exec_clone_run
+	fi
+    ;;
+$ACTION_START)
+    exec_start_run
+    ;;
+$ACTION_STOP)
+    exec_stop_run
+    ;;
+$ACTION_RESTART)
+    exec_restart_run
+    ;;
+$ACTION_LIST)
+    exec_list_run
+    ;;
+$ACTION_APP_START)
+    exec_app_param_analyze $*
+    exec_start_false
+    ;;
+$ACTION_APP_STOP)
+    exec_app_param_analyze $*
+    exec_stop_false
+    ;;
+$ACTION_APP_NODE)
+	echo "exec_app_node_param_analyze $*">>$CMD_LOG
+    exec_app_node_param_analyze $*
+	
+	echo "exec_app_run $*">>$CMD_LOG
+	exec_app_run $*
+    ;;
+$ACTION_DEL_APP_NODE)
+	echo "exec_del_app_node_param_analyze $*">>$CMD_LOG
+    exec_del_app_node_param_analyze $*
+	
+	echo "exec_del_run $*">>$CMD_LOG
+	exec_del_run $*
+    ;;
+*)
+    ;;
+esac
+
+exit 0
+

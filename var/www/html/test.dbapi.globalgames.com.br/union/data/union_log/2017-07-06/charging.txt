@@ -1,0 +1,39 @@
+179.215.124.118	2017-07-06 02:10:38	[INFO:REQUEST_STRING]	userName=felipe|serverId=s1|orderId=|chargeMoney=10|clientIp=177.234.153.154|sign=c32a68d70ede01e1242c1a8b2aac7116
+179.215.124.118	2017-07-06 02:10:38	[INFO:SORT_ARGS]	userName=felipe|serverId=s1|orderId=|chargeMoney=10.00
+179.215.124.118	2017-07-06 02:10:38	[ERROR:SIGN_ERROR]	Charging_Module::charge	signature_verification_failed	{"args":{"userName":"felipe","serverId":"s1","orderId":"","chargeMoney":"10","clientIp":"177.234.153.154","sign":"c32a68d70ede01e1242c1a8b2aac7116"}}	In charging_module.php On Line [0018],
+179.215.124.118	2017-07-06 02:24:05	[INFO:REQUEST_STRING]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:24:05	[INFO:SORT_ARGS]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:24:05	[INFO:UNION_MID_PARAM]	union mid param: unionCode=lmzg_1204|orderId=152|userName=tykoth2|chargeTime=20170706022405|chargeMoney=1000.00|chargeAmount=1000|gatewayId=104001|gameId=1204|clientIp=177.234.153.154|version=2, union_result=-1472
+179.215.124.118	2017-07-06 02:24:40	[INFO:REQUEST_STRING]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:24:40	[INFO:SORT_ARGS]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:24:40	[INFO:UNION_MID_PARAM]	union mid param: unionCode=lmzg_1204|orderId=152|userName=tykoth2|chargeTime=20170706022440|chargeMoney=1000.00|chargeAmount=1000|gatewayId=104001|gameId=1204|clientIp=177.234.153.154|version=2, union_result=-1472
+179.215.124.118	2017-07-06 02:24:41	[INFO:REQUEST_STRING]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:24:41	[INFO:SORT_ARGS]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:24:41	[INFO:UNION_MID_PARAM]	union mid param: unionCode=lmzg_1204|orderId=152|userName=tykoth2|chargeTime=20170706022441|chargeMoney=1000.00|chargeAmount=1000|gatewayId=104001|gameId=1204|clientIp=177.234.153.154|version=2, union_result=-1472
+179.215.124.118	2017-07-06 02:24:44	[INFO:REQUEST_STRING]	userName=tykoth2|serverId=s1|orderId=153|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:24:44	[INFO:SORT_ARGS]	userName=tykoth2|serverId=s1|orderId=153|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:24:44	[ERROR:SIGN_ERROR]	Charging_Module::charge	signature_verification_failed	{"args":{"userName":"tykoth2","serverId":"s1","orderId":"153","chargeMoney":"1000.00","clientIp":"177.234.153.154","sign":"f7178c9b7e44629c5e2a70bfbebff8a9"}}	In charging_module.php On Line [0018],
+179.215.124.118	2017-07-06 02:24:50	[INFO:REQUEST_STRING]	userName=tykoth2|serverId=s1|orderId=151|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:24:50	[INFO:SORT_ARGS]	userName=tykoth2|serverId=s1|orderId=151|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:24:50	[ERROR:SIGN_ERROR]	Charging_Module::charge	signature_verification_failed	{"args":{"userName":"tykoth2","serverId":"s1","orderId":"151","chargeMoney":"1000.00","clientIp":"177.234.153.154","sign":"f7178c9b7e44629c5e2a70bfbebff8a9"}}	In charging_module.php On Line [0018],
+179.215.124.118	2017-07-06 02:24:53	[INFO:REQUEST_STRING]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:24:53	[INFO:SORT_ARGS]	userName=tykoth2|serverId=s1|orderId=152|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:24:53	[INFO:UNION_MID_PARAM]	union mid param: unionCode=lmzg_1204|orderId=152|userName=tykoth2|chargeTime=20170706022453|chargeMoney=1000.00|chargeAmount=1000|gatewayId=104001|gameId=1204|clientIp=177.234.153.154|version=2, union_result=-1472
+179.215.124.118	2017-07-06 02:25:07	[INFO:REQUEST_STRING]	userName=tykoth2|serverId=s1|orderId=153|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:25:07	[INFO:SORT_ARGS]	userName=tykoth2|serverId=s1|orderId=153|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:25:07	[ERROR:SIGN_ERROR]	Charging_Module::charge	signature_verification_failed	{"args":{"userName":"tykoth2","serverId":"s1","orderId":"153","chargeMoney":"1000.00","clientIp":"177.234.153.154","sign":"f7178c9b7e44629c5e2a70bfbebff8a9"}}	In charging_module.php On Line [0018],
+179.215.124.118	2017-07-06 02:25:25	[INFO:REQUEST_STRING]	userName=felipe|serverId=s1|orderId=153|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 02:25:25	[INFO:SORT_ARGS]	userName=felipe|serverId=s1|orderId=153|chargeMoney=1000.00
+179.215.124.118	2017-07-06 02:25:25	[ERROR:SIGN_ERROR]	Charging_Module::charge	signature_verification_failed	{"args":{"userName":"felipe","serverId":"s1","orderId":"153","chargeMoney":"1000.00","clientIp":"177.234.153.154","sign":"f7178c9b7e44629c5e2a70bfbebff8a9"}}	In charging_module.php On Line [0018],
+179.215.124.118	2017-07-06 02:26:34	[INFO:REQUEST_STRING]	userName=felipe|serverId=s1|orderId=152|chargeMoney=100.00|clientIp=177.47.22.70|sign=c98fdf5a96dd38c9a2f79ad07ec4c5c6
+179.215.124.118	2017-07-06 02:26:34	[INFO:SORT_ARGS]	userName=felipe|serverId=s1|orderId=152|chargeMoney=100.00
+179.215.124.118	2017-07-06 02:26:34	[INFO:UNION_MID_PARAM]	union mid param: unionCode=lmzg_1204|orderId=152|userName=felipe|chargeTime=20170706022634|chargeMoney=100.00|chargeAmount=100|gatewayId=104001|gameId=1204|clientIp=177.47.22.70|version=2, union_result=-1472
+179.215.124.118	2017-07-06 02:26:42	[INFO:REQUEST_STRING]	userName=felipe|serverId=s1|orderId=152|chargeMoney=100.00|clientIp=177.234.153.154|sign=c98fdf5a96dd38c9a2f79ad07ec4c5c6
+179.215.124.118	2017-07-06 02:26:42	[INFO:SORT_ARGS]	userName=felipe|serverId=s1|orderId=152|chargeMoney=100.00
+179.215.124.118	2017-07-06 02:26:42	[INFO:UNION_MID_PARAM]	union mid param: unionCode=lmzg_1204|orderId=152|userName=felipe|chargeTime=20170706022642|chargeMoney=100.00|chargeAmount=100|gatewayId=104001|gameId=1204|clientIp=177.234.153.154|version=2, union_result=-1472
+179.215.124.118	2017-07-06 02:29:39	[INFO:REQUEST_STRING]	userName=felipe|serverId=s1|orderId=152|chargeMoney=100.00|clientIp=177.234.153.154|sign=c98fdf5a96dd38c9a2f79ad07ec4c5c6
+179.215.124.118	2017-07-06 02:29:39	[INFO:SORT_ARGS]	userName=felipe|serverId=s1|orderId=152|chargeMoney=100.00
+179.215.124.118	2017-07-06 02:29:39	[INFO:UNION_MID_PARAM]	union mid param: unionCode=lmzg_1204|orderId=152|userName=felipe|chargeTime=20170706022939|chargeMoney=100.00|chargeAmount=100|gatewayId=104001|gameId=1204|clientIp=177.234.153.154|version=2, union_result=-1472
+179.215.124.118	2017-07-06 05:27:53	[INFO:REQUEST_STRING]	userName=felipe|serverId=s1|orderId=153|chargeMoney=1000.00|clientIp=177.234.153.154|sign=f7178c9b7e44629c5e2a70bfbebff8a9
+179.215.124.118	2017-07-06 05:27:53	[INFO:SORT_ARGS]	userName=felipe|serverId=s1|orderId=153|chargeMoney=1000.00
+179.215.124.118	2017-07-06 05:27:53	[ERROR:SIGN_ERROR]	Charging_Module::charge	signature_verification_failed	{"args":{"userName":"felipe","serverId":"s1","orderId":"153","chargeMoney":"1000.00","clientIp":"177.234.153.154","sign":"f7178c9b7e44629c5e2a70bfbebff8a9"}}	In charging_module.php On Line [0018],

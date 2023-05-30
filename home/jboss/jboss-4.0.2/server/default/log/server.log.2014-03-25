@@ -1,0 +1,11 @@
+2014-03-25 06:50:33,284 INFO  [STDOUT] java.lang.NullPointerException
+2014-03-25 06:50:33,285 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-03-25 06:50:33,285 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-03-25 06:50:33,285 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-03-25 06:50:33,285 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-03-25 06:50:33,286 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-03-25 15:05:30,876 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 72    userName = felipe    chargeTime = 2014-03-26 02:05:30    chargeMoney = 1000000.0    chargeAmount = 1000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 139577073085976    sign = 73f7f9affe5127a9d996f9f01cebfe0b     )
+2014-03-25 15:37:19,508 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 73    userName = kissinet02    chargeTime = 2014-03-26 02:37:19    chargeMoney = 1.0E7    chargeAmount = 10000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 139577263949206    sign = 03135d2985d07ddc1e03710dc0035550     )
+2014-03-25 17:13:29,237 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-03-25 17:13:29,897 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-03-25 17:53:34,266 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 74    userName = felipe    chargeTime = 2014-03-26 04:53:34    chargeMoney = 5.0E8    chargeAmount = 500000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 139578081425010    sign = 402561da0e8f25df7546d40dde7944ba     )

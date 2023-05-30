@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<!-- 资源管理 begin -->
+	<bean name="/showResourceManage" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showResourceAdd" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/addResource" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showResourceModify" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/modifyResource" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showResourceTree" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/delResource" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showResourceSort" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/sortResource" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showResource2Game" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/resource2Game" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showResourceRelation" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/resourceRelation" class="com.linekong.gmweb2.web.action.ResourceManageAction">
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="resourceManageService" ref="resourceManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<!-- 资源管理end -->
+	
+	<!-- 角色管理 begin -->
+	<bean name="/showRoleManage" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showRoleAdd" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showRoleModify" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/addRole" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+
+	<bean name="/modifyRole" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/delGMRole" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showRole2Resource" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/modifyRoleResource" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showMultiRoleAddResource" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/multiRoleAddResource" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="resourceManageDao" ref="resourceManageDao" />
+		<property name="roleManageService" ref="roleManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<!-- 角色管理 end -->
+	
+	<!-- 用户管理 begin -->
+	<bean name="/showUserManage" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showUserAdd" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showUserModify" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/addUser" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/modifyUser" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/delUser" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showUser2Role" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/modifyUserRole" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exchangeUser" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showUserPwdModify" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/modifyUserPwd" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />		
+	</bean>
+	
+	<bean name="/queryOperRight" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageDao" ref="userManageDao" />	
+	</bean>
+	
+	<bean name="/showRoleGame" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+	</bean>
+	<bean name="/insertRoleGame" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+	</bean>
+	<bean name="/deleteRoleGame" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="roleManageDao" ref="roleManageDao" />
+	</bean>
+	<bean name="/showRoleUsers" class="com.linekong.gmweb2.web.action.RoleManageAction">
+		<property name="roleManageDao" ref="roleManageDao" />		
+	</bean>
+	<bean name="/addAdmin" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="userManageService" ref="userManageService" />
+		<property name="logInfoDao" ref="logInfoDao" />			
+	</bean>
+	<bean name="/showAddAdmin" class="com.linekong.gmweb2.web.action.UserManageAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />		
+	</bean>
+	
+	
+	
+	<!-- 用户管理 end -->
+</beans>

@@ -1,0 +1,40 @@
+2015-06-08 17:23:03,351 INFO  [STDOUT] java.lang.NullPointerException
+2015-06-08 17:23:03,352 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2015-06-08 17:23:03,352 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2015-06-08 17:23:03,352 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2015-06-08 17:23:03,352 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2015-06-08 17:23:03,352 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2015-06-08 18:36:19,499 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.net.SocketException: Connection reset
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:96)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:65)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:123)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1793)
+	at java.io.ObjectOutputStream.flush(ObjectOutputStream.java:699)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:245)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2015-06-08 18:52:25,201 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:258)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:317)
+	at java.io.ObjectInputStream$PeekInputStream.read(ObjectInputStream.java:2265)
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2278)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:2749)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:779)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2015-06-08 20:09:25,936 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2015-06-08 20:09:25,937 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)

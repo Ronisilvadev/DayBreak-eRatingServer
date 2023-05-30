@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<form-beans>
+	<!-- 资源FORM begin -->
+		<form-bean name="resourceForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="resName" type="java.lang.String"></form-property>
+			<form-property name="resDesc" type="java.lang.String"></form-property>
+			<form-property name="resType" type="java.lang.String"></form-property>
+			<form-property name="resUrl" type="java.lang.String"></form-property>
+			<form-property name="resPid" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 资源FORM end -->
+	
+	<!-- 角色FORM begin -->
+		<form-bean name="roleForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="roleDesc" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 角色FORM end -->
+
+	<!-- 用户FORM begin -->
+		<form-bean name="userForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="passportName" type="java.lang.String"></form-property>
+			<form-property name="realName" type="java.lang.String"></form-property>
+			<form-property name="email" type="java.lang.String"></form-property>
+			<form-property name="oldPassword" type="java.lang.String"></form-property>
+			<form-property name="newPassword" type="java.lang.String"></form-property>
+			<form-property name="newPasswordAgain" type="java.lang.String"></form-property>
+		</form-bean>
+		
+		
+		<form-bean name="adminForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="passportName" type="java.lang.String"></form-property>
+			<form-property name="realName" type="java.lang.String"></form-property>
+			<form-property name="email" type="java.lang.String"></form-property>
+			<form-property name="gameId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 用户FORM end -->
+</form-beans>
+	
+	<action-mappings>
+		<!-- 资源管理 begin -->
+		<action path="/showResourceManage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResourceManage" scope="request">
+			<forward name="resourceManage" path="/WEB-INF/jsp/purview/resourceManage.jsp" />
+		</action>
+		<action path="/showResourceAdd" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResourceAdd" scope="request">
+			<forward name="resourceAdd" path="/WEB-INF/jsp/purview/resourceAdd.jsp" />
+		</action>
+		<action path="/addResource" type="org.springframework.web.struts.DelegatingActionProxy" name="resourceForm" parameter="addResource" scope="request" validate="true" input="/showResourceAdd.do">
+			<forward name="resourceAdd" path="/WEB-INF/jsp/purview/resourceAdd.jsp" />
+		</action>
+		<action path="/showResourceModify" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResourceModify" scope="request">
+			<forward name="resourceAdd" path="/WEB-INF/jsp/purview/resourceAdd.jsp" />
+		</action>
+		<action path="/modifyResource" type="org.springframework.web.struts.DelegatingActionProxy" name="resourceForm" parameter="modifyResource" scope="request" validate="true" input="/showResourceModify.do">
+			<forward name="resourceAdd" path="/WEB-INF/jsp/purview/resourceAdd.jsp" />
+		</action>
+		<action path="/showResourceTree" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResourceTree" scope="request">
+			<forward name="resourceTree" path="/WEB-INF/jsp/purview/resourceTree.jsp" />
+		</action>
+		<action path="/delResource" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delResource" scope="request">
+		</action>
+		<action path="/showResourceSort" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResourceSort" scope="request">
+			<forward name="resourceSort" path="/WEB-INF/jsp/purview/resourceSort.jsp" />
+		</action>
+		<action path="/sortResource" type="org.springframework.web.struts.DelegatingActionProxy" parameter="sortResource" scope="request">
+		</action>
+		<action path="/showResource2Game" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResource2Game" scope="request">
+			<forward name="resource2Game" path="/WEB-INF/jsp/purview/resource2Game.jsp" />
+		</action>
+		<action path="/resource2Game" type="org.springframework.web.struts.DelegatingActionProxy" parameter="resource2Game" scope="request">
+		</action>
+		<action path="/showResourceRelation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResourceRelation" scope="request">
+			<forward name="resourceRelation" path="/WEB-INF/jsp/purview/resourceRelation.jsp" />
+		</action>
+		<action path="/resourceRelation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="resourceRelation" scope="request">
+		</action>
+		<!-- 资源管理 end -->
+		
+		<!-- 角色管理 begin -->
+		<action path="/showRoleManage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleManage" scope="request">
+			<forward name="roleManage" path="/WEB-INF/jsp/purview/roleManage.jsp" />
+		</action>
+		<action path="/showRoleAdd" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleAdd" scope="request">
+			<forward name="roleAdd" path="/WEB-INF/jsp/purview/roleAdd.jsp" />
+		</action>
+		<action path="/showRoleModify" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleModify" scope="request">
+			<forward name="roleAdd" path="/WEB-INF/jsp/purview/roleAdd.jsp" />
+		</action>
+		<action path="/addRole" type="org.springframework.web.struts.DelegatingActionProxy" name="roleForm" parameter="addRole" scope="request" validate="true" input="/showRoleAdd.do">
+		</action>
+		<action path="/modifyRole" type="org.springframework.web.struts.DelegatingActionProxy" name="roleForm" parameter="modifyRole" scope="request" validate="true" input="/showRoleModify.do">
+		</action>
+		<action path="/delGMRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delGMRole" scope="request">
+		</action>
+		<action path="/showRole2Resource" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRole2Resource" scope="request">
+			<forward name="role2Resource" path="/WEB-INF/jsp/purview/role2Resource.jsp" />
+		</action>
+		<action path="/modifyRoleResource" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyRoleResource" scope="request">
+		</action>
+		<action path="/showMultiRoleAddResource" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showMultiRoleAddResource" scope="request">
+			<forward name="multiRoleAddResource" path="/WEB-INF/jsp/purview/multiRoleAddResource.jsp" />
+		</action>
+		<action path="/multiRoleAddResource" type="org.springframework.web.struts.DelegatingActionProxy" parameter="multiRoleAddResource" scope="request">
+		</action>
+		
+		<action path="/showRoleGame" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleGame" scope="request">
+		<forward name="roleGame" path="/WEB-INF/jsp/purview/role2Game.jsp" />
+		</action>
+		<action path="/insertRoleGame" type="org.springframework.web.struts.DelegatingActionProxy" name="roleForm" parameter="insertRoleGame" scope="request" input="/showRoleGame.do">
+		<forward name="roleGame" path="/WEB-INF/jsp/purview/role2Game.jsp" />
+		</action>
+		<action path="/deleteRoleGame" type="org.springframework.web.struts.DelegatingActionProxy" name="roleForm" parameter="deleteRoleGame" scope="request" input="/showRoleGame.do">
+		<forward name="roleGame" path="/WEB-INF/jsp/purview/role2Game.jsp" />
+		</action>
+		<!-- 角色管理 end -->
+		
+		<!-- 用户管理 begin -->
+		<action path="/showUserManage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserManage" scope="request">
+			<forward name="userManage" path="/WEB-INF/jsp/purview/userManage.jsp" />
+		</action>
+		<action path="/showUserAdd" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserAdd" scope="request">
+			<forward name="userAdd" path="/WEB-INF/jsp/purview/userAdd.jsp" />
+		</action>
+		<action path="/showUserModify" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserModify" scope="request">
+			<forward name="userAdd" path="/WEB-INF/jsp/purview/userAdd.jsp" />
+		</action>
+		<action path="/addUser" type="org.springframework.web.struts.DelegatingActionProxy" name="userForm" parameter="addUser" scope="request" validate="true" input="/showUserAdd.do">
+		</action>
+		<action path="/modifyUser" type="org.springframework.web.struts.DelegatingActionProxy" name="userForm" parameter="modifyUser" scope="request" validate="true" input="/showUserModify.do">
+		</action>
+		<action path="/delUser" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delUser" scope="request">
+			<forward name="exchange" path="/WEB-INF/jsp/purview/exchange.jsp"></forward>
+		</action>
+		<action path="/showUser2Role" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUser2Role" scope="request">
+			<forward name="user2Role" path="/WEB-INF/jsp/purview/user2Role.jsp" />
+		</action>
+		<action path="/modifyUserRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyUserRole" scope="request">
+		</action>
+		<action path="/exchangeUser" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exchangeUser" scope="request"></action>
+		<action path="/showUserPwdModify" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserPwdModify" scope="request">
+			<forward name="pwdModify" path="/WEB-INF/jsp/purview/userModifyPwd.jsp" />
+		</action>
+		<action path="/modifyUserPwd" type="org.springframework.web.struts.DelegatingActionProxy" name="userForm" parameter="modifyUserPwd" scope="request" validate="true" input="/showUserPwdModify.do">
+		</action>	
+		
+		<action path="/resourceRedirect" type="org.springframework.web.struts.DelegatingActionProxy" parameter="resourceRedirect" scope="request"/>	
+		<!-- 用户管理 end -->
+		
+		<action path="/showRoleUsers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleUsers" scope="request">
+			<forward name="roleUsers" path="/WEB-INF/jsp/purview/roleUsers.jsp" />
+		</action>
+		
+		<action path="/queryOperRight" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryOperRight" scope="request">
+			<forward name="userRight" path="/WEB-INF/jsp/purview/userRight.jsp" />
+		</action>
+		
+		
+		<action path="/showAddAdmin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddAdmin" scope="request">
+			<forward name="showAddAdmin" path="/WEB-INF/jsp/purview/addAdmin.jsp" />
+		</action>
+		
+		<action path="/addAdmin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addAdmin" scope="request" name="adminForm" validate="true">
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

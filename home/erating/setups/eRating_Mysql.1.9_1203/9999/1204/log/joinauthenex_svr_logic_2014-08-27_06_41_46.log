@@ -1,0 +1,52 @@
+2014-08-27_06:41:46.740|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=73953|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=47340
+2014-08-27_06:41:46.743|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=renangg&password=09e9fdf413aaf9e18814aad8e1b6dded37d8de14f81f69a8cd3f34b1cdbd54e5&sign=6F63791508077C40EB5D722E90AAEDAB
+2014-08-27_06:41:46.765|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Mon, 25 Aug 2014 14:04:17 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>renangg</userName></response>
+2014-08-27_06:41:46.769|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000100|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=renangg|Password=a064a9f8f1fca077cf47b6e91ad488d0|Send3rdPassword=09e9fdf413aaf9e18814aad8e1b6dded37d8de14f81f69a8cd3f34b1cdbd54e5|UserID_Union=renangg|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=177.47.22.70|User_Port=49815|Client_MAC=00FF2D16DDB0|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=25|TC2=4|TC=29
+2014-08-27_06:41:46.769|I|4146|B3A3E6E0|INFO|package|1|SequenceID=73953|toRouter
+2014-08-27_06:51:00.593|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=74026|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=47340
+2014-08-27_06:51:00.595|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=lpnobrega&password=8f70e1bb36a36cd1c3e3dc0c52ac85762ac344bb6456ec994b984a78a1ffaf58&sign=9595CFA96164839F4C985031C92229E8
+2014-08-27_06:51:00.617|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 128
+Content-Type: text/html; charset=utf-8
+Date: Mon, 25 Aug 2014 14:13:31 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>-1815</result><adult>1</adult><userName>lpnobrega</userName></response>
+2014-08-27_06:51:00.617|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|-1815|0|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=lpnobrega|Password=e998335cfe5fa2018e9759efc6b6cd55|Send3rdPassword=8f70e1bb36a36cd1c3e3dc0c52ac85762ac344bb6456ec994b984a78a1ffaf58|UserID_Union=|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=0|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=61858|Client_MAC=1EC9D31E2F1B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=24|TC2=0|TC=24
+2014-08-27_06:51:00.617|I|4146|B3A3E6E0|INFO|package|1|SequenceID=74026|toRouter
+2014-08-27_06:51:15.598|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=74028|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=47340
+2014-08-27_06:51:15.598|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=lpnobrega&password=77992a2b0ac2c34ad936abd0a8b1c07004c5945fddbeecd0f3f0008afc80e003&sign=B42697F195EF5EC27C386801FFA6087C
+2014-08-27_06:51:15.622|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 124
+Content-Type: text/html; charset=utf-8
+Date: Mon, 25 Aug 2014 14:13:46 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>lpnobrega</userName></response>
+2014-08-27_06:51:15.628|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000102|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=lpnobrega|Password=aa23c31957a240a56278f69022cc4159|Send3rdPassword=77992a2b0ac2c34ad936abd0a8b1c07004c5945fddbeecd0f3f0008afc80e003|UserID_Union=lpnobrega|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=61861|Client_MAC=1EC9D31E2F1B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=24|TC2=6|TC=30
+2014-08-27_06:51:15.628|I|4146|B3A3E6E0|INFO|package|1|SequenceID=74028|toRouter
+2014-08-27_06:51:38.840|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=74032|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=47340
+2014-08-27_06:51:38.840|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=lpnobrega&password=77992a2b0ac2c34ad936abd0a8b1c07004c5945fddbeecd0f3f0008afc80e003&sign=B42697F195EF5EC27C386801FFA6087C
+2014-08-27_06:51:38.859|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 124
+Content-Type: text/html; charset=utf-8
+Date: Mon, 25 Aug 2014 14:14:09 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>lpnobrega</userName></response>
+2014-08-27_06:51:38.863|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000102|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=lpnobrega|Password=aa23c31957a240a56278f69022cc4159|Send3rdPassword=77992a2b0ac2c34ad936abd0a8b1c07004c5945fddbeecd0f3f0008afc80e003|UserID_Union=lpnobrega|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.34.132.34|User_Port=61862|Client_MAC=1EC9D31E2F1B|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=19|TC2=4|TC=23
+2014-08-27_06:51:38.863|I|4146|B3A3E6E0|INFO|package|1|SequenceID=74032|toRouter

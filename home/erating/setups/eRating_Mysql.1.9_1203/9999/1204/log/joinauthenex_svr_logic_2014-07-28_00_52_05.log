@@ -1,0 +1,13 @@
+2014-07-28_00:52:05.529|I|4146|B3A3E6E0|INFO|unPackage|1|pdu_len=163|orig_pdu_len=163|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=26623|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=34247
+2014-07-28_00:52:05.531|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=renangg&password=09e9fdf413aaf9e18814aad8e1b6dded37d8de14f81f69a8cd3f34b1cdbd54e5&sign=6F63791508077C40EB5D722E90AAEDAB
+2014-07-28_00:52:05.561|I|4146|B3A3E6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 122
+Content-Type: text/html; charset=utf-8
+Date: Sun, 27 Jul 2014 02:13:36 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>1</result><adult>1</adult><userName>renangg</userName></response>
+2014-07-28_00:52:05.565|I|4146|B3A3E6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|1|1500000100|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=renangg|Password=a064a9f8f1fca077cf47b6e91ad488d0|Send3rdPassword=09e9fdf413aaf9e18814aad8e1b6dded37d8de14f81f69a8cd3f34b1cdbd54e5|UserID_Union=renangg|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=1|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=177.47.22.70|User_Port=62233|Client_MAC=00FF68C9B0DC|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=32|TC2=4|TC=36
+2014-07-28_00:52:05.566|I|4146|B3A3E6E0|INFO|package|1|SequenceID=26623|toRouter

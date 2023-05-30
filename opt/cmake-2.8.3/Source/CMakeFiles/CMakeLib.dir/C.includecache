@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/opt/cmake-2.8.3/Source/cmListFileLexer.c
+stdio.h
+-
+string.h
+-
+errno.h
+-
+stdlib.h
+-
+inttypes.h
+-
+cmStandardLexer.h
+/opt/cmake-2.8.3/Source/cmStandardLexer.h
+cmListFileLexer.h
+/opt/cmake-2.8.3/Source/cmListFileLexer.h
+unistd.h
+-
+
+/opt/cmake-2.8.3/Source/cmListFileLexer.h
+
+/opt/cmake-2.8.3/Source/cmStandardLexer.h
+stdint.h
+-
+sys/termios.h
+-
+io.h
+-
+malloc.h
+-
+
+/opt/cmake-2.8.3/Source/cm_utf8.c
+cm_utf8.h
+/opt/cmake-2.8.3/Source/cm_utf8.h
+
+/opt/cmake-2.8.3/Source/cm_utf8.h
+

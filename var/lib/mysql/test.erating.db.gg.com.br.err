@@ -1,0 +1,857 @@
+130217 20:41:50 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+130217 20:41:50 [Note] Plugin 'FEDERATED' is disabled.
+130217 20:41:50 InnoDB: The InnoDB memory heap is disabled
+130217 20:41:50 InnoDB: Mutexes and rw_locks use InnoDB's own implementation
+130217 20:41:50 InnoDB: Compressed tables use zlib 1.2.3
+130217 20:41:50 InnoDB: Using Linux native AIO
+130217 20:41:50 InnoDB: Initializing buffer pool, size = 128.0M
+130217 20:41:50 InnoDB: Completed initialization of buffer pool
+InnoDB: The first specified data file ./ibdata1 did not exist:
+InnoDB: a new database to be created!
+130217 20:41:50  InnoDB: Setting file ./ibdata1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+130217 20:41:50  InnoDB: Log file ./ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile0 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+130217 20:41:50  InnoDB: Log file ./ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile1 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: 127 rollback segment(s) active.
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+130217 20:41:50  InnoDB: Waiting for the background threads to start
+130217 20:41:51 InnoDB: 5.5.30 started; log sequence number 0
+130217 20:41:51 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130217 20:41:51 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130217 20:41:51 [Note] Server socket created on IP: '0.0.0.0'.
+130217 20:41:51 [Note] Event Scheduler: Loaded 0 events
+130217 20:41:51 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.5.30'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+130217 20:51:40 [Note] /usr/sbin/mysqld: Normal shutdown
+
+130217 20:51:40 [Note] Event Scheduler: Purging the queue. 0 events
+130217 20:51:40  InnoDB: Starting shutdown...
+130217 20:51:41  InnoDB: Shutdown completed; log sequence number 1595675
+130217 20:51:41 [Note] /usr/sbin/mysqld: Shutdown complete
+
+130217 20:51:41 mysqld_safe mysqld from pid file /var/lib/mysql/test.erating.db.gg.com.br.pid ended
+130217 20:53:08 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+130217 20:53:08 [Note] Plugin 'FEDERATED' is disabled.
+130217 20:53:08 InnoDB: The InnoDB memory heap is disabled
+130217 20:53:08 InnoDB: Mutexes and rw_locks use InnoDB's own implementation
+130217 20:53:08 InnoDB: Compressed tables use zlib 1.2.3
+130217 20:53:08 InnoDB: Using Linux native AIO
+130217 20:53:08 InnoDB: Initializing buffer pool, size = 128.0M
+130217 20:53:08 InnoDB: Completed initialization of buffer pool
+130217 20:53:08 InnoDB: highest supported file format is Barracuda.
+130217 20:53:08  InnoDB: Waiting for the background threads to start
+130217 20:53:09 InnoDB: 5.5.30 started; log sequence number 1595675
+130217 20:53:09 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130217 20:53:09 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130217 20:53:09 [Note] Server socket created on IP: '0.0.0.0'.
+130217 20:53:09 [Note] Event Scheduler: Loaded 0 events
+130217 20:53:09 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.5.30'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+130217 21:12:02 [Note] /usr/sbin/mysqld: Normal shutdown
+
+130217 21:12:02 [Note] Event Scheduler: Purging the queue. 0 events
+130217 21:12:02  InnoDB: Starting shutdown...
+130217 21:12:02  InnoDB: Shutdown completed; log sequence number 1595675
+130217 21:12:02 [Note] /usr/sbin/mysqld: Shutdown complete
+
+130217 21:12:02 mysqld_safe mysqld from pid file /var/lib/mysql/test.erating.db.gg.com.br.pid ended
+130217 21:13:21 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+130217 21:13:21 [Note] Plugin 'FEDERATED' is disabled.
+130217 21:13:21 InnoDB: The InnoDB memory heap is disabled
+130217 21:13:21 InnoDB: Mutexes and rw_locks use InnoDB's own implementation
+130217 21:13:21 InnoDB: Compressed tables use zlib 1.2.3
+130217 21:13:21 InnoDB: Using Linux native AIO
+130217 21:13:21 InnoDB: Initializing buffer pool, size = 128.0M
+130217 21:13:21 InnoDB: Completed initialization of buffer pool
+130217 21:13:21 InnoDB: highest supported file format is Barracuda.
+130217 21:13:21  InnoDB: Waiting for the background threads to start
+130217 21:13:22 InnoDB: 5.5.30 started; log sequence number 1595675
+130217 21:13:22 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130217 21:13:22 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130217 21:13:22 [Note] Server socket created on IP: '0.0.0.0'.
+130217 21:13:22 [Note] Event Scheduler: Loaded 0 events
+130217 21:13:22 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.5.30'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+130219 13:50:14 [Warning] IP address '118.122.188.242' could not be resolved: Name or service not known
+130220  2:32:23 [Warning] IP address '187.17.71.254' could not be resolved: Name or service not known
+130220  2:48:32 [Note] /usr/sbin/mysqld: Normal shutdown
+
+130220  2:48:32 [Note] Event Scheduler: Purging the queue. 0 events
+130220  2:48:32  InnoDB: Starting shutdown...
+130220  2:48:33  InnoDB: Shutdown completed; log sequence number 1595675
+130220  2:48:33 [Note] /usr/sbin/mysqld: Shutdown complete
+
+130220 02:48:33 mysqld_safe mysqld from pid file /var/lib/mysql/test.erating.db.gg.com.br.pid ended
+130220 02:49:34 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+130220  2:49:34 [Note] Plugin 'FEDERATED' is disabled.
+130220  2:49:34 InnoDB: The InnoDB memory heap is disabled
+130220  2:49:34 InnoDB: Mutexes and rw_locks use InnoDB's own implementation
+130220  2:49:34 InnoDB: Compressed tables use zlib 1.2.3
+130220  2:49:34 InnoDB: Using Linux native AIO
+130220  2:49:34 InnoDB: Initializing buffer pool, size = 128.0M
+130220  2:49:34 InnoDB: Completed initialization of buffer pool
+130220  2:49:34 InnoDB: highest supported file format is Barracuda.
+130220  2:49:34  InnoDB: Waiting for the background threads to start
+130220  2:49:35 InnoDB: 5.5.30 started; log sequence number 1595675
+130220  2:49:35 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130220  2:49:35 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130220  2:49:35 [Note] Server socket created on IP: '0.0.0.0'.
+130220  2:49:35 [Note] Event Scheduler: Loaded 0 events
+130220  2:49:35 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.5.30'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+130221  7:25:42 [Warning] IP address '222.189.238.106' could not be resolved: Name or service not known
+130221  9:53:38 [Warning] IP address '222.189.238.109' could not be resolved: Name or service not known
+130225  0:51:46 [Warning] IP address '120.209.173.178' could not be resolved: Temporary failure in name resolution
+130225  7:11:45 [Warning] IP address '120.209.173.178' could not be resolved: Temporary failure in name resolution
+130225 16:47:01 [Warning] IP address '120.209.173.178' could not be resolved: Temporary failure in name resolution
+130225 23:12:18 [Warning] IP address '106.3.37.81' could not be resolved: Name or service not known
+130226  0:06:10 [Note] /usr/sbin/mysqld: Normal shutdown
+
+130226  0:06:10 [Note] Event Scheduler: Purging the queue. 0 events
+130226  0:06:10  InnoDB: Starting shutdown...
+130226  0:06:11  InnoDB: Shutdown completed; log sequence number 1595675
+130226  0:06:11 [Note] /usr/sbin/mysqld: Shutdown complete
+
+130226 00:06:11 mysqld_safe mysqld from pid file /var/lib/mysql/test.erating.db.gg.com.br.pid ended
+130226 00:09:55 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+130226  0:09:55 [Note] Plugin 'FEDERATED' is disabled.
+130226  0:09:55 InnoDB: The InnoDB memory heap is disabled
+130226  0:09:55 InnoDB: Mutexes and rw_locks use InnoDB's own implementation
+130226  0:09:55 InnoDB: Compressed tables use zlib 1.2.3
+130226  0:09:55 InnoDB: Using Linux native AIO
+130226  0:09:55 InnoDB: Initializing buffer pool, size = 128.0M
+130226  0:09:55 InnoDB: Completed initialization of buffer pool
+130226  0:09:55 InnoDB: highest supported file format is Barracuda.
+130226  0:09:55  InnoDB: Waiting for the background threads to start
+130226  0:09:56 InnoDB: 5.5.30 started; log sequence number 1595675
+130226  0:09:56 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130226  0:09:56 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130226  0:09:56 [Note] Server socket created on IP: '0.0.0.0'.
+130226  0:09:56 [Note] Event Scheduler: Loaded 0 events
+130226  0:09:56 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.5.30'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+130226  7:33:53 [Warning] IP address '219.148.111.134' could not be resolved: Name or service not known
+130228  0:11:36 [Warning] IP address '192.168.177.92' could not be resolved: Name or service not known
+130228 16:36:26 [Warning] IP address '198.13.96.55' could not be resolved: Temporary failure in name resolution
+130302 18:41:37 [Warning] IP address '119.255.38.204' could not be resolved: Name or service not known
+130303  4:33:21 [Warning] IP address '222.189.238.110' could not be resolved: Name or service not known
+130304  8:45:43 [Warning] IP address '120.209.173.178' could not be resolved: Temporary failure in name resolution
+130305 17:22:39 [Warning] IP address '222.189.238.106' could not be resolved: Name or service not known
+130307 18:59:15 [Warning] IP address '61.160.200.69' could not be resolved: Name or service not known
+130308 12:24:57 [Warning] IP address '61.160.212.210' could not be resolved: Name or service not known
+130309 22:45:31 [Warning] IP address '118.244.155.83' could not be resolved: Name or service not known
+130312 20:39:58 [Warning] IP address '61.147.74.193' could not be resolved: Name or service not known
+130312 22:05:37 [Warning] IP address '116.55.13.50' has been resolved to the host name '50.13.55.116.broad.km.yn.dynamic.163data.com.cn', which resembles IPv4-address itself.
+130313 17:07:27 [Warning] IP address '61.160.223.106' could not be resolved: Name or service not known
+130313 18:19:12 [Warning] IP address '222.74.218.4' could not be resolved: Name or service not known
+130315  3:19:20 [Warning] IP address '115.239.205.123' could not be resolved: Name or service not known
+130316  3:25:12 [Warning] IP address '61.147.108.35' could not be resolved: Name or service not known
+130320  6:05:23 [Warning] IP address '61.132.229.235' could not be resolved: Name or service not known
+130322 15:14:42 [Warning] IP address '217.218.235.42' could not be resolved: Name or service not known
+130323  2:35:31 [Warning] IP address '61.147.74.149' could not be resolved: Name or service not known
+130323  2:44:14 [Warning] IP address '61.147.74.223' could not be resolved: Name or service not known
+130323  5:21:52 [Warning] IP address '219.147.195.134' has been resolved to the host name '134.195.147.219.broad.qq.hl.dynamic.163data.com.cn', which resembles IPv4-address itself.
+130323 15:33:28 [Warning] IP address '117.41.229.90' could not be resolved: Name or service not known
+130326 17:23:18 [Warning] IP address '220.189.253.78' could not be resolved: Name or service not known
+130327  4:15:01 [Warning] IP address '222.189.238.103' could not be resolved: Name or service not known
+130327  8:48:59 [Warning] IP address '42.96.169.63' could not be resolved: Name or service not known
+130328  3:03:51 [Warning] IP address '176.10.35.241' could not be resolved: Name or service not known
+130328  8:02:12 [Warning] IP address '211.141.115.3' could not be resolved: Name or service not known
+130329  8:28:17 [Warning] IP address '198.15.88.53' could not be resolved: Name or service not known
+130329 11:37:20 [Warning] IP address '125.65.76.55' could not be resolved: Name or service not known
+130330  4:37:24 [Warning] IP address '118.244.148.139' could not be resolved: Name or service not known
+130331 15:44:29 [Warning] IP address '61.147.70.121' could not be resolved: Name or service not known
+130401 13:32:45 [Warning] IP address '98.126.53.34' has been resolved to the host name '98.126.53.34.static.customer.krypt.com', which resembles IPv4-address itself.
+130401 20:50:18 [Warning] IP address '118.244.187.235' could not be resolved: Name or service not known
+130407 17:25:50 [Warning] IP address '118.244.181.249' could not be resolved: Name or service not known
+130407 19:17:36 [Warning] IP address '120.210.224.118' could not be resolved: Temporary failure in name resolution
+130408  1:10:59 [Warning] IP address '115.47.57.141' could not be resolved: Temporary failure in name resolution
+130408 16:42:21 [Warning] IP address '60.190.203.169' could not be resolved: Name or service not known
+130409 18:09:58 [Warning] IP address '94.142.155.123' could not be resolved: Name or service not known
+130412 10:38:25 [Warning] IP address '42.96.164.169' could not be resolved: Name or service not known
+130412 18:44:38 [Warning] IP address '115.239.229.231' could not be resolved: Name or service not known
+130413  5:57:00 [Warning] IP address '42.96.177.216' could not be resolved: Name or service not known
+130413  9:55:02 [Warning] IP address '61.147.99.115' could not be resolved: Name or service not known
+130414 14:35:57 [Warning] IP address '111.227.174.72' could not be resolved: Name or service not known
+130418  9:54:25 [Warning] IP address '60.190.217.240' could not be resolved: Name or service not known
+130419  0:14:06 [Warning] IP address '115.47.51.106' could not be resolved: Temporary failure in name resolution
+130419  9:37:40 [Warning] IP address '221.236.16.228' could not be resolved: Name or service not known
+130419 19:24:37 [Warning] IP address '210.45.215.132' could not be resolved: Temporary failure in name resolution
+130422 22:57:01 [Warning] IP address '183.61.185.76' could not be resolved: Name or service not known
+130423  4:53:29 [Warning] IP address '115.239.231.8' could not be resolved: Name or service not known
+130423 12:12:43 [Warning] IP address '42.121.131.249' could not be resolved: Name or service not known
+130423 13:27:47 [Note] Hostname 'singlehop3.shodanhq.com' does not resolve to '198.20.70.114'.
+130423 13:27:47 [Note] Hostname 'singlehop3.shodanhq.com' has the following IP addresses:
+130423 13:27:47 [Note]  - 174.79.246.153
+
+130423 18:19:39 [Warning] IP address '59.53.68.126' could not be resolved: Name or service not known
+130424 20:31:29 [Warning] IP address '218.62.77.99' has been resolved to the host name '99.77.62.218.adsl-pool.jlccptt.net.cn', which resembles IPv4-address itself.
+130426  2:11:27 [Warning] IP address '124.240.186.133' could not be resolved: Name or service not known
+130427 15:09:43 [Note] Hostname 'ctccn.com.cn' does not resolve to '125.208.8.139'.
+130427 15:09:43 [Note] Hostname 'ctccn.com.cn' has the following IP addresses:
+130427 15:09:43 [Note]  - 58.64.194.100
+
+130427 17:39:12 [Warning] IP address '61.141.235.99' could not be resolved: Name or service not known
+130427 23:36:28 [Warning] IP address '125.65.110.189' could not be resolved: Name or service not known
+130428  7:38:33 [Warning] IP address '213.99.51.164' could not be resolved: Name or service not known
+130429  9:20:14 [Note] Hostname 'ip199.hichina.com' does not resolve to '121.199.26.215'.
+130429  9:20:14 [Note] Hostname 'ip199.hichina.com' has the following IP addresses:
+130429  9:20:14 [Note]  - 121.199.254.224
+
+130429 12:11:34 [Warning] IP address '61.158.162.167' has been resolved to the host name '167.162.158.61.ha.cnc', which resembles IPv4-address itself.
+130429 12:57:29 [Warning] IP address '115.47.51.208' could not be resolved: Temporary failure in name resolution
+130429 15:01:09 [Warning] IP address '211.141.27.242' could not be resolved: Name or service not known
+130429 19:52:49 [Warning] IP address '115.47.51.208' could not be resolved: Temporary failure in name resolution
+130430  1:59:36 [Warning] IP address '202.29.80.147' could not be resolved: Name or service not known
+130430 12:40:40 [Warning] IP address '119.57.53.6' could not be resolved: Name or service not known
+130503  0:03:28 [Warning] IP address '42.62.18.200' could not be resolved: Temporary failure in name resolution
+130516  4:13:30 [Warning] IP address '61.160.207.162' could not be resolved: Name or service not known
+130522 11:22:14 [Warning] IP address '60.190.217.170' could not be resolved: Name or service not known
+130525 18:28:00 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130525 18:28:02 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130525 18:28:03 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130525 23:09:56 [Warning] IP address '42.121.105.43' could not be resolved: Name or service not known
+130526  8:55:19 [Note] Hostname 'swi9a.com' does not resolve to '66.228.116.117'.
+130526  8:55:19 [Note] Hostname 'swi9a.com' has the following IP addresses:
+130526  8:55:19 [Note]  - 173.192.95.210
+
+130526 10:36:43 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130526 10:36:47 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130526 10:36:51 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130526 10:36:53 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130526 10:36:57 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130526 10:36:59 [Warning] IP address '142.4.127.218' could not be resolved: Temporary failure in name resolution
+130526 23:20:29 [Warning] IP address '163.32.159.192' could not be resolved: Name or service not known
+130527  9:10:39 [Warning] IP address '211.141.179.132' could not be resolved: Name or service not known
+130529  8:42:42 [Warning] IP address '222.73.86.69' could not be resolved: Name or service not known
+130530  0:47:53 [Warning] IP address '173.208.191.52' could not be resolved: Name or service not known
+130530 12:22:49 [Warning] IP address '42.96.185.202' could not be resolved: Name or service not known
+130530 22:12:39 [Warning] IP address '91.135.19.2' could not be resolved: Name or service not known
+130531  1:57:11 [Warning] IP address '173.208.240.205' could not be resolved: Name or service not known
+130531 14:38:59 [Warning] IP address '110.173.96.10' could not be resolved: Name or service not known
+130601  4:19:22 [Warning] IP address '121.147.245.30' could not be resolved: Name or service not known
+130601 21:32:54 [Warning] IP address '58.215.189.74' could not be resolved: Name or service not known
+130601 23:48:35 [Warning] IP address '192.184.38.216' could not be resolved: Name or service not known
+130602  1:04:09 [Warning] IP address '192.187.99.210' could not be resolved: Name or service not known
+130603 18:05:20 [Warning] IP address '192.210.63.10' could not be resolved: Temporary failure in name resolution
+130608  1:09:07 [Warning] IP address '58.215.176.165' could not be resolved: Name or service not known
+130608 14:06:20 [Warning] IP address '211.149.151.70' could not be resolved: Name or service not known
+130609 13:56:49 [Warning] IP address '58.215.160.108' could not be resolved: Name or service not known
+130610  1:15:59 [Warning] IP address '173.208.176.120' could not be resolved: Name or service not known
+130610 16:52:54 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:52:55 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:52:57 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:53:02 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:53:04 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:54:27 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:54:28 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:54:30 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:54:31 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130610 16:54:33 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130611  2:06:48 [Warning] IP address '222.219.120.25' could not be resolved: Name or service not known
+130611  5:14:13 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130611  5:14:17 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130611  5:14:18 [Warning] IP address '198.204.241.109' could not be resolved: Temporary failure in name resolution
+130612 14:25:11 [Warning] IP address '61.164.108.36' could not be resolved: Name or service not known
+130613 11:27:48 [Warning] IP address '58.215.184.113' could not be resolved: Name or service not known
+130614 17:20:08 [Warning] IP address '198.204.241.110' could not be resolved: Temporary failure in name resolution
+130614 21:22:05 [Warning] IP address '42.121.113.61' could not be resolved: Name or service not known
+130616  0:33:51 [Warning] IP address '61.191.55.11' could not be resolved: Name or service not known
+130616  3:21:28 [Warning] IP address '202.107.224.20' could not be resolved: Name or service not known
+130616  8:35:42 [Warning] IP address '202.101.6.4' could not be resolved: Name or service not known
+130616 15:29:50 [Warning] IP address '222.77.8.69' has been resolved to the host name '69.8.77.222.broad.qz.fj.dynamic.163data.com.cn', which resembles IPv4-address itself.
+130618 13:11:21 [Warning] IP address '112.123.169.13' could not be resolved: Name or service not known
+130619  9:36:53 [Warning] IP address '60.190.216.245' could not be resolved: Name or service not known
+130619 21:55:14 [Note] Hostname 'mail.szunicon.com' does not resolve to '203.86.9.70'.
+130619 21:55:14 [Note] Hostname 'mail.szunicon.com' has the following IP addresses:
+130619 21:55:14 [Note]  - 203.86.9.69
+
+130620  0:54:34 [Warning] IP address '60.191.170.186' could not be resolved: Temporary failure in name resolution
+130620  1:46:27 [Warning] IP address '124.232.138.91' could not be resolved: Name or service not known
+130621 19:23:39 [Warning] IP address '121.12.125.51' could not be resolved: Name or service not known
+130623  1:38:37 [Warning] IP address '61.155.202.27' could not be resolved: Name or service not known
+130624  3:05:57 [Warning] IP address '58.211.18.217' could not be resolved: Name or service not known
+130624 15:59:35 [Warning] IP address '198.204.241.110' could not be resolved: Temporary failure in name resolution
+130624 18:30:08 [Warning] IP address '61.180.49.139' could not be resolved: Name or service not known
+130624 23:24:34 [Warning] IP address '61.160.215.52' could not be resolved: Name or service not known
+130625 14:55:37 [Warning] IP address '202.206.251.53' could not be resolved: Name or service not known
+130626  2:35:25 [Warning] IP address '192.168.177.94' could not be resolved: Name or service not known
+130626  6:42:46 [Warning] IP address '75.127.90.87' could not be resolved: Name or service not known
+130626  8:57:06 [Warning] IP address '111.227.174.71' could not be resolved: Temporary failure in name resolution
+130628  6:16:33 [Warning] IP address '142.4.109.194' could not be resolved: Temporary failure in name resolution
+130629  2:10:02 [Warning] IP address '111.227.174.71' could not be resolved: Temporary failure in name resolution
+130629 23:57:25 [Warning] IP address '61.164.149.5' could not be resolved: Name or service not known
+130701  0:45:27 [Warning] IP address '110.249.150.158' could not be resolved: Name or service not known
+130703 16:59:35 [Warning] IP address '182.50.3.161' could not be resolved: Name or service not known
+130704 14:26:42 [Warning] IP address '112.123.174.129' could not be resolved: Name or service not known
+130705 10:13:16 [Warning] IP address '119.37.199.11' could not be resolved: Name or service not known
+130705 11:25:29 [Warning] IP address '218.94.15.226' could not be resolved: Name or service not known
+130706 11:54:14 [Warning] IP address '192.74.229.110' could not be resolved: Name or service not known
+130706 21:06:22 [Warning] IP address '46.166.168.104' could not be resolved: Temporary failure in name resolution
+130707  1:27:58 [Warning] IP address '1.93.45.57' could not be resolved: Name or service not known
+130709 19:03:47 [Warning] IP address '222.198.128.88' could not be resolved: Name or service not known
+130711 14:25:13 [Warning] IP address '123.164.66.38' could not be resolved: Name or service not known
+130712  3:23:39 [Warning] IP address '180.153.108.203' could not be resolved: Name or service not known
+130712  9:52:18 [Warning] IP address '202.99.81.51' could not be resolved: Name or service not known
+130712 13:37:56 [Warning] IP address '108.62.17.106' has been resolved to the host name '108.62.17.106.rdns.ubiquityservers.com', which resembles IPv4-address itself.
+130712 21:51:13 [Warning] IP address '121.16.158.34' could not be resolved: Name or service not known
+130713 21:20:56 [Warning] IP address '61.178.249.6' has been resolved to the host name '6.249.178.61.dail.ts.gs.dynamic.163data.com.cn', which resembles IPv4-address itself.
+130714  9:40:02 [Warning] IP address '42.121.98.127' could not be resolved: Name or service not known
+130714 19:06:27 [Warning] IP address '199.36.79.188' could not be resolved: Name or service not known
+130715  9:04:51 [Warning] IP address '61.160.223.102' could not be resolved: Name or service not known
+130716  1:13:19 [Warning] IP address '218.57.175.14' could not be resolved: Name or service not known
+130716 13:20:07 [Warning] IP address '61.147.103.117' could not be resolved: Name or service not known
+130716 17:52:15 [Warning] IP address '211.97.0.45' could not be resolved: Name or service not known
+130716 23:33:26 [Warning] IP address '113.208.129.50' could not be resolved: Temporary failure in name resolution
+130716 23:33:38 [Warning] IP address '113.208.129.50' could not be resolved: Temporary failure in name resolution
+130716 23:34:18 [Warning] IP address '113.208.129.50' could not be resolved: Temporary failure in name resolution
+130716 23:35:06 [Warning] IP address '113.208.129.50' could not be resolved: Temporary failure in name resolution
+130716 23:36:32 [Warning] IP address '113.208.129.50' could not be resolved: Temporary failure in name resolution
+130719  6:56:43 [Warning] IP address '199.192.156.212' could not be resolved: Name or service not known
+130719 15:55:59 [Warning] IP address '112.65.228.237' could not be resolved: Name or service not known
+130720 10:18:43 [Warning] IP address '42.62.6.94' could not be resolved: Name or service not known
+130721  8:34:50 [Warning] IP address '222.133.131.7' could not be resolved: Name or service not known
+130721  9:41:03 [Warning] IP address '115.236.79.211' could not be resolved: Name or service not known
+130721 18:16:19 [Warning] IP address '1.189.137.220' could not be resolved: Name or service not known
+130723  2:05:35 [Warning] IP address '61.160.247.138' could not be resolved: Name or service not known
+130725  6:23:06 [Warning] IP address '222.179.191.6' has been resolved to the host name '6.191.179.222.broad.cq.cq.dynamic.163data.com.cn', which resembles IPv4-address itself.
+130726 11:39:18 [Warning] IP address '124.95.176.26' could not be resolved: Name or service not known
+130727  5:49:42 [Warning] IP address '117.21.227.196' could not be resolved: Name or service not known
+130727  6:49:15 [Warning] IP address '122.225.101.53' could not be resolved: Name or service not known
+130728 11:24:06 [Warning] IP address '60.171.215.146' could not be resolved: Name or service not known
+130730  1:56:58 [Warning] IP address '61.130.145.18' has been resolved to the host name '18.145.130.61.dial.wz.zj.dynamic.163data.com.cn', which resembles IPv4-address itself.
+130731 17:44:26 [Warning] IP address '218.62.120.228' has been resolved to the host name '228.120.62.218.adsl-pool.jlccptt.net.cn', which resembles IPv4-address itself.
+130801  0:39:59 [Warning] IP address '125.67.67.82' could not be resolved: Name or service not known
+130801  9:30:25 [Warning] IP address '63.141.242.85' could not be resolved: Name or service not known
+130802  3:37:10 [Warning] IP address '61.144.203.214' could not be resolved: Name or service not known
+130803 13:54:03 [Warning] IP address '198.13.101.245' could not be resolved: Temporary failure in name resolution
+130804  3:52:46 [Warning] IP address '222.82.240.210' could not be resolved: Name or service not known
+130804  8:08:06 [Warning] IP address '198.13.101.245' could not be resolved: Temporary failure in name resolution
+130806 16:27:45 [Warning] IP address '221.214.12.243' could not be resolved: Name or service not known
+130807 10:35:00 [Warning] IP address '58.215.172.205' could not be resolved: Name or service not known
+130807 21:31:12 [Warning] IP address '183.136.132.140' could not be resolved: Name or service not known
+130808  3:08:46 [Warning] IP address '120.35.11.196' could not be resolved: Name or service not known
+130808  8:05:11 [Warning] IP address '61.147.103.81' could not be resolved: Name or service not known
+130808 19:43:09 [Warning] IP address '58.221.60.177' could not be resolved: Name or service not known
+130809  8:44:33 [Warning] IP address '222.186.26.131' could not be resolved: Name or service not known
+130810  9:34:34 [Warning] IP address '122.226.95.70' could not be resolved: Name or service not known
+130810 17:20:55 [Warning] IP address '173.208.200.11' could not be resolved: Name or service not known
+130812 13:24:58 [Warning] IP address '177.220.140.34' has been resolved to the host name '34.140.220.177.dynamic.copel.net', which resembles IPv4-address itself.
+130812 15:41:44 [Warning] IP address '14.17.77.94' could not be resolved: Name or service not known
+130812 16:35:16 [Warning] IP address '61.147.103.139' could not be resolved: Name or service not known
+130814 15:36:41 [Warning] IP address '61.128.111.97' could not be resolved: Name or service not known
+130817 13:12:44 [Warning] IP address '117.79.85.20' could not be resolved: Name or service not known
+130818  7:53:50 [Warning] IP address '1.93.49.143' could not be resolved: Name or service not known
+130821  7:29:53 [Warning] IP address '199.192.157.134' could not be resolved: Name or service not known
+130821 18:46:57 [Warning] IP address '183.153.51.117' could not be resolved: Name or service not known
+130822 15:51:07 [Warning] IP address '220.113.9.94' could not be resolved: Temporary failure in name resolution
+130822 15:51:18 [Warning] IP address '220.113.9.94' could not be resolved: Temporary failure in name resolution
+130822 15:51:34 [Warning] IP address '220.113.9.94' could not be resolved: Temporary failure in name resolution
+130822 15:51:45 [Warning] IP address '220.113.9.94' could not be resolved: Temporary failure in name resolution
+130823  3:42:18 [Warning] IP address '115.28.15.109' could not be resolved: Name or service not known
+130823 10:36:19 [Warning] IP address '58.215.94.17' could not be resolved: Name or service not known
+130823 10:36:19 [Warning] IP address '58.215.94.17' could not be resolved: Name or service not known
+130823 10:36:19 [Warning] IP address '58.215.94.17' could not be resolved: Name or service not known
+130823 15:14:47 [Note] Hostname 'alpha.prontoswiss.ch' does not resolve to '80.246.50.130'.
+130823 15:14:47 [Note] Hostname 'alpha.prontoswiss.ch' has the following IP addresses:
+130823 15:14:47 [Note]  - 82.220.34.74
+
+130823 19:49:28 [Warning] IP address '23.19.3.226' has been resolved to the host name '23.19.3.226.rdns.ubiquity.io', which resembles IPv4-address itself.
+130823 23:46:07 [Warning] IP address '113.98.254.146' could not be resolved: Name or service not known
+130824 16:16:11 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:18 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:24 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:27 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:32 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:36 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:43 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:47 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:51 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130824 16:16:55 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:54:06 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:54:22 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:54:36 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:54:51 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:55:01 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:55:12 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:55:23 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:55:34 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:55:44 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130827 23:56:00 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 19:13:51 [Warning] IP address '121.199.19.61' could not be resolved: Name or service not known
+130828 22:19:09 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:19:27 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:19:33 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:19:44 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:19:52 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:20:03 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:20:12 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:20:20 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:20:31 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130828 22:20:42 [Warning] IP address '218.65.30.168' could not be resolved: Temporary failure in name resolution
+130829 18:39:10 [Warning] IP address '183.153.56.83' could not be resolved: Name or service not known
+130829 19:58:46 [Warning] IP address '222.186.34.162' could not be resolved: Name or service not known
+130830  9:27:02 [Warning] IP address '1.82.191.21' could not be resolved: Name or service not known
+130830 13:09:07 [Warning] IP address '61.175.225.152' could not be resolved: Temporary failure in name resolution
+130830 16:43:08 [Warning] IP address '211.55.29.11' could not be resolved: Name or service not known
+130901  4:42:19 [Warning] IP address '112.123.169.30' could not be resolved: Name or service not known
+130901  7:51:33 [Warning] IP address '91.221.51.212' could not be resolved: Name or service not known
+130901 16:25:27 [Warning] IP address '222.186.25.68' could not be resolved: Name or service not known
+130901 17:23:01 [Warning] IP address '61.147.68.150' could not be resolved: Name or service not known
+130902 10:11:26 [Warning] IP address '203.156.217.51' could not be resolved: Name or service not known
+130904  3:32:37 [Warning] IP address '61.175.225.152' could not be resolved: Name or service not known
+130904  6:58:02 [Warning] IP address '27.17.58.253' could not be resolved: Name or service not known
+130904 18:10:52 [Warning] IP address '125.71.200.253' could not be resolved: Name or service not known
+130905  0:11:23 [Warning] IP address '58.215.94.18' could not be resolved: Name or service not known
+130905 12:11:36 [Warning] IP address '222.186.26.22' could not be resolved: Name or service not known
+130905 14:44:23 [Warning] IP address '222.186.26.12' could not be resolved: Name or service not known
+130906 16:16:00 [Warning] IP address '58.218.199.240' could not be resolved: Name or service not known
+130906 17:17:50 [Warning] IP address '114.112.187.122' could not be resolved: Name or service not known
+130907 15:58:11 [Warning] IP address '27.17.58.252' could not be resolved: Name or service not known
+130907 20:39:46 [Note] Hostname 'cncln.online.ln.cn' does not resolve to '218.60.54.18'.
+130907 20:39:46 [Note] Hostname 'cncln.online.ln.cn' has the following IP addresses:
+130907 20:39:46 [Note]  - 60.19.29.21
+
+130908  6:08:23 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+130908 19:42:38 [Warning] IP address '210.209.79.135' could not be resolved: Name or service not known
+130911 18:20:02 [Warning] IP address '202.8.157.67' could not be resolved: Name or service not known
+130912  4:07:31 [Warning] IP address '177.17.73.116' has been resolved to the host name '177.17.73.116.static.host.gvt.net.br', which resembles IPv4-address itself.
+130912 12:45:07 [Warning] IP address '202.107.225.38' could not be resolved: Name or service not known
+130912 23:39:06 [Warning] IP address '58.221.60.145' could not be resolved: Name or service not known
+130912 23:55:20 [Warning] IP address '60.172.29.200' could not be resolved: Name or service not known
+130915  7:38:10 [Warning] IP address '1.93.50.45' could not be resolved: Name or service not known
+130916  0:12:56 [Warning] IP address '183.136.216.2' could not be resolved: Name or service not known
+130916  1:19:48 [Warning] IP address '115.239.231.2' could not be resolved: Name or service not known
+130917 10:41:36 [Warning] IP address '222.186.24.18' could not be resolved: Name or service not known
+130918  2:32:59 [Warning] IP address '122.228.64.55' could not be resolved: Name or service not known
+130919 20:56:31 [Warning] IP address '219.139.115.215' could not be resolved: Name or service not known
+130921  0:38:05 [Warning] IP address '61.183.11.230' could not be resolved: Name or service not known
+130921 11:05:34 [Warning] IP address '117.41.247.232' could not be resolved: Name or service not known
+130922  5:43:16 [Note] Hostname 'static.vdc.vn' does not resolve to '123.30.212.231'.
+130922  5:43:16 [Note] Hostname 'static.vdc.vn' has the following IP addresses:
+130922  5:43:16 [Note]  - 203.162.0.78
+
+130922  5:43:16 [Note] Hostname 'static.vdc.vn' does not resolve to '123.30.212.231'.
+130922  5:43:16 [Note] Hostname 'static.vdc.vn' has the following IP addresses:
+130922  5:43:16 [Note]  - 203.162.0.78
+
+130924 22:34:31 [Warning] IP address '125.64.94.220' could not be resolved: Name or service not known
+130924 23:14:05 [Warning] IP address '1.82.184.211' could not be resolved: Name or service not known
+130925  8:06:36 [Warning] IP address '222.186.26.35' could not be resolved: Name or service not known
+130926  4:21:17 [Warning] IP address '110.249.150.158' could not be resolved: Name or service not known
+130926  8:28:44 [Warning] IP address '116.55.226.206' has been resolved to the host name '206.226.55.116.broad.km.yn.dynamic.163data.com.cn', which resembles IPv4-address itself.
+130927 17:37:36 [Warning] IP address '222.186.31.13' could not be resolved: Name or service not known
+130928 21:35:46 [Warning] IP address '61.136.59.15' could not be resolved: Name or service not known
+130929 19:52:36 [Warning] IP address '1.93.48.33' could not be resolved: Name or service not known
+131001  0:06:06 [Warning] IP address '199.192.154.110' could not be resolved: Name or service not known
+131001 22:23:03 [Note] Hostname 'created.elfincrownsix.com' does not resolve to '23.89.65.72'.
+131001 22:23:03 [Note] Hostname 'created.elfincrownsix.com' has the following IP addresses:
+131001 22:23:03 [Note]  - 184.154.116.186
+
+131001 22:23:03 [Note]  - 74.50.101.173
+
+131003  2:00:25 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131003 10:37:23 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131003 12:16:57 [Note] Hostname 'about.jitterybedroomfive.com' does not resolve to '23.89.65.142'.
+131003 12:16:57 [Note] Hostname 'about.jitterybedroomfive.com' has the following IP addresses:
+131003 12:16:57 [Note]  - 184.154.116.186
+
+131003 12:16:57 [Note]  - 74.50.101.173
+
+131003 17:13:56 [Warning] IP address '61.139.44.69' could not be resolved: Name or service not known
+131004 23:51:14 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131005  1:42:46 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131005  7:39:54 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131005 12:53:00 [Warning] IP address '222.186.30.173' could not be resolved: Name or service not known
+131006 19:00:55 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131007  3:51:19 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131007  5:04:33 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131007  8:01:52 [Warning] IP address '61.178.36.52' has been resolved to the host name '52.36.178.61.dail.lz.gs.dynamic.163data.com.cn', which resembles IPv4-address itself.
+131007  9:13:07 [Warning] IP address '117.40.196.149' could not be resolved: Name or service not known
+131007 10:38:18 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131007 13:04:51 [Warning] IP address '118.145.18.120' could not be resolved: Name or service not known
+131007 15:59:32 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131008 14:26:08 [Warning] IP address '1.82.184.243' could not be resolved: Name or service not known
+131009  4:20:30 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131009 10:30:24 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131010 22:12:51 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131011  1:14:13 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131011  7:09:20 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131011 17:21:57 [Warning] IP address '58.221.60.162' could not be resolved: Name or service not known
+131012 10:35:33 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131012 17:44:24 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131012 22:32:40 [Note] Hostname 'static.vdc.vn' does not resolve to '123.30.140.116'.
+131012 22:32:40 [Note] Hostname 'static.vdc.vn' has the following IP addresses:
+131012 22:32:40 [Note]  - 203.162.0.78
+
+131013  9:28:11 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131013 18:09:18 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131014  9:14:54 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131014 14:02:11 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:02:18 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:02:27 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:02:35 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:02:44 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:02:53 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:03:01 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:03:03 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:03:03 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:03:04 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:03:04 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 14:03:16 [Warning] IP address '115.47.13.197' could not be resolved: Temporary failure in name resolution
+131014 20:06:03 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131015  5:15:35 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131015 13:54:05 [Warning] IP address '198.13.97.148' could not be resolved: Temporary failure in name resolution
+131018  8:37:53 [Warning] IP address '222.161.197.187' has been resolved to the host name '187.197.161.222.adsl-pool.jlccptt.net.cn', which resembles IPv4-address itself.
+131018 18:04:52 [Warning] IP address '42.121.6.171' could not be resolved: Name or service not known
+131019 20:43:36 [Warning] IP address '173.208.200.38' could not be resolved: Name or service not known
+131020  8:34:14 [Warning] IP address '61.147.110.94' could not be resolved: Name or service not known
+131025  0:37:05 [Warning] IP address '203.156.217.10' could not be resolved: Name or service not known
+131025 15:19:28 [Warning] IP address '183.60.201.86' could not be resolved: Name or service not known
+131026 12:57:49 [Warning] IP address '218.87.254.22' could not be resolved: Name or service not known
+131026 15:06:31 [Warning] IP address '117.34.78.197' could not be resolved: Name or service not known
+131026 19:21:50 [Warning] IP address '122.224.6.222' could not be resolved: Name or service not known
+131027  8:57:34 [Warning] IP address '192.64.15.183' could not be resolved: Name or service not known
+131027 23:16:21 [Warning] IP address '198.204.236.156' could not be resolved: Name or service not known
+131031  9:10:13 [Warning] IP address '221.204.31.15' has been resolved to the host name '15.31.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+131031 11:59:33 [Warning] IP address '221.204.213.124' has been resolved to the host name '124.213.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+131031 16:14:21 [Warning] IP address '124.207.29.187' could not be resolved: Temporary failure in name resolution
+131031 21:56:18 [Warning] IP address '58.221.57.90' could not be resolved: Name or service not known
+131101  8:48:37 [Warning] IP address '68.71.151.97' could not be resolved: Name or service not known
+131101 10:25:40 [Warning] IP address '61.172.238.213' could not be resolved: Name or service not known
+131102 23:30:42 [Warning] IP address '221.204.31.43' has been resolved to the host name '43.31.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+131105  9:27:09 [Warning] IP address '202.100.85.201' could not be resolved: Name or service not known
+131106  2:08:41 [Warning] IP address '82.221.105.7' could not be resolved: Name or service not known
+131106  9:24:52 [Warning] IP address '211.103.158.72' could not be resolved: Name or service not known
+131106 21:58:13 [Warning] IP address '124.207.29.187' could not be resolved: Temporary failure in name resolution
+131107  7:50:20 [Warning] IP address '61.191.56.81' could not be resolved: Name or service not known
+131107 16:12:55 [Note] Hostname 'zunchweb01.zunch.com' does not resolve to '66.228.129.131'.
+131107 16:12:55 [Note] Hostname 'zunchweb01.zunch.com' has the following IP addresses:
+131107 16:12:55 [Note]  - 69.6.202.103
+
+131107 17:10:03 [Warning] IP address '203.156.217.187' could not be resolved: Name or service not known
+131109 18:27:41 [Warning] IP address '58.215.188.148' could not be resolved: Name or service not known
+131110 10:32:58 [Warning] IP address '58.215.176.171' could not be resolved: Name or service not known
+131110 19:37:09 [Warning] IP address '122.112.70.151' could not be resolved: Name or service not known
+131111 16:13:54 [Warning] IP address '106.37.190.138' has been resolved to the host name '138.190.37.106.static.bjtelecom.net', which resembles IPv4-address itself.
+131113 14:52:24 [Warning] IP address '61.147.70.12' could not be resolved: Name or service not known
+131114  5:15:44 [Warning] IP address '124.193.165.13' could not be resolved: Temporary failure in name resolution
+131114  6:09:00 [Warning] IP address '203.156.217.142' could not be resolved: Name or service not known
+131114 13:01:24 [Warning] IP address '116.255.201.176' could not be resolved: Name or service not known
+131114 17:28:48 [Warning] IP address '50.7.75.85' could not be resolved: Name or service not known
+131115  0:48:21 [Warning] IP address '103.244.3.112' could not be resolved: Name or service not known
+131117 16:08:04 [Warning] IP address '58.215.189.101' could not be resolved: Name or service not known
+131117 22:59:20 [Warning] IP address '210.14.144.146' could not be resolved: Name or service not known
+131118  6:13:54 [Warning] IP address '199.188.104.235' could not be resolved: Temporary failure in name resolution
+131120  7:33:54 [Warning] IP address '58.215.176.178' could not be resolved: Name or service not known
+131120 13:07:03 [Warning] IP address '61.187.251.207' could not be resolved: Name or service not known
+131120 17:13:52 [Note] Hostname 'singlehop3.shodanhq.com' does not resolve to '198.20.70.114'.
+131120 17:13:52 [Note] Hostname 'singlehop3.shodanhq.com' has the following IP addresses:
+131120 17:13:52 [Note]  - 24.73.251.74
+
+131120 17:18:56 [Warning] IP address '61.175.245.62' could not be resolved: Name or service not known
+131120 23:41:56 [Warning] IP address '216.99.158.72' could not be resolved: Name or service not known
+131126  7:02:43 [Warning] IP address '192.168.177.94' could not be resolved: Name or service not known
+131126  7:16:38 [Warning] IP address '61.147.103.187' could not be resolved: Name or service not known
+131126 22:15:18 [Warning] IP address '61.147.103.154' could not be resolved: Name or service not known
+131127 20:19:26 [Warning] IP address '122.226.50.66' could not be resolved: Name or service not known
+131203  6:42:49 [Warning] IP address '220.191.160.218' could not be resolved: Name or service not known
+131203  9:14:04 [Warning] IP address '198.200.51.213' could not be resolved: Temporary failure in name resolution
+131203 11:34:03 [Warning] IP address '198.200.51.213' could not be resolved: Temporary failure in name resolution
+131203 13:17:55 [Warning] IP address '198.200.51.213' could not be resolved: Temporary failure in name resolution
+131203 14:15:30 [Warning] IP address '198.200.51.213' could not be resolved: Temporary failure in name resolution
+131203 15:11:51 [Warning] IP address '198.200.51.213' could not be resolved: Temporary failure in name resolution
+131203 20:21:08 [Warning] IP address '210.209.120.8' could not be resolved: Name or service not known
+131204  2:55:03 [Warning] IP address '58.221.60.168' could not be resolved: Name or service not known
+131205 23:25:14 [Note] Hostname 'we.love.servers.at.ioflood.com' does not resolve to '184.164.69.120'.
+131205 23:25:14 [Note] Hostname 'we.love.servers.at.ioflood.com' has the following IP addresses:
+131205 23:25:14 [Note]  - 96.45.82.133
+
+131205 23:25:14 [Note]  - 96.45.82.5
+
+131205 23:25:14 [Note]  - 96.45.82.197
+
+131205 23:25:14 [Note]  - 96.45.82.69
+
+131205 23:25:14 [Note] Hostname 'we.love.servers.at.ioflood.com' does not resolve to '184.164.69.120'.
+131205 23:25:14 [Note] Hostname 'we.love.servers.at.ioflood.com' has the following IP addresses:
+131205 23:25:14 [Note]  - 96.45.82.5
+
+131205 23:25:14 [Note]  - 96.45.82.69
+
+131205 23:25:14 [Note]  - 96.45.82.197
+
+131205 23:25:14 [Note]  - 96.45.82.133
+
+131207  3:09:22 [Warning] IP address '180.225.197.68' could not be resolved: Name or service not known
+131208  5:22:36 [Warning] IP address '61.136.93.16' has been resolved to the host name '16.93.136.61.ha.cnc', which resembles IPv4-address itself.
+131209  2:08:12 [Warning] IP address '61.157.96.117' could not be resolved: Name or service not known
+131209 16:30:05 [Warning] IP address '115.47.9.60' could not be resolved: Temporary failure in name resolution
+131209 17:00:38 [Warning] IP address '180.225.203.220' could not be resolved: Name or service not known
+131211  5:55:31 [Warning] IP address '61.147.103.102' could not be resolved: Name or service not known
+131212  8:13:34 [Warning] IP address '198.13.101.242' could not be resolved: Temporary failure in name resolution
+131213  0:11:28 [Note] Hostname 'mail.happychina.cn' does not resolve to '203.191.148.3'.
+131213  0:11:28 [Note] Hostname 'mail.happychina.cn' has the following IP addresses:
+131213  0:11:28 [Note]  - 69.46.84.54
+
+131213  0:11:28 [Note]  - 65.19.141.201
+
+131213  7:29:59 [Warning] IP address '117.41.249.228' could not be resolved: Name or service not known
+131215  8:34:57 [Warning] IP address '198.13.101.242' could not be resolved: Temporary failure in name resolution
+131215 14:58:23 [Warning] IP address '82.221.102.179' could not be resolved: Name or service not known
+131216  8:28:51 [Warning] IP address '211.154.149.135' could not be resolved: Name or service not known
+131216 10:44:39 [Warning] IP address '198.13.101.242' could not be resolved: Temporary failure in name resolution
+131217 12:43:19 [Warning] IP address '80.82.78.9' could not be resolved: Name or service not known
+131217 13:25:57 [Warning] IP address '198.13.101.248' could not be resolved: Temporary failure in name resolution
+131218  8:12:08 [Warning] IP address '198.13.101.242' could not be resolved: Temporary failure in name resolution
+131218 22:27:01 [Warning] IP address '222.186.101.106' could not be resolved: Name or service not known
+131219  3:21:20 [Warning] IP address '198.13.101.248' could not be resolved: Temporary failure in name resolution
+131220 10:17:45 [Warning] IP address '198.13.101.242' could not be resolved: Temporary failure in name resolution
+131220 13:25:03 [Warning] IP address '111.17.194.171' could not be resolved: Temporary failure in name resolution
+131220 13:26:05 [Warning] IP address '111.17.194.171' could not be resolved: Temporary failure in name resolution
+131221  1:09:30 [Warning] IP address '198.13.101.248' could not be resolved: Temporary failure in name resolution
+131221 10:29:38 [Warning] IP address '222.191.251.170' could not be resolved: Name or service not known
+131222  4:36:51 [Warning] IP address '198.13.101.242' could not be resolved: Temporary failure in name resolution
+131226 23:50:19 [Warning] IP address '219.232.251.201' could not be resolved: Name or service not known
+131229 22:49:21 [Warning] IP address '218.65.30.177' has been resolved to the host name '177.30.65.218.broad.xy.jx.dynamic.163data.com.cn', which resembles IPv4-address itself.
+131231 15:21:32 [Warning] IP address '60.222.229.66' has been resolved to the host name '66.229.222.60.adsl-pool.sx.cn', which resembles IPv4-address itself.
+131231 18:04:50 [Warning] IP address '218.56.37.78' could not be resolved: Name or service not known
+140101 15:49:21 [Warning] IP address '218.61.196.217' could not be resolved: Name or service not known
+140101 17:28:43 [Warning] IP address '59.53.68.27' could not be resolved: Name or service not known
+140102 15:02:09 [Warning] IP address '218.92.239.102' could not be resolved: Name or service not known
+140104  3:43:22 [Warning] IP address '198.204.236.145' could not be resolved: Name or service not known
+140104 17:09:22 [Warning] IP address '60.173.9.130' could not be resolved: Name or service not known
+140105  3:20:14 [Warning] IP address '216.99.158.90' could not be resolved: Name or service not known
+140105 13:55:04 [Warning] IP address '59.45.79.49' could not be resolved: Name or service not known
+140106 10:53:05 [Warning] IP address '23.238.232.115' could not be resolved: Temporary failure in name resolution
+140107  7:37:23 [Warning] IP address '198.13.101.248' could not be resolved: Temporary failure in name resolution
+140107 17:27:18 [Warning] IP address '60.214.117.162' could not be resolved: Name or service not known
+140107 17:35:21 [Warning] IP address '122.224.108.38' could not be resolved: Name or service not known
+140108 17:09:48 [Warning] IP address '180.225.83.228' could not be resolved: Name or service not known
+140108 20:57:47 [Warning] IP address '23.238.232.114' could not be resolved: Temporary failure in name resolution
+140109  1:20:38 [Warning] IP address '23.238.232.115' could not be resolved: Temporary failure in name resolution
+140109  5:20:42 [Warning] IP address '23.238.232.118' could not be resolved: Temporary failure in name resolution
+140109 18:01:14 [Warning] IP address '23.238.232.116' could not be resolved: Temporary failure in name resolution
+140109 20:00:28 [Warning] IP address '120.196.109.120' could not be resolved: Name or service not known
+140109 23:44:11 [Warning] IP address '116.255.212.102' could not be resolved: Name or service not known
+140110  3:04:04 [Warning] IP address '23.238.232.116' could not be resolved: Temporary failure in name resolution
+140110  6:49:50 [Warning] IP address '23.238.232.115' could not be resolved: Temporary failure in name resolution
+140110 14:14:25 [Warning] IP address '23.238.232.118' could not be resolved: Temporary failure in name resolution
+140111  8:05:32 [Warning] IP address '66.240.236.119' could not be resolved: Name or service not known
+140112  0:52:16 [Warning] IP address '120.37.141.123' could not be resolved: Name or service not known
+140112 19:21:39 [Note] Hostname 'f96036.applyfortifyremodel.com' does not resolve to '192.184.55.16'.
+140112 19:21:39 [Note] Hostname 'f96036.applyfortifyremodel.com' has the following IP addresses:
+140112 19:21:39 [Note]  - 69.42.221.154
+
+140113 16:56:20 [Warning] IP address '117.41.249.134' could not be resolved: Name or service not known
+140114 14:53:47 [Warning] IP address '177.154.136.35' has been resolved to the host name '35.136.154.177.static.sp2.alog.com.br', which resembles IPv4-address itself.
+140115 23:34:06 [Warning] IP address '74.91.22.4' could not be resolved: Name or service not known
+140116  3:51:23 [Warning] IP address '59.53.68.15' could not be resolved: Name or service not known
+140116 13:49:38 [Warning] IP address '93.174.95.82' could not be resolved: Name or service not known
+140118  6:23:22 [Warning] IP address '124.173.120.227' could not be resolved: Name or service not known
+140118  9:04:20 [Warning] IP address '210.5.27.49' could not be resolved: Name or service not known
+140118 17:43:27 [Warning] IP address '61.147.107.68' could not be resolved: Name or service not known
+140119 19:25:31 [Warning] IP address '58.180.10.8' could not be resolved: Name or service not known
+140121  1:39:33 [Warning] IP address '218.201.52.70' could not be resolved: Name or service not known
+140121 18:05:40 [Warning] IP address '222.186.35.9' could not be resolved: Name or service not known
+140121 20:54:28 [Warning] IP address '58.221.60.148' could not be resolved: Name or service not known
+140122 19:52:12 [Warning] IP address '222.186.15.55' could not be resolved: Name or service not known
+140123 18:56:01 [Warning] IP address '1.93.1.83' could not be resolved: Name or service not known
+140124  1:30:10 [Warning] IP address '186.214.253.79' has been resolved to the host name '186.214.253.79.static.host.gvt.net.br', which resembles IPv4-address itself.
+140126 12:25:37 [Warning] IP address '202.103.25.32' could not be resolved: Name or service not known
+140127 16:26:17 [Warning] IP address '114.66.192.158' could not be resolved: Name or service not known
+140128  9:47:10 [Warning] IP address '221.0.111.38' could not be resolved: Name or service not known
+140129 21:36:45 [Warning] IP address '58.221.60.170' could not be resolved: Temporary failure in name resolution
+140129 22:38:17 [Warning] IP address '60.169.79.198' could not be resolved: Temporary failure in name resolution
+140129 22:38:17 [Warning] IP address '60.169.79.198' could not be resolved: Temporary failure in name resolution
+140130 13:04:33 [Warning] IP address '23.239.122.144' could not be resolved: Temporary failure in name resolution
+140130 23:20:46 [Warning] IP address '23.239.122.145' could not be resolved: Temporary failure in name resolution
+140131  6:45:26 [Warning] IP address '23.239.122.148' could not be resolved: Temporary failure in name resolution
+140131 10:03:19 [Warning] IP address '58.221.60.170' could not be resolved: Temporary failure in name resolution
+140131 10:05:02 [Warning] IP address '58.221.60.170' could not be resolved: Temporary failure in name resolution
+140131 17:59:28 [Warning] IP address '23.239.122.146' could not be resolved: Temporary failure in name resolution
+140201  9:30:54 [Warning] IP address '23.239.122.146' could not be resolved: Temporary failure in name resolution
+140202 13:33:43 [Warning] IP address '58.221.60.167' could not be resolved: Temporary failure in name resolution
+140202 16:16:35 [Warning] IP address '192.210.48.76' could not be resolved: Temporary failure in name resolution
+140202 16:16:36 [Warning] IP address '192.210.48.76' could not be resolved: Temporary failure in name resolution
+140203  4:50:18 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:50:39 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:51:00 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:51:21 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:51:42 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:52:03 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:52:23 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:52:44 [Warning] IP address '121.199.43.139' could not be resolved: Temporary failure in name resolution
+140203  4:52:50 [Warning] IP address '121.199.43.139' could not be resolved: Name or service not known
+140203 22:00:55 [Warning] IP address '60.169.79.198' could not be resolved: Temporary failure in name resolution
+140203 22:00:56 [Warning] IP address '60.169.79.198' could not be resolved: Temporary failure in name resolution
+140204  4:22:57 [Warning] IP address '192.210.48.76' could not be resolved: Temporary failure in name resolution
+140204  4:22:57 [Warning] IP address '192.210.48.76' could not be resolved: Temporary failure in name resolution
+140205 10:16:16 [Warning] IP address '218.15.203.136' has been resolved to the host name '136.203.15.218.broad.yf.gd.dynamic.163data.com.cn', which resembles IPv4-address itself.
+140206 11:38:41 [Warning] IP address '114.66.192.222' could not be resolved: Temporary failure in name resolution
+140206 13:53:48 [Warning] IP address '114.80.200.229' could not be resolved: Temporary failure in name resolution
+140206 13:53:48 [Warning] IP address '114.80.200.229' could not be resolved: Temporary failure in name resolution
+140206 13:54:02 [Warning] IP address '114.80.200.229' could not be resolved: Temporary failure in name resolution
+140206 13:54:02 [Warning] IP address '114.80.200.229' could not be resolved: Temporary failure in name resolution
+140207  0:19:11 [Warning] IP address '58.210.224.134' could not be resolved: Temporary failure in name resolution
+140207 13:55:34 [Warning] IP address '174.139.55.34' could not be resolved: Temporary failure in name resolution
+140207 13:55:34 [Warning] IP address '174.139.55.34' could not be resolved: Temporary failure in name resolution
+140207 21:03:20 [Warning] IP address '221.229.162.126' could not be resolved: Name or service not known
+140209  0:56:28 [Warning] IP address '58.210.224.134' could not be resolved: Temporary failure in name resolution
+140209 20:28:01 [Warning] IP address '88.80.216.19' could not be resolved: Temporary failure in name resolution
+140209 20:28:03 [Warning] IP address '88.80.216.19' could not be resolved: Temporary failure in name resolution
+140210  2:33:33 [Warning] IP address '216.99.147.213' could not be resolved: Temporary failure in name resolution
+140211  3:04:28 [Warning] IP address '124.232.146.38' could not be resolved: Temporary failure in name resolution
+140211  3:04:28 [Warning] IP address '124.232.146.38' could not be resolved: Temporary failure in name resolution
+140211 17:02:45 [Warning] IP address '103.20.221.176' could not be resolved: Temporary failure in name resolution
+140211 21:53:18 [Warning] IP address '222.215.230.245' could not be resolved: Temporary failure in name resolution
+140212  2:49:24 [Warning] IP address '183.230.33.207' could not be resolved: Temporary failure in name resolution
+140212  2:49:25 [Warning] IP address '183.230.33.207' could not be resolved: Temporary failure in name resolution
+140212  7:51:09 [Warning] IP address '120.203.198.136' could not be resolved: Temporary failure in name resolution
+140212  7:51:13 [Warning] IP address '120.203.198.136' could not be resolved: Temporary failure in name resolution
+140212 10:20:40 [Warning] IP address '120.203.198.136' could not be resolved: Temporary failure in name resolution
+140212 10:20:44 [Warning] IP address '120.203.198.136' could not be resolved: Temporary failure in name resolution
+140215  9:56:53 [Warning] IP address '111.73.46.96' could not be resolved: Name or service not known
+140215 23:32:40 [Warning] IP address '61.158.162.182' has been resolved to the host name '182.162.158.61.ha.cnc', which resembles IPv4-address itself.
+140217  2:17:57 [Warning] IP address '61.147.103.160' could not be resolved: Name or service not known
+140219  7:37:26 [Warning] IP address '220.181.158.174' could not be resolved: Name or service not known
+140219 20:23:17 [Warning] IP address '221.194.44.153' could not be resolved: Name or service not known
+140220 11:08:39 [Warning] IP address '171.92.208.92' could not be resolved: Name or service not known
+140221  6:28:35 [Warning] IP address '112.186.1.37' could not be resolved: Name or service not known
+140221 19:13:58 [Warning] IP address '124.117.250.146' could not be resolved: Name or service not known
+140221 19:14:11 [Warning] IP address '60.169.79.198' could not be resolved: Name or service not known
+140221 19:53:35 [Warning] IP address '112.124.62.199' could not be resolved: Name or service not known
+140222  1:11:01 [Warning] IP address '121.187.191.60' could not be resolved: Name or service not known
+140225 23:05:51 [Warning] IP address '60.235.46.130' could not be resolved: Name or service not known
+140226 12:43:37 [Warning] IP address '183.230.33.207' could not be resolved: Name or service not known
+140226 18:23:00 [Warning] IP address '222.73.134.199' could not be resolved: Name or service not known
+140301  5:14:06 [Warning] IP address '222.187.129.29' could not be resolved: Name or service not known
+140302  0:28:21 [Warning] IP address '116.255.163.16' could not be resolved: Temporary failure in name resolution
+140302  9:26:55 [Warning] IP address '101.227.246.109' could not be resolved: Name or service not known
+140304 11:14:37 [Warning] IP address '119.90.43.209' could not be resolved: Name or service not known
+140305  4:32:57 [Warning] IP address '210.14.156.38' could not be resolved: Temporary failure in name resolution
+140305  4:32:57 [Warning] IP address '210.14.156.38' could not be resolved: Temporary failure in name resolution
+140305 12:45:31 [Warning] IP address '58.221.46.67' could not be resolved: Temporary failure in name resolution
+140306  1:41:12 [Warning] IP address '113.105.247.54' could not be resolved: Name or service not known
+140306 12:25:55 [Warning] IP address '174.139.92.194' could not be resolved: Temporary failure in name resolution
+140306 19:57:05 [Warning] IP address '58.218.200.112' could not be resolved: Temporary failure in name resolution
+140307 17:13:38 [Warning] IP address '114.112.72.166' could not be resolved: Temporary failure in name resolution
+140307 17:13:59 [Warning] IP address '114.112.72.166' could not be resolved: Temporary failure in name resolution
+140307 17:14:15 [Warning] IP address '114.112.72.166' could not be resolved: Name or service not known
+140308 11:13:35 [Warning] IP address '58.221.46.67' could not be resolved: Temporary failure in name resolution
+140309 11:39:28 [Warning] IP address '203.171.229.48' could not be resolved: Temporary failure in name resolution
+140309 12:25:28 [Warning] IP address '177.11.123.4' could not be resolved: Temporary failure in name resolution
+140311 11:27:18 [Warning] IP address '58.221.46.67' could not be resolved: Name or service not known
+140311 17:35:17 [Warning] IP address '183.60.107.205' could not be resolved: Name or service not known
+140314 19:23:13 [Warning] IP address '23.239.121.115' could not be resolved: Temporary failure in name resolution
+140315 12:24:12 [Warning] IP address '222.186.15.138' could not be resolved: Name or service not known
+140315 18:55:30 [Warning] IP address '221.229.160.224' could not be resolved: Temporary failure in name resolution
+140316 10:47:29 [Warning] IP address '199.83.94.67' could not be resolved: Temporary failure in name resolution
+140318  5:39:52 [Warning] IP address '58.30.227.108' could not be resolved: Temporary failure in name resolution
+140318 23:16:44 [Warning] IP address '211.231.159.33' could not be resolved: Name or service not known
+140319 15:56:07 [Warning] IP address '60.169.73.174' could not be resolved: Name or service not known
+140320  6:12:55 [Warning] IP address '58.253.234.59' could not be resolved: Temporary failure in name resolution
+140320 16:57:03 [Warning] IP address '61.147.103.170' could not be resolved: Temporary failure in name resolution
+140320 23:43:25 [Warning] IP address '61.233.18.14' could not be resolved: Name or service not known
+140321 17:09:49 [Warning] IP address '107.160.158.109' could not be resolved: Temporary failure in name resolution
+140321 21:35:32 [Warning] IP address '61.147.103.170' could not be resolved: Temporary failure in name resolution
+140322 12:26:06 [Warning] IP address '61.234.245.162' could not be resolved: Temporary failure in name resolution
+140322 14:49:26 [Warning] IP address '125.77.121.90' could not be resolved: Temporary failure in name resolution
+140323  7:00:27 [Warning] IP address '119.200.5.109' could not be resolved: Temporary failure in name resolution
+140324 15:12:59 [Warning] IP address '114.112.73.96' could not be resolved: Name or service not known
+140324 16:37:52 [Warning] IP address '222.45.4.82' could not be resolved: Temporary failure in name resolution
+140324 18:20:01 [Warning] IP address '185.9.157.152' has been resolved to the host name '152.157.9.185.salay.com.tr', which resembles IPv4-address itself.
+140326 23:22:49 [Warning] IP address '71.6.135.131' could not be resolved: Temporary failure in name resolution
+140327  6:44:13 [Warning] IP address '61.147.103.171' could not be resolved: Temporary failure in name resolution
+140327  8:59:41 [Warning] IP address '210.51.188.169' could not be resolved: Temporary failure in name resolution
+140327 18:19:10 [Warning] IP address '61.147.103.171' could not be resolved: Name or service not known
+140327 19:32:47 [Warning] IP address '222.186.31.178' could not be resolved: Name or service not known
+140327 20:08:05 [Warning] IP address '66.240.192.138' could not be resolved: Temporary failure in name resolution
+140330 11:50:05 [Warning] IP address '60.172.246.110' could not be resolved: Temporary failure in name resolution
+140403  0:59:26 [Warning] IP address '198.13.112.250' could not be resolved: Temporary failure in name resolution
+140403 17:04:22 [Warning] IP address '118.194.226.62' could not be resolved: Temporary failure in name resolution
+140403 17:04:28 [Warning] IP address '118.194.226.62' could not be resolved: Name or service not known
+140404 20:55:53 [Warning] IP address '192.210.51.169' could not be resolved: Temporary failure in name resolution
+140405  4:54:29 [Warning] IP address '219.148.29.176' could not be resolved: Name or service not known
+140405 11:15:01 [Warning] IP address '59.151.34.134' could not be resolved: Name or service not known
+140406  0:38:34 [Warning] IP address '61.147.103.170' could not be resolved: Temporary failure in name resolution
+140406  3:14:59 [Warning] IP address '61.147.103.170' could not be resolved: Name or service not known
+140407 23:54:27 [Warning] IP address '124.232.145.222' could not be resolved: Temporary failure in name resolution
+140408 12:36:04 [Warning] IP address '219.245.18.38' could not be resolved: Name or service not known
+140408 15:19:46 [Warning] IP address '108.171.254.37' could not be resolved: Temporary failure in name resolution
+140409 13:42:46 [Warning] IP address '23.239.121.107' could not be resolved: Temporary failure in name resolution
+140409 18:06:48 [Warning] IP address '61.136.93.16' could not be resolved: Temporary failure in name resolution
+140410  4:14:26 [Warning] IP address '125.77.121.90' could not be resolved: Name or service not known
+140410  5:35:49 [Warning] IP address '122.112.71.11' could not be resolved: Name or service not known
+140410  5:35:49 [Warning] IP address '122.112.71.11' could not be resolved: Name or service not known
+140410  5:35:49 [Warning] IP address '122.112.71.11' could not be resolved: Name or service not known
+140410  5:35:49 [Warning] IP address '122.112.71.11' could not be resolved: Name or service not known
+140410  5:35:49 [Warning] IP address '122.112.71.11' could not be resolved: Name or service not known
+140410 11:33:16 [Warning] IP address '61.160.250.136' could not be resolved: Name or service not known
+140410 14:03:23 [Note] /usr/sbin/mysqld: Normal shutdown
+
+140410 14:03:23 [Note] Event Scheduler: Purging the queue. 0 events
+140410 14:03:23  InnoDB: Starting shutdown...
+140410 14:03:24  InnoDB: Shutdown completed; log sequence number 1595675
+140410 14:03:24 [Note] /usr/sbin/mysqld: Shutdown complete
+
+140410 14:03:24 mysqld_safe mysqld from pid file /var/lib/mysql/test.erating.db.gg.com.br.pid ended
+140410 14:04:23 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+140410 14:04:23 [Note] Plugin 'FEDERATED' is disabled.
+140410 14:04:23 InnoDB: The InnoDB memory heap is disabled
+140410 14:04:23 InnoDB: Mutexes and rw_locks use InnoDB's own implementation
+140410 14:04:23 InnoDB: Compressed tables use zlib 1.2.3
+140410 14:04:23 InnoDB: Using Linux native AIO
+140410 14:04:24 InnoDB: Initializing buffer pool, size = 128.0M
+140410 14:04:24 InnoDB: Completed initialization of buffer pool
+140410 14:04:24 InnoDB: highest supported file format is Barracuda.
+140410 14:04:24  InnoDB: Waiting for the background threads to start
+140410 14:04:25 InnoDB: 5.5.30 started; log sequence number 1595675
+140410 14:04:25 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+140410 14:04:25 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+140410 14:04:25 [Note] Server socket created on IP: '0.0.0.0'.
+140410 14:04:25 [Note] Event Scheduler: Loaded 0 events
+140410 14:04:25 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.5.30'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+140410 14:05:25 [Warning] IP address '177.154.136.35' has been resolved to the host name '35.136.154.177.static.sp2.alog.com.br', which resembles IPv4-address itself.
+140410 14:40:08 [Note] /usr/sbin/mysqld: Normal shutdown
+
+140410 14:40:08 [Note] Event Scheduler: Purging the queue. 0 events
+140410 14:40:08  InnoDB: Starting shutdown...
+140410 14:40:08  InnoDB: Shutdown completed; log sequence number 1595675
+140410 14:40:08 [Note] /usr/sbin/mysqld: Shutdown complete
+
+140410 14:40:08 mysqld_safe mysqld from pid file /var/lib/mysql/test.erating.db.gg.com.br.pid ended
+140410 14:41:02 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+140410 14:41:03 [Note] Plugin 'FEDERATED' is disabled.
+140410 14:41:03 InnoDB: The InnoDB memory heap is disabled
+140410 14:41:03 InnoDB: Mutexes and rw_locks use InnoDB's own implementation
+140410 14:41:03 InnoDB: Compressed tables use zlib 1.2.3
+140410 14:41:03 InnoDB: Using Linux native AIO
+140410 14:41:03 InnoDB: Initializing buffer pool, size = 128.0M
+140410 14:41:03 InnoDB: Completed initialization of buffer pool
+140410 14:41:03 InnoDB: highest supported file format is Barracuda.
+140410 14:41:03  InnoDB: Waiting for the background threads to start
+140410 14:41:04 InnoDB: 5.5.30 started; log sequence number 1595675
+140410 14:41:04 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+140410 14:41:04 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+140410 14:41:04 [Note] Server socket created on IP: '0.0.0.0'.
+140410 14:41:05 [Note] Event Scheduler: Loaded 0 events
+140410 14:41:05 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.5.30'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+140410 14:41:24 [Warning] IP address '177.154.136.35' has been resolved to the host name '35.136.154.177.static.sp2.alog.com.br', which resembles IPv4-address itself.
+140410 15:26:39 [Note] /usr/sbin/mysqld: Normal shutdown
+
+140410 15:26:39 [Note] Event Scheduler: Purging the queue. 0 events
+140410 15:26:39  InnoDB: Starting shutdown...
+140410 15:26:39  InnoDB: Shutdown completed; log sequence number 1595675
+140410 15:26:39 [Note] /usr/sbin/mysqld: Shutdown complete
+
+140410 15:26:39 mysqld_safe mysqld from pid file /var/lib/mysql/test.erating.db.gg.com.br.pid ended

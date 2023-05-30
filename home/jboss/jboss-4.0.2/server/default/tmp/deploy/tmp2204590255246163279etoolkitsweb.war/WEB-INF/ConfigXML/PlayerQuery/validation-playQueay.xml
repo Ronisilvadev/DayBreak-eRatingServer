@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC 
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" 
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd"> 
+<form-validation>
+	<global>
+		<constant>
+			<constant-name>date</constant-name>
+			<constant-value>^\d{4}-\d{2}-\d{2}$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>date2</constant-name>
+			<constant-value>^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$</constant-value>
+		</constant>
+	</global>
+	<formset>
+		<!-- 查询帐号信息 begin -->
+		<form name="/getPlayerInfo">
+			<field property="playerName" depends="">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="playerId" depends="long">
+				<arg0 key="prompt.playerId"/>
+			</field>
+			<field property="roleName" depends="">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="roleId" depends="long">
+				<arg0 key="prompt.roleId"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+		</form>
+		<!-- 查询帐号信息 end -->
+		<!-- 身份证查账号 begin -->
+		<form name="/getPlayerInfoByIdCode">
+			<field property="idCode" depends="required">
+				<arg0 key="prompt.idCode"/>
+			</field>
+		</form>
+		<!-- 身份证查账号 end -->
+		<!-- 查询帐号注册信息 begin -->
+		<form name="/queryPlayerResInfo">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+		</form>
+		<!-- 查询帐号注册信息 end -->
+		<!-- 验证玩家信息 begin -->
+		<form name="/validatePlayerInfo">
+			<field property="passportName" depends="required">
+				<arg0 key="prompt.passportName"/>
+			</field>
+			<field property="idCode" depends="required">
+				<arg0 key="prompt.idCode"/>
+			</field>
+			<field property="realName" depends="required">
+				<arg0 key="prompt.realName"/>
+			</field>
+		</form>
+		<!-- 验证玩家信息 begin -->
+		<!-- 活动物品记录 begin -->
+		<form name="/getPlayerItems">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="beginDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 活动物品记录 end -->
+		<!-- 活动奖品日志记录查询 begin -->
+		<form name="/getLogPlayerItems">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="beginDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 活动奖品日志记录查询 end -->
+		<!-- 活动奖品修改 begin -->
+		<form name="/modifyItemName">
+			<field property="itemName" depends="required">
+				<arg0 key="prompt.itemName"/>
+			</field>
+			<field property="playerItemCode" depends="required">
+				<arg0 key="prompt.playerItemCode"/>
+			</field>
+		</form>
+		<!-- 活动奖品修改 end -->
+		<!-- 登入登出日志查询 begin -->
+		<form name="/getPlayerLoginOutDetail">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="beginDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 登入登出日志查询 end -->
+		<!-- 角色详细信息查询 begin -->
+		<form name="/getRoleDetailInfo">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!-- 角色详细信息查询 end -->
+		<!-- 冻结日志和记录数 begin -->
+		<form name="/querySearchFreezenAcount">
+			<field property="beginDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 冻结日志和记录数 end -->
+		<!-- 道具购买明细查询 begin -->
+		<form name="/getPlayerPurchaseDetail">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="beginDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 道具购买明细查询 end -->
+		<!-- 帐户明细查询 begin -->
+		<form name="/getPlayerChargeDetail">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="beginDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 帐户明细查询 end -->
+		<!-- 帐户余额查询 begin -->
+		<form name="/getPlayerAccountDetail">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+		</form>
+		<!-- 帐户余额查询 end -->
+		<!-- 充值订单查询 begin -->
+		<form name="/getOrderStatus">
+			<field property="orderId" depends="required,long">
+				<arg0 key="prompt.orderId"/>
+			</field>
+		</form>
+		<!-- 充值订单查询 end -->
+		<!-- 角色模糊查询 begin -->
+		<form name="/searchRole">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!-- 角色模糊查询 end -->
+		<!--  帐号批量查询 begin -->
+		<form name="/playerNames2Ids">
+			<field property="playerNames" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+		</form>
+		<!--  帐号批量查询 end -->
+		<!--  查询Npc信息 begin -->
+		<form name="/queryNpc">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="npcName" depends="required">
+				<arg0 key="prompt.npcName"/>
+			</field>
+		</form>
+		<!--  查询Npc信息 end -->
+		<!-- 查询角色仓库信息 begin -->
+		<form name="/getRoleStoreGood">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!-- 查询角色仓库信息 end -->
+		<!--  查询角色位置信息 begin -->
+		<form name="/getRoleLocation">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!--  查询角色位置信息 end -->
+		<!-- 激活码批量查询 begin -->
+		<form name="/queryVipCard">
+			<field property="vipCards" depends="required">
+				<arg0 key="prompt.vipCards"/>
+			</field>
+			<field property="cardType" depends="required">
+				<arg0 key="prompt.cardType"/>
+			</field>
+		</form>
+		<!-- 激活码批量查询 end -->
+		<!-- 激活码统计查询(活动模型) begin -->
+		<form name="/queryTotalSerialInfo">
+			<field property="activityId" depends="required,long">
+				<arg0 key="prompt.activityId"/>
+			</field>
+		</form>
+		<!-- 激活码统计查询(活动模型) end -->
+		<!-- 测试期激活码统计 begin -->
+		<form name="/queryTestSerialInfo">
+			<field property="activityId" depends="required,long">
+				<arg0 key="prompt.activityId"/>
+			</field>
+		</form>
+		<!-- 测试期激活码统计 end -->
+		<!-- 激活码汇总查询(活动模型) begin -->
+		<form name="/querySummarySerialInfo">
+			<field property="activityId" depends="required,long">
+				<arg0 key="prompt.activityId"/>
+			</field>
+		</form>
+		<!-- 激活码汇总查询(活动模型) end -->
+		<!-- 激活码批量查询(活动模型) begin -->
+		<form name="/queryBatchSerialInfo">
+			<field property="condition" depends="required">
+				<arg0 key="prompt.condition"/>
+			</field>
+		</form>
+		<form name="/exportAllSerialInfo">
+			<field property="condition" depends="required">
+				<arg0 key="prompt.condition"/>
+			</field>
+		</form>
+		<!-- 激活码批量查询(活动模型) end -->
+		<!-- 角色排名统计 begin -->
+		<form name="/queryRoleTopN">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId" />
+			</field>
+			<field property="orderType" depends="required">
+				<arg0 key="prompt.orderType" />
+			</field>
+			<field property="occupaction" depends="required">
+				<arg0 key="prompt.occupaction"/>
+			</field>
+			<field property="topN" depends="required">
+				<arg0 key="prompt.topN" />
+			</field>
+		</form>
+		<!-- 角色排名统计 end -->
+		<!-- 查询角色社会关系信息 begin -->
+		<form name="/queryRoleSocial">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId" />
+			</field>
+			<field property="serverId" depends="required">
+				<arg0 key="prompt.serverId" />
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName" />
+			</field>
+		</form>
+		<!-- 查询角色社会关系信息 end -->
+		<!-- 各职业信息统计 begin -->
+		<form name="/occuptationTotal">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="startDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 各职业信息统计 end -->
+		<!-- 物品移动流向查询 begin -->
+		<form name="/goodsHistory">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="startDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 物品移动流向查询 end -->
+		<!-- 指定玩家的物品的转移记录 begin -->
+		<form name="/OperationDetail">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="startDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 指定玩家的物品的转移记录 end -->
+		<!-- NPC至玩家的物品转移记录  begin -->
+		<form name="/GoodsHistoryFromNPC">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="npcName" depends="required">
+				<arg0 key="prompt.npcName"/>
+			</field>
+			<field property="startDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- NPC至玩家的物品转移记录  end -->
+		<!--玩家至NPC的物品转移记录  begin -->
+		<form name="/GoodsHistoryToNPC">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="npcName" depends="required">
+				<arg0 key="prompt.npcName"/>
+			</field>
+			<field property="startDate" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endDate" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!--玩家至NPC的物品转移记录  end -->
+		<!-- 充值订单详情查询 begin -->
+		<form name="/getOrderDetail">
+			<field property="orderId" depends="required,long">
+				<arg0 key="prompt.orderId"/>
+			</field>
+		</form>
+		<!-- 充值订单详情查询 end -->
+		<!-- 玩家至玩家物品移动记录 begin -->
+		<form name="/goodsHistoryBetweenUsers">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName1" depends="required">
+				<arg0 key="prompt.roleName1"/>
+			</field>
+			<field property="roleName2" depends="required">
+				<arg0 key="prompt.roleName2"/>
+			</field>
+			<field property="startTime" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endTime" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 玩家至玩家物品移动记录 end -->
+		<!-- 查询角色包裹信息 begin -->
+		<form name="/getRolePackage">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!-- 查询角色包裹信息 end -->
+		
+		<!-- 角色物品查询 begin -->
+		<form name="/getRoleItemInfo">
+			<field property="gatewayId" depends="required,integer">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required,integer">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="itemId" depends="required,integer">
+				<arg0 key="prompt.itemId"/>
+			</field>
+			<field property="roleId" depends="required,long">
+				<arg0 key="prompt.roleId"/>
+			</field>
+		</form>
+		<!-- 角色物品查询 end -->
+		<!-- 玩家技能查询 begin -->
+		<form name="/userSkillInfo">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required,integer">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!-- 玩家技能查询 end -->
+		<!-- 玩家身上装备查询begin -->
+		<form name="/userItemOnBody">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required,integer">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!-- 玩家身上装备查询end -->
+		<!-- 玩家的经验等级日志查询begin -->
+		<form name="/userLevelInfo">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="startTime" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endTime" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+		</form>
+		<!-- 玩家的经验等级日志查询end -->
+		<!-- 角色称号查询、修改 -->
+		<form name="/queryRoleTitle">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<form name="/changeRoleTitle">
+			<field property="titleType" depends="required">
+				<arg0 key="prompt.titleType"/>
+			</field>
+			<field property="level" depends="required,integer">
+				<arg0 key="prompt.level"/>
+			</field>
+		</form>
+		<!-- 登入登出记录查询 -->
+		<form name="/loginInfo">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="userName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="startTime" depends="required,mask">
+				<arg0 key="prompt.startDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+			<field property="endTime" depends="required,mask">
+				<arg0 key="prompt.endDate"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${date2}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 查询玩家已完成任务 -->
+		<form name="/finishedTaskInfo">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<!-- 角色物品查询 -->
+		<form name="/roleItem">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="type" depends="required">
+				<arg0 key="prompt.type"/>
+			</field>
+		</form>
+		<!-- 角色帐号查询 -->
+		<form name="/role2Passport">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roles" depends="required">
+				<arg0 key="prompt.roles"/>
+			</field>
+		</form>
+		<!-- 玩家物品日志查询 -->
+		<form name="/roleItemLog">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="loggatewayId" depends="required">
+				<arg0 key="prompt.loggateway"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="opType" depends="required">
+				<arg0 key="prompt.opType"/>
+			</field>
+			<field property="itemType" depends="required">
+				<arg0 key="prompt.itemType"/>
+			</field>
+			<field property="itemId" depends="required">
+				<arg0 key="prompt.itemId"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<!-- 玩家金钱日志查询 -->
+		<form name="/roleMoneyLog">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="loggatewayId" depends="required">
+				<arg0 key="prompt.loggateway"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="opType" depends="required">
+				<arg0 key="prompt.opType"/>
+			</field>
+			<field property="itemType" depends="required">
+				<arg0 key="prompt.moneyType"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<!-- 玩家经验日志查询 -->
+		<form name="/roleExpLog">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="loggatewayId" depends="required">
+				<arg0 key="prompt.loggateway"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="opType" depends="required">
+				<arg0 key="prompt.opType"/>
+			</field>
+			<field property="expType" depends="required">
+				<arg0 key="prompt.expType"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<!-- 玩家物品升级日志查询 -->
+		<form name="/roleItemLevLog">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="loggatewayId" depends="required">
+				<arg0 key="prompt.loggateway"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="itemType" depends="required">
+				<arg0 key="prompt.itemType"/>
+			</field>
+			<field property="itemId" depends="required">
+				<arg0 key="prompt.itemId"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<!-- 帐号激活查询 -->
+		<form name="/activationLog">
+			<field property="passport" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+		</form>
+		<!-- 组织详细信息查询 -->
+		<form name="/corpsDetailNew">
+			<field property="corpsName" depends="required">
+				<arg0 key="prompt.corpsName"/>
+			</field>			
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="corpsType" depends="required">
+				<arg0 key="prompt.corpsType"/>
+			</field>
+		</form>
+		<!-- 组织仓库信息查询 -->
+		<form name="/corpsStorage">
+			<field property="corpsName" depends="required">
+				<arg0 key="prompt.corpsName"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="corpsType" depends="required">
+				<arg0 key="prompt.corpsType"/>
+			</field>
+		</form>
+		<!-- 组织成员信息查询 -->
+		<form name="/getCorpsMember">
+			<field property="corpsName" depends="required">
+				<arg0 key="prompt.corpsName"/>
+			</field>			
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="corpsType" depends="required">
+				<arg0 key="prompt.corpsType"/>
+			</field>
+		</form>
+		<!-- 组织总数信息查询 -->
+		<form name="/getCorpsTotalNew">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="corpsType" depends="required">
+				<arg0 key="prompt.corpsType"/>
+			</field>
+		</form>		
+		<!-- 玩家邮件信息查询 -->
+		<form name="/getRoleEmail">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>	
+		<!-- 组织日志查询 -->
+		<form name="/getCorpsLog">
+			<field property="corpsName" depends="required">
+				<arg0 key="prompt.corpsName"/>
+			</field>			
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="corpsType" depends="required">
+				<arg0 key="prompt.corpsType"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<!-- 角色日志查询 -->
+		<form name="/getRoleLog">					
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<!-- 角色拍卖行信息查询 -->
+		<form name="/getRoleAuction">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>			
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+		</form>
+		<!-- 卡密激活查询 -->
+		<form name="/getInvokeCard">
+			<field property="passportName" depends="required">
+				<arg0 key="prompt.passportName"/>
+			</field>			
+		</form>
+		<!-- 元宝交易日志查询 -->
+		<form name="/getFundExchange">					
+			<field property="passportName" depends="required">
+				<arg0 key="prompt.passportName"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<!-- 玩家行为日志查询 -->
+		<form name="/getRoleActionOperateLog">					
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>		
+	</formset>
+</form-validation>
+          

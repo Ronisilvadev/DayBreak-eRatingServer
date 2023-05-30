@@ -1,0 +1,41 @@
+2017-12-03 04:00:00,007 INFO  [STDOUT] Exception in thread "Timer-3" 
+2017-12-03 04:00:00,007 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-12-03 04:00:00,007 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-12-03 04:00:00,007 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-12-03 04:00:00,008 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.QiDianTask$1.run(Unknown Source)
+2017-12-03 04:00:00,008 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-12-03 04:00:00,008 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-12-03 06:00:00,024 INFO  [STDOUT] java.lang.NullPointerException
+2017-12-03 06:00:00,024 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-12-03 06:00:00,024 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-12-03 06:00:00,024 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-12-03 06:00:00,024 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-12-03 06:00:00,024 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-12-03 10:48:00,006 INFO  [STDOUT] Exception in thread "Timer-5" 
+2017-12-03 10:48:00,007 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-12-03 10:48:00,007 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-12-03 10:48:00,007 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-12-03 10:48:00,007 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TaoBaoTask$1.run(Unknown Source)
+2017-12-03 10:48:00,007 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-12-03 10:48:00,007 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-12-03 17:07:13,576 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-03 17:08:52,034 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-12-03 17:10:27,636 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)

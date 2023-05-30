@@ -1,0 +1,9 @@
+/*C7*/CONNECT USER SA
+/*C8*/CONNECT USER SA
+/*C9*/CONNECT USER SA
+/*C10*/CONNECT USER SA
+/*C11*/CONNECT USER SA
+/*C12*/CONNECT USER SA
+/*C8*/drop table HILOSEQUENCES
+create table HILOSEQUENCES (\u000a           SEQUENCENAME varchar(50) not null,\u000a           HIGHVALUES integer not null,\u000a           constraint hilo_pk primary key (SEQUENCENAME)\u000a        )
+INSERT INTO HILOSEQUENCES VALUES('general',0)

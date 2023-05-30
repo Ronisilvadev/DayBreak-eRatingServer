@@ -1,0 +1,8 @@
+2014-09-11 10:17:59,281 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 128    userName = richard500    chargeTime = 2014-09-11 21:17:59    chargeMoney = 300.0    chargeAmount = 300    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 141044147927018    sign = 2723c217d951ecbed472f61c58cd3b30     )
+2014-09-11 10:23:10,095 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 129    userName = eventodbo1    chargeTime = 2014-09-11 21:23:10    chargeMoney = 1200.0    chargeAmount = 1200    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 141044179008403    sign = fbefbd8e028ae9a981629537c8864c88     )
+2014-09-11 14:03:31,415 INFO  [STDOUT] java.lang.NullPointerException
+2014-09-11 14:03:31,415 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-09-11 14:03:31,416 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-09-11 14:03:31,416 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-09-11 14:03:31,416 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-09-11 14:03:31,416 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

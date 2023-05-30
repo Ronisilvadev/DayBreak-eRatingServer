@@ -1,0 +1,199 @@
+2014-05-03 01:11:19,226 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-05-03 01:11:19,227 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:11:19,227 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:11:19,430 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-05-03 01:11:45,157 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=8vcup&gameId=1204&method=login&passportName=GLOBALgames02&
+2014-05-03 01:11:45,157 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:11:45,158 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:11:45,220 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-05-03 01:12:01,320 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=np981&gameId=1204&method=login&passportName=GLOBALgames02&
+2014-05-03 01:12:01,320 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:12:01,536 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showTop&
+2014-05-03 01:12:01,537 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:12:01,574 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-05-03 01:12:01,574 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:12:01,579 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-05-03 01:12:01,579 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:12:01,609 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-05-03 01:12:01,610 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:12:01,614 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showTab&
+2014-05-03 01:12:01,615 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:12:01,623 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-05-03 01:12:01,624 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:12:09,677 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-05-03 01:12:23,171 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/getPlayerInfo.do?playerName=interkaos&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2014-05-03 01:12:35,096 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-05-03 01:12:52,756 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showQueryPlayerChargeDetail.do?
+2014-05-03 01:12:57,196 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/getPlayerChargeDetail.do?playerName=Athinnis&search=Submit&endDate=2014-05-03&beginDate=2014-04-03&
+2014-05-03 01:12:57,222 INFO  [STDOUT] org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+2014-05-03 01:12:57,222 INFO  [STDOUT] 	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+2014-05-03 01:12:57,222 INFO  [STDOUT] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:669)
+2014-05-03 01:12:57,222 INFO  [STDOUT] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:679)
+2014-05-03 01:12:57,222 INFO  [STDOUT] 	at org.springframework.jdbc.core.JdbcTemplate.queryForLong(JdbcTemplate.java:696)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at com.linekong.gmweb2.dao.impl.mysql.PlayerQueryDaoImpl.getUserIdByUserName(Unknown Source)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at com.linekong.gmweb2.dao.impl.mysql.PlayerQueryDaoImpl.getPlayerChargeDetail(Unknown Source)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at java.lang.reflect.Method.invoke(Method.java:597)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:304)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:182)
+2014-05-03 01:12:57,223 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:149)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:106)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:89)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at $Proxy42.getPlayerChargeDetail(Unknown Source)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at com.linekong.gmweb2.web.action.PlayerQueryAction.getPlayerChargeDetail(Unknown Source)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2014-05-03 01:12:57,224 INFO  [STDOUT] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at java.lang.reflect.Method.invoke(Method.java:597)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.apache.struts.actions.DispatchAction.dispatchMethod(DispatchAction.java:270)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.apache.struts.actions.DispatchAction.execute(DispatchAction.java:187)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.apache.struts.actions.MappingDispatchAction.execute(MappingDispatchAction.java:169)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.springframework.web.struts.DelegatingActionProxy.execute(DelegatingActionProxy.java:110)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+2014-05-03 01:12:57,225 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+2014-05-03 01:12:57,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+2014-05-03 01:12:57,227 INFO  [STDOUT] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+2014-05-03 01:12:57,228 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+2014-05-03 01:12:57,229 INFO  [STDOUT] 	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+2014-05-03 01:12:57,229 INFO  [STDOUT] 	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+2014-05-03 01:12:57,229 INFO  [STDOUT] 	at java.lang.Thread.run(Thread.java:662)
+2014-05-03 01:12:57,230 INFO  [STDOUT] org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+2014-05-03 01:12:57,230 INFO  [STDOUT] 	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:669)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:679)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at org.springframework.jdbc.core.JdbcTemplate.queryForLong(JdbcTemplate.java:696)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at com.linekong.gmweb2.dao.impl.mysql.PlayerQueryDaoImpl.getUserIdByUserName(Unknown Source)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at com.linekong.gmweb2.dao.impl.mysql.PlayerQueryDaoImpl.getAllPlayerChargeDetail(Unknown Source)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2014-05-03 01:12:57,231 INFO  [STDOUT] 	at java.lang.reflect.Method.invoke(Method.java:597)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:304)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:182)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:149)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:106)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:89)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at $Proxy42.getAllPlayerChargeDetail(Unknown Source)
+2014-05-03 01:12:57,232 INFO  [STDOUT] 	at com.linekong.gmweb2.web.action.PlayerQueryAction.getPlayerChargeDetail(Unknown Source)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at java.lang.reflect.Method.invoke(Method.java:597)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at org.apache.struts.actions.DispatchAction.dispatchMethod(DispatchAction.java:270)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at org.apache.struts.actions.DispatchAction.execute(DispatchAction.java:187)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at org.apache.struts.actions.MappingDispatchAction.execute(MappingDispatchAction.java:169)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at org.springframework.web.struts.DelegatingActionProxy.execute(DelegatingActionProxy.java:110)
+2014-05-03 01:12:57,233 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,234 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+2014-05-03 01:12:57,235 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+2014-05-03 01:12:57,236 INFO  [STDOUT] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+2014-05-03 01:12:57,237 INFO  [STDOUT] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+2014-05-03 01:12:57,237 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+2014-05-03 01:12:57,237 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+2014-05-03 01:12:57,237 INFO  [STDOUT] 	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+2014-05-03 01:12:57,237 INFO  [STDOUT] 	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+2014-05-03 01:12:57,237 INFO  [STDOUT] 	at java.lang.Thread.run(Thread.java:662)
+2014-05-03 01:13:04,810 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showUserManage.do?
+2014-05-03 01:13:07,333 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showUserPwdModify.do?
+2014-05-03 01:13:08,166 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showUserAdd.do?
+2014-05-03 01:13:12,550 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showRoleAdd.do?
+2014-05-03 01:13:15,712 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showRoleManage.do?
+2014-05-03 01:13:27,153 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-05-03 01:13:27,153 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 01:14:35,626 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showQueryPlayerLoginOutDetail.do?
+2014-05-03 01:14:39,694 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/getPlayerLoginOutDetail.do?playerName=pedrao1&search=Submit&endDate=2014-05-03&beginDate=2014-05-02&qurType=1&
+2014-05-03 01:14:58,562 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showGameServer.do?
+2014-05-03 01:15:42,014 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showGameServer.do?
+2014-05-03 06:01:25,848 INFO  [STDOUT] java.lang.NullPointerException
+2014-05-03 06:01:25,848 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-05-03 06:01:25,849 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-05-03 06:01:25,849 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-05-03 06:01:25,849 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-05-03 06:01:25,849 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-05-03 14:56:33,317 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-05-03 14:56:33,317 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 14:56:33,317 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 14:56:33,581 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-05-03 15:04:52,996 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-05-03 15:04:52,996 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:04:52,996 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:04:53,368 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-05-03 15:15:11,308 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=ncnn6&gameId=1204&method=login&passportName=GLOBALgames02&
+2014-05-03 15:15:11,308 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:11,309 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:11,353 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-05-03 15:15:23,864 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=mcpx0&gameId=1204&method=login&passportName=GLOBALgames02&
+2014-05-03 15:15:23,864 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:24,115 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showTop&
+2014-05-03 15:15:24,116 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:24,136 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-05-03 15:15:24,136 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:24,137 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-05-03 15:15:24,137 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:24,175 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-05-03 15:15:24,176 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:24,212 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-05-03 15:15:24,212 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:24,214 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showFrame.do?method=showTab&
+2014-05-03 15:15:24,214 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-05-03 15:15:41,826 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-05-03 15:16:30,665 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/getPlayerInfo.do?playerName=pedrao1&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2014-05-03 15:17:00,772 INFO  [LogPrintFilter] operator:GLOBALgames02: /etoolkitsweb/showQueryPlayerLoginOutDetail.do?

@@ -1,0 +1,29 @@
+2014-09-18 10:32:32,005 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:32:32,306 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-18 10:33:46,741 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&gameId=1204&validCode=q11cc&method=login&passportName=GLOBALgames05&
+2014-09-18 10:33:46,742 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:33:49,719 INFO  [LogPrintFilter] operator:GLOBALgames05: /etoolkitsweb/login.do?method=logout&
+2014-09-18 10:33:49,719 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:33:49,762 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2014-09-18 10:33:49,762 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:33:49,840 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-18 10:35:23,735 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&gameId=1204&validCode=cj64q&method=login&passportName=GLOBALgames05&
+2014-09-18 10:35:23,735 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:35:50,259 INFO  [LogPrintFilter] operator:GLOBALgames05: /etoolkitsweb/login.do?method=logout&
+2014-09-18 10:35:50,259 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:35:50,304 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2014-09-18 10:35:50,304 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:35:50,384 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-18 10:36:00,462 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=67jq5&gameId=1204&method=login&passportName=GLOBALgames05&
+2014-09-18 10:36:00,462 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:36:02,763 INFO  [LogPrintFilter] operator:GLOBALgames05: /etoolkitsweb/login.do?method=logout&
+2014-09-18 10:36:02,763 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:36:02,858 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2014-09-18 10:36:02,858 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-18 10:36:02,994 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-18 14:05:34,877 INFO  [STDOUT] java.lang.NullPointerException
+2014-09-18 14:05:34,877 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-09-18 14:05:34,877 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-09-18 14:05:34,877 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-09-18 14:05:34,877 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-09-18 14:05:34,877 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/opt/mysql-5.5.15/extra/innochecksum.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+unistd.h
+-
+

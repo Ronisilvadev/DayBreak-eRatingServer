@@ -1,0 +1,8 @@
+2013-07-16 05:30:27,842 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 1370423297    userName = daybreak    chargeTime = 2013-07-16 16:30:27    chargeMoney = 1.0    chargeAmount = 1    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 27.131.160.82    chargeDetailId = 137396342782616    sign = c270c2155a3b281c901bb7ec60089401     )
+2013-07-16 06:04:24,256 INFO  [STDOUT] java.lang.NullPointerException
+2013-07-16 06:04:24,256 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2013-07-16 06:04:24,257 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2013-07-16 06:04:24,257 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2013-07-16 06:04:24,257 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2013-07-16 06:04:24,257 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2013-07-16 06:59:02,978 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''

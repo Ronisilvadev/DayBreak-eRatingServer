@@ -1,0 +1,51 @@
+2014-04-03 06:52:31,410 INFO  [STDOUT] java.lang.NullPointerException
+2014-04-03 06:52:31,410 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-04-03 06:52:31,411 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-04-03 06:52:31,411 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-04-03 06:52:31,411 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-04-03 06:52:31,411 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-04-03 11:19:36,473 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:19:36,961 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-04-03 11:20:00,663 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&gameId=1204&validCode=8300j&method=login&passportName=braziltest1&
+2014-04-03 11:20:00,663 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:01,222 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showTop&
+2014-04-03 11:20:01,223 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:01,249 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-04-03 11:20:01,249 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:01,249 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-04-03 11:20:01,250 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:01,321 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-04-03 11:20:01,322 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:01,350 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showTab&
+2014-04-03 11:20:01,350 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:01,357 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-04-03 11:20:01,357 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:08,288 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/logManage.do?method=showLog&
+2014-04-03 11:20:08,288 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:20:35,985 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-04-03 11:20:43,026 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/getPlayerInfo.do?playerName=kissinet01&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2014-04-03 11:21:52,252 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showQueryPlayerLoginOutDetail.do?
+2014-04-03 11:22:09,108 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/getPlayerLoginOutDetail.do?playerName=kissinet01&search=Submit&endDate=2014-04-03&beginDate=2014-03-19&qurType=1&
+2014-04-03 11:22:52,560 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showPlayerNames2Ids.do?
+2014-04-03 11:23:04,654 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/playerNames2Ids.do?queryType=1&search=Submit&playerNames=kissinet01&
+2014-04-03 11:23:15,635 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showQueryPlayerAccountDetail.do?
+2014-04-03 11:23:20,925 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/getPlayerAccountDetail.do?playerName=kissinet01&search=Submit&
+2014-04-03 11:23:29,993 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showSearchRole.do?
+2014-04-03 11:23:41,405 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/searchRole.do?search=Submit&roleName=kissinet01&gatewayId=0&
+2014-04-03 11:23:50,789 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/logManage.do?method=showLog&
+2014-04-03 11:23:50,790 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-04-03 11:23:58,699 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showRoleManage.do?
+2014-04-03 11:24:13,160 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showRoleModify.do?roleId=2&
+2014-04-03 11:24:25,720 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showRoleUsers.do?roleIdScope=1&
+2014-04-03 11:24:50,771 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showUserManage.do?
+2014-04-03 11:24:56,771 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showUserManage.do?searchType=realName&keyWord=admin&
+2014-04-03 11:25:01,478 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-04-03 11:25:07,059 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/getPlayerInfo.do?playerName=&search=Submit&playerId=&roleName=admin&gatewayId=0&roleId=&
+2014-04-03 11:25:13,955 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/getPlayerInfo.do?playerName=&search=Submit&playerId=&roleName=Brazil&gatewayId=0&roleId=&
+2014-04-03 11:25:18,813 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/getPlayerInfo.do?playerName=admin&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2014-04-03 11:25:48,920 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-04-03 11:25:50,732 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showPlayerItems.do?
+2014-04-03 11:25:52,036 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showLogPlayerItems.do?
+2014-04-03 11:25:56,172 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showUserPwdModify.do?
+2014-04-03 11:26:11,128 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showRoleAdd.do?
+2014-04-03 11:26:19,783 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?

@@ -1,0 +1,27 @@
+2017-11-24 06:00:00,050 INFO  [STDOUT] java.lang.NullPointerException
+2017-11-24 06:00:00,051 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-11-24 06:00:00,051 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-11-24 06:00:00,051 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-11-24 06:00:00,051 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-11-24 06:00:00,051 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-11-24 15:08:55,830 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-11-24 15:09:37,419 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-11-24 15:10:19,512 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002B
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)

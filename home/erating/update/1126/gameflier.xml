@@ -1,0 +1,16 @@
+<config>
+
+    <ip>210.242.203.250</ip>
+    <port>33000</port>
+    <timeout>50</timeout>
+
+    <log_level>4</log_level>
+
+    <interval>
+        <reconnect>5</reconnect>
+        <keep_alive>30</keep_alive>
+        <report_status>30</report_status>
+        <reload_config>3</reload_config>
+    </interval>
+
+</config>

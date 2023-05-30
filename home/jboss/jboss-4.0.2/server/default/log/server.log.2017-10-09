@@ -1,0 +1,31 @@
+2017-10-09 02:29:48,416 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002F
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-10-09 06:00:00,052 INFO  [STDOUT] java.lang.NullPointerException
+2017-10-09 06:00:00,052 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-10-09 06:00:00,053 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-10-09 06:00:00,053 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-10-09 06:00:00,053 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-10-09 06:00:00,053 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-10-09 09:48:01,628 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 0125003    userName = uchyhas2    chargeTime = 2017-10-09 20:48:01    chargeMoney = 5250.0    chargeAmount = 5250    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.234.154.231    chargeDetailId = 150755328161768    sign = 02816643e5fff5b88f30574b992f233f     )
+2017-10-09 15:47:04,237 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2280)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:2749)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:779)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-10-09 15:47:04,567 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 03000026
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-10-09 20:09:03,939 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 0125008    userName = pqp1david    chargeTime = 2017-10-10 07:09:03    chargeMoney = 3500.0    chargeAmount = 3500    gatewayId = 104003    serverIP = 192.168.177.94    clientIp = 177.234.154.231    chargeDetailId = 150759054392745    sign = 7c7f9831ab01352fc14059e9c78ea7dd     )

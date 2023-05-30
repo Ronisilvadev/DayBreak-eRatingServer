@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="getFreezePlayerInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="getRole2OperForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="keyWord" type="java.lang.String"></form-property>
+			<form-property name="selectFlag" type="java.lang.String"></form-property>
+			<form-property name="oper" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="addTaskForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="taskId" type="java.lang.String"></form-property>
+			<form-property name="taskState" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="resetRoleAttrForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="clearItemForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="itemNum" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="clearStorageForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="clearCorpsItemForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="corpsName" type="java.lang.String"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="itemNum" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="simuLoginForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="userName" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="renameRoleForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="rename" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="kickOutUserForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="freezeMACForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="mac" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="period" type="java.lang.String"></form-property>
+			<form-property name="reason" type="java.lang.String"></form-property>
+		</form-bean>
+		<!-- 清空组织仓库 -->
+		<form-bean name="clearCorpsStorageForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="corpsName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>			
+		</form-bean>
+		<!-- 清空组织仓库 -->
+		<form-bean name="clearCorpsStorageForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="corpsName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>			
+		</form-bean>
+		<!-- 恢复角色物品 -->
+		<form-bean name="recoverRoleItemForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>			
+		</form-bean>
+		<form-bean name="emailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="title" type="java.lang.String"></form-property>
+			<form-property name="body" type="java.lang.String"></form-property>
+			<form-property name="type" type="java.lang.String"></form-property>
+		</form-bean>
+	</form-beans>
+	
+	<global-forwards>
+		<forward name="queryFreezePlayer" path="/WEB-INF/jsp/roleOperation/queryFreezePlayer.jsp" />
+		<forward name="freezePlayer" path="/WEB-INF/jsp/roleOperation/freezePlayer.jsp" />
+		<forward name="showUnFreezePlayer" path="/WEB-INF/jsp/roleOperation/showUnFreezePlayer.jsp"></forward>
+		<forward name="freezePlayerDetail" path="/WEB-INF/jsp/roleOperation/freezePlayerDetail.jsp" />
+		<forward name="queryRole2Oper" path="/WEB-INF/jsp/roleOperation/queryRole2Oper.jsp" />
+		<forward name="kickRole" path="/WEB-INF/jsp/roleOperation/kickRole.jsp" />
+		<forward name="moveRole" path="/WEB-INF/jsp/roleOperation/moveRole.jsp" />
+		<forward name="shutUpRole" path="/WEB-INF/jsp/roleOperation/shutUpRole.jsp" />
+		<forward name="endTask" path="/WEB-INF/jsp/roleOperation/endTask.jsp" />
+		<forward name="endPlayerFightState" path="/WEB-INF/jsp/roleOperation/endPlayerFightState.jsp" />
+		<forward name="modifyBindEmail" path="/WEB-INF/jsp/roleOperation/modifyBindEmail.jsp" />
+		<forward name="createModifyBindEmail" path="/WEB-INF/jsp/roleOperation/createModifyBindEmail.jsp" />
+		<forward name="operModifyBindEmail" path="/WEB-INF/jsp/roleOperation/operModifyBindEmail.jsp" />
+		<forward name="apprModifyBindEmail" path="/WEB-INF/jsp/roleOperation/apprModifyBindEmail.jsp" />
+		<forward name="queryTrusteePlayer" path="/WEB-INF/jsp/roleOperation/queryTrusteePlayer.jsp" />
+		<forward name="trusteePlayer" path="/WEB-INF/jsp/roleOperation/trusteePlayer.jsp" />
+		<forward name="showUnTrusteePlayer" path="/WEB-INF/jsp/roleOperation/showUnTrusteePlayer.jsp"></forward>
+		<forward name="freezePlayers" path="/WEB-INF/jsp/roleOperation/freezePlayers.jsp" />
+		<forward name="validateFreezePlayers" path="/WEB-INF/jsp/roleOperation/validateFreezePlayers.jsp" />
+		<forward name="restorePlayers" path="/WEB-INF/jsp/roleOperation/restorePlayers.jsp" />
+		<forward name="validateRestorePlayers" path="/WEB-INF/jsp/roleOperation/validateRestorePlayers.jsp" />
+		<forward name="trusteePlayers" path="/WEB-INF/jsp/roleOperation/trusteePlayers.jsp" />
+		<forward name="trusteePlayerDetail" path="/WEB-INF/jsp/roleOperation/trusteePlayerDetail.jsp" />
+		<forward name="validateTrusteePlayers" path="/WEB-INF/jsp/roleOperation/validateTrusteePlayers.jsp" />
+		<forward name="closePassCard" path="/WEB-INF/jsp/roleOperation/closePassCard.jsp" />
+		<forward name="createClosePassCard" path="/WEB-INF/jsp/roleOperation/createClosePassCard.jsp" />
+		<forward name="operClosePassCard" path="/WEB-INF/jsp/roleOperation/operClosePassCard.jsp" />
+		<forward name="apprClosePassCard" path="/WEB-INF/jsp/roleOperation/apprClosePassCard.jsp" />
+		<forward name="queryDelRole" path="/WEB-INF/jsp/roleOperation/queryDelRole.jsp" />
+		<forward name="delRole" path="/WEB-INF/jsp/roleOperation/delRole.jsp" />
+		<forward name="queryResumeRole" path="/WEB-INF/jsp/roleOperation/queryResumeRole.jsp" />
+		<forward name="resumeRole" path="/WEB-INF/jsp/roleOperation/resumeRole.jsp" />
+		<forward name="modifyPrivateId" path="/WEB-INF/jsp/roleOperation/modifyPrivateId.jsp" />
+		<forward name="transfer" path="/WEB-INF/jsp/roleOperation/transfer.jsp" />
+		<forward name="createTransfer" path="/WEB-INF/jsp/roleOperation/createTransfer.jsp" />
+		<forward name="operTransfer" path="/WEB-INF/jsp/roleOperation/operTransfer.jsp" />
+		<forward name="apprTransfer" path="/WEB-INF/jsp/roleOperation/apprTransfer.jsp" />
+		<forward name="kickRole2" path="/WEB-INF/jsp/roleOperation/kickRole2.jsp" />
+		<forward name="operOfflineRole" path="/WEB-INF/jsp/roleOperation/operOfflineRole.jsp" />
+		<forward name="cleanPackage" path="/WEB-INF/jsp/roleOperation/cleanPackage.jsp" />
+		<forward name="batchApprModifyBindEmail" path="/WEB-INF/jsp/roleOperation/batchApprModifyBindEmail.jsp"></forward>
+		<forward name="batchApprClosePassCard" path="/WEB-INF/jsp/roleOperation/batchApprClosePassCard.jsp"></forward>
+		<forward name="batchtApprTransfer" path="/WEB-INF/jsp/roleOperation/batchtApprTransfer.jsp"></forward>
+		<forward name="transferState" path="/WEB-INF/jsp/roleOperation/transferState.jsp"></forward>
+		<forward name="unShutUpRole" path="/WEB-INF/jsp/roleOperation/unShutUpRole.jsp"></forward>
+		<forward name="freezeHistoryInfo" path="/WEB-INF/jsp/roleOperation/freezeHistoryInfo.jsp"></forward>
+		<forward name="trusteeHistoryInfo" path="/WEB-INF/jsp/roleOperation/trusteeHistoryInfo.jsp"></forward>
+		<forward name="chargeCompensate" path="/WEB-INF/jsp/roleOperation/chargeCompensate.jsp"></forward>
+		<forward name="addTask" path="/WEB-INF/jsp/roleOperation/addTask.jsp"></forward>
+		<forward name="resetRoleAttr" path="/WEB-INF/jsp/roleOperation/resetRoleAttr.jsp"></forward>
+		<forward name="clearItem" path="/WEB-INF/jsp/roleOperation/clearItem.jsp"></forward>
+		<forward name="clearStorage" path="/WEB-INF/jsp/roleOperation/clearStorage.jsp"></forward>
+		<forward name="clearCorpsItem" path="/WEB-INF/jsp/roleOperation/clearCorpsItem.jsp"></forward>
+		<forward name="simuLogin" path="/WEB-INF/jsp/roleOperation/simuLogin.jsp"></forward>
+		<forward name="renameRole" path="/WEB-INF/jsp/roleOperation/renameRole.jsp"></forward>
+		<forward name="kickOutUser" path="/WEB-INF/jsp/roleOperation/kickOutUser.jsp"></forward>
+		<forward name="freezeMac" path="/WEB-INF/jsp/roleOperation/freezeMac.jsp"></forward>
+		<forward name="freezeMacOper" path="/WEB-INF/jsp/roleOperation/freezeMacOper.jsp"></forward>
+		<forward name="fastFreezeAccount" path="/WEB-INF/jsp/roleOperation/fastFreezeAccount.jsp"></forward>
+		<forward name="validateFastFreezeAccount" path="/WEB-INF/jsp/roleOperation/validateFastFreezeAccount.jsp"></forward>
+		<forward name="clearCorpsStorage" path="/WEB-INF/jsp/roleOperation/clearCorpsStorage.jsp"></forward>
+		
+		<forward name="showQueryHardwareSNFreeze" path="/WEB-INF/jsp/roleOperation//showQueryHardwareSNFreeze.jsp"></forward>
+		<forward name="showFreezeHardwareSN" path="/WEB-INF/jsp/roleOperation//showFreezeHardwareSN.jsp"></forward>
+		<forward name="showUnfreezeHardwareSN" path="/WEB-INF/jsp/roleOperation//showUnfreezeHardwareSN.jsp"></forward>
+		
+		<forward name="roleItemRecover" path="/WEB-INF/jsp/roleOperation/itemRecover.jsp"></forward>
+	</global-forwards>
+	
+	<action-mappings>
+		<action path="/getFreezePlayerInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getFreezePlayerInfo" scope="request"></action>
+		<action path="/showQueryFreezePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryFreezePlayer" scope="request"></action>
+		<action path="/showFreezePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFreezePlayer" scope="request"></action>
+		<action path="/showUnFreezePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUnFreezePlayer" scope="request"></action>
+		<action path="/getFreezePlayerDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getFreezePlayerDetail" scope="request"></action>
+		<action path="/freezePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="freezePlayer" scope="request"></action>
+		<action path="/unFreezePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unFreezePlayer" scope="request"></action>
+		<action path="/showQueryKickRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryKickRole" scope="request"></action>
+		<action path="/getRole2Oper" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRole2Oper" scope="request"></action>
+		<action path="/showKickRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showKickRole" scope="request"></action>
+		<action path="/kickRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="kickRole" scope="request"></action>
+		<action path="/operOfflineRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operOfflineRole" scope="request"></action>
+		<action path="/showQueryMoveRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryMoveRole" scope="request"></action>
+		<action path="/showMoveRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showMoveRole" scope="request"></action>
+		<action path="/moveRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="moveRole" scope="request"></action>
+		<action path="/showQueryShutUpRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryShutUpRole" scope="request"></action>
+		<action path="/showShutUpRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showShutUpRole" scope="request"></action>
+		<action path="/shutUpRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="shutUpRole" scope="request"></action>
+		<action path="/unKickRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unKickRole" scope="request"></action>
+		<action path="/showUnShutUpRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUnShutUpRole" scope="request"></action>
+		<action path="/unShutUpRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unShutUpRole" scope="request"></action>
+		<action path="/showModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyBindEmail" scope="request"></action>
+		<action path="/showFirstApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFirstApprModifyBindEmail" scope="request"></action>
+		<action path="/showSecondApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSecondApprModifyBindEmail" scope="request"></action>
+		<action path="/showAppredModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAppredModifyBindEmail" scope="request"></action>
+		<action path="/showExedModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showExedModifyBindEmail" scope="request"></action>
+		<action path="/showDeledModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showDeledModifyBindEmail" scope="request"></action>
+		<action path="/showCreateModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCreateModifyBindEmail" scope="request"></action>
+		<action path="/saveModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="saveModifyBindEmail" scope="request"></action>
+		<action path="/operModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operModifyBindEmail" scope="request"></action>
+		<action path="/showEditModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEditModifyBindEmail" scope="request"></action>
+		<action path="/submitModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="submitModifyBindEmail" scope="request"></action>
+		<action path="/delModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delModifyBindEmail" scope="request"></action>
+		<action path="/cancelModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="cancelModifyBindEmail" scope="request"></action>
+		<action path="/show2FirstApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="show2FirstApprModifyBindEmail" scope="request"></action>
+		<action path="/firstApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="firstApprModifyBindEmail" scope="request"></action>
+		<action path="/batchFirstApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="batchFirstApprModifyBindEmail" scope="request"></action>
+		<action path="/show2SecondApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="show2SecondApprModifyBindEmail" scope="request"></action>
+		<action path="/secondApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="secondApprModifyBindEmail" scope="request"></action>
+		<action path="/batchSecondApprModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="batchSecondApprModifyBindEmail" scope="request"></action>
+		<action path="/exeModifyBindEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exeModifyBindEmail" scope="request"></action>
+		<action path="/showQueryTrusteePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryTrusteePlayer" scope="request"></action>
+		<action path="/getTrusteePlayerInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getTrusteePlayerInfo" scope="request"></action>
+		<action path="/showTrusteePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showTrusteePlayer" scope="request"></action>
+		<action path="/showUnTrusteePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUnTrusteePlayer" scope="request"></action>
+		<action path="/getTrusteePlayerDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getTrusteePlayerDetail" scope="request"></action>
+		<action path="/trusteePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="trusteePlayer" scope="request"></action>
+		<action path="/unTrusteePlayer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unTrusteePlayer" scope="request"></action>
+		<action path="/showQueryEndTask" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryEndTask" scope="request"></action>
+		<action path="/showEndTask" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEndTask" scope="request"></action>
+		<action path="/endTask" type="org.springframework.web.struts.DelegatingActionProxy" parameter="endTask" scope="request"></action>
+		<action path="/showQueryEndPlayerFightState" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryEndPlayerFightState" scope="request"></action>
+		<action path="/showEndPlayerFightState" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEndPlayerFightState" scope="request"></action>
+		<action path="/endPlayerFightState" type="org.springframework.web.struts.DelegatingActionProxy" parameter="endPlayerFightState" scope="request"></action>
+		<action path="/showFreezePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFreezePlayers" scope="request"></action>
+		<action path="/validateFreezePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateFreezePlayers" scope="request"></action>
+		<action path="/freezePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="freezePlayers" scope="request"></action>
+		<action path="/showUnFreezePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUnFreezePlayers" scope="request"></action>
+		<action path="/validateRestorePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateRestorePlayers" scope="request"></action>
+		<action path="/unFreezePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unFreezePlayers" scope="request"></action>
+		<action path="/showTrusteePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showTrusteePlayers" scope="request"></action>
+		<action path="/validateTrusteePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateTrusteePlayers" scope="request"></action>
+		<action path="/trusteePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="trusteePlayers" scope="request"></action>
+		<action path="/showUnTrusteePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUnTrusteePlayers" scope="request"></action>
+		<action path="/unTrusteePlayers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unTrusteePlayers" scope="request"></action>
+		<action path="/showClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showClosePassCard" scope="request"></action>
+		<action path="/showFirstApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFirstApprClosePassCard" scope="request"></action>
+		<action path="/showSecondApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSecondApprClosePassCard" scope="request"></action>
+		<action path="/showAppredClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAppredClosePassCard" scope="request"></action>
+		<action path="/showExedClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showExedClosePassCard" scope="request"></action>
+		<action path="/showDeledClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showDeledClosePassCard" scope="request"></action>
+		<action path="/showCreateClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCreateClosePassCard" scope="request"></action>
+		<action path="/saveClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="saveClosePassCard" scope="request"></action>
+		<action path="/operClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operClosePassCard" scope="request"></action>
+		<action path="/showEditClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEditClosePassCard" scope="request"></action>
+		<action path="/submitClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="submitClosePassCard" scope="request"></action>
+		<action path="/delClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delClosePassCard" scope="request"></action>
+		<action path="/cancelClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="cancelClosePassCard" scope="request"></action>
+		<action path="/show2FirstApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="show2FirstApprClosePassCard" scope="request"></action>
+		<action path="/firstApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="firstApprClosePassCard" scope="request"></action>
+		<action path="/batchFirstApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="batchFirstApprClosePassCard" scope="request"></action>
+		<action path="/show2SecondApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="show2SecondApprClosePassCard" scope="request"></action>
+		<action path="/secondApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="secondApprClosePassCard" scope="request"></action>
+		<action path="/batchSecondApprClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="batchSecondApprClosePassCard" scope="request"></action>
+		<action path="/exeClosePassCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exeClosePassCard" scope="request"></action>
+		<action path="/showQueryRestoreSanYuan" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRestoreSanYuan" scope="request"></action>
+		<action path="/showQueryDelRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryDelRole" scope="request"></action>
+		<action path="/showDelRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showDelRole" scope="request"></action>
+		<action path="/delRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delRole" scope="request"></action>
+		<action path="/showQueryResumeRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryResumeRole" scope="request"></action>
+		<action path="/showResumeRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResumeRole" scope="request"></action>
+		<action path="/resumeRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="resumeRole" scope="request"></action>
+		<action path="/showTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showTransfer" scope="request"></action>
+		<action path="/showFirstApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFirstApprTransfer" scope="request"></action>
+		<action path="/showSecondApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSecondApprTransfer" scope="request"></action>
+		<action path="/showAppredTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAppredTransfer" scope="request"></action>
+		<action path="/showExedTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showExedTransfer" scope="request"></action>
+		<action path="/showDeledTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showDeledTransfer" scope="request"></action>
+		<action path="/showCreateTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCreateTransfer" scope="request"></action>
+		<action path="/saveTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="saveTransfer" scope="request"></action>
+		<action path="/operTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operTransfer" scope="request"></action>
+		<action path="/showEditTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEditTransfer" scope="request"></action>
+		<action path="/cancelTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="cancelTransfer" scope="request"></action>
+		<action path="/delTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delTransfer" scope="request"></action>
+		<action path="/show2FirstApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="show2FirstApprTransfer" scope="request"></action>
+		<action path="/firstApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="firstApprTransfer" scope="request"></action>
+		<action path="/batchFirstApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="batchFirstApprTransfer" scope="request"></action>
+		<action path="/show2SecondApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="show2SecondApprTransfer" scope="request"></action>
+		<action path="/secondApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="secondApprTransfer" scope="request"></action>
+		<action path="/batchSecondApprTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="batchSecondApprTransfer" scope="request"></action>
+		<action path="/submitTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="submitTransfer" scope="request"></action>
+		<action path="/exeTransfer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exeTransfer" scope="request"></action>
+		<action path="/getTransferState" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getTransferState" scope="request"></action>
+		<action path="/showQueryKickRole2" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryKickRole2" scope="request"></action>
+		<action path="/showKickRole2" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showKickRole2" scope="request"></action>
+		<action path="/kickRole2" type="org.springframework.web.struts.DelegatingActionProxy" parameter="kickRole2" scope="request"></action>
+		<action path="/showQueryCleanPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryCleanPackage" scope="request"></action>
+		<action path="/showCleanPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCleanPackage" scope="request"></action>
+		<action path="/cleanPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="cleanPackage" scope="request"></action>
+		<action path="/getHistoryInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getHistoryInfo" scope="request"></action>
+		<action path="/showChargeCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showChargeCompensate" scope="request"></action>
+		<action path="/insertChargeCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="insertChargeCompensate" scope="request"></action>
+		<action path="/delChargeCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delChargeCompensate" scope="request"></action>
+		<action path="/showAddTask" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddTask" scope="request"></action>
+		<action path="/addTask" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addTask" scope="request" name="addTaskForm" validate="true" input="/showAddTask.do"></action>
+		<action path="/showResetRoleAttr" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showResetRoleAttr" scope="request"></action>
+		<action path="/resetRoleAttr" type="org.springframework.web.struts.DelegatingActionProxy" parameter="resetRoleAttr" scope="request" name="resetRoleAttrForm" validate="true" input="/showResetRoleAttr.do"></action>
+		<action path="/showClearItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showClearItem" scope="request"></action>
+		<action path="/clearItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="clearItem" scope="request" name="clearItemForm" validate="true" input="/showClearItem.do"></action>
+		<action path="/showClearStorage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showClearStorage" scope="request"></action>
+		<action path="/clearStorage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="clearStorage" scope="request" name="clearStorageForm" validate="true" input="/showClearStorage.do"></action>
+		<action path="/showClearCorpsItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showClearCorpsItem" scope="request"></action>
+		<action path="/clearCorpsItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="clearCorpsItem" scope="request" name="clearCorpsItemForm" validate="true" input="/showClearCorpsItem.do"></action>
+		<action path="/showSimuLogin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSimuLogin" scope="request"></action>
+		<action path="/simuLogin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="simuLogin" scope="request" name="simuLoginForm" validate="true" input="/showSimuLogin.do"></action>
+		<action path="/showRenameRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRenameRole" scope="request"></action>
+		<action path="/renameRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="renameRole" scope="request" name="renameRoleForm" validate="true" input="/showRenameRole.do"></action>
+		<action path="/showKickOutUser" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showKickOutUser" scope="request"></action>
+		<action path="/kickOutUser" type="org.springframework.web.struts.DelegatingActionProxy" parameter="kickOutUser" scope="request" name="kickOutUserForm" validate="true" input="/showKickOutUser.do"></action>
+		<action path="/showFreezeMac" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFreezeMac" scope="request"></action>
+		<action path="/showFreezeMacLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFreezeMacLog" scope="request"></action>
+		<action path="/showOperFreezeMac" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOperFreezeMac" scope="request" name="kickOutUserForm" validate="true" input="/showKickOutUser.do"></action>
+		<action path="/freezeMac" type="org.springframework.web.struts.DelegatingActionProxy" parameter="freezeMac" scope="request" name="freezeMACForm"></action>
+		<action path="/unfreezeMac" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unfreezeMac" scope="request" name="freezeMACForm"></action>
+		<action path="/showFastFreezeAccount" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFastFreezeAccount" scope="request"></action>
+		<action path="/showFastUnfreezeAccount" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFastUnfreezeAccount" scope="request"></action>
+		<action path="/validateFastfreezeAccount" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateFastfreezeAccount" scope="request"></action>
+		<action path="/fastFreezeAccount" type="org.springframework.web.struts.DelegatingActionProxy" parameter="fastFreezeAccount" scope="request"></action>
+		<action path="/showClearCorpsStorage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showClearCorpsStorage" scope="request"/>
+		<action path="/clearCorpsStorage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="clearCorpsStorage" scope="request" validate="true"  name="clearCorpsStorageForm" input="/showClearCorpsStorage.do"/>
+		
+		<action path="/showRoleItemRecover" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleItemRecover" scope="request"/>
+		<action path="/recoverRoleItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="recoverRoleItem" scope="request" validate="true"  name="recoverRoleItemForm" input="/showRoleItemRecover.do?oper=${1}"/>
+		
+		<action path="/userInfoByIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="userInfoByIp" scope="request">
+			<forward name="userInfoByIp" path="/WEB-INF/jsp/roleOperation/showUserInfoByIp.jsp"></forward>
+		</action>
+		
+		<action path="/showUserInfoByIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserInfoByIp">
+			<forward name="showUserInfoByIp" path="/WEB-INF/jsp/roleOperation/showUserInfoByIp.jsp"></forward>
+		</action>
+		
+		<action path="/showEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEmail">
+			<forward name="showEmail" path="/WEB-INF/jsp/roleOperation/showEmail.jsp"></forward>
+		</action>
+		
+		<action path="/sendEmail" validate="true"  name="emailForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="sendEmail">
+			<forward name="sendEmail" path="/WEB-INF/jsp/roleOperation/showEmail.jsp"></forward>
+		</action>
+		
+		<action path="/showQueryHardwareSNFreeze" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryHardwareSNFreeze" scope="request" />
+		<action path="/queryHardwareSNFreeze" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryHardwareSNFreeze" scope="request" />
+		
+		<action path="/showFreezeHardwareSN" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFreezeHardwareSN" scope="request" />
+		<action path="/freezeHardwareSN" type="org.springframework.web.struts.DelegatingActionProxy" parameter="freezeHardwareSN" scope="request" />
+		<action path="/showUnfreezeHardwareSN" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUnfreezeHardwareSN" scope="request" />
+		<action path="/unfreezeHardwareSN" type="org.springframework.web.struts.DelegatingActionProxy" parameter="unfreezeHardwareSN" scope="request" />
+		
+		<action path="/showMarkPassport" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showMarkPassport" scope="request" >
+			<forward name="markPassport" path="/WEB-INF/jsp/roleOperation/markPassport.jsp"></forward>
+		</action>
+		<action path="/markPassport" type="org.springframework.web.struts.DelegatingActionProxy" parameter="markPassport" scope="request" >
+			<forward name="markPassport" path="/WEB-INF/jsp/roleOperation/markPassport.jsp"></forward>
+		</action>
+		
+		<action path="/showResetStorePwd" parameter="showResetStorePwd" type="org.springframework.web.struts.DelegatingActionProxy" scope="request">
+			<forward name="resetStorePwd" path="/WEB-INF/jsp/roleOperation/resetWarehousePwd.jsp"></forward>
+		</action>
+		
+		<action path="/resetStorePwd" parameter="resetStorePwd" type="org.springframework.web.struts.DelegatingActionProxy" scope="request">
+		</action>
+	</action-mappings>
+</struts-config>

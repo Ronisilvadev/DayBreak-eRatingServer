@@ -1,0 +1,105 @@
+/*�˵���ʽ0*/
+.menubar {
+	width:211px;
+}
+.menubar .title {
+	background:url("../images/gmweb.jpg") #67D4FF no-repeat left;
+	height:18px;
+	padding:7px 0px 0px 95px;
+	font-weight:bold;
+	font-size:14px;
+	border-bottom:1px solid #FFFFFF;
+}
+/*toolbar ����}��ť ȫ��չ��ȫ���۵�*/
+.menubar .toolbar{
+	background:url("../images/menu_header.jpg") no-repeat;
+	height:49px;
+}
+
+
+/*�˵�ͷ*/
+.menubar .menu_head{
+	font-size:small;
+	color:#FFFFFF;
+	font-weight:bold;
+	background:url("../images/but_bk.jpg") no-repeat;
+	padding:10px 0px 0px 0px;
+	height:21px;
+	cursor:pointer;
+}
+.menubar .open{
+font-size:13px
+	/*background:url("../images/but_bk.jpg") no-repeat;
+	padding:10px 0px 0px 75px;*/
+}
+.menubar .menu_bk {
+	background:url('../images/menu_bk.jpg');
+}
+
+/*�˵���*/
+.menubar ul.menu_body ,.menubar .menu_body li{
+	padding:0px 0px 5px 30px;
+	margin:0px 0px 0px 0px;
+	/*list-style:url('../images/list_icon.jpg') inside;*/
+}
+.menubar .menu_body li{
+	
+	font-size:small;
+	/*background:url('../images/linebk01.jpg') repeat-x bottom;*/
+}
+
+.sub_head{
+	 font-weight:bold;
+	 padding:7px 10px 0px 10px;
+	 cursor:pointer;
+}
+
+.sub_body{
+	/* background-image:url(../images/ecard_r12_c4.jpg);*/
+	 width:170px;
+	 padding:7px 10px 0px 0px;
+	}
+
+
+
+/*���˵���β*/
+.menubar .tail {
+	height:11px;
+	overflow:hidden;
+}
+
+
+.exit {
+	text-align:center;
+	background:url("../images/but_exit_bk.jpg") no-repeat;
+	padding:8px 0px 0px 0px;
+	height:45px;
+	font-size:14px;
+	word-spacing:3px;
+	font-weight:bold;
+}
+
+/* t����ʽ*/
+.exit a:link{
+	color:#000000;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
+.exit a:link{
+	color:#000000;
+}
+
+
+/* t����ʽ*/
+.menubar a:link {
+	color:#0360B0;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
+.menubar a:visited {
+	color:#0360B0;
+}
+.menubar a:hover {
+	color:#008A00;
+}
+

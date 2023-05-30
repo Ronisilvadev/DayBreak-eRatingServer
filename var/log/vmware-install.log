@@ -1,0 +1,293 @@
+Mon May 29 20:10:37 2023 vmware-install.pl start
+A previous installation of VMware Tools has been detected.
+
+The previous installation was made by the tar installer (version 4).
+
+Keeping the tar4 installer database format.
+
+You have a version of VMware Tools installed.  Continuing this install will 
+first uninstall the currently installed version.  Do you wish to continue? 
+(yes/no) [yes] 
+INPUT: [yes]  default
+
+Uninstalling the tar installation of VMware Tools.
+
+Stopping services for VMware Tools
+
+Stopping VMware Tools services in the virtual machine:
+   Guest operating system daemon:[  OK  ]
+   Virtual Printing daemon:[  OK  ]
+   Unmounting HGFS shares:[  OK  ]
+   Guest filesystem driver:[  OK  ]
+   Guest memory manager:[  OK  ]
+   VM communication interface socket family:[  OK  ]
+   VM communication interface:[  OK  ]
+
+File /usr/lib/vmware-tools/lib32/libconf/etc/gtk-2.0/gdk-pixbuf.loaders is 
+backed up to 
+/usr/lib/vmware-tools/lib32/libconf/etc/gtk-2.0/gdk-pixbuf.loaders.old.0.
+
+File /usr/lib/vmware-tools/lib32/libconf/etc/pango/pangorc is backed up to 
+/usr/lib/vmware-tools/lib32/libconf/etc/pango/pangorc.old.0.
+
+This program previously created the file 
+/usr/lib/vmware-tools/libconf/etc/pango/pangorc, and was about to remove it.  
+Somebody else apparently did it already.
+
+File /etc/vmware-tools/vmware-user.desktop is backed up to 
+/etc/vmware-tools/vmware-user.desktop.old.0.
+
+File /usr/lib/vmware-tools/lib32/libconf/etc/fonts/fonts.conf is backed up to 
+/usr/lib/vmware-tools/lib32/libconf/etc/fonts/fonts.conf.old.0.
+
+This program previously created the file 
+/usr/lib/vmware-tools/lib32/libconf/etc/pango/pango.modules, and was about to 
+remove it.  Somebody else apparently did it already.
+
+This program previously created the file 
+/usr/lib/vmware-tools/libconf/etc/gtk-2.0/gdk-pixbuf.loaders, and was about to 
+remove it.  Somebody else apparently did it already.
+
+File /usr/lib/vmware-tools/lib32/libconf/etc/gtk-2.0/gtk.immodules is backed up
+to /usr/lib/vmware-tools/lib32/libconf/etc/gtk-2.0/gtk.immodules.old.0.
+
+This program previously created the file 
+/usr/lib/vmware-tools/libconf/etc/gtk-2.0/gtk.immodules, and was about to 
+remove it.  Somebody else apparently did it already.
+
+This program previously created the file 
+/usr/lib/vmware-tools/lib32/libconf/etc/pango/pangox.aliases, and was about to 
+remove it.  Somebody else apparently did it already.
+
+This program previously created the directory 
+/usr/lib/vmware-tools/lib32/libconf/etc/gtk-2.0, and was about to remove it. 
+Since there are files in that directory that this program did not create, it 
+will not be removed.
+
+This program previously created the directory 
+/usr/lib/vmware-tools/lib32/libconf/etc/pango, and was about to remove it. 
+Since there are files in that directory that this program did not create, it 
+will not be removed.
+
+This program previously created the directory 
+/usr/lib/vmware-tools/lib32/libconf/etc/fonts, and was about to remove it. 
+Since there are files in that directory that this program did not create, it 
+will not be removed.
+
+This program previously created the directory 
+/usr/lib/vmware-tools/lib32/libconf/etc, and was about to remove it. Since 
+there are files in that directory that this program did not create, it will not
+be removed.
+
+This program previously created the directory 
+/usr/lib/vmware-tools/lib32/libconf, and was about to remove it. Since there 
+are files in that directory that this program did not create, it will not be 
+removed.
+
+This program previously created the directory /usr/lib/vmware-tools/lib32, and 
+was about to remove it. Since there are files in that directory that this 
+program did not create, it will not be removed.
+
+This program previously created the directory /usr/lib/vmware-tools, and was 
+about to remove it. Since there are files in that directory that this program 
+did not create, it will not be removed.
+
+File descriptor 4 (pipe:[10678]) leaked on lvm.static invocation. Parent PID 4246: /bin/bash
+The removal of VMware Tools 9.0.0 build-782409 for Linux completed 
+successfully.
+
+Installing VMware Tools.
+
+In which directory do you want to install the binary files? 
+[/usr/bin] 
+INPUT: [/usr/bin]  default
+
+What is the directory that contains the init directories (rc0.d/ to rc6.d/)? 
+[/etc/rc.d] 
+INPUT: [/etc/rc.d]  default
+
+What is the directory that contains the init scripts? 
+[/etc/rc.d/init.d] 
+INPUT: [/etc/rc.d/init.d]  default
+
+In which directory do you want to install the daemon files? 
+[/usr/sbin] 
+INPUT: [/usr/sbin]  default
+
+In which directory do you want to install the library files? 
+[/usr/lib/vmware-tools] 
+INPUT: [/usr/lib/vmware-tools]  default
+
+In which directory do you want to install the common agent library files? 
+[/usr/lib] 
+INPUT: [/usr/lib]  default
+
+In which directory do you want to install the common agent transient files? 
+[/var/lib] 
+INPUT: [/var/lib]  default
+
+In which directory do you want to install the documentation files? 
+[/usr/share/doc/vmware-tools] 
+INPUT: [/usr/share/doc/vmware-tools]  default
+
+The path "/usr/share/doc/vmware-tools" does not exist currently. This program 
+is going to create it, including needed parent directories. Is this what you 
+want? [yes] 
+INPUT: [yes]  default
+
+The installation of VMware Tools 10.3.23 build-16594550 for Linux completed 
+successfully. You can decide to remove this software from your system at any 
+time by invoking the following command: "/usr/bin/vmware-uninstall-tools.pl".
+
+Before running VMware Tools for the first time, you need to configure it by 
+invoking the following command: "/usr/bin/vmware-config-tools.pl". Do you want 
+this program to invoke the command for you now? [yes] 
+INPUT: [yes]  default
+
+Initializing...
+
+
+Making sure services for VMware Tools are stopped.
+
+Stopping VMware Tools services in the virtual machine:
+   Guest operating system daemon:[  OK  ]
+   VMware User Agent (vmware-user):[  OK  ]
+   Unmounting HGFS shares:[  OK  ]
+   Guest filesystem driver:[  OK  ]
+   Guest memory manager:[  OK  ]
+   VM communication interface socket family:[  OK  ]
+   VM communication interface:[  OK  ]
+
+
+The VMware FileSystem Sync Driver (vmsync) allows external third-party backup 
+software that is integrated with vSphere to create backups of the virtual 
+machine. Do you wish to enable this feature? [no] 
+INPUT: [no]  default
+
+
+WARNING: This program cannot compile any modules for the following reason(s)...
+
+- This program could not find a valid path to the kernel headers of the running
+kernel.  Please ensure that the header files for the running kernel are 
+installed on this sytem.
+
+[ Press Enter key to continue ] 
+INPUT: [ Press Enter key to continue ]  default
+
+
+The communication service is used in addition to the standard communication 
+between the guest and the host.  The rest of the software provided by VMware 
+Tools is designed to work independently of this feature.
+If you wish to have the VMCI feature, you can install the driver by running 
+vmware-config-tools.pl again after making sure that gcc, binutils, make and the
+kernel sources for your running kernel are installed on your machine. These 
+packages are available on your distribution's installation CD.
+[ Press Enter key to continue ] 
+INPUT: [ Press Enter key to continue ]  default
+
+
+The VM communication interface socket family is used in conjunction with the VM
+communication interface to provide a new communication path among guests and 
+host.  The rest of this software provided by VMware Tools is designed to work 
+independently of this feature.  If you wish to have the VSOCK feature  you can 
+install the driver by running vmware-config-tools.pl again after making sure 
+that gcc, binutils, make and the kernel sources for your running kernel are 
+installed on your machine. These packages are available on your distribution's 
+installation CD.
+[ Press the Enter key to continue.] 
+INPUT: [ Press the Enter key to continue.]  default
+
+
+The driver for the VMXNET 3 virtual network card is used only for our advanced 
+networking interface. The rest of the software provided by VMware Tools is 
+designed to work independently of this feature.
+If you wish to have the advanced network driver enabled, you can install the 
+driver by running vmware-config-tools.pl again after making sure that gcc, 
+binutils, make and the kernel sources for your running kernel are installed on 
+your machine. These packages are available on your distribution's installation 
+CD.
+[ Press Enter key to continue ] 
+INPUT: [ Press Enter key to continue ]  default
+
+
+Unable to compile the pvscsi module.  If you wish to have the pvscsi feature, 
+you can install the driver by running vmware-config-tools.pl again after making
+sure that gcc, binutils, make and the kernel sources for your running kernel 
+are installed on your machine. These packages are available on your 
+distribution's installation CD.
+[ Press Enter key to continue ] 
+INPUT: [ Press Enter key to continue ]  default
+
+
+The memory manager driver (vmmemctl module) is used by VMware host software to 
+efficiently reclaim memory from a virtual machine.
+If the driver is not available, VMware host software may instead need to swap 
+guest memory to disk, which may reduce performance.
+The rest of the software provided by VMware Tools is designed to work 
+independently of this feature.
+If you want the memory management feature, you can install the driver by 
+running vmware-config-tools.pl again after making sure that gcc, binutils, make
+and the kernel sources for your running kernel are installed on your machine. 
+These packages are available on your distribution's installation CD.
+[ Press Enter key to continue ] 
+INPUT: [ Press Enter key to continue ]  default
+
+The VMware Host-Guest Filesystem allows for shared folders between the host OS 
+and the guest OS in a Fusion or Workstation virtual environment.  Do you wish 
+to enable this feature? [no] 
+INPUT: [no]  default
+
+
+The fast network device driver (vmxnet module) is used only for our fast 
+networking interface. The rest of the software provided by VMware Tools is 
+designed to work independently of this feature.
+If you wish to have the fast network driver enabled, you can install the driver
+by running vmware-config-tools.pl again after making sure that gcc, binutils, 
+make and the kernel sources for your running kernel are installed on your 
+machine. These packages are available on your distribution's installation CD.
+[ Press Enter key to continue ] 
+INPUT: [ Press Enter key to continue ]  default
+
+The vmblock enables dragging or copying files between host and guest in a 
+Fusion or Workstation virtual environment.  Do you wish to enable this feature?
+[no] 
+INPUT: [no]  default
+
+
+Skipping configuring automatic kernel modules as no drivers were installed by 
+this installer.
+
+Do you want to enable Guest Authentication (vgauth)? Enabling vgauth is needed 
+if you want to enable Common Agent (caf). [yes] 
+INPUT: [yes]  default
+
+No X install found.
+
+
+Skipping rebuilding initrd boot image for kernel as no drivers to be included 
+in boot image were installed by this installer.
+
+Generating the key and certificate files.
+Successfully generated the key and certificate files.
+   Checking acpi hot plug[  OK  ]
+Starting VMware Tools services in the virtual machine:
+   Switching to guest configuration:[  OK  ]
+   Guest operating system daemon:[  OK  ]
+   VGAuthService:[  OK  ]
+The configuration of VMware Tools 10.3.23 build-16594550 for Linux for this 
+running kernel completed successfully.
+
+You must restart your X session before any mouse or graphics changes take 
+effect.
+
+To enable advanced X features (e.g., guest resolution fit, drag and drop, and 
+file and text copy/paste), you will need to do one (or more) of the following:
+1. Manually start /usr/bin/vmware-user
+2. Log out and log back into your desktop session
+3. Restart your X session.
+
+Enjoy,
+
+--the VMware team
+
+Mon May 29 20:10:53 2023 vmware-install.pl end

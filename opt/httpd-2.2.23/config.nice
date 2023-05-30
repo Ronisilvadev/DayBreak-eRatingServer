@@ -1,0 +1,31 @@
+#! /bin/sh
+#
+# Created by configure
+
+"./configure" \
+"--prefix=/usr/local/apache2.2.23" \
+"--enable-so" \
+"--enable-modules=all" \
+"--enable-mods-shared=all" \
+"--enable-cache" \
+"--enable-file-cache" \
+"--enable-mem-cache" \
+"--enable-disk-cache" \
+"--enable-static-support" \
+"--enable-static-htpasswd" \
+"--enable-static-htdigest" \
+"--enable-static-rotatelogs" \
+"--enable-static-logresolve" \
+"--enable-static-htdbm" \
+"--enable-static-ab" \
+"--enable-static-checkgid" \
+"--enable-mod_cgi" \
+"--with-apr=/usr/local/apr/" \
+"--with-apr-util=/usr/local/apr-util/" \
+"--enable-proxy" \
+"--enable-proxy-connect" \
+"--enable-proxy-ftp" \
+"--enable-proxy-http" \
+"--enable-proxy-scgi" \
+"--enable-proxy-ajp" \
+"$@"

@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/getFreezePlayerInfo" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryFreezePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFreezePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showUnFreezePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/getFreezePlayerDetail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/freezePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/unFreezePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryKickRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/getRole2Oper" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showKickRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/kickRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operOfflineRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryMoveRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showMoveRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/moveRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryShutUpRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showShutUpRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/shutUpRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/unKickRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showUnShutUpRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/unShutUpRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeModifyBindEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryTrusteePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/getTrusteePlayerInfo" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showTrusteePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/getTrusteePlayerDetail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/trusteePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="loginService" ref="loginService" />
+	</bean>
+	<bean name="/showUnTrusteePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/unTrusteePlayer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryEndTask" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEndTask" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/endTask" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryEndPlayerFightState" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEndPlayerFightState" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/endPlayerFightState" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFreezePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateFreezePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/freezePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showUnFreezePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateRestorePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/unFreezePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showTrusteePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateTrusteePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/trusteePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="loginService" ref="loginService" />
+	</bean>
+	<bean name="/showUnTrusteePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/unTrusteePlayers" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeClosePassCard" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryRestoreSanYuan" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryDelRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDelRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryResumeRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showResumeRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/resumeRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeTransfer" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/getTransferState" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryKickRole2" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showKickRole2" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/kickRole2" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryCleanPackage" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCleanPackage" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cleanPackage" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/getHistoryInfo" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showChargeCompensate" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/insertChargeCompensate" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delChargeCompensate" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddTask" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addTask" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showResetRoleAttr" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/resetRoleAttr" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showClearItem" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/clearItem" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showClearStorage" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/clearStorage" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showClearCorpsItem" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/clearCorpsItem" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSimuLogin" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/simuLogin" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showRenameRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/renameRole" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showKickOutUser" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/kickOutUser" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFreezeMac" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFreezeMacLog" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showOperFreezeMac" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/freezeMac" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/unfreezeMac" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFastFreezeAccount" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFastUnfreezeAccount" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateFastfreezeAccount" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/fastFreezeAccount" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showClearCorpsStorage" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/clearCorpsStorage" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showQueryHardwareSNFreeze" class="com.linekong.gmweb2.web.action.RoleOperationAction">		
+	</bean>
+	<bean name="/queryHardwareSNFreeze" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="roleOperationDao" ref="roleOperationDao" />
+	</bean>
+	
+	<bean name="/showFreezeHardwareSN" class="com.linekong.gmweb2.web.action.RoleOperationAction">		
+	</bean>
+	<bean name="/freezeHardwareSN" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showUnfreezeHardwareSN" class="com.linekong.gmweb2.web.action.RoleOperationAction">		
+	</bean>
+	<bean name="/unfreezeHardwareSN" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showRoleItemRecover" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+			
+	<bean name="/recoverRoleItem" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />	
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/userInfoByIp" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="operationService" ref="operationService" />	
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/showUserInfoByIp" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/showEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/sendEmail" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />	
+	</bean>
+	
+	<bean name="/showMarkPassport" class="com.linekong.gmweb2.web.action.RoleOperationAction">				
+	</bean>
+	
+	<bean name="/markPassport" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>	
+	<!-- 重置仓库密码 -->
+	<bean name="/resetStorePwd" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />	
+	</bean>
+	
+	
+	<bean name="/showResetStorePwd" class="com.linekong.gmweb2.web.action.RoleOperationAction"> 
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/showWorldDropRate" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/worldDropRate" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCancelWorldDropRate" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelWorldDropRate" class="com.linekong.gmweb2.web.action.RoleOperationAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleOperationDao" ref="roleOperationDao" />
+		<property name="roleOperationService" ref="roleOperationService" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+</beans>

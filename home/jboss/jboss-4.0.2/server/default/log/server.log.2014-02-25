@@ -1,0 +1,7 @@
+2014-02-25 04:47:27,428 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/wundahtjip, warUrl=file:/home/jboss/jboss-4.0.2/server/default/tmp/deploy/tmp2094159509461634493wundahtjip.war/
+2014-02-25 06:44:25,782 INFO  [STDOUT] java.lang.NullPointerException
+2014-02-25 06:44:25,783 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-02-25 06:44:25,783 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-02-25 06:44:25,783 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-02-25 06:44:25,783 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-02-25 06:44:25,783 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

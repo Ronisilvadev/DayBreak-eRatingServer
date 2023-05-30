@@ -1,0 +1,250 @@
+2017-11-28 06:00:00,006 INFO  [STDOUT] java.lang.NullPointerException
+2017-11-28 06:00:00,007 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-11-28 06:00:00,007 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-11-28 06:00:00,007 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-11-28 06:00:00,007 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-11-28 06:00:00,007 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-11-28 09:34:07,207 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2017-11-28 09:34:07,208 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 09:34:07,209 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 09:34:07,459 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-11-28 14:38:39,736 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:38:40,321 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-11-28 14:38:56,619 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=25rhc&gameId=1204&method=login&passportName=spacecowboy&
+2017-11-28 14:38:56,619 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:38:56,950 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2017-11-28 14:38:56,950 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:38:56,951 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2017-11-28 14:38:56,952 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:38:56,967 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2017-11-28 14:38:56,968 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:38:57,037 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2017-11-28 14:38:57,037 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:38:57,038 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2017-11-28 14:38:57,038 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2017-11-28 14:38:57,038 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:38:57,038 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:39:11,355 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showRoleManage.do?
+2017-11-28 14:39:17,476 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showRoleManage.do?
+2017-11-28 14:39:22,475 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerInfo.do?
+2017-11-28 14:39:28,810 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/getPlayerInfo.do?playerName=&search=Submit&playerId=&roleName=&gatewayId=104002&roleId=&
+2017-11-28 14:39:32,104 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerLoginOutDetail.do?
+2017-11-28 14:39:36,275 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showGateway.do?
+2017-11-28 14:39:44,649 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showModifyGateway.do?gameId=1204&gatewayId=104002&
+2017-11-28 14:39:48,169 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showGameServer.do?
+2017-11-28 14:39:51,839 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showModifyGameServer.do?gameId=1204&serverId=0&gatewayId=104002&
+2017-11-28 14:40:00,737 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/modifyGameServer.do?groupId=0&gameId=1204&serverId=0&serverName=Test&serverUrl=177.234.154.221:18008&gatewayId=104002&
+2017-11-28 14:40:00,748 INFO  [STDOUT] http://192.168.177.94:9999/UpdateGSgame_id=1204
+2017-11-28 14:40:00,763 WARN  [org.apache.struts.action.RequestProcessor] Unhandled Exception thrown: class com.linekong.gmweb2.operation.OperationException
+2017-11-28 14:40:00,763 INFO  [STDOUT] javax.servlet.ServletException: java.net.SocketException: Unexpected end of file from server
+2017-11-28 14:40:00,764 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processException(RequestProcessor.java:535)
+2017-11-28 14:40:00,764 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:433)
+2017-11-28 14:40:00,764 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+2017-11-28 14:40:00,764 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+2017-11-28 14:40:00,764 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:00,765 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:00,766 INFO  [STDOUT] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+2017-11-28 14:40:00,767 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+2017-11-28 14:40:00,768 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+2017-11-28 14:40:00,768 INFO  [STDOUT] 	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+2017-11-28 14:40:00,768 INFO  [STDOUT] 	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+2017-11-28 14:40:00,768 INFO  [STDOUT] 	at java.lang.Thread.run(Thread.java:662)
+2017-11-28 14:40:00,768 ERROR [com.linekong.gmweb2.web.filter.BaseFilter] /modifyGameServer.do
+javax.servlet.ServletException: java.net.SocketException: Unexpected end of file from server
+	at org.apache.struts.action.RequestProcessor.processException(RequestProcessor.java:535)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:433)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-28 14:40:03,874 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/modifyGameServer.do?groupId=0&gameId=1204&serverId=0&serverName=Test&serverUrl=177.234.154.221:18008&gatewayId=104002&
+2017-11-28 14:40:03,884 INFO  [STDOUT] http://192.168.177.94:9999/UpdateGSgame_id=1204
+2017-11-28 14:40:03,904 WARN  [org.apache.struts.action.RequestProcessor] Unhandled Exception thrown: class com.linekong.gmweb2.operation.OperationException
+2017-11-28 14:40:03,905 INFO  [STDOUT] javax.servlet.ServletException: java.net.SocketException: Unexpected end of file from server
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processException(RequestProcessor.java:535)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:433)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:03,905 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+2017-11-28 14:40:03,906 INFO  [STDOUT] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+2017-11-28 14:40:03,907 INFO  [STDOUT] 	at java.lang.Thread.run(Thread.java:662)
+2017-11-28 14:40:03,907 ERROR [com.linekong.gmweb2.web.filter.BaseFilter] /modifyGameServer.do
+javax.servlet.ServletException: java.net.SocketException: Unexpected end of file from server
+	at org.apache.struts.action.RequestProcessor.processException(RequestProcessor.java:535)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:433)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-28 14:40:06,285 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showGameServer.do?
+2017-11-28 14:40:10,082 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showGateway.do?
+2017-11-28 14:40:13,370 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showExperienceType.do?
+2017-11-28 14:40:15,228 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddExperienceType.do?gameId=1204&
+2017-11-28 14:40:22,320 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showIssueBulletin.do?
+2017-11-28 14:40:25,166 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showIssueSettingExp.do?
+2017-11-28 14:40:27,028 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddSettingExp.do?
+2017-11-28 14:40:36,015 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showIssueBulletin.do?
+2017-11-28 14:40:38,041 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showProduct.do?
+2017-11-28 14:40:39,308 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddProduct.do?
+2017-11-28 14:40:43,210 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2017-11-28 14:40:51,731 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAwardCompensate.do?
+2017-11-28 14:41:05,606 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFundExchange.do?
+2017-11-28 14:41:10,023 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showChargeDetail.do?
+2017-11-28 14:41:13,365 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/logManage.do?method=showLog&
+2017-11-28 14:41:13,365 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-11-28 14:41:17,328 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerInfo.do?
+2017-11-28 14:41:18,213 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showPlayerItems.do?
+2017-11-28 14:41:19,126 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showLogPlayerItems.do?
+2017-11-28 14:41:20,065 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerLoginOutDetail.do?
+2017-11-28 14:41:21,029 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?
+2017-11-28 14:41:22,061 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerChargeDetail.do?
+2017-11-28 14:41:22,830 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerAccountDetail.do?
+2017-11-28 21:38:03,929 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 768
+2017-11-28 21:41:08,911 INFO  [org.apache.jk.common.ChannelSocket] Error reading data after 43bytes
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:258)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:317)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-28 21:41:08,912 WARN  [org.apache.jk.common.ChannelSocket] can't read body, waited #47
+2017-11-28 21:41:08,912 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection -1
+2017-11-28 22:25:06,370 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2017-11-28 22:25:06,371 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-28 22:25:07,052 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 5635
+2017-11-28 22:25:07,052 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection 0
+2017-11-28 22:25:07,713 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 32926
+2017-11-28 22:25:12,718 WARN  [org.apache.jk.common.ChannelSocket] can't read body, waited #259
+2017-11-28 22:25:12,718 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection -1
+2017-11-28 22:25:13,097 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2017-11-28 22:25:13,097 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)

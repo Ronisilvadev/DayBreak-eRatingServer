@@ -1,0 +1,692 @@
+Linux version 2.6.18-419.el5.centos.plus (mockbuild@c1bm.rdu2.centos.org) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-55)) #1 SMP Sat Feb 25 15:14:49 UTC 2017
+BIOS-provided physical RAM map:
+ BIOS-e820: 0000000000010000 - 000000000009f800 (usable)
+ BIOS-e820: 000000000009f800 - 00000000000a0000 (reserved)
+ BIOS-e820: 00000000000dc000 - 0000000000100000 (reserved)
+ BIOS-e820: 0000000000100000 - 00000000bfee0000 (usable)
+ BIOS-e820: 00000000bfee0000 - 00000000bfeff000 (ACPI data)
+ BIOS-e820: 00000000bfeff000 - 00000000bff00000 (ACPI NVS)
+ BIOS-e820: 00000000bff00000 - 00000000c0000000 (usable)
+ BIOS-e820: 00000000f0000000 - 00000000f8000000 (reserved)
+ BIOS-e820: 00000000fec00000 - 00000000fec10000 (reserved)
+ BIOS-e820: 00000000fee00000 - 00000000fee01000 (reserved)
+ BIOS-e820: 00000000fffe0000 - 0000000100000000 (reserved)
+ BIOS-e820: 0000000100000000 - 0000000140000000 (usable)
+Warning only 4GB will be used.
+Use a PAE enabled kernel.
+3200MB HIGHMEM available.
+896MB LOWMEM available.
+found SMP MP-table at 000f6a70
+Memory for crash kernel (0x0 to 0x0) notwithin permissible range
+disabling kdump
+Using x86 segment limits to approximate NX protection
+On node 0 totalpages: 1048576
+  DMA zone: 4096 pages, LIFO batch:0
+  Normal zone: 225280 pages, LIFO batch:31
+  HighMem zone: 819200 pages, LIFO batch:31
+DMI present.
+DMI: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 11/12/2020
+Using APIC driver default
+ACPI: RSDP (v002 PTLTD                                 ) @ 0x000f6a00
+ACPI: XSDT (v001 INTEL  440BX    0x06040000 VMW  0x01324272) @ 0xbfeee8fb
+ACPI: FADT (v004 INTEL  440BX    0x06040000 PTL  0x000f4240) @ 0xbfefee73
+ACPI: BOOT (v001 PTLTD  $SBFTBL$ 0x06040000  LTP 0x00000001) @ 0xbfeeeb95
+ACPI: MADT (v001 PTLTD  	 APIC   0x06040000  LTP 0x00000000) @ 0xbfeeeb1b
+ACPI: MCFG (v001 PTLTD  $PCITBL$ 0x06040000  LTP 0x00000001) @ 0xbfeeeadf
+ACPI: SRAT (v002 VMWARE MEMPLUG  0x06040000 VMW  0x00000001) @ 0xbfeee9f7
+ACPI: HPET (v001 VMWARE VMW HPET 0x06040000 VMW  0x00000001) @ 0xbfeee9bf
+ACPI: WAET (v001 VMWARE VMW WAET 0x06040000 VMW  0x00000001) @ 0xbfeee997
+ACPI: DSDT (v001 PTLTD  Custom   0x06040000 MSFT 0x03000001) @ 0x(null)
+ACPI: PM-Timer IO Port: 0x1008
+ACPI: Local APIC address 0xfee00000
+ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+Processor #0 14:5 APIC version 21
+ACPI: LAPIC (acpi_id[0x01] lapic_id[0x01] enabled)
+Processor #1 14:5 APIC version 21
+ACPI: LAPIC (acpi_id[0x02] lapic_id[0x02] enabled)
+Processor #2 14:5 APIC version 21
+ACPI: LAPIC (acpi_id[0x03] lapic_id[0x03] enabled)
+Processor #3 14:5 APIC version 21
+ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+ACPI: IOAPIC (id[0x04] address[0xfec00000] gsi_base[0])
+IOAPIC[0]: apic_id 4, version 17, address 0xfec00000, GSI 0-23
+ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 high edge)
+ACPI: IRQ0 used by override.
+ACPI: IRQ2 used by override.
+ACPI: IRQ9 used by override.
+Enabling APIC mode:  Flat.  Using 1 I/O APICs
+ACPI: HPET id: 0x8086af01 base: 0xfed00000
+Using ACPI (MADT) for SMP configuration information
+Allocating PCI resources starting at c4000000 (gap: c0000000:30000000)
+TSC: Frequency read from the hypervisor
+Detected 3791.999 MHz processor.
+Built 1 zonelists.  Total pages: 1048576
+Kernel command line: ro root=/dev/VolGroup00/LogVol00
+mapped APIC to ffffd000 (fee00000)
+mapped IOAPIC to ffffc000 (fec00000)
+Enabling fast FPU save and restore... done.
+Enabling unmasked SIMD FPU exception support... done.
+Initializing CPU#0
+CPU 0 irqstacks, hard=c0779000 soft=c0759000
+PID hash table entries: 4096 (order: 12, 16384 bytes)
+Console: colour VGA+ 80x25
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 3102400k/4194304k available (2225k kernel code, 41788k reserved, 924k data, 232k init, 2228096k highmem)
+Checking if this processor honours the WP bit even in supervisor mode... Ok.
+hpet0: at MMIO 0xfed00000 (virtual 0xf8800000), IRQs 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+hpet0: 16 64-bit timers, 14318180 Hz
+Using HPET for base-timer
+Calibrating delay loop (skipped) preset value.. 7583.99 BogoMIPS (lpj=3791999)
+Security Framework v1.0.0 initialized
+SELinux:  Initializing.
+SELinux:  Starting in permissive mode
+selinux_register_security:  Registering secondary module capability
+Capability LSM initialized as secondary
+Mount-cache hash table entries: 512
+CPU: After generic identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: After vendor identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 16384K
+CPU: Physical Processor ID: 0
+CPU: Processor Core ID: 0
+CPU: After all inits, caps: 1f8bf3ff 2c100000 00000000 13000940 f6fa3203 00000000 00000101
+MCE: Machine Check Exception Reporting is disabled.
+Checking 'hlt' instruction... OK.
+SMP alternatives: switching to UP code
+ACPI: Core revision 20060707
+CPU0: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz stepping 05
+SMP alternatives: switching to SMP code
+Booting processor 1/1 eip 11000
+CPU 1 irqstacks, hard=c077a000 soft=c075a000
+Initializing CPU#1
+Calibrating delay loop (skipped) preset value.. 7583.99 BogoMIPS (lpj=3791999)
+CPU: After generic identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: After vendor identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 16384K
+CPU: Physical Processor ID: 0
+CPU: Processor Core ID: 1
+CPU: After all inits, caps: 1f8bf3ff 2c100000 00000000 13000940 f6fa3203 00000000 00000101
+CPU1: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz stepping 05
+SMP alternatives: switching to SMP code
+Booting processor 2/2 eip 11000
+CPU 2 irqstacks, hard=c077b000 soft=c075b000
+Initializing CPU#2
+Calibrating delay loop (skipped) preset value.. 7583.99 BogoMIPS (lpj=3791999)
+CPU: After generic identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: After vendor identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 16384K
+CPU: Physical Processor ID: 1
+CPU: Processor Core ID: 0
+CPU: After all inits, caps: 1f8bf3ff 2c100000 00000000 13000940 f6fa3203 00000000 00000101
+CPU2: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz stepping 05
+SMP alternatives: switching to SMP code
+Booting processor 3/3 eip 11000
+CPU 3 irqstacks, hard=c077c000 soft=c075c000
+Initializing CPU#3
+Calibrating delay loop (skipped) preset value.. 7583.99 BogoMIPS (lpj=3791999)
+CPU: After generic identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: After vendor identify, caps: 1f8bfbff 2c100000 00000000 02000000 f6fa3203 00000000 00000101
+CPU: L1 I cache: 32K, L1 D cache: 32K
+CPU: L2 cache: 256K
+CPU: L3 cache: 16384K
+CPU: Physical Processor ID: 1
+CPU: Processor Core ID: 1
+CPU: After all inits, caps: 1f8bf3ff 2c100000 00000000 13000940 f6fa3203 00000000 00000101
+CPU3: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz stepping 05
+Total of 4 processors activated (30335.99 BogoMIPS).
+ENABLING IO-APIC IRQs
+..TIMER: vector=0x31 apic1=0 pin1=2 apic2=-1 pin2=-1
+Using local APIC timer interrupts.
+WARNING calibrate_APIC_clock: the APIC timer calibration may be wrong.
+checking TSC synchronization across 4 CPUs: passed.
+Brought up 4 CPUs
+sizeof(vma)=84 bytes
+sizeof(page)=32 bytes
+sizeof(inode)=340 bytes
+sizeof(dentry)=136 bytes
+sizeof(ext3inode)=492 bytes
+sizeof(buffer_head)=52 bytes
+sizeof(skbuff)=176 bytes
+migration_cost=1678,1723
+checking if image is initramfs... it is
+Freeing initrd memory: 3425k freed
+NET: Registered protocol family 16
+ACPI: bus type pci registered
+PCI: Using MMCONFIG
+Setting up standard PCI resources
+ACPI: Interpreter enabled
+ACPI: Using IOAPIC for interrupt routing
+ACPI: No dock devices found.
+ACPI: PCI Root Bridge [PCI0] (0000:00)
+pci 0000:00:07.1: reg 20: [io  0x1060-0x106f]
+PCI quirk: region 1000-103f claimed by PIIX4 ACPI
+PCI quirk: region 1040-104f claimed by PIIX4 SMB
+pci 0000:00:07.7: reg 10: [io  0x1080-0x10bf]
+pci 0000:00:07.7: reg 14: [mem 0xfebfe000-0xfebfffff 64bit]
+pci 0000:00:0f.0: reg 10: [io  0x1070-0x107f]
+pci 0000:00:0f.0: reg 14: [mem 0xe8000000-0xefffffff pref]
+pci 0000:00:0f.0: reg 18: [mem 0xfe000000-0xfe7fffff]
+pci 0000:00:0f.0: reg 30: [mem 0x00000000-0x00007fff pref]
+pci 0000:00:10.0: reg 10: [io  0x1400-0x14ff]
+pci 0000:00:10.0: reg 14: [mem 0xfeba0000-0xfebbffff 64bit]
+pci 0000:00:10.0: reg 1c: [mem 0xfebc0000-0xfebdffff 64bit]
+pci 0000:00:10.0: reg 30: [mem 0x00000000-0x00003fff pref]
+pci 0000:00:01.0: PCI bridge to [bus 01-01]
+pci 0000:02:00.0: reg 10: [io  0x2000-0x207f]
+pci 0000:02:00.0: reg 30: [mem 0x00000000-0x0000ffff pref]
+pci 0000:02:01.0: reg 10: [io  0x2080-0x20ff]
+pci 0000:02:01.0: reg 30: [mem 0x00000000-0x0000ffff pref]
+pci 0000:02:02.0: reg 10: [io  0x2400-0x247f]
+pci 0000:02:02.0: reg 30: [mem 0x00000000-0x0000ffff pref]
+pci 0000:00:11.0: PCI bridge to [bus 02-02] (subtractive decode)
+pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+pci 0000:00:11.0:   bridge window [mem 0xfd600000-0xfdffffff]
+pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+pci 0000:00:15.0: PCI bridge to [bus 03-03]
+pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+pci 0000:00:15.0:   bridge window [mem 0xfd500000-0xfd5fffff]
+pci 0000:00:15.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+pci 0000:00:15.1: PCI bridge to [bus 04-04]
+pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+pci 0000:00:15.1:   bridge window [mem 0xfd100000-0xfd1fffff]
+pci 0000:00:15.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+pci 0000:00:15.2: PCI bridge to [bus 05-05]
+pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+pci 0000:00:15.2:   bridge window [mem 0xfcd00000-0xfcdfffff]
+pci 0000:00:15.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+pci 0000:00:15.3: PCI bridge to [bus 06-06]
+pci 0000:00:15.3:   bridge window [mem 0xfc900000-0xfc9fffff]
+pci 0000:00:15.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+pci 0000:00:15.4: PCI bridge to [bus 07-07]
+pci 0000:00:15.4:   bridge window [mem 0xfc500000-0xfc5fffff]
+pci 0000:00:15.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+pci 0000:00:15.5: PCI bridge to [bus 08-08]
+pci 0000:00:15.5:   bridge window [mem 0xfc100000-0xfc1fffff]
+pci 0000:00:15.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+pci 0000:00:15.6: PCI bridge to [bus 09-09]
+pci 0000:00:15.6:   bridge window [mem 0xfbd00000-0xfbdfffff]
+pci 0000:00:15.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+pci 0000:00:15.7: PCI bridge to [bus 0a-0a]
+pci 0000:00:15.7:   bridge window [mem 0xfb900000-0xfb9fffff]
+pci 0000:00:15.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+pci 0000:00:16.0: PCI bridge to [bus 0b-0b]
+pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+pci 0000:00:16.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+pci 0000:00:16.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+pci 0000:00:16.1: PCI bridge to [bus 0c-0c]
+pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+pci 0000:00:16.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+pci 0000:00:16.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+pci 0000:00:16.2: PCI bridge to [bus 0d-0d]
+pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+pci 0000:00:16.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+pci 0000:00:16.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+pci 0000:00:16.3: PCI bridge to [bus 0e-0e]
+pci 0000:00:16.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+pci 0000:00:16.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+pci 0000:00:16.4: PCI bridge to [bus 0f-0f]
+pci 0000:00:16.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+pci 0000:00:16.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+pci 0000:00:16.5: PCI bridge to [bus 10-10]
+pci 0000:00:16.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+pci 0000:00:16.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+pci 0000:00:16.6: PCI bridge to [bus 11-11]
+pci 0000:00:16.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+pci 0000:00:16.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+pci 0000:00:16.7: PCI bridge to [bus 12-12]
+pci 0000:00:16.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+pci 0000:00:16.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+pci 0000:00:17.0: PCI bridge to [bus 13-13]
+pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+pci 0000:00:17.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+pci 0000:00:17.0:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+pci 0000:00:17.1: PCI bridge to [bus 14-14]
+pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+pci 0000:00:17.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+pci 0000:00:17.1:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+pci 0000:00:17.2: PCI bridge to [bus 15-15]
+pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+pci 0000:00:17.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+pci 0000:00:17.2:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+pci 0000:00:17.3: PCI bridge to [bus 16-16]
+pci 0000:00:17.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+pci 0000:00:17.3:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+pci 0000:00:17.4: PCI bridge to [bus 17-17]
+pci 0000:00:17.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+pci 0000:00:17.4:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+pci 0000:00:17.5: PCI bridge to [bus 18-18]
+pci 0000:00:17.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+pci 0000:00:17.5:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+pci 0000:00:17.6: PCI bridge to [bus 19-19]
+pci 0000:00:17.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+pci 0000:00:17.6:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+pci 0000:00:17.7: PCI bridge to [bus 1a-1a]
+pci 0000:00:17.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+pci 0000:00:17.7:   bridge window [mem 0xe5c00000-0xe5cfffff 64bit pref]
+pci 0000:00:18.0: PCI bridge to [bus 1b-1b]
+pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+pci 0000:00:18.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+pci 0000:00:18.0:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+pci 0000:00:18.1: PCI bridge to [bus 1c-1c]
+pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+pci 0000:00:18.1:   bridge window [mem 0xfce00000-0xfcefffff]
+pci 0000:00:18.1:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+pci 0000:00:18.2: PCI bridge to [bus 1d-1d]
+pci 0000:00:18.2:   bridge window [mem 0xfca00000-0xfcafffff]
+pci 0000:00:18.2:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+pci 0000:00:18.3: PCI bridge to [bus 1e-1e]
+pci 0000:00:18.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+pci 0000:00:18.3:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+pci 0000:00:18.4: PCI bridge to [bus 1f-1f]
+pci 0000:00:18.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+pci 0000:00:18.4:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+pci 0000:00:18.5: PCI bridge to [bus 20-20]
+pci 0000:00:18.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+pci 0000:00:18.5:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+pci 0000:00:18.6: PCI bridge to [bus 21-21]
+pci 0000:00:18.6:   bridge window [mem 0xfba00000-0xfbafffff]
+pci 0000:00:18.6:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+pci 0000:00:18.7: PCI bridge to [bus 22-22]
+pci 0000:00:18.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+pci 0000:00:18.7:   bridge window [mem 0xe5b00000-0xe5bfffff 64bit pref]
+host bridge window [mem 0x000a0000-0x000bffff] (ignored)
+host bridge window [mem 0x000d0000-0x000d3fff] (ignored)
+host bridge window [mem 0x000d4000-0x000d7fff] (ignored)
+host bridge window [mem 0x000d8000-0x000dbfff] (ignored)
+host bridge window [mem 0xc0000000-0xfebfffff] (ignored)
+host bridge window [io  0x0000-0x0cf7] (ignored)
+host bridge window [io  0x0d00-0xfeff] (ignored)
+ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 7 *9 10 11 14 15)
+ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 9 10 *11 14 15)
+ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 7 9 *10 11 14 15)
+ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 *5 6 7 9 10 11 14 15)
+Linux Plug and Play Support v0.97 (c) Adam Belay
+pnp: PnP ACPI init
+pnp: PnP ACPI: found 14 devices
+usbcore: registered new driver usbfs
+usbcore: registered new driver hub
+PCI: Using ACPI for IRQ routing
+PCI: If a device doesn't work, try "pci=routeirq".  If it helps, post a report
+NetLabel: Initializing
+NetLabel:  domain hash size = 128
+NetLabel:  protocols = UNLABELED CIPSOv4
+NetLabel:  unlabeled traffic allowed by default
+system 00:08: iomem range 0xfed00000-0xfed003ff has been reserved
+system 00:0d: ioport range 0xfce0-0xfcff has been reserved
+system 00:0d: iomem range 0xf0000000-0xf7ffffff has been reserved
+system 00:0d: iomem range 0xfe800000-0xfe9fffff has been reserved
+pci 0000:00:0f.0: BAR 6: assigned [mem 0xc4000000-0xc4007fff pref]
+pci 0000:00:10.0: BAR 6: assigned [mem 0xc4008000-0xc400bfff pref]
+pci 0000:00:01.0: PCI bridge to [bus 01-01]
+pci 0000:00:01.0:   bridge window [io  disabled]
+pci 0000:00:01.0:   bridge window [mem disabled]
+pci 0000:00:01.0:   bridge window [mem pref disabled]
+pci 0000:02:00.0: BAR 6: assigned [mem 0xe7b00000-0xe7b0ffff pref]
+pci 0000:02:01.0: BAR 6: assigned [mem 0xe7b10000-0xe7b1ffff pref]
+pci 0000:02:02.0: BAR 6: assigned [mem 0xe7b20000-0xe7b2ffff pref]
+pci 0000:00:11.0: PCI bridge to [bus 02-02]
+pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+pci 0000:00:11.0:   bridge window [mem 0xfd600000-0xfdffffff]
+pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+pci 0000:00:15.0: PCI bridge to [bus 03-03]
+pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+pci 0000:00:15.0:   bridge window [mem 0xfd500000-0xfd5fffff]
+pci 0000:00:15.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+pci 0000:00:15.1: PCI bridge to [bus 04-04]
+pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+pci 0000:00:15.1:   bridge window [mem 0xfd100000-0xfd1fffff]
+pci 0000:00:15.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+pci 0000:00:15.2: PCI bridge to [bus 05-05]
+pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+pci 0000:00:15.2:   bridge window [mem 0xfcd00000-0xfcdfffff]
+pci 0000:00:15.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+pci 0000:00:15.3: PCI bridge to [bus 06-06]
+pci 0000:00:15.3:   bridge window [io  disabled]
+pci 0000:00:15.3:   bridge window [mem 0xfc900000-0xfc9fffff]
+pci 0000:00:15.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+pci 0000:00:15.4: PCI bridge to [bus 07-07]
+pci 0000:00:15.4:   bridge window [io  disabled]
+pci 0000:00:15.4:   bridge window [mem 0xfc500000-0xfc5fffff]
+pci 0000:00:15.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+pci 0000:00:15.5: PCI bridge to [bus 08-08]
+pci 0000:00:15.5:   bridge window [io  disabled]
+pci 0000:00:15.5:   bridge window [mem 0xfc100000-0xfc1fffff]
+pci 0000:00:15.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+pci 0000:00:15.6: PCI bridge to [bus 09-09]
+pci 0000:00:15.6:   bridge window [io  disabled]
+pci 0000:00:15.6:   bridge window [mem 0xfbd00000-0xfbdfffff]
+pci 0000:00:15.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+pci 0000:00:15.7: PCI bridge to [bus 0a-0a]
+pci 0000:00:15.7:   bridge window [io  disabled]
+pci 0000:00:15.7:   bridge window [mem 0xfb900000-0xfb9fffff]
+pci 0000:00:15.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+pci 0000:00:16.0: PCI bridge to [bus 0b-0b]
+pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+pci 0000:00:16.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+pci 0000:00:16.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+pci 0000:00:16.1: PCI bridge to [bus 0c-0c]
+pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+pci 0000:00:16.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+pci 0000:00:16.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+pci 0000:00:16.2: PCI bridge to [bus 0d-0d]
+pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+pci 0000:00:16.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+pci 0000:00:16.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+pci 0000:00:16.3: PCI bridge to [bus 0e-0e]
+pci 0000:00:16.3:   bridge window [io  disabled]
+pci 0000:00:16.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+pci 0000:00:16.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+pci 0000:00:16.4: PCI bridge to [bus 0f-0f]
+pci 0000:00:16.4:   bridge window [io  disabled]
+pci 0000:00:16.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+pci 0000:00:16.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+pci 0000:00:16.5: PCI bridge to [bus 10-10]
+pci 0000:00:16.5:   bridge window [io  disabled]
+pci 0000:00:16.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+pci 0000:00:16.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+pci 0000:00:16.6: PCI bridge to [bus 11-11]
+pci 0000:00:16.6:   bridge window [io  disabled]
+pci 0000:00:16.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+pci 0000:00:16.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+pci 0000:00:16.7: PCI bridge to [bus 12-12]
+pci 0000:00:16.7:   bridge window [io  disabled]
+pci 0000:00:16.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+pci 0000:00:16.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+pci 0000:00:17.0: PCI bridge to [bus 13-13]
+pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+pci 0000:00:17.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+pci 0000:00:17.0:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+pci 0000:00:17.1: PCI bridge to [bus 14-14]
+pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+pci 0000:00:17.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+pci 0000:00:17.1:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+pci 0000:00:17.2: PCI bridge to [bus 15-15]
+pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+pci 0000:00:17.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+pci 0000:00:17.2:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+pci 0000:00:17.3: PCI bridge to [bus 16-16]
+pci 0000:00:17.3:   bridge window [io  disabled]
+pci 0000:00:17.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+pci 0000:00:17.3:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+pci 0000:00:17.4: PCI bridge to [bus 17-17]
+pci 0000:00:17.4:   bridge window [io  disabled]
+pci 0000:00:17.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+pci 0000:00:17.4:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+pci 0000:00:17.5: PCI bridge to [bus 18-18]
+pci 0000:00:17.5:   bridge window [io  disabled]
+pci 0000:00:17.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+pci 0000:00:17.5:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+pci 0000:00:17.6: PCI bridge to [bus 19-19]
+pci 0000:00:17.6:   bridge window [io  disabled]
+pci 0000:00:17.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+pci 0000:00:17.6:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+pci 0000:00:17.7: PCI bridge to [bus 1a-1a]
+pci 0000:00:17.7:   bridge window [io  disabled]
+pci 0000:00:17.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+pci 0000:00:17.7:   bridge window [mem 0xe5c00000-0xe5cfffff 64bit pref]
+pci 0000:00:18.0: PCI bridge to [bus 1b-1b]
+pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+pci 0000:00:18.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+pci 0000:00:18.0:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+pci 0000:00:18.1: PCI bridge to [bus 1c-1c]
+pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+pci 0000:00:18.1:   bridge window [mem 0xfce00000-0xfcefffff]
+pci 0000:00:18.1:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+pci 0000:00:18.2: PCI bridge to [bus 1d-1d]
+pci 0000:00:18.2:   bridge window [io  disabled]
+pci 0000:00:18.2:   bridge window [mem 0xfca00000-0xfcafffff]
+pci 0000:00:18.2:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+pci 0000:00:18.3: PCI bridge to [bus 1e-1e]
+pci 0000:00:18.3:   bridge window [io  disabled]
+pci 0000:00:18.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+pci 0000:00:18.3:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+pci 0000:00:18.4: PCI bridge to [bus 1f-1f]
+pci 0000:00:18.4:   bridge window [io  disabled]
+pci 0000:00:18.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+pci 0000:00:18.4:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+pci 0000:00:18.5: PCI bridge to [bus 20-20]
+pci 0000:00:18.5:   bridge window [io  disabled]
+pci 0000:00:18.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+pci 0000:00:18.5:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+pci 0000:00:18.6: PCI bridge to [bus 21-21]
+pci 0000:00:18.6:   bridge window [io  disabled]
+pci 0000:00:18.6:   bridge window [mem 0xfba00000-0xfbafffff]
+pci 0000:00:18.6:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+pci 0000:00:18.7: PCI bridge to [bus 22-22]
+pci 0000:00:18.7:   bridge window [io  disabled]
+pci 0000:00:18.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+pci 0000:00:18.7:   bridge window [mem 0xe5b00000-0xe5bfffff 64bit pref]
+pci 0000:00:01.0: setting latency timer to 64
+pci 0000:00:15.0: setting latency timer to 64
+pci 0000:00:15.1: setting latency timer to 64
+pci 0000:00:15.2: setting latency timer to 64
+pci 0000:00:15.3: setting latency timer to 64
+pci 0000:00:15.4: setting latency timer to 64
+pci 0000:00:15.5: setting latency timer to 64
+pci 0000:00:15.6: setting latency timer to 64
+pci 0000:00:15.7: setting latency timer to 64
+pci 0000:00:16.0: setting latency timer to 64
+pci 0000:00:16.1: setting latency timer to 64
+pci 0000:00:16.2: setting latency timer to 64
+pci 0000:00:16.3: setting latency timer to 64
+pci 0000:00:16.4: setting latency timer to 64
+pci 0000:00:16.5: setting latency timer to 64
+pci 0000:00:16.6: setting latency timer to 64
+pci 0000:00:16.7: setting latency timer to 64
+pci 0000:00:17.0: setting latency timer to 64
+pci 0000:00:17.1: setting latency timer to 64
+pci 0000:00:17.2: setting latency timer to 64
+pci 0000:00:17.3: setting latency timer to 64
+pci 0000:00:17.4: setting latency timer to 64
+pci 0000:00:17.5: setting latency timer to 64
+pci 0000:00:17.6: setting latency timer to 64
+pci 0000:00:17.7: setting latency timer to 64
+pci 0000:00:18.0: setting latency timer to 64
+pci 0000:00:18.1: setting latency timer to 64
+pci 0000:00:18.2: setting latency timer to 64
+pci 0000:00:18.3: setting latency timer to 64
+pci 0000:00:18.4: setting latency timer to 64
+pci 0000:00:18.5: setting latency timer to 64
+pci 0000:00:18.6: setting latency timer to 64
+pci 0000:00:18.7: setting latency timer to 64
+NET: Registered protocol family 2
+IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+Simple Boot Flag at 0x36 set to 0x80
+Using TSC for driving interrupts
+apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+apm: disabled - APM is not SMP safe.
+audit: initializing netlink socket (disabled)
+type=2000 audit(1685390993.887:1): initialized
+highmem bounce pool size: 64 pages
+Total HugeTLB memory allocated, 0
+VFS: Disk quotas dquot_6.5.1
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+SELinux:  Registering netfilter hooks
+Initializing Cryptographic API
+alg: No test for crc32c (crc32c-generic)
+ksign: Installing public key data
+Loading keyring
+- Added public key D402D1BAF01C170E
+- User ID: CentOS (Kernel Module GPG key)
+io scheduler noop registered
+io scheduler anticipatory registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Limiting direct PCI/PCI transfers.
+Boot video device is 0000:00:0f.0
+pcieport-driver 0000:00:15.0: setting latency timer to 64
+pcieport-driver 0000:00:15.1: setting latency timer to 64
+pcieport-driver 0000:00:15.2: setting latency timer to 64
+pcieport-driver 0000:00:15.3: setting latency timer to 64
+pcieport-driver 0000:00:15.4: setting latency timer to 64
+pcieport-driver 0000:00:15.5: setting latency timer to 64
+pcieport-driver 0000:00:15.6: setting latency timer to 64
+pcieport-driver 0000:00:15.7: setting latency timer to 64
+pcieport-driver 0000:00:16.0: setting latency timer to 64
+pcieport-driver 0000:00:16.1: setting latency timer to 64
+pcieport-driver 0000:00:16.2: setting latency timer to 64
+pcieport-driver 0000:00:16.3: setting latency timer to 64
+pcieport-driver 0000:00:16.4: setting latency timer to 64
+pcieport-driver 0000:00:16.5: setting latency timer to 64
+pcieport-driver 0000:00:16.6: setting latency timer to 64
+pcieport-driver 0000:00:16.7: setting latency timer to 64
+pcieport-driver 0000:00:17.0: setting latency timer to 64
+pcieport-driver 0000:00:17.1: setting latency timer to 64
+pcieport-driver 0000:00:17.2: setting latency timer to 64
+pcieport-driver 0000:00:17.3: setting latency timer to 64
+pcieport-driver 0000:00:17.4: setting latency timer to 64
+pcieport-driver 0000:00:17.5: setting latency timer to 64
+pcieport-driver 0000:00:17.6: setting latency timer to 64
+pcieport-driver 0000:00:17.7: setting latency timer to 64
+pcieport-driver 0000:00:18.0: setting latency timer to 64
+pcieport-driver 0000:00:18.1: setting latency timer to 64
+pcieport-driver 0000:00:18.2: setting latency timer to 64
+pcieport-driver 0000:00:18.3: setting latency timer to 64
+pcieport-driver 0000:00:18.4: setting latency timer to 64
+pcieport-driver 0000:00:18.5: setting latency timer to 64
+pcieport-driver 0000:00:18.6: setting latency timer to 64
+pcieport-driver 0000:00:18.7: setting latency timer to 64
+pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Real Time Clock Driver v1.12ac
+hpet_resources: 0xfed00000 is busy
+Non-volatile memory driver v1.2
+Linux agpgart interface v0.101 (c) Dave Jones
+agpgart: Detected an Intel 440BX Chipset.
+agpgart: AGP aperture is 256M @ 0x0
+Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+serial8250: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+00:0a: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+00:0b: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+brd: module loaded
+Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+PIIX4: IDE controller at PCI slot 0000:00:07.1
+PIIX4: chipset revision 1
+PIIX4: not 100% native mode: will probe irqs later
+    ide0: BM-DMA at 0x1060-0x1067, BIOS settings: hda:pio, hdb:pio
+    ide1: BM-DMA at 0x1068-0x106f, BIOS settings: hdc:pio, hdd:pio
+Probing IDE interface ide0...
+Probing IDE interface ide1...
+Probing IDE interface ide0...
+Probing IDE interface ide1...
+ide-floppy driver 0.99.newide
+usbcore: registered new driver hiddev
+usbcore: registered new driver usbhid
+drivers/usb/input/hid-core.c: v2.6:USB HID core driver
+PNP: PS/2 Controller [PNP0303:KBC,PNP0f13:MOUS] at 0x60,0x64 irq 1,12
+serio: i8042 KBD port at 0x60,0x64 irq 1
+serio: i8042 AUX port at 0x60,0x64 irq 12
+mice: PS/2 mouse device common for all mice
+md: md driver 0.90.3 MAX_MD_DEVS=256, MD_SB_DISKS=27
+md: bitmap version 4.39
+TCP bic registered
+Initializing IPsec netlink socket
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Using IPI No-Shortcut mode
+ACPI: (supports S0 S1<6>Time: tsc clocksource has been installed.
+ S4 S5)
+Initalizing network drop monitor service
+Freeing unused kernel memory: 232k freed
+input: AT Translated Set 2 keyboard as /class/input/input0
+Write protecting the kernel read-only data: 419k
+input: ImPS/2 Generic Wheel Mouse as /class/input/input1
+ohci_hcd: 2005 April 22 USB 1.1 'Open' Host Controller (OHCI) Driver (PCI)
+USB Universal Host Controller Interface driver v3.0
+SCSI subsystem initialized
+Fusion MPT base driver 3.04.20rh1
+Copyright (c) 1999-2008 LSI Corporation
+Fusion MPT SPI Host driver 3.04.20rh1
+ACPI: PCI Interrupt 0000:00:10.0[A] -> GSI 17 (level, low) -> IRQ 51
+mptbase: ioc0: Initiating bringup
+ioc0: LSI53C1030 B0: Capabilities={Initiator}
+scsi0 : ioc0: LSI53C1030 B0, FwRev=01032920h, Ports=1, MaxQ=128, IRQ=51
+  Vendor: VMware,   Model: VMware Virtual S  Rev: 1.0 
+  Type:   Direct-Access                      ANSI SCSI revision: 02
+ target0:0:0: Beginning Domain Validation
+ target0:0:0: Domain Validation skipping write tests
+ target0:0:0: Ending Domain Validation
+ target0:0:0: FAST-40 WIDE SCSI 80.0 MB/s ST (25 ns, offset 127)
+SCSI device sda: 585923296 512-byte hdwr sectors (299993 MB)
+sda: Write Protect is off
+sda: Mode Sense: 61 00 00 00
+sda: cache data unavailable
+sda: assuming drive cache: write through
+SCSI device sda: 585923296 512-byte hdwr sectors (299993 MB)
+sda: Write Protect is off
+sda: Mode Sense: 61 00 00 00
+sda: cache data unavailable
+sda: assuming drive cache: write through
+ sda: sda1 sda2
+sd 0:0:0:0: Attached scsi disk sda
+  Vendor: VMware,   Model: Virtual CD-ROM    Rev: 1.0 
+  Type:   CD-ROM                             ANSI SCSI revision: 02
+ target0:0:1: Beginning Domain Validation
+ target0:0:1: Domain Validation skipping write tests
+ target0:0:1: Ending Domain Validation
+ target0:0:1: FAST-40 WIDE SCSI 80.0 MB/s ST (25 ns, offset 127)
+libata version 3.00 loaded.
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.11.6-ioctl (2011-02-18) initialised: dm-devel@redhat.com
+device-mapper: dm-raid45: initialized v0.2594l
+EXT3-fs: INFO: recovery required on readonly filesystem.
+EXT3-fs: write access will be enabled during recovery.
+kjournald starting.  Commit interval 5 seconds
+EXT3-fs: recovery complete.
+EXT3-fs: mounted filesystem with ordered data mode.
+SELinux:  Disabled at runtime.
+SELinux:  Unregistering netfilter hooks
+type=1404 audit(1685391031.084:2): selinux=0 auid=4294967295 ses=4294967295
+input: PC Speaker as /class/input/input2
+pcnet32.c:v1.32 18.Mar.2006 tsbogend@alpha.franken.de
+ACPI: PCI Interrupt 0000:02:00.0[A] -> GSI 18 (level, low) -> IRQ 59
+pcnet32: PCnet/PCI II 79C970A at 0x2000, 00 0c 29 1a 76 69 assigned IRQ 59.
+eth0: registered as PCnet/PCI II 79C970A
+ACPI: PCI Interrupt 0000:02:01.0[A] -> GSI 19 (level, low) -> IRQ 67
+pcnet32: PCnet/PCI II 79C970A at 0x2080, 00 0c 29 1a 76 73 assigned IRQ 67.
+eth1: registered as PCnet/PCI II 79C970A
+ACPI: PCI Interrupt 0000:02:02.0[A] -> GSI 16 (level, low) -> IRQ 75
+pcnet32: PCnet/PCI II 79C970A at 0x2400, 00 0c 29 1a 76 7d assigned IRQ 75.
+eth2: registered as PCnet/PCI II 79C970A
+pcnet32: 3 cards_found.
+piix4_smbus 0000:00:07.3: Found 0000:00:07.3 device
+piix4_smbus 0000:00:07.3: Host SMBus controller not enabled!
+parport: PnPBIOS parport detected.
+parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE]
+sd 0:0:0:0: Attached scsi generic sg0 type 0
+scsi 0:0:1:0: Attached scsi generic sg1 type 5
+sr0: scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+Uniform CD-ROM driver Revision: 3.20
+sr 0:0:1:0: Attached scsi CD-ROM sr0
+FDC 0 is a post-1991 82077
+lp0: using parport0 (interrupt-driven).
+lp0: console ready
+ACPI: AC Adapter [ACAD] (on-line)
+ACPI: Power Button (FF) [PWRF]
+ACPI: Mapper loaded
+dell-wmi: No known WMI GUID found
+md: Autodetecting RAID arrays.
+md: autorun ...
+md: ... autorun DONE.
+device-mapper: multipath: version 1.0.6 loaded
+loop: loaded (max 8 devices)
+EXT3 FS on dm-0, internal journal
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on sda1, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+Adding 4128760k swap on /dev/VolGroup00/LogVol01.  Priority:-1 extents:1 across:4128760k

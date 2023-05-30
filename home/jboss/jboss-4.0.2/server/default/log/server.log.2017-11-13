@@ -1,0 +1,56 @@
+2017-11-13 06:00:00,030 INFO  [STDOUT] java.lang.NullPointerException
+2017-11-13 06:00:00,031 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-11-13 06:00:00,031 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-11-13 06:00:00,031 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-11-13 06:00:00,031 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-11-13 06:00:00,031 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-11-13 09:28:59,702 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2017-11-13 09:28:59,702 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-13 09:29:01,962 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 5635
+2017-11-13 09:29:04,577 WARN  [org.apache.jk.common.ChannelSocket] can't read body, waited #256
+2017-11-13 09:29:04,577 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection -1
+2017-11-13 09:29:07,801 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2017-11-13 09:29:07,801 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-13 09:29:09,469 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 5635
+2017-11-13 09:29:12,749 WARN  [org.apache.jk.common.ChannelSocket] can't read body, waited #256
+2017-11-13 09:29:12,749 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection -1
+2017-11-13 15:48:01,544 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 5635
+2017-11-13 15:48:01,545 INFO  [org.apache.jk.common.HandlerRequest] Unknown message 0
+2017-11-13 15:48:01,545 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 25
+2017-11-13 15:48:01,545 INFO  [org.apache.jk.common.HandlerRequest] Unknown message 0
+2017-11-13 15:48:01,545 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 49158
+2017-11-13 15:48:01,545 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-13 15:48:03,507 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2017-11-13 15:48:03,507 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+	<form-beans>
+		<form-bean name="queryForm"
+			type="com.linekong.unionmid.web.struts.form.QueryForm" />
+
+		<form-bean name="queryOrderForm"
+			type="org.apache.struts.action.DynaActionForm">
+			<form-property name="gameId" type="java.lang.String" />
+			<form-property name="orderId" type="java.lang.String" />
+			<form-property name="sign" type="java.lang.String" />
+			<form-property name="unionCode" type="java.lang.String" />
+		</form-bean>
+
+		<form-bean name="giveItemForm"
+			type="com.linekong.unionmid.web.struts.form.GiveItemForm" />
+		<form-bean name="chargingForm"
+			type="com.linekong.unionmid.web.struts.form.ChargingForm" />
+		<form-bean name="spreadForm"
+			type="com.linekong.unionmid.web.struts.form.SpreadForm" />
+			
+		<form-bean name="resetForm" type="com.linekong.unionmid.web.struts.form.ResetPWDForm" />
+		
+		<form-bean name="offlinePayForm"
+			type="com.linekong.unionmid.web.struts.form.OfflinePayForm" />
+			
+			
+		<form-bean name="yyChargingForm"
+			type="com.linekong.unionmid.web.struts.form.YYChargingForm" />
+		<form-bean name="userForm"
+			type="com.linekong.unionmid.web.struts.form.UserForm" />
+			
+       <form-bean name="registerForm"
+		type="com.linekong.unionmid.web.struts.form.RegisterForm" />
+		
+		   <form-bean name="getAllRoleListForm"
+		type="com.linekong.unionmid.web.struts.form.GetAllRoleListForm" />
+
+		   <form-bean name="queryOrderInfoForm"
+		type="com.linekong.unionmid.web.struts.form.QueryOrderInfoForm" />
+		
+		   <form-bean name="getNewRoleNumForm"
+		   	type="com.linekong.unionmid.web.struts.form.GetNewRoleNumForm" />
+
+           <form-bean name="unChargingForm"
+		   	type="com.linekong.unionmid.web.struts.form.UnChargingForm" />
+		   	
+		   	   <form-bean name="appStoreChargingForm"
+		   	type="com.linekong.unionmid.web.struts.form.AppStoreChargingForm" />
+		   	
+		   	 	   <form-bean name="abaoChargingForm"
+		   	type="com.linekong.unionmid.web.struts.form.AbaoChargingForm" />
+
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!-- 充值 -->
+		<action attribute="chargingForm" name="chargingForm"
+			path="/charging" scope="request"
+			type="com.linekong.unionmid.web.struts.action.ChargingAction"
+			validate="false" />
+			
+		  <!--appStore充值  -->		
+	   <action attribute="appStoreChargingForm" name="appStoreChargingForm" 
+			path="/appStoreCharging" scope="request" parameter="appStoreCharging"
+			type="com.linekong.unionmid.web.struts.action.AppStoreChargingAction"
+			validate="false" />		
+			
+		<!-- 离线购买 -->
+		<action attribute="offlinePayForm" name="offlinePayForm"
+			path="/offlinePay" scope="request"
+			type="com.linekong.unionmid.web.struts.action.OfflinePayAction"
+			validate="false" />	
+			
+		<!-- yy充值 -->
+		<action attribute="yyChargingForm" name="yyChargingForm"
+			path="/yyCharging" scope="request"
+			type="com.linekong.unionmid.web.struts.action.yy.YYChargingAction"
+			validate="false" />
+				
+			<!-- abao充值 -->
+		<action attribute="abaoChargingForm" name="abaoChargingForm"
+			path="/abaoCharging" scope="request"
+			type="com.linekong.unionmid.web.struts.action.abao.AbaoChargingAction"
+			validate="false" />		
+				
+		<!-- 查询角色数量 -->
+		<action name="queryForm" parameter="getRoleCount"
+			path="/getRoleCount"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />
+
+		<!-- 查询在线人数 -->
+		<action name="queryForm" parameter="getOnlineCount"
+			path="/getOnlineCount"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />
+
+		<!-- 订单查询 -->
+		<action attribute="queryOrderForm" name="queryOrderForm"
+			path="/queryOrder" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryOrderAction"
+			validate="false" />
+
+		<!-- 道具赠送 -->
+		<action name="giveItemForm" parameter="giveItem"
+			path="/giveItem"
+			type="com.linekong.unionmid.web.struts.action.ActivityAction"
+			validate="false" />
+
+		<!-- 查询道具赠送流水号 -->
+		<action name="queryForm" parameter="queryGiveItem"
+			path="/queryGiveItem"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />
+
+		<!-- 推广 -->
+		<action attribute="queryOrderForm" name="spreadForm"
+			path="/spread" scope="request"
+			type="com.linekong.unionmid.web.struts.action.SpreadAction"
+			validate="false" />
+
+		<!-- 角色排名接口 -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="queryRoleRank" path="/queryRoleRank" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />
+			
+		<!-- 角色等级TOP N -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="getLevelTopN" path="/getLevelTopN" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />	
+			
+		<!-- 角色金钱TOP N -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="getMoneyTopN" path="/getMoneyTopN" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />		
+			
+		<!-- 充值明细查询 -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="getChargeDetail" path="/getChargeDetail" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />
+		
+		<!-- 充值明细查询 -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="getChargeDetailByTime" path="/getChargeDetailByTime" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />		
+			
+		<!-- 充值明细查询 -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="getChargeDetailByOrder" path="/getChargeDetailByOrder" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />		
+			
+	
+		<!-- 获得最大级别，用于魔神无双临时使用的 -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="getRoleLevel" path="/getRoleLevel" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />	
+		
+		<!-- 用户余额查询 -->
+		<action attribute="queryForm" name="queryForm"
+			parameter="getUserAmount" path="/getUserAmount" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" />	
+			
+		<!-- 角色信息 -->
+		<action path="/getRoleList" name="queryForm" scope="request"
+			type="com.linekong.unionmid.web.struts.action.GetRoleListAction"
+			validate="false">
+		</action>
+		
+		<!-- 角色信息 -->
+		<action path="/getRoleListJson" name="queryForm" scope="request"
+			type="com.linekong.unionmid.web.struts.action.GetRoleListJsonAction"
+			validate="false">
+		</action>
+		
+		<!-- 角色信息包含金钱信息 -->
+		<action path="/getRoleNewList" name="queryForm" scope="request"
+			type="com.linekong.unionmid.web.struts.action.GetRoleList3Action"
+			validate="false">
+		</action>
+		
+		<!-- 重置游戏内财产密码接口 -->
+		<action path="/resetGamePropertyPWD"
+			attribute="resetForm"
+			name="resetForm"
+			scope="request"
+			type="com.linekong.unionmid.web.struts.action.ResetPropertyPWDAction"
+			validate="false">		
+		</action>
+		
+		<!-- 充值对帐 -->
+		<action attribute="queryForm" name="queryForm" 
+			path="/checkCharge" scope="request" parameter="checkCharge"
+			type="com.linekong.unionmid.web.struts.action.ExigenceAction"
+			validate="false">
+		</action>
+		
+		<!-- 联运激活接口 -->
+		<action name="userForm" parameter="activityUser"
+			path="/activityUser"
+			type="com.linekong.unionmid.web.struts.action.UserAction"
+			validate="false" >
+		</action>	
+		
+		<!-- 联运激活接口 根据区服号-->
+		 <action name="userForm" parameter="activityUserByGatewayId"
+			path="/activityUserByGatewayId"
+			type="com.linekong.unionmid.web.struts.action.UserAction"
+			validate="false" >
+		</action>	
+				
+			
+		<!-- 联运激活接口 直接调用eraing-->
+		 <action name="userForm" parameter="activityUserBy"
+			path="/activityUserBy"
+			type="com.linekong.unionmid.web.struts.action.UserAction"
+			validate="false" >
+		</action>	
+	<!--西游记百度充值回调  -->
+    <action
+      path="/baidu/xyj/charging"
+      type="com.linekong.unionmid.web.struts.action.baidu.XyjChargingAction"
+      validate="false" />
+      
+	<!-- 西游记百度重置游戏内财产密码接口 -->
+	<action path="/baidu/xyj/resetGamePropertyPWD"
+		attribute="resetForm"
+		name="resetForm"
+		scope="request"
+		type="com.linekong.unionmid.web.struts.action.baidu.ResetXyjBaiduPropertyPWD"
+		validate="false" />
+		
+	
+	<!-- 西游记百度角色信息 -->
+	<action path="/baidu/xyj/getRoleList" name="queryForm" scope="request"
+		type="com.linekong.unionmid.web.struts.action.baidu.GetXyjBaiduRoleList"
+		validate="false">
+	</action>
+	
+	
+	   <!-- 新注册用户统计接口-->
+		<action path="/getRegisterList" name="registerForm" scope="request"
+			type="com.linekong.unionmid.web.struts.action.GetRegisterListAction"
+			validate="false">
+		</action>
+		
+			<!-- 批量角色信息 -->
+		<action path="/getAllRoleList" name="getAllRoleListForm" scope="request"
+			type="com.linekong.unionmid.web.struts.action.GetAllRoleListAction"
+			validate="false">
+		</action>
+		
+		<!-- 批量角色信息 传username -->
+		<action path="/queryAllRoleList" name="getAllRoleListForm" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryAllRoleListAction"
+			validate="false">
+		</action>
+		<!-- 4399查询在线人数 -->
+		<action name="queryForm" parameter="getOnlineCountQuery"
+			path="/getOnlineCountQuery"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		<!-- 4399查询在线人数 用于横行三国 -->
+		<action name="queryForm" parameter="getOnlineCountQueryEx"
+			path="/getOnlineCountQueryEx"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		<action name="getNewRoleNumForm" parameter="getNewRoleNumCount"
+			path="/getNewRoleNumCount"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		<action name="queryForm" parameter="getUserInfo"
+			path="/getUserInfo"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		<action name="queryForm" parameter="getRoleLevelNum"
+			path="/getRoleLevelNum"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		
+	    <action name="getNewRoleNumForm" parameter="getSubjectInfo"
+			path="/getSubjectInfo"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		  <action name="getNewRoleNumForm" parameter="getOnlineDuration"
+			path="/getOnlineDuration"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		  <action name="getNewRoleNumForm" parameter="getSendData"
+			path="/getSendData"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>
+		
+		<!-- 兑换元宝明细查询接口 -->
+		<action attribute="queryForm" name="queryForm" 
+			path="/queryOrderDetail" scope="request" parameter="queryOrderDetail"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false">
+		</action>			
+				
+		<!-- 元宝消费记录接口 -->
+		 <action name="getNewRoleNumForm" parameter="getProductPurchaseInfo"
+			path="/getProductPurchaseInfo"
+			type="com.linekong.unionmid.web.struts.action.QueryAction"
+			validate="false" >
+		</action>		
+				
+		<!-- 撤销充值 -->				
+		<action attribute="unChargingForm" name="unChargingForm" 
+			path="/unCharging" scope="request" parameter="unCharging"
+			type="com.linekong.unionmid.web.struts.action.UnChargingAction"
+			validate="false">
+		</action>				
+				<!-- 查询用户角色是否有大于30级的 -->				
+		<action attribute="queryForm" name="queryForm" 
+			path="/getIfLevelMax30" scope="request" parameter="getIfLevelMax30"
+			type="com.linekong.unionmid.web.struts.action.GetIfLevelMax30Action"
+			validate="false">
+		</action>				
+						
+		
+	    <!-- 订单信息查询 -->
+
+		<action path="/queryOrderInfo" name="queryOrderInfoForm" scope="request"
+			type="com.linekong.unionmid.web.struts.action.QueryOrderInfoAction"
+			validate="false">
+		</action>
+		
+	    <!-- 起点综合数据查询 -->
+		<action attribute="queryForm" name="queryForm" 
+			path="/gameStatAnalytics" scope="request" parameter="gameStatAnalytics"
+			type="com.linekong.unionmid.web.struts.action.ExigenceAction"
+			validate="false">
+		</action>
+				
+	   <!-- 同时在线人数（在线数据接口） 每小时执行一次 -->
+		<action attribute="queryForm" name="queryForm" 
+			path="/onlinesOneTime" scope="request" parameter="onlinesOneTime"
+			type="com.linekong.unionmid.web.struts.action.ExigenceAction"
+			validate="false">
+		</action>		
+			
+				
+	 <!-- 自动测试 -->
+		 
+		 <action path="/test/login" scope="request" parameter="Login"
+			type="com.linekong.unionmid.web.test.LoginAction"
+			validate="false">
+			<forward name="success" path="/WEB-INF/jsp/test/login.jsp" />
+			<forward name="noPrivlege" path="/WEB-INF/test/noPrivlege.jsp" />
+		</action>
+		
+		<action path="/test/doLogin" scope="request" parameter="doLogin"
+			type="com.linekong.unionmid.web.test.LoginAction"
+			validate="false">
+			<forward name="success" path="/WEB-INF/jsp/test/success.jsp" />
+			<forward name="error" path="/WEB-INF/jsp/test/error.jsp" />
+		</action>
+		
+		
+		<action path="/test/autoTest" scope="request" parameter="autoTest"
+			type="com.linekong.unionmid.web.test.LoginAction"
+			validate="false">
+			<forward name="success" path="/WEB-INF/jsp/test/autoTest.jsp" />
+		</action>
+		
+		<action path="/test/doAutoTest" scope="request" parameter="doAutoTest"
+			type="com.linekong.unionmid.web.test.AutoChargingTestAction"
+			validate="false">
+		</action>
+		
+		<action path="/test/testHistory" scope="request" parameter="testHistory"
+			type="com.linekong.unionmid.web.test.TestHistoryAction"
+			validate="false">
+			<forward name="success" path="/WEB-INF/jsp/test/testHistory.jsp" />
+		</action>	
+		
+	  <!-- 淘宝对账 -->
+	<action
+        path="/taobao/doCheckCharge"   parameter="doExecute"
+        type="com.linekong.unionmid.web.struts.action.taobao.TaoBaocheckChargeAction"
+       validate="false" />
+					
+	</action-mappings>
+
+	<message-resources
+		parameter="com.linekong.unionmid.web.struts.ApplicationResources" />
+</struts-config>
+

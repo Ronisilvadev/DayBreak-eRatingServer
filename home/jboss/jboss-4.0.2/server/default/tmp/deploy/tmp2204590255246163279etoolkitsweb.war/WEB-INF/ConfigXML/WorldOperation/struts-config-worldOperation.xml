@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="addActivityModelForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="activityName" type="java.lang.String"></form-property>
+			<form-property name="activityType" type="java.lang.String"></form-property>
+			<form-property name="beginTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="giftBeginTime" type="java.lang.String"></form-property>
+			<form-property name="giftEndTime" type="java.lang.String"></form-property>
+			<form-property name="roleBeginTime" type="java.lang.String"></form-property>
+			<form-property name="roleEndTime" type="java.lang.String"></form-property>
+			<form-property name="lowerLimit" type="java.lang.String"></form-property>
+			<form-property name="upperLimit" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="isMutex" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="setPackageForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="activityType" type="java.lang.String"></form-property>
+			<form-property name="lowerLimit" type="java.lang.String"></form-property>
+			<form-property name="upperLimit" type="java.lang.String"></form-property>
+			<form-property name="limitType" type="java.lang.String"></form-property>
+			<form-property name="subjectId" type="java.lang.String"></form-property>
+			<form-property name="productCode" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="setPackageItemForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="packageId" type="java.lang.String"></form-property>
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="itemCode" type="java.lang.String"></form-property>
+			<form-property name="itemName" type="java.lang.String"></form-property>
+			<form-property name="itemNum" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="generateSerialCodeForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="mediaName" type="java.lang.String"></form-property>
+			<form-property name="useLimit" type="java.lang.String"></form-property>
+			<form-property name="serialNum" type="java.lang.String"></form-property>
+		</form-bean>
+		
+		<form-bean name="modifyActivityModelTimeForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="chargeGatewayConfigForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="operType" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="gatewayType" type="java.lang.String"></form-property>
+			<form-property name="gatewayCode" type="java.lang.String"></form-property>
+			<form-property name="gatewayPassword" type="java.lang.String"></form-property>
+			<form-property name="gatewayIP" type="java.lang.String"></form-property>
+			<form-property name="gatewayPort" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="chargeGatewayForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="operType" type="java.lang.String"></form-property>
+			<form-property name="gatewayIdd" type="java.lang.String"></form-property>
+			<form-property name="gatewayZone" type="java.lang.String"></form-property>
+			<form-property name="gatewayName" type="java.lang.String"></form-property>
+			<form-property name="gatewayCode" type="java.lang.String"></form-property>
+			<form-property name="gatewayPwd" type="java.lang.String"></form-property>
+			<form-property name="gatewayIP" type="java.lang.String"></form-property>
+			<form-property name="gatewayMac" type="java.lang.String"></form-property>			
+		</form-bean>
+		<form-bean name="updateActivityModelForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="activityName" type="java.lang.String"></form-property>
+			<form-property name="activityType" type="java.lang.String"></form-property>
+			<form-property name="beginTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="giftBeginTime" type="java.lang.String"></form-property>
+			<form-property name="giftEndTime" type="java.lang.String"></form-property>
+			<form-property name="roleBeginTime" type="java.lang.String"></form-property>
+			<form-property name="roleEndTime" type="java.lang.String"></form-property>
+			<form-property name="lowerLimit" type="java.lang.String"></form-property>
+			<form-property name="upperLimit" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			
+		</form-bean>
+		<form-bean name="worldDropRateForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String[]"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+	</form-beans>
+	
+	<global-forwards>
+		<forward name="issueBulletin" path="/WEB-INF/jsp/worldOperation/issueBulletin.jsp" />
+		<forward name="historyBulletin" path="/WEB-INF/jsp/worldOperation/historyBulletin.jsp" />
+		<forward name="addBulletin" path="/WEB-INF/jsp/worldOperation/addBulletin.jsp" />
+		<forward name="operBulletin" path="/WEB-INF/jsp/worldOperation/operBulletin.jsp" />
+		<forward name="issueSettingExp" path="/WEB-INF/jsp/worldOperation/issueSettingExp.jsp" />
+		<forward name="historySettingExp" path="/WEB-INF/jsp/worldOperation/historySettingExp.jsp" />
+		<forward name="addSettingExp" path="/WEB-INF/jsp/worldOperation/addSettingExp.jsp" />
+		<forward name="operSettingExp" path="/WEB-INF/jsp/worldOperation/operSettingExp.jsp" />
+		<forward name="issueActivity" path="/WEB-INF/jsp/worldOperation/issueActivity.jsp" />
+		<forward name="historyActivity" path="/WEB-INF/jsp/worldOperation/historyActivity.jsp" />
+		<forward name="addActivity" path="/WEB-INF/jsp/worldOperation/addActivity.jsp" />
+		<forward name="modifyActivity" path="/WEB-INF/jsp/worldOperation/modifyActivity.jsp" />
+		<forward name="addActivityPackage" path="/WEB-INF/jsp/worldOperation/addActivityPackage.jsp" />
+		<forward name="addActivityPoint" path="/WEB-INF/jsp/worldOperation/addActivityPoint.jsp" />
+		<forward name="activityDetail" path="/WEB-INF/jsp/worldOperation/activityDetail.jsp" />
+		<forward name="activityPackageDetail" path="/WEB-INF/jsp/worldOperation/activityPackageDetail.jsp" />
+		<forward name="validatePackage" path="/WEB-INF/jsp/worldOperation/validatePackage.jsp" />
+		<forward name="validatePackageItem" path="/WEB-INF/jsp/worldOperation/validatePackageItem.jsp" />
+		<forward name="validatePoint" path="/WEB-INF/jsp/worldOperation/validatePoint.jsp" />
+		<forward name="issueNews" path="/WEB-INF/jsp/worldOperation/issueNews.jsp" />
+		<forward name="historyNews" path="/WEB-INF/jsp/worldOperation/historyNews.jsp" />
+		<forward name="addNews" path="/WEB-INF/jsp/worldOperation/addNews.jsp" />
+		<forward name="operNews" path="/WEB-INF/jsp/worldOperation/operNews.jsp" />
+		<forward name="product" path="/WEB-INF/jsp/worldOperation/product.jsp" />
+		<forward name="productDetail" path="/WEB-INF/jsp/worldOperation/productDetail.jsp" />
+		<forward name="productInfo" path="/WEB-INF/jsp/worldOperation/productInfo.jsp"></forward>
+		<forward name="operProduct" path="/WEB-INF/jsp/worldOperation/operProduct.jsp" />
+		<forward name="addProduct" path="/WEB-INF/jsp/worldOperation/addProduct.jsp" />
+		<forward name="modifyProduct" path="/WEB-INF/jsp/worldOperation/modifyProduct.jsp" />
+		
+		<forward name="productPrice" path="/WEB-INF/jsp/worldOperation/productPrice.jsp" />
+		<forward name="productPriceDetail" path="/WEB-INF/jsp/worldOperation/productPriceDetail.jsp" />
+		<forward name="operProductPrice" path="/WEB-INF/jsp/worldOperation/operProductPrice.jsp" />
+		<forward name="addProductPrice" path="/WEB-INF/jsp/worldOperation/addProductPrice.jsp" />
+		<forward name="productSort" path="/WEB-INF/jsp/worldOperation/productSort.jsp" />
+		
+		<forward name="chargingGiveItem" path="/WEB-INF/jsp/worldOperation/chargingGiveItem.jsp" />
+		<forward name="chargingGiveItemDetail" path="/WEB-INF/jsp/worldOperation/chargingGiveItemDetail.jsp" />
+		<forward name="addChargingGiveItem" path="/WEB-INF/jsp/worldOperation/addChargingGiveItem.jsp" />
+		<forward name="modifyChargingGiveItem" path="/WEB-INF/jsp/worldOperation/modifyChargingGiveItem.jsp" />
+		<forward name="onlineGm" path="/WEB-INF/jsp/worldOperation/onlineGm.jsp" />
+		<forward name="onlineGmAdd" path="/WEB-INF/jsp/worldOperation/onlineGmAdd.jsp" />
+		<forward name="modifyOnlineGmIp" path="/WEB-INF/jsp/worldOperation/modifyOnlineGmIp.jsp" />
+		<forward name="activityCode" path="/WEB-INF/jsp/worldOperation/activityCode.jsp" />
+		<forward name="generateActivityCode" path="/WEB-INF/jsp/worldOperation/generateActivityCode.jsp" />
+		<forward name="modifyOrderStatus" path="/WEB-INF/jsp/worldOperation/modifyOrderStatus.jsp"></forward>
+		<forward name="showPassportGateway" path="/WEB-INF/jsp/worldOperation/showPassportGateway.jsp"></forward>
+		<forward name="opPassportGateway" path="/WEB-INF/jsp/worldOperation/opPassportGateway.jsp"></forward>
+		<forward name="setIbLocation" path="/WEB-INF/jsp/worldOperation/setIbLocation.jsp"></forward>
+		<forward name="activityInfo" path="/WEB-INF/jsp/worldOperation/activityInfo.jsp"></forward>
+		<forward name="opTypeActivityInfo" path="/WEB-INF/jsp/worldOperation/opTypeActivityInfo.jsp"></forward>
+		<forward name="activityPlanInfo" path="/WEB-INF/jsp/worldOperation/activityPlanInfo.jsp"></forward>
+		<forward name="opActivityInfo" path="/WEB-INF/jsp/worldOperation/opActivityInfo.jsp"></forward>
+		<forward name="delActivityInfo" path="/WEB-INF/jsp/worldOperation/delActivityInfo.jsp"></forward>
+		<forward name="enableActivity" path="/WEB-INF/jsp/worldOperation/enableActivity.jsp"></forward>
+		<forward name="curActivity" path="/WEB-INF/jsp/worldOperation/curActivity.jsp"></forward>
+		<forward name="activitySettingInfo" path="/WEB-INF/jsp/worldOperation/activitySettingInfo.jsp"></forward>
+		<forward name="activitySetting" path="/WEB-INF/jsp/worldOperation/activitySetting.jsp"></forward>
+		<forward name="setActivitySetting" path="/WEB-INF/jsp/worldOperation/setActivitySetting.jsp"></forward>
+		
+		<!-- !!!!! -->
+		<forward name="operActivityModel" path="/WEB-INF/jsp/worldOperation/operActivityModel.jsp"></forward>
+		<forward name="operActivityModel_new" path="/WEB-INF/jsp/worldOperation/operActivityModel_new.jsp"></forward>
+		<forward name="mute1ActivityModel" path="/WEB-INF/jsp/worldOperation/mute1ActivityModel.jsp"></forward>
+		<forward name="mute2ActivityModel" path="/WEB-INF/jsp/worldOperation/mute2ActivityModel.jsp"></forward>
+		
+		<forward name="setIbMark" path="/WEB-INF/jsp/worldOperation/setIbMark.jsp"></forward>
+		<forward name="setShopNotice" path="/WEB-INF/jsp/worldOperation/setShopNotice.jsp"></forward>
+		<forward name="sendGoldByLevelStage" path="/WEB-INF/jsp/worldOperation/sendGoldByLevelStage.jsp"></forward>
+		<forward name="itemAddByLevelStage" path="/WEB-INF/jsp/worldOperation/itemAddByLevelStage.jsp"></forward>
+		<forward name="modifyUnionGatewayId" path="/WEB-INF/jsp/worldOperation/modifyUnionGatewayId.jsp"></forward>
+		<forward name="activityModel" path="/WEB-INF/jsp/worldOperation/activityModel.jsp"></forward>
+		<forward name="addActivityModel" path="/WEB-INF/jsp/worldOperation/addActivityModel.jsp"></forward>
+		<forward name="setPackage" path="/WEB-INF/jsp/worldOperation/setPackage.jsp"></forward>
+		<forward name="setPackageFirstConsume" path="/WEB-INF/jsp/worldOperation/setPackageFirstConsume.jsp"></forward>
+		<forward name="setPackageOtherConsume" path="/WEB-INF/jsp/worldOperation/setPackageOtherConsume.jsp"></forward>
+		<forward name="setPackageItem" path="/WEB-INF/jsp/worldOperation/setPackageItem.jsp"></forward>
+		<forward name="generateSerialCode" path="/WEB-INF/jsp/worldOperation/generateSerialCode.jsp"></forward>
+		<forward name="updateSerialMedia" path="/WEB-INF/jsp/worldOperation/updateSerialMedia.jsp"></forward>
+		<forward name="IssueBulletinCompensate" path="/WEB-INF/jsp/worldOperation/issueBulletinCompensate.jsp" />
+		<forward name="createIssueBulletinCompensate" path="/WEB-INF/jsp/worldOperation/createIssueBulletinCompensate.jsp" />
+		<forward name="operIssueBulletinCompensate" path="/WEB-INF/jsp/worldOperation/operIssueBulletinCompensate.jsp" />
+		<forward name="apprIssueBulletinCompensate" path="/WEB-INF/jsp/worldOperation/apprIssueBulletinCompensate.jsp" />
+		<forward name="batchApprIssueBulletinCompensate" path="/WEB-INF/jsp/worldOperation/batchApprIssueBulletinCompensate.jsp" />
+		<forward name="IssueSettingExpCompensate" path="/WEB-INF/jsp/worldOperation/IssueSettingExpCompensate.jsp" />
+		<forward name="createIssueSettingExpCompensate" path="/WEB-INF/jsp/worldOperation/createIssueSettingExpCompensate.jsp" />
+		<forward name="operIssueSettingExpCompensate" path="/WEB-INF/jsp/worldOperation/operIssueSettingExpCompensate.jsp" />
+		<forward name="apprIssueSettingExpCompensate" path="/WEB-INF/jsp/worldOperation/apprIssueSettingExpCompensate.jsp" />
+		<forward name="batchApprIssueSettingExpCompensate" path="/WEB-INF/jsp/worldOperation/batchApprIssueSettingExpCompensate.jsp" />
+		<forward name="modifyActivityModelTime" path="/WEB-INF/jsp/worldOperation/modifyActivityModelTime.jsp"></forward>
+		<forward name="setIbBag" path="/WEB-INF/jsp/worldOperation/setIbBag.jsp"></forward>
+		
+		<forward name="showGroupMsgList" path="/WEB-INF/jsp/worldOperation/showGroupMsgList.jsp"></forward>
+		<forward name="operateGroupMsg" path="/WEB-INF/jsp/worldOperation/operateGroupMsg.jsp"></forward>
+		
+		<forward name="dynamicToken" path="/WEB-INF/jsp/worldOperation/dynamicToken.jsp"></forward>
+
+		<forward name="setChargeActivity" path="/WEB-INF/jsp/worldOperation/setChargeActivity.jsp"></forward>
+		<forward name="chargeGatewayList" path="/WEB-INF/jsp/worldOperation/chargeGatewayList.jsp"></forward>
+		<forward name="operateChargeGateway" path="/WEB-INF/jsp/worldOperation/operateChargeGateway.jsp"></forward>
+		<forward name="chargeGatewayConfigList" path="/WEB-INF/jsp/worldOperation/chargeGatewayConfigList.jsp"></forward>
+		<forward name="operateChargeGatewayConfig" path="/WEB-INF/jsp/worldOperation/operateChargeGatewayConfig.jsp"></forward>
+		
+		<forward name="showSynchronizationActivityGames" path="/WEB-INF/jsp/worldOperation/synchronizationActivityGames.jsp"></forward>
+		<forward name="showSynchronizationActivity" path="/WEB-INF/jsp/worldOperation/synchronizationActivity.jsp"></forward>
+		
+		<forward name="showSynChargeGiveItemGames" path="/WEB-INF/jsp/worldOperation/synChargeGiveItemGames.jsp"></forward>
+		<forward name="showSynChargeGiveItem" path="/WEB-INF/jsp/worldOperation/synChargeGiveItem.jsp"></forward>
+		
+
+		<forward name="dirtyWord" path="/WEB-INF/jsp/worldOperation/dirtyWord.jsp"></forward>
+		
+		<forward name="unionGatewayList" path="/WEB-INF/jsp/worldOperation/unionGatewayList.jsp"></forward>
+		<forward name="unionGatewayAdd"  path="/WEB-INF/jsp/worldOperation/unionGatewayAdd.jsp"></forward>
+		<forward name="unionGateway"  path="/WEB-INF/jsp/worldOperation/unionGateway.jsp"></forward>
+		<forward name="unionGatewayAjax"  path="/WEB-INF/jsp/worldOperation/unionGatewayAjax.jsp"></forward>
+		<forward name="operUnionGateway"  path="/WEB-INF/jsp/worldOperation/operUnionGateway.jsp"></forward>
+		<forward name="unionGatewayPlanList" path="/WEB-INF/jsp/worldOperation/unionGatewayPlanList.jsp"></forward>
+		<forward name="unionGatewayPlanAdd"  path="/WEB-INF/jsp/worldOperation/unionGatewayPlanAdd.jsp"></forward>
+		<forward name="operUnionGatewayPlan"  path="/WEB-INF/jsp/worldOperation/operUnionGatewayPlan.jsp"></forward>
+		
+		<forward name="worldDropRate"  path="/WEB-INF/jsp/worldOperation/worldDropRate.jsp"></forward>
+		<forward name="cancelWorldDropRate"  path="/WEB-INF/jsp/worldOperation/cancelWorldDropRate.jsp"></forward>
+        <forward name="sychronizUnionGateway" path="/WEB-INF/jsp/worldOperation/sychronizUnionGateway.jsp"></forward>
+	</global-forwards>
+	
+	<action-mappings>
+		<action path="/showIssueBulletin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showIssueBulletin" scope="request"></action>
+		<action path="/showHistoryBulletin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showHistoryBulletin" scope="request"></action>
+		<action path="/showAddBulletin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddBulletin" scope="request"></action>
+		<action path="/addBulletin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addBulletin" scope="request"></action>
+		<action path="/operBulletin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operBulletin" scope="request"></action>
+		<action path="/cancelBulletin" type="org.springframework.web.struts.DelegatingActionProxy" parameter="cancelBulletin" scope="request"></action>
+		<action path="/showIssueSettingExp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showIssueSettingExp" scope="request"></action>
+		<action path="/showHistorySettingExp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showHistorySettingExp" scope="request"></action>
+		<action path="/showAddSettingExp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddSettingExp" scope="request"></action>
+		<action path="/addSettingExp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addSettingExp" scope="request"></action>
+		<action path="/operSettingExp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operSettingExp" scope="request"></action>
+		<action path="/stopSettingExp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="stopSettingExp" scope="request"></action>
+		<action path="/showIssueActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showIssueActivity" scope="request"></action>
+		<action path="/showHistoryActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showHistoryActivity" scope="request"></action>
+		<action path="/showActivityDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showActivityDetail" scope="request"></action>
+		<action path="/delActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delActivity" scope="request"></action>
+		<action path="/showAddActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddActivity" scope="request"></action>
+		<action path="/addActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addActivity" scope="request"></action>
+		<action path="/showModifyActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyActivity" scope="request"></action>
+		<action path="/modifyActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyActivity" scope="request"></action>
+		<action path="/showAddActivityPoint" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddActivityPoint" scope="request"></action>
+		<action path="/validateActivityPoint" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateActivityPoint" scope="request"></action>
+		<action path="/addActivityPoint" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addActivityPoint" scope="request"></action>
+		<action path="/showAddActivityPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddActivityPackage" scope="request"></action>
+		<action path="/validateActivityPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateActivityPackage" scope="request"></action>
+		<action path="/addActivityPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addActivityPackage" scope="request"></action>
+		<action path="/showActivityPackageDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showActivityPackageDetail" scope="request"></action>
+		<action path="/validateActivityPackageItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateActivityPackageItem" scope="request"></action>
+		<action path="/addActivityPackageItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addActivityPackageItem" scope="request"></action>
+		<action path="/showIssueNews" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showIssueNews" scope="request"></action>
+		<action path="/showHistoryNews" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showHistoryNews" scope="request"></action>
+		<action path="/showAddNews" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddNews" scope="request"></action>
+		<action path="/addNews" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addNews" scope="request"></action>
+		<action path="/operNews" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operNews" scope="request"></action>
+		<action path="/cancelNews" type="org.springframework.web.struts.DelegatingActionProxy" parameter="cancelNews" scope="request"></action>
+		<action path="/showProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showProduct" scope="request"></action>
+		<action path="/showProductInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showProductInfo" scope="request"></action>
+		<action path="/productInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="productInfo" scope="request"></action>
+		<action path="/productDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="productDetail" scope="request"></action>
+		<action path="/showAddProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddProduct" scope="request"></action>
+		<action path="/addProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addProduct" scope="request"></action>
+		<action path="/showSynchronizationProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSynchronizationProduct" scope="request"></action>
+		<action path="/synchronizationProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="synchronizationProduct" scope="request"></action>
+		<action path="/showStartProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showStartProduct" scope="request"></action>
+		<action path="/startProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="startProduct" scope="request"></action>
+		<action path="/showEndProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEndProduct" scope="request"></action>
+		<action path="/endProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="endProduct" scope="request"></action>
+		<action path="/showProductPrice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showProductPrice" scope="request"></action>
+		<action path="/productPriceDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="productPriceDetail" scope="request"></action>
+		<action path="/showAddProductPrice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddProductPrice" scope="request"></action>
+		<action path="/addProductPrice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addProductPrice" scope="request"></action>
+		<action path="/showEndProductPrice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEndProductPrice" scope="request"></action>
+		<action path="/showSendProductPrice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSendProductPrice" scope="request"></action>
+		<action path="/sendProductPrice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="sendProductPrice" scope="request"></action>
+		<action path="/endProductPrice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="endProductPrice" scope="request"></action>
+		<action path="/showProductSort" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showProductSort" scope="request"></action>
+		<action path="/sortProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="sortProduct" scope="request"></action>
+		
+		<action path="/showModifyProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyProduct" scope="request"></action>
+		<action path="/modifyProduct" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyProduct" scope="request"></action>
+		
+		
+		<action path="/showChargingGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showChargingGiveItem" scope="request"></action>
+		<action path="/showChargingGiveItemDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showChargingGiveItemDetail" scope="request"></action>
+		<action path="/delChargingGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delChargingGiveItem" scope="request"></action>
+		<action path="/showAddChargingGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddChargingGiveItem" scope="request"></action>
+		<action path="/addChargingGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addChargingGiveItem" scope="request"></action>
+		<action path="/showModifyChargingGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyChargingGiveItem" scope="request"></action>
+		<action path="/modifyChargingGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyChargingGiveItem" scope="request"></action>
+		<action path="/showOnlineGm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOnlineGm" scope="request"></action>
+		<action path="/showOnlineGmAdd" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOnlineGmAdd" scope="request"></action>
+		<action path="/showOnlineGmModify" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOnlineGmModify" scope="request"></action>
+		<action path="/addOnlineGm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addOnlineGm" scope="request"></action>
+		<action path="/modifyOnlineGm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyOnlineGm" scope="request"></action>
+		<action path="/delOnlineGm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delOnlineGm" scope="request"></action>
+		<action path="/showModifyOnlineGmIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyOnlineGmIp" scope="request"></action>
+		<action path="/modifyOnlineGmIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyOnlineGmIp" scope="request"></action>
+		<action path="/showActivityCode" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showActivityCode" scope="request"></action>
+		<action path="/showActivityCodeGenerate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showActivityCodeGenerate" scope="request"></action>
+		<action path="/generateActivityCode" type="org.springframework.web.struts.DelegatingActionProxy" parameter="generateActivityCode" scope="request"></action>
+		<action path="/showModifyOrderStatus" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyOrderStatus" scope="request"></action>
+		<action path="/modifyOrderStatus" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyOrderStatus" scope="request"></action>
+		<action path="/showPassportGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showPassportGateway" scope="request"></action>
+		<action path="/showAddPassportGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddPassportGateway" scope="request"></action>
+		<action path="/showModifyPassportGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyPassportGateway" scope="request"></action>
+		<action path="/opPassportGateway" type="org.springframework.web.struts.DelegatingActionProxy" parameter="opPassportGateway" scope="request"></action>
+		<action path="/showSetIbLocation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSetIbLocation" scope="request"></action>
+		<action path="/setIbLocation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="setIbLocation" scope="request"></action>
+		<action path="/showActivityInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showActivityInfo" scope="request"></action>
+		<action path="/showOpActivityInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOpActivityInfo" scope="request"></action>
+		<action path="/addActivityInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addActivityInfo" scope="request"></action>
+		<action path="/synchronizationActivityInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="synchronizationActivityInfo" scope="request"></action>
+		<action path="/delActivityInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delActivityInfo" scope="request"></action>
+		<action path="/planActivityInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="planActivityInfo" scope="request"></action>
+		<action path="/opActivityInfoServer" type="org.springframework.web.struts.DelegatingActionProxy" parameter="opActivityInfoServer" scope="request"></action>
+		<action path="/showQueryCurActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryCurActivity" scope="request"></action>
+		<action path="/queryCurActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryCurActivity" scope="request"></action>
+		<action path="/queryActivitySetting" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryActivitySetting" scope="request"></action>
+		<action path="/showOperActivitySetting" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOperActivitySetting" scope="request"></action>
+		<action path="/operActivitySetting" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operActivitySetting" scope="request"></action>
+		<action path="/showSetActivitySetting" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSetActivitySetting" scope="request"></action>
+		<action path="/setActivitySetting" type="org.springframework.web.struts.DelegatingActionProxy" parameter="setActivitySetting" scope="request"></action>
+		<action path="/showSetIbMark" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSetIbMark" scope="request"></action>
+		<action path="/setIbMark" type="org.springframework.web.struts.DelegatingActionProxy" parameter="setIbMark" scope="request"></action>
+		<action path="/showSetShopNotice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSetShopNotice" scope="request"></action>
+		<action path="/setShopNotice" type="org.springframework.web.struts.DelegatingActionProxy" parameter="setShopNotice" scope="request"></action>
+		<action path="/showSendGoldByLevelStage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSendGoldByLevelStage" scope="request"></action>
+		<action path="/sendGoldByLevelStage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="sendGoldByLevelStage" scope="request"></action>
+		<action path="/showItemAddByLevelStage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showItemAddByLevelStage" scope="request"></action>
+		<action path="/itemAddByLevelStage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="itemAddByLevelStage" scope="request"></action>
+		<action path="/showModifyUnionGatewayId" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showModifyUnionGatewayId" scope="request"></action>
+		<action path="/modifyUnionGatewayId" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyUnionGatewayId" scope="request"></action>
+		<action path="/showActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showActivityModel" scope="request"></action>
+		<action path="/showAddActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAddActivityModel" scope="request"></action>
+		<action path="/addActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="addActivityModel" scope="request" validate="true" name="addActivityModelForm" input="/showAddActivityModel.do"></action>
+		<action path="/operActivity" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operActivity" scope="request"></action>
+		<action path="/showSetPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSetPackage" scope="request"></action>
+		<action path="/setPackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="setPackage" scope="request" validate="true" name="setPackageForm" input="/showSetPackage.do"></action>
+		<action path="/showSetPackageItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSetPackageItem" scope="request"></action>
+		<action path="/setPackageItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="setPackageItem" scope="request" validate="true" name="setPackageItemForm" input="/showActivityModel.do"></action>
+		<action path="/showGenerateSerialCode" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGenerateSerialCode" scope="request"></action>
+		<action path="/generateSerialCode" type="org.springframework.web.struts.DelegatingActionProxy" parameter="generateSerialCode" scope="request" validate="true" name="generateSerialCodeForm" input="/showActivityModel.do"></action>
+		<action path="/showUpdateSerialMedia" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUpdateSerialMedia" scope="request"></action>
+		<action path="/updateSerialMedia" type="org.springframework.web.struts.DelegatingActionProxy" parameter="updateSerialMedia" scope="request" validate="true" input="/showUpdateSerialMedia.do"></action>
+		<action path="/showIssueBulletinCompensate" parameter="showIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprIssueBulletinCompensate" parameter="showFirstApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprIssueBulletinCompensate" parameter="showSecondApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredIssueBulletinCompensate" parameter="showAppredIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedIssueBulletinCompensate" parameter="showExedIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledIssueBulletinCompensate" parameter="showDeledIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreateIssueBulletinCompensate" parameter="showCreateIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/saveIssueBulletinCompensate" parameter="saveIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operIssueBulletinCompensate" parameter="operIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditIssueBulletinCompensate" parameter="showEditIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelIssueBulletinCompensate" parameter="cancelIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delIssueBulletinCompensate" parameter="delIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprIssueBulletinCompensate" parameter="show2FirstApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprIssueBulletinCompensate" parameter="batchFirstApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprIssueBulletinCompensate" parameter="firstApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprIssueBulletinCompensate" parameter="show2SecondApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprIssueBulletinCompensate" parameter="batchSecondApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprIssueBulletinCompensate" parameter="secondApprIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitIssueBulletinCompensate" parameter="submitIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeIssueBulletinCompensate" parameter="exeIssueBulletinCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showIssueSettingExpCompensate" parameter="showIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprIssueSettingExpCompensate" parameter="showFirstApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprIssueSettingExpCompensate" parameter="showSecondApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredIssueSettingExpCompensate" parameter="showAppredIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedIssueSettingExpCompensate" parameter="showExedIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledIssueSettingExpCompensate" parameter="showDeledIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreateIssueSettingExpCompensate" parameter="showCreateIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/saveIssueSettingExpCompensate" parameter="saveIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operIssueSettingExpCompensate" parameter="operIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditIssueSettingExpCompensate" parameter="showEditIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelIssueSettingExpCompensate" parameter="cancelIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delIssueSettingExpCompensate" parameter="delIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprIssueSettingExpCompensate" parameter="show2FirstApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprIssueSettingExpCompensate" parameter="batchFirstApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprIssueSettingExpCompensate" parameter="firstApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprIssueSettingExpCompensate" parameter="show2SecondApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprIssueSettingExpCompensate" parameter="batchSecondApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprIssueSettingExpCompensate" parameter="secondApprIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitIssueSettingExpCompensate" parameter="submitIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeIssueSettingExpCompensate" parameter="exeIssueSettingExpCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delActivityModel" parameter="delActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delActivityModelPackage" parameter="delActivityModelPackage" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delActivityModelPackageItem" parameter="delActivityModelPackageItem" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showModifyActivityModelTime" parameter="showModifyActivityModelTime" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/modifyActivityModelTime" parameter="modifyActivityModelTime" type="org.springframework.web.struts.DelegatingActionProxy" scope="request" name="modifyActivityModelTimeForm" validate="true" input="/showModifyActivityModelTime.do"></action>
+		<action path="/showSetIbBag" parameter="showSetIbBag" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/setIbBag" parameter="setIbBag" type="org.springframework.web.struts.DelegatingActionProxy" scope="request" validate="true" input="/showSetIbBag.do"></action>
+		<action path="/showOperActivityModel" parameter="showOperActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/updateActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" parameter="updateActivityModel" scope="request" validate="true" name="updateActivityModelForm" input="/showAddActivityModel.do"></action>
+		<action path="/showMute1ActivityModel" parameter="showMute1ActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/mute1ActivityModel" parameter="mute1ActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showMute2ActivityModel" parameter="showMute2ActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/mute2ActivityModel" parameter="mute2ActivityModel" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		
+		
+		<action path="/showQueryGroupMsg" parameter="showQueryGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/queryAllGroupMsg" parameter="queryAllGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/querySpecificGroupMsg" parameter="querySpecificGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAddGroupMsg" parameter="showAddGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/addGroupMsg" parameter="addGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delAllGroupMsg" parameter="delAllGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delOneGroupMsg" parameter="delOneGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/openGroupMsg" parameter="openGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showUpdateGroupMsg" parameter="showUpdateGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/updateGroupMsg" parameter="updateGroupMsg" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		
+		<action path="/showDynamicToken" parameter="showDynamicToken" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/queryDynamicToken" parameter="queryDynamicToken" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operateDynamicToken" parameter="operateDynamicToken" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+
+		
+		<action path="/searchChargeGatewayByName" parameter="searchChargeGatewayByName" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showChargeGatewayList" parameter="showChargeGatewayList" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/openChargeGateway" parameter="openChargeGateway" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/freezeOrUnfreezeChargeGateway" parameter="freezeOrUnfreezeChargeGateway" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAddOrUpdateChargeGateway" parameter="showAddOrUpdateChargeGateway" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/addOrUpdateChargeGateway" parameter="addOrUpdateChargeGateway" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"  name="chargeGatewayForm" validate="true" input="/showChargeGatewayList.do"></action>
+		<action path="/showChargeGatewayConfigList" parameter="showChargeGatewayConfigList" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/openChargeGatewayConfig" parameter="openChargeGatewayConfig" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/freezeOrUnfreezeChargeGatewayConfig" parameter="freezeOrUnfreezeChargeGatewayConfig" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAddOrUpdateChargeGatewayConfig" parameter="showAddOrUpdateChargeGatewayConfig" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/addOrUpdateChargeGatewayConfig" parameter="addOrUpdateChargeGatewayConfig" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"  name="chargeGatewayConfigForm" validate="true" input="/showChargeGatewayList.do"></action>
+	
+	    <!-- 同步充值活动 -->
+		<action path="/showSynchronizationActivityGames" parameter="showSynchronizationActivityGames" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSynchronizationActivity" parameter="showSynchronizationActivity" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/synchronizationActivity" parameter="synchronizationActivity" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<!-- 同步充值活动 -->
+	
+		<!-- 同步网站活动 -->
+		<action path="/showSynChargeGiveItemGames" parameter="showSynChargeGiveItemGames" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSynChargeGiveItem" parameter="showSynChargeGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/synChargeGiveItem" parameter="synChargeGiveItem" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<!-- 同步网站活动 -->
+
+		
+		<action path="/showDirtyWord" parameter="showDirtyWord" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operateDirtyWord" parameter="operateDirtyWord" type="org.springframework.web.struts.DelegatingActionProxy" scope="request" input="/showDirtyWord.do">
+		</action>
+		
+		<action path="/showSynPassport" parameter="showSynPassport" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="showSynPassport" path="/WEB-INF/jsp/worldOperation/synPassport.jsp"></forward>
+		</action>
+		
+		<action path="/synPassport" parameter="synPassport" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		
+		<!--union gateway 合服网关  -->
+		<action path="/showUnionGatewayPlanList" parameter="showUnionGatewayPlanList" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/showAddUnionGatewayPlan" parameter="showAddUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/addUnionGatewayPlan" parameter="addUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/showOperUnionGatewayPlan" parameter="showOperUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/bakeUnionGatewayPlan" parameter="bakeUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/exeUnionGatewayPlan" parameter="exeUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/showModifyOperUnionGatewayPlan" parameter="showModifyOperUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/modifyUnionGatewayPlan" parameter="modifyUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/deleteUnionGatewayPlan" parameter="deleteUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>		
+		<action path="/showUnionGatewayList" parameter="showUnionGatewayList" type="org.springframework.web.struts.DelegatingActionProxy"></action>		
+		<action path="/showAddUnionGateway" parameter="showAddUnionGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/addUnionGateway" parameter="addUnionGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/openUnionGateway" parameter="openUnionGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/showOperUnionGateway" parameter="showOperUnionGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/delUnionGateway" parameter="delUnionGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/shutOldGateway" parameter="shutOldGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/exeUnionGateway" parameter="exeUnionGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/showWorldDropRate" parameter="showWorldDropRate" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/worldDropRate" parameter="worldDropRate" type="org.springframework.web.struts.DelegatingActionProxy" name="worldDropRateForm" attribute="worldDropRateForm" validate="true"></action>
+		<action path="/showCancelWorldDropRate" parameter="showCancelWorldDropRate" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/showCanCancelRate" parameter="showCanCancelRate" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/cancelWorldDropRate" parameter="cancelWorldDropRate" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/stopUnionGateway" parameter="stopUnionGateway" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+		<action path="/sychronousUnionGatewayPlan" parameter="sychronousUnionGatewayPlan" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+	<!--同步道具与价格配置 -->
+	<action path="/synchronizGame" parameter="synchronizGame" type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="synchronizGame" path="/WEB-INF/jsp/worldOperation/synchronizGame.jsp"></forward>
+	</action>
+	<!--跨服联赛导入功能 -->
+	<action path="/ShowImportTxTFile" parameter="ShowImportTxTFile" type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="ShowImportTxTFile" path="/WEB-INF/jsp/worldOperation/importTxTFile.jsp"></forward>
+	</action>
+	<action path="/ImportTxTFile" parameter="ImportTxTFile" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+	<!-- 跨服联赛名单查询 -->
+	<action path="/ShowKuafuInfo" parameter="ShowKuafuInfo" type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="showkuafuinfo" path="/WEB-INF/jsp/worldOperation/kuafuinfo.jsp"></forward>
+	</action>
+	<action path="/SelectKuafuInfo" parameter="SelectKuafuInfo" type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="selectkuafuinfo" path="/WEB-INF/jsp/worldOperation/kuafuinfo.jsp"></forward>
+	</action>
+	<!-- 跨服联赛名单清空 -->
+	<action path="/showDeleteKuafuInfo" parameter="showDeleteKuafuInfo" type="org.springframework.web.struts.DelegatingActionProxy">
+		<forward name="showDeleteKuafuInfo" path="/WEB-INF/jsp/worldOperation/deleteKuafuInfo.jsp"></forward>
+	</action>
+	<action path="/deleteKuafuInfo" parameter="deleteKuafuInfo" type="org.springframework.web.struts.DelegatingActionProxy"></action>
+	</action-mappings>
+
+</struts-config>

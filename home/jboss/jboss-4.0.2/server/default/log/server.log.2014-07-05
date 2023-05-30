@@ -1,0 +1,8 @@
+2014-07-05 06:59:47,583 INFO  [STDOUT] java.lang.NullPointerException
+2014-07-05 06:59:47,583 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-07-05 06:59:47,583 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-07-05 06:59:47,583 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-07-05 06:59:47,583 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-07-05 06:59:47,583 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-07-05 09:21:25,673 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-05 09:21:25,937 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?

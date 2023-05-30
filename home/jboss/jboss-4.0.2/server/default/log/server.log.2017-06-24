@@ -1,0 +1,75 @@
+2017-06-24 00:57:19,007 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:57:20,175 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-06-24 00:57:38,546 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=1y63r&gameId=1204&method=login&passportName=globalgames1&
+2017-06-24 00:57:38,546 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:57:54,638 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/login.do?method=logout&
+2017-06-24 00:57:54,639 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:57:54,808 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2017-06-24 00:57:54,809 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:57:55,229 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-06-24 00:58:06,992 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=cdrc4&gameId=1204&method=login&passportName=globalgames1&
+2017-06-24 00:58:06,992 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:58:09,200 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/login.do?method=logout&
+2017-06-24 00:58:09,200 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:58:09,378 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2017-06-24 00:58:09,378 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:58:09,753 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-06-24 00:58:57,755 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=j2sn3&gameId=1204&method=login&passportName=globalgames1&
+2017-06-24 00:58:57,755 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:59:00,174 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/login.do?method=logout&
+2017-06-24 00:59:00,174 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:59:00,258 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2017-06-24 00:59:00,258 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 00:59:00,426 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-06-24 04:00:15,117 INFO  [STDOUT] Exception in thread "Timer-3" 
+2017-06-24 04:00:15,117 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-06-24 04:00:15,117 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-06-24 04:00:15,118 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-06-24 04:00:15,118 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.QiDianTask$1.run(Unknown Source)
+2017-06-24 04:00:15,118 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-06-24 04:00:15,118 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-06-24 06:00:16,373 INFO  [STDOUT] java.lang.NullPointerException
+2017-06-24 06:00:16,373 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-06-24 06:00:16,373 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-06-24 06:00:16,373 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-06-24 06:00:16,374 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-06-24 06:00:16,374 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-06-24 10:48:19,348 INFO  [STDOUT] Exception in thread "Timer-5" 
+2017-06-24 10:48:19,348 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-06-24 10:48:19,348 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-06-24 10:48:19,348 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-06-24 10:48:19,348 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TaoBaoTask$1.run(Unknown Source)
+2017-06-24 10:48:19,348 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-06-24 10:48:19,348 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-06-24 18:15:59,879 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2017-06-24 18:15:59,879 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 18:15:59,879 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 19:23:32,285 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 19:23:33,359 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-06-24 19:23:46,748 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=2xavu&gameId=1204&method=login&passportName=globalgames1&
+2017-06-24 19:23:46,748 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:30:40,943 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/login.do?method=logout&
+2017-06-24 23:30:40,944 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:30:41,082 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2017-06-24 23:30:41,082 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:30:41,316 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-06-24 23:32:57,150 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=jqbvp&gameId=1204&method=login&passportName=braziltest1&
+2017-06-24 23:32:57,150 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:32:57,601 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showTop&
+2017-06-24 23:32:57,602 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:32:57,702 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showMiddle&
+2017-06-24 23:32:57,702 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:32:57,730 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showBottom&
+2017-06-24 23:32:57,730 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:32:57,875 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showLeft&
+2017-06-24 23:32:57,875 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:32:57,901 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showTab&
+2017-06-24 23:32:57,901 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:32:57,926 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showFrame.do?method=showWelcome&
+2017-06-24 23:32:57,926 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:33:14,812 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showQueryPlayerInfo.do?
+2017-06-24 23:33:21,290 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showSearchRole.do?
+2017-06-24 23:34:05,681 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/logManage.do?method=showLog&
+2017-06-24 23:34:05,682 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-24 23:35:01,558 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showPlayerNames2Ids.do?
+2017-06-24 23:35:12,358 INFO  [LogPrintFilter] operator:braziltest1: /etoolkitsweb/showAwardCompensate.do?

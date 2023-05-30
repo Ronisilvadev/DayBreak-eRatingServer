@@ -1,0 +1,283 @@
+2014-09-14 12:13:43,042 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-09-14 12:13:43,042 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:43,042 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:43,421 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-14 12:13:50,498 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&gameId=1204&validCode=7m3fr&method=login&passportName=spacecowboy&
+2014-09-14 12:13:50,498 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:50,971 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2014-09-14 12:13:50,971 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:51,061 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-09-14 12:13:51,061 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:51,062 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-09-14 12:13:51,062 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:51,214 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-09-14 12:13:51,214 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:51,290 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2014-09-14 12:13:51,290 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:13:51,328 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-09-14 12:13:51,329 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:14:15,605 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showLogPlayerItems.do?
+2014-09-14 12:14:23,531 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAwardCompensate.do?
+2014-09-14 12:14:28,738 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-09-14 12:15:59,282 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/validateCreate.do?activityId=1514091291&items=2-867-0-0,1
+2-505-0-0,1
+2-507-0-0,1
+1-1327-0-0,1
+1-1951-0-0,1
+1-1606-0-0,1
+2-262-0-0,1
+2-517-0-0,1&reason=Teste de Vinculo&oper=add&commitFlag=1&endDate=2014-09-13&playerNames=andersongg&beginDate=2014-09-12&compensateId=&gatewayId=0&
+2014-09-14 12:16:06,219 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/saveAwardCompensate.do?activityId=1514091291&items=2-867-0-0,1
+2-505-0-0,1
+2-507-0-0,1
+1-1327-0-0,1
+1-1951-0-0,1
+1-1606-0-0,1
+2-262-0-0,1
+2-517-0-0,1&reason=Teste de Vinculo&oper=add&commitFlag=1&endDate=2014-09-13&playerNames=andersongg&beginDate=2014-09-12&compensateId=&gatewayId=0&
+2014-09-14 12:16:07,688 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFirstApprAwardCompensate.do?
+2014-09-14 12:16:09,918 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/batchFirstApprAwardCompensate.do?page=1&compensateId=2&
+2014-09-14 12:16:15,262 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/firstApprAwardCompensate.do?compensateId=2&approvalResult=1&approvalComment=teste&
+2014-09-14 12:16:16,209 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSecondApprAwardCompensate.do?
+2014-09-14 12:16:17,451 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/batchSecondApprAwardCompensate.do?page=1&compensateId=2&
+2014-09-14 12:16:19,755 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/secondApprAwardCompensate.do?compensateId=2&approvalResult=1&approvalComment=teste&
+2014-09-14 12:16:20,728 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAppredAwardCompensate.do?
+2014-09-14 12:16:27,643 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operAwardCompensate.do?oper=appred&compensateId=2&
+2014-09-14 12:16:28,891 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/exeAwardCompensate.do?compensateId=2&
+2014-09-14 12:16:28,892 INFO  [STDOUT] 查看 awardCompensateList 是否为空-----------------------------
+2014-09-14 12:16:28,892 INFO  [STDOUT] 1
+2014-09-14 12:16:28,892 INFO  [STDOUT] 执行 exeAwardCompensate--------------------------------
+2014-09-14 12:16:28,893 INFO  [STDOUT] 打印数组---------------------------------------------
+2014-09-14 12:16:28,893 INFO  [STDOUT] [Ljava.lang.String;@e0177e
+2014-09-14 12:16:28,893 INFO  [STDOUT] [Ljava.lang.String;@2655bf
+2014-09-14 12:16:28,895 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000062-867-0-012014-09-122014-09-13
+2014-09-14 12:16:28,896 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:28,901 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000062-505-0-012014-09-122014-09-13
+2014-09-14 12:16:28,902 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:28,906 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000062-507-0-012014-09-122014-09-13
+2014-09-14 12:16:28,906 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:28,910 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000061-1327-0-012014-09-122014-09-13
+2014-09-14 12:16:28,911 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:28,915 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000061-1951-0-012014-09-122014-09-13
+2014-09-14 12:16:28,915 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:28,919 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000061-1606-0-012014-09-122014-09-13
+2014-09-14 12:16:28,919 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:28,924 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000062-262-0-012014-09-122014-09-13
+2014-09-14 12:16:28,924 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:28,928 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129115000000062-517-0-012014-09-122014-09-13
+2014-09-14 12:16:28,928 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:16:30,554 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showExedAwardCompensate.do?
+2014-09-14 12:16:52,066 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operAwardCompensate.do?oper=exed&compensateId=2&
+2014-09-14 12:19:19,182 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showExedAwardCompensate.do?
+2014-09-14 12:19:27,605 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operAwardCompensate.do?oper=exed&compensateId=2&
+2014-09-14 12:19:59,455 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-09-14 12:20:02,800 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514091104&version=new&
+2014-09-14 12:20:07,133 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-09-14 12:20:08,595 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddActivityModel.do?version=new&
+2014-09-14 12:20:13,686 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-09-14 12:20:15,705 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAwardCompensate.do?
+2014-09-14 12:20:17,199 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-09-14 12:20:45,073 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/validateCreate.do?activityId=1514091292&items=2-867-0-0,1
+2-505-0-0,1
+2-507-0-0,1
+1-1327-0-0,1
+1-1951-0-0,1
+1-1606-0-0,1
+2-262-0-0,1
+2-517-0-0,1&reason=dfgdtomacu&oper=add&commitFlag=1&endDate=2014-09-15&playerNames=andersongg&beginDate=2014-09-14&compensateId=&gatewayId=0&
+2014-09-14 12:20:48,964 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/saveAwardCompensate.do?activityId=1514091292&items=2-867-0-0,1
+2-505-0-0,1
+2-507-0-0,1
+1-1327-0-0,1
+1-1951-0-0,1
+1-1606-0-0,1
+2-262-0-0,1
+2-517-0-0,1&reason=dfgdtomacu&oper=add&commitFlag=1&endDate=2014-09-15&playerNames=andersongg&beginDate=2014-09-14&compensateId=&gatewayId=0&
+2014-09-14 12:20:50,423 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFirstApprAwardCompensate.do?
+2014-09-14 12:20:51,598 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/batchFirstApprAwardCompensate.do?page=1&compensateId=3&
+2014-09-14 12:20:54,416 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/firstApprAwardCompensate.do?compensateId=3&approvalResult=1&approvalComment=sdfsdf&
+2014-09-14 12:20:55,571 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSecondApprAwardCompensate.do?
+2014-09-14 12:20:57,009 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/batchSecondApprAwardCompensate.do?page=1&compensateId=3&
+2014-09-14 12:20:59,081 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/secondApprAwardCompensate.do?compensateId=3&approvalResult=1&approvalComment=sdfdsf&
+2014-09-14 12:21:00,019 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAppredAwardCompensate.do?
+2014-09-14 12:21:02,833 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operAwardCompensate.do?oper=appred&compensateId=3&
+2014-09-14 12:21:04,053 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/exeAwardCompensate.do?compensateId=3&
+2014-09-14 12:21:04,054 INFO  [STDOUT] 查看 awardCompensateList 是否为空-----------------------------
+2014-09-14 12:21:04,054 INFO  [STDOUT] 1
+2014-09-14 12:21:04,054 INFO  [STDOUT] 执行 exeAwardCompensate--------------------------------
+2014-09-14 12:21:04,055 INFO  [STDOUT] 打印数组---------------------------------------------
+2014-09-14 12:21:04,055 INFO  [STDOUT] [Ljava.lang.String;@10241ae
+2014-09-14 12:21:04,055 INFO  [STDOUT] [Ljava.lang.String;@1261355
+2014-09-14 12:21:04,057 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000062-867-0-012014-09-142014-09-15
+2014-09-14 12:21:04,058 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:04,064 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000062-505-0-012014-09-142014-09-15
+2014-09-14 12:21:04,064 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:04,070 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000062-507-0-012014-09-142014-09-15
+2014-09-14 12:21:04,070 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:04,075 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000061-1327-0-012014-09-142014-09-15
+2014-09-14 12:21:04,075 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:04,079 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000061-1951-0-012014-09-142014-09-15
+2014-09-14 12:21:04,080 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:04,085 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000061-1606-0-012014-09-142014-09-15
+2014-09-14 12:21:04,085 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:04,089 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000062-262-0-012014-09-142014-09-15
+2014-09-14 12:21:04,090 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:04,094 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409129215000000062-517-0-012014-09-142014-09-15
+2014-09-14 12:21:04,095 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:21:05,431 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showExedAwardCompensate.do?
+2014-09-14 12:47:03,523 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/login.do?method=login&
+2014-09-14 12:47:03,523 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:03,524 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:03,621 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/generateRandomCode.do?
+2014-09-14 12:47:08,656 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/login.do?region=1&validCode=51ha2&gameId=1204&method=login&passportName=spacecowboy&
+2014-09-14 12:47:08,656 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:09,052 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2014-09-14 12:47:09,052 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:09,078 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-09-14 12:47:09,078 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:09,097 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-09-14 12:47:09,097 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:09,135 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-09-14 12:47:09,135 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:09,151 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2014-09-14 12:47:09,151 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:09,176 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-09-14 12:47:09,176 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-14 12:47:11,577 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-09-14 12:47:13,548 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddActivityModel.do?version=new&
+2014-09-14 12:48:09,735 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/addActivityModel.do?activityId=1514091258&roleBeginTime=2009-09-12 17:10:06&roleEndTime=2016-09-12 17:10:12&beginTime=2014-09-14 12:47:13&giftBeginTime=2014-09-14 12:47:13&giftEndTime=2014-09-15 12:47:13&activityType=3&endTime=2014-09-15 12:47:13&activityName=Teste Semanal 3&isMutex=0&gatewayId=0&version=new&
+2014-09-14 12:48:11,783 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514091258&version=new&
+2014-09-14 12:48:14,125 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514091258&activityType=3&version=new&
+2014-09-14 12:48:18,289 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/setPackage.do?activityId=1514091258&upperLimit=99&lowerLimit=1&activityType=3&version=new&
+2014-09-14 12:48:19,940 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackageItem.do?activityId=1514091258&packageId=17&activityType=3&version=new&
+2014-09-14 12:48:38,533 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAwardCompensate.do?
+2014-09-14 12:48:40,588 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFirstApprAwardCompensate.do?
+2014-09-14 12:48:42,891 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAwardCompensate.do?
+2014-09-14 12:48:43,537 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-09-14 12:50:39,143 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/validateCreate.do?activityId=1514091245&items=1-388-0-0,1
+2-944-0-0,1
+1-870-0-0,1
+1-550-0-0,1
+2-945-0-0,1
+1-870-0-0,1
+1-358-0-0,1
+1-1327-0-0,1
+1-1662-0-0,1
+1-870-0-0,1
+1-390-0-0,1
+2-262-0-0,1
+1-1662-0-0,1
+1-870-0-0,1
+1-314-0-0,1
+2-517-0-0,1
+1-871-0-0,1
+2-867-0-0,1
+2-505-0-0,1
+2-507-0-0,1
+1-871-0-0,1
+1-1662-0-0,1
+1-1951-0-0,1
+1-1606-0-0,1
+2-515-0-0,1
+1-871-0-0,1&reason=teste semanal 3&oper=add&commitFlag=1&endDate=2014-09-15&playerNames=pedraomontaria&beginDate=2014-09-14&compensateId=&gatewayId=0&
+2014-09-14 12:50:43,198 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/saveAwardCompensate.do?activityId=1514091245&items=1-388-0-0,1
+2-944-0-0,1
+1-870-0-0,1
+1-550-0-0,1
+2-945-0-0,1
+1-870-0-0,1
+1-358-0-0,1
+1-1327-0-0,1
+1-1662-0-0,1
+1-870-0-0,1
+1-390-0-0,1
+2-262-0-0,1
+1-1662-0-0,1
+1-870-0-0,1
+1-314-0-0,1
+2-517-0-0,1
+1-871-0-0,1
+2-867-0-0,1
+2-505-0-0,1
+2-507-0-0,1
+1-871-0-0,1
+1-1662-0-0,1
+1-1951-0-0,1
+1-1606-0-0,1
+2-515-0-0,1
+1-871-0-0,1&reason=teste semanal 3&oper=add&commitFlag=1&endDate=2014-09-15&playerNames=pedraomontaria&beginDate=2014-09-14&compensateId=&gatewayId=0&
+2014-09-14 12:50:45,396 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFirstApprAwardCompensate.do?
+2014-09-14 12:50:47,140 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/batchFirstApprAwardCompensate.do?page=1&compensateId=4&
+2014-09-14 12:50:53,354 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/firstApprAwardCompensate.do?compensateId=4&approvalResult=1&approvalComment=teste 3&
+2014-09-14 12:50:54,436 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSecondApprAwardCompensate.do?
+2014-09-14 12:50:56,034 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/batchSecondApprAwardCompensate.do?page=1&compensateId=4&
+2014-09-14 12:50:58,193 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/secondApprAwardCompensate.do?compensateId=4&approvalResult=1&approvalComment=teste 3&
+2014-09-14 12:50:59,348 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAppredAwardCompensate.do?
+2014-09-14 12:51:00,693 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operAwardCompensate.do?oper=appred&compensateId=4&
+2014-09-14 12:51:02,289 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/exeAwardCompensate.do?compensateId=4&
+2014-09-14 12:51:02,291 INFO  [STDOUT] 查看 awardCompensateList 是否为空-----------------------------
+2014-09-14 12:51:02,291 INFO  [STDOUT] 1
+2014-09-14 12:51:02,291 INFO  [STDOUT] 执行 exeAwardCompensate--------------------------------
+2014-09-14 12:51:02,291 INFO  [STDOUT] 打印数组---------------------------------------------
+2014-09-14 12:51:02,291 INFO  [STDOUT] [Ljava.lang.String;@14acf50
+2014-09-14 12:51:02,291 INFO  [STDOUT] [Ljava.lang.String;@70ca5f
+2014-09-14 12:51:02,294 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-388-0-012014-09-142014-09-15
+2014-09-14 12:51:02,294 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,300 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-944-0-012014-09-142014-09-15
+2014-09-14 12:51:02,300 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,305 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-870-0-012014-09-142014-09-15
+2014-09-14 12:51:02,305 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,310 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-550-0-012014-09-142014-09-15
+2014-09-14 12:51:02,310 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,315 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-945-0-012014-09-142014-09-15
+2014-09-14 12:51:02,315 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,320 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-870-0-012014-09-142014-09-15
+2014-09-14 12:51:02,320 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,325 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-358-0-012014-09-142014-09-15
+2014-09-14 12:51:02,325 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,330 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-1327-0-012014-09-142014-09-15
+2014-09-14 12:51:02,330 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,335 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-1662-0-012014-09-142014-09-15
+2014-09-14 12:51:02,335 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,340 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-870-0-012014-09-142014-09-15
+2014-09-14 12:51:02,340 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,345 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-390-0-012014-09-142014-09-15
+2014-09-14 12:51:02,346 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,350 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-262-0-012014-09-142014-09-15
+2014-09-14 12:51:02,351 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,355 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-1662-0-012014-09-142014-09-15
+2014-09-14 12:51:02,355 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,360 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-870-0-012014-09-142014-09-15
+2014-09-14 12:51:02,361 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,365 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-314-0-012014-09-142014-09-15
+2014-09-14 12:51:02,366 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,370 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-517-0-012014-09-142014-09-15
+2014-09-14 12:51:02,370 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,375 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-871-0-012014-09-142014-09-15
+2014-09-14 12:51:02,376 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,380 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-867-0-012014-09-142014-09-15
+2014-09-14 12:51:02,381 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,386 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-505-0-012014-09-142014-09-15
+2014-09-14 12:51:02,386 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,391 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-507-0-012014-09-142014-09-15
+2014-09-14 12:51:02,391 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,396 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-871-0-012014-09-142014-09-15
+2014-09-14 12:51:02,396 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,401 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-1662-0-012014-09-142014-09-15
+2014-09-14 12:51:02,401 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,406 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-1951-0-012014-09-142014-09-15
+2014-09-14 12:51:02,407 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,411 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-1606-0-012014-09-142014-09-15
+2014-09-14 12:51:02,411 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,416 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001062-515-0-012014-09-142014-09-15
+2014-09-14 12:51:02,416 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:02,421 INFO  [STDOUT] 执行activityAwardCompensate 方法120410151409124515000001061-871-0-012014-09-142014-09-15
+2014-09-14 12:51:02,421 INFO  [STDOUT] 执行数据库操作
+2014-09-14 12:51:03,687 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showExedAwardCompensate.do?
+2014-09-14 12:57:15,830 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-09-14 14:04:24,328 INFO  [STDOUT] java.lang.NullPointerException
+2014-09-14 14:04:24,328 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-09-14 14:04:24,328 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-09-14 14:04:24,328 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-09-14 14:04:24,328 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-09-14 14:04:24,329 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

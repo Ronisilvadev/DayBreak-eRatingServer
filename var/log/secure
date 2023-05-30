@@ -1,0 +1,35 @@
+May 29 20:10:35 tdberating sshd[3074]: Server listening on 0.0.0.0 port 8722.
+May 29 20:10:35 tdberating su: pam_unix(su-l:session): session opened for user erating by (uid=0)
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session closed for user erating
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session opened for user erating by (uid=0)
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session closed for user erating
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session opened for user erating by (uid=0)
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session closed for user erating
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session opened for user jboss by (uid=0)
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session closed for user jboss
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session opened for user jboss by (uid=0)
+May 29 20:10:44 tdberating su: pam_unix(su-l:session): session closed for user jboss
+May 29 20:12:33 tdberating login: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+May 29 20:12:33 tdberating login: ROOT LOGIN ON tty1
+May 29 20:13:32 tdberating su: pam_unix(su-l:session): session opened for user erating by root(uid=0)
+May 29 20:13:39 tdberating su: pam_unix(su-l:session): session closed for user erating
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session opened for user erating by root(uid=0)
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session closed for user erating
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session opened for user erating by root(uid=0)
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session closed for user erating
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session opened for user jboss by root(uid=0)
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session closed for user jboss
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session opened for user jboss by root(uid=0)
+May 29 20:13:41 tdberating su: pam_unix(su-l:session): session closed for user jboss
+May 29 20:30:07 tdberating sshd[9428]: Address 192.168.15.23 maps to desktop-54atu2e, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+May 29 20:30:07 tdberating sshd[9428]: Accepted password for root from 192.168.15.23 port 1149 ssh2
+May 29 20:30:07 tdberating sshd[9428]: pam_unix(sshd:session): session opened for user root by (uid=0)
+May 29 20:30:07 tdberating sshd[9428]: subsystem request for sftp
+May 29 20:31:00 tdberating sshd[9450]: Address 192.168.15.23 maps to desktop-54atu2e, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+May 29 20:31:00 tdberating sshd[9450]: Accepted password for root from 192.168.15.23 port 1152 ssh2
+May 29 20:31:00 tdberating sshd[9454]: Address 192.168.15.23 maps to desktop-54atu2e, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+May 29 20:31:00 tdberating sshd[9454]: Accepted password for root from 192.168.15.23 port 1153 ssh2
+May 29 20:31:00 tdberating sshd[9450]: pam_unix(sshd:session): session opened for user root by (uid=0)
+May 29 20:31:00 tdberating sshd[9450]: subsystem request for sftp
+May 29 20:31:00 tdberating sshd[9454]: pam_unix(sshd:session): session opened for user root by (uid=0)
+May 29 20:31:00 tdberating sshd[9454]: subsystem request for sftp

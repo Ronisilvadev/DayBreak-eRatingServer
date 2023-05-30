@@ -1,0 +1,368 @@
+<?xml version="1.0"?>
+<Schedule>
+<Version>4.4</Version>
+<Task name="players_city_ln_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangrui@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="辽宁"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_jl_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangrui@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="吉林"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_hlj_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangrui@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="黑龙江"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_hb_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangyanbai@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="河北"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_nmg_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangyanbai@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="内蒙古"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_sd_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangyanbai@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="山东"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_tj_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangyanbai@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="天津"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_sx_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangyanbai@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="山西"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_hun_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="chengyu@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="湖南"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_hub_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="chengyu@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="湖北"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_hn_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="chengyu@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="河南"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_zj_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhouchi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="浙江"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_fj_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhouchi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="福建"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_sh_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhouchi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="上海"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_js_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="wangyuting@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="江苏"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_gd_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="jiaoyi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="广东"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_gx_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="jiaoyi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="广西"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_jx_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="jiaoyi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="江西"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_hain_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="jiaoyi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="海南"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_hain2_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="jiaoyi@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="海南省"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_sx2_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="陕西"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_gs_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="甘肃"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_nx_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="宁夏"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_qh_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="青海"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_xz_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="西藏"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_xj_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="新疆"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_sc_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="四川"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_cq_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="重庆"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_yn_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="云南"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_gz_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangtong@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="贵州"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_bj_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="zhangyanbai@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="北京"/>
+</Request>
+</Action>
+</Task>
+<Task name="players_city_ah_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="wangyuting@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="安徽"/>
+</Request>
+</Action>
+</Task>
+
+<Task name="players_city_test_task" owner="null" enabled="true">
+<Condition type="EveryDay"  hour="8" minute="1" second="1"/>
+<Action type="Replet" replet="City Players Amount(Schedule)" clearCache="true">
+<MailTo email="chenguoda@linekong.com" from="shujufenxi@linekong.com" format="EXCEL_SHEET" message="" subject=""/>
+<Notify email=""/>
+<locale value=""/>
+<Request name="create">
+<Parameter name="province" type="String" value="北京"/>
+</Request>
+</Action>
+</Task>
+</Schedule>

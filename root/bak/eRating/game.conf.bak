@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="GBK" ?>
+
+<xxx_svr>
+    <auth_svr>
+        <baidu game_id="724">
+            <uri>http://wanba.baidu.com/test</uri>
+            <version>1</version>
+            <secret_key>xxx</secret_key>
+            <api_key>xxx</api_key>
+            <api_name>what</api_name>
+        </baidu>
+
+        <http game_id="742">
+            <uri>http://127.0.0.1:7429/debug/</uri>
+            <secret_key>8ac193ea283e63e301283e8f6886209c</secret_key>
+        </http>
+
+        <shunw game_id="745">
+            <uri>http://www.kedou.com/front/interface/checkGuidExisted.htm</uri>
+            <app_key>1234</app_key>
+            <secret_key>8ac193ea283e63e301283e8f6886209c</secret_key>
+        </shunw>
+
+        <gameyarou game_id="745">
+            <uri>http://113.34.69.102/Auth_WebService/auth_start.asmx/Encrypt_Checked</uri>
+            <host>ws-auth.gameyarou.jp</host>
+        </gameyarou>
+    </auth_svr>
+
+    <DB>
+        <!-- dbtype = 1:mysql, 其他:oracle-->
+        <dbtype>1</dbtype>
+        <tnsname>UOSDEV_201</tnsname>
+        <host>192.168.177.94</host>
+        <port>3306</port>
+        <db_name>erating</db_name>
+        <user>erating</user>
+        <pwd>001e4cfecedddf424f7d</pwd>
+        <time_out>30</time_out>
+        <use_pool>1</use_pool>
+        <min_conn>1</min_conn>
+        <max_conn>10</max_conn>
+        <cache_size>1024</cache_size>
+    </DB>
+
+    <PASSPORT>
+        <address>http://192.168.41.43:8080/oversea-mid/xmlRpcServerServlet</address>
+        <key>linekongline</key>
+        <time_out unit="ms">3000</time_out>
+    </PASSPORT>
+
+    <game_id default="0">1204</game_id>
+
+
+    <env_encoding>utf8</env_encoding>
+    <recv_encoding>utf8</recv_encoding>
+    <mysql_db_encoding>utf8</mysql_db_encoding>
+    <db_encoding>utf8</db_encoding>
+    <once_load>10000</once_load>
+    <detail_flag>1</detail_flag>
+    <send_flag>0</send_flag>
+    <open_role_list>0</open_role_list>
+    <open_dcode>0</open_dcode>
+    <load_ip>1</load_ip>
+    <lower_user_name>1</lower_user_name>
+
+    <!--
+    该配置项用于标识联运游戏的认证方式：
+        （注意：只在GameID大于等于700时，该配置项生效！）
+        No3rdParty  - 无需eRating去第三方认证的联运
+                      如《飞天西游》4399联运系列，《热血西游》联运系列
+        No3rdPartyWithUID  - 手机游戏《王者之剑》
+        FTXY91wan   - 《飞天西游-91wan》联运
+        Shunw       - 顺网联运
+        Thunder     - 迅雷联运
+        Baidu       - 百度联运
+        WAYI        - 台湾华义联运
+        FPT         - 越南FPT联运
+        VTC         - 越南VTC联运
+        GameFlier   - 台湾智冠GF联运
+        JapanGameyarou - 日本Gameyarou认证
+        LK          - 联运中使用蓝港在线的HTTP认证接口
+        Ingamba     - Russia Ingamba auth
+    -->
+    <union_auth_type>LK</union_auth_type>
+
+    <!-- for ePayAuditServer -->
+    <scan_cycle default="30" unit="m">30</scan_cycle>
+    <refresh_cycle default="60" unit="s">10</refresh_cycle>
+    <subject_id>5</subject_id>
+
+<!--
+    <service>
+        <gateway_id default="0">202901</gateway_id>
+    </service>
+-->
+
+    <svr>
+        <app>
+            <app_name>gateway_svr_logic</app_name>
+            <app_id>3</app_id>
+            <include>
+                <cmd tag="CMD_UNBIND">10000002</cmd>
+                <cmd tag="CMD_BIND">10000001</cmd>   
+                <cmd tag="CMD_GW_DATA_REPORT">10002003</cmd>  
+                <cmd tag="CMD_GW_BALANCE_REPORT">10004201</cmd>
+            </include>
+            <exclude>
+            </exclude>
+        </app>
+        <app>
+            <app_name>auth_svr_logic</app_name>
+            <app_id>4</app_id>
+	    <include>
+                <cmd tag="CMD_USER_AUTH">10003304</cmd>
+                <cmd tag="CMD_PASSWORD_VERIFY">10003202</cmd>
+                <cmd tag="CMD_USER_LOGIN">10003301</cmd>
+                <cmd tag="CMD_USER_AUTH_AD_ID">10003305</cmd>
+                <cmd tag="CMD_USER_AUTH_EX">10003306</cmd>
+                <cmd tag="CMD_JOINT_AUTHEN">10003801</cmd>
+                <cmd tag="CMD_JOINT_AUTHEN_EX">10003802</cmd>
+                <cmd tag="CMD_USER_ENTER_GAME">10003302</cmd>   
+                <cmd tag="CMD_ROLE_ENTER_GAME">10003105</cmd>   
+                <cmd tag="CMD_ROLE_ENTER_GAME_EX">10003106</cmd>
+                <cmd tag="CMD_ROLE_ENTER_GAME_EX1">10003109</cmd>
+                <cmd tag="CMD_USER_LOGOUT">10003303</cmd>
+            </include>
+            <exclude>
+            </exclude>
+        </app>
+        <app>
+            <app_name>dict_svr_logic</app_name>
+            <app_id>5</app_id>
+	    <include>
+                <cmd tag="CMD_CREATE_ROLE">10003102</cmd>
+                <cmd tag="CMD_CREATE_ROLE_WITH_ID">10003108</cmd>
+                <cmd tag="CMD_DELETE_ROLE">10003103</cmd>
+                <cmd tag="CMD_RENAME_ROLE">10003107</cmd>
+                <cmd tag="CMD_RENAME_USER">10003007</cmd>
+                <cmd tag="CMD_CREATE_GROUP">10003901</cmd>
+                <cmd tag="CMD_DELETE_GROUP">10003902</cmd>
+                <cmd tag="CMD_TRANSFER_GROUP">10003903</cmd>
+                <cmd tag="CMD_USER_STATE_QUERY">10003004</cmd>
+                <cmd tag="CMD_ROLE_STATE_QUERY">10003104</cmd>
+                <cmd tag="CMD_ROLE_LIST">10003101</cmd>
+                <cmd tag="CMD_USER_ITEM_LIST">10003508</cmd>
+                <cmd tag="CMD_ACTIVITY_ITEM_QUERY">10003509</cmd>
+                <cmd tag="CMD_USER_ITEM_MINUS">10003505</cmd>
+                <cmd tag="CMD_USER_SERIAL_QUERY">10003206</cmd>
+            </include>
+            <exclude>
+            </exclude>
+        </app>
+        <app>
+            <app_name>dacq_svr_logic</app_name>
+            <app_id>6</app_id>
+	    <include>
+                <cmd tag="CMD_USER_CASH_EXCHANGE">10003704</cmd>
+                <cmd tag="CMD_USER_CASH_EXCHANGE_EX">10003708</cmd>
+                <cmd tag="CMD_USER_CASH_EXCHANGE_EX1">10003709</cmd>
+                <cmd tag="CMD_USER_IB_PAY_EX">10003712</cmd>
+                <cmd tag="CMD_USER_IB_PAY">10003701</cmd>
+                <cmd tag="CMD_USER_IB_PAY_AUDIT">10003702</cmd>
+                <cmd tag="CMD_USER_BALANCE_INFO">10003402</cmd>
+                <cmd tag="CMD_USER_DRAW_BALANCE">10003403</cmd>
+                <cmd tag="CMD_USER_USE_PRODUCT">10003502</cmd>
+                <cmd tag="CMD_USER_IB_USE">10003703</cmd>
+                <cmd tag="CMD_HANDSET">10001001</cmd>
+                <cmd tag="CMD_USER_DRAW_BALANCE_EX">10003406</cmd>
+                <cmd tag="CMD_GET_BALANCE">10003405</cmd>
+                <cmd tag="CMD_BUY_ITEM">10003700</cmd>
+                <cmd tag="CMD_JOINT_PURCHASE">10003710</cmd>
+            </include>
+            <exclude>
+            </exclude>
+        </app>
+    </svr>
+
+<!--
+    <cmd tag="CMD_UNBIND">10000002</cmd>
+    <cmd tag="CMD_BIND">10000001</cmd>
+
+    <cmd tag="CMD_USER_AUTH">10003304</cmd>
+    <cmd tag="CMD_PASSWORD_VERIFY">10003202</cmd>
+    <cmd tag="CMD_USER_LOGIN">10003301</cmd>
+    <cmd tag="CMD_USER_AUTH_AD_ID">10003305</cmd>
+    <cmd tag="CMD_USER_AUTH_EX">10003306</cmd>
+    <cmd tag="CMD_JOINT_AUTHEN">10003801</cmd>
+    <cmd tag="CMD_JOINT_AUTHEN_EX">10003802</cmd>
+
+
+    <cmd tag="CMD_CREATE_ROLE">10003102</cmd>
+    <cmd tag="CMD_CREATE_ROLE_WITH_ID">10003108</cmd>
+    <cmd tag="CMD_DELETE_ROLE">10003103</cmd>
+    <cmd tag="CMD_RENAME_ROLE">10003107</cmd>
+    <cmd tag="CMD_RENAME_USER">10003007</cmd>
+    <cmd tag="CMD_CREATE_GROUP">10003901</cmd>
+    <cmd tag="CMD_DELETE_GROUP">10003902</cmd>
+    <cmd tag="CMD_TRANSFER_GROUP">10003903</cmd>
+    <cmd tag="CMD_USER_STATE_QUERY">10003004</cmd>
+    <cmd tag="CMD_ROLE_STATE_QUERY">10003104</cmd>
+    <cmd tag="CMD_ROLE_LIST">10003101</cmd>
+    <cmd tag="CMD_USER_ITEM_LIST">10003508</cmd>
+    <cmd tag="CMD_ACTIVITY_ITEM_QUERY">10003509</cmd>
+    <cmd tag="CMD_USER_ITEM_MINUS">10003505</cmd>
+    <cmd tag="CMD_USER_SERIAL_QUERY">10003206</cmd>
+    <cmd tag="CMD_GW_BALANCE_REPORT">10004201</cmd>
+
+    <cmd tag="CMD_USER_LOGOUT">10003303</cmd>
+    <cmd tag="CMD_USER_ENTER_GAME">10003302</cmd>
+    <cmd tag="CMD_ROLE_ENTER_GAME">10003105</cmd>
+    <cmd tag="CMD_ROLE_ENTER_GAME_EX">10003106</cmd>
+    <cmd tag="CMD_ROLE_ENTER_GAME_EX1">10003109</cmd>
+    <cmd tag="CMD_GW_DATA_REPORT">10002003</cmd>
+    <cmd tag="CMD_USER_CASH_EXCHANGE">10003704</cmd>
+    <cmd tag="CMD_USER_CASH_EXCHANGE_EX">10003708</cmd>
+    <cmd tag="CMD_USER_CASH_EXCHANGE_EX1">10003709</cmd>
+    <cmd tag="CMD_USER_IB_PAY_EX">10003712</cmd>
+    <cmd tag="CMD_USER_IB_PAY">10003701</cmd>
+    <cmd tag="CMD_USER_IB_PAY_AUDIT">10003702</cmd>
+    <cmd tag="CMD_USER_BALANCE_INFO">10003402</cmd>
+    <cmd tag="CMD_USER_DRAW_BALANCE">10003403</cmd>
+    <cmd tag="CMD_USER_USE_PRODUCT">10003502</cmd>
+    <cmd tag="CMD_USER_IB_USE">10003703</cmd>
+    <cmd tag="CMD_HANDSET">10001001</cmd>
+    <cmd tag="CMD_USER_DRAW_BALANCE_EX">10003406</cmd>
+
+
+    <cmd tag="CMD_GET_BALANCE">10003405</cmd>
+    <cmd tag="CMD_BUY_ITEM">10003700</cmd>
+    <cmd tag="CMD_JOINT_PURCHASE">10003710</cmd>
+-->
+
+</xxx_svr>
+

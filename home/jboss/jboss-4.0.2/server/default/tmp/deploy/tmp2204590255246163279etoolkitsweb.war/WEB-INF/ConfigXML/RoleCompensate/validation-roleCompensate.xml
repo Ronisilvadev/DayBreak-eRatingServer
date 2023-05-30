@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC 
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" 
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd"> 
+<form-validation>
+	<formset>
+		<form name="/saveAddItemCompensate">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="itemId" depends="required">
+				<arg0 key="prompt.item_id"/>
+			</field>
+			<field property="itemNum" depends="required,integer">
+				<arg0 key="prompt.item_num"/>
+			</field>
+			<field property="star" depends="required,integer">
+				<arg0 key="prompt.star"/>
+			</field>
+			<field property="level" depends="required,integer">
+				<arg0 key="prompt.itemLevel"/>
+			</field>
+			<field property="bind" depends="required,integer">
+				<arg0 key="prompt.bind"/>
+			</field>
+			<field property="reason" depends="required">
+				<arg0 key="prompt.reason"/>
+			</field>
+		</form>
+		<form name="/saveClearPointsCompensate">
+			<field property="pointType" depends="required,integer">
+				<arg0 key="prompt.pointType"/>
+			</field>
+			<field property="reason" depends="required">
+				<arg0 key="prompt.reason"/>
+			</field>
+		</form>
+	</formset>
+</form-validation>

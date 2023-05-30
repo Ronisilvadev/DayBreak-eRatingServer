@@ -1,0 +1,2643 @@
+#!/bin/bash
+
+#
+# @Author:  Joiky.G
+# @Date:    2010-08-11
+#
+    # °æ±¾ºÅ
+VERSION=1.9
+    # ×÷Õß
+AUTHOR=Joiky.G
+    # ·´À¡
+FEEDBACK=gaoguodong@linekong.com
+    # ÐÞ¶©ÀúÊ·
+# v1.9 2013-02-27
+#	¼ÓÈëaddapp delapp ÃüÁîÌí¼Ó»òÕßÉ¾³ýµ±Ç°¶Ë¿ÚÏÂÄ³serverÏÂÄ³·þÎñ£¬¼ÓÈë¿ËÂ¡ÃüÁîÏÂµÄ×ÓÃüÁîapp ¿ËÂ¡µ±Ç°¶Ë¿ÚÏÂÄ³server»òÕßÈ«²¿serverÏÂÄ³·þÎñ
+# v1.8 2012-08-30
+#   ¶àsvrºÏ1°æ±¾
+# v1.7 2011-10-21
+#   ÐÞ¸Ägame.confÖÐ¿ÉÒÔÔö¼Ó¶àserver.
+# v1.6 2011-03-04
+#   ¼ÓÈëforce-kill-all×ÓÃüÁî£¬Ç¿ÖÆÉ±µôµ±Ç°Ä¿Â¼ÏÂËùÓÐpidÎÄ¼þËù¶ÔÓ¦µÄ½ø³Ì£¬²¢É¾³ýpidÎÄ¼þ¡£
+# v1.5 2011-02-25
+#   ¼ÓÈëtop×ÓÃüÁî£¬¿ÉÒÔÔÚtopÖÐ²é¿´ÊôÓÚ¸ö½ø³ÌÐÅÏ¢¡£
+# v1.4 2010-12-17
+#   ¼ÓÈë¶Ô ÖÇ¹ÚÊÖ»úËøÈÏÖ¤ ÐèÒªµÄÅäÖÃÎÄ¼þ gameflier.xml µÄ²¿ÊðÖ§³Ö¡£
+# v1.3 2010-11-16
+#   ¼ÓÈë¶Ô pay_svr ºÍ vtc.xml µÄ²¿Êð²Ù×÷¡£
+
+#
+# Ê¹ÓÃÊ±×ÃÇéÉèÖÃ
+#
+    # ÑÚÂë
+#UMASK=022
+    # ¿ÉÖ´ÐÐÎÄ¼þÈ¨ÏÞ
+#CHMOD_PERM="u+x"
+    # Ò»¼¶×ÓÃüÁî
+    # Éú³ÉÐÂ»·¾³£¨½öÓÃÓÚËùÓÐÎÄ¼þÔÚÍ¬Ò»Ä¿Â¼Ê±£©£¨1£©
+MAKE_NEW=(-m mk make -gen generate)
+    # ¿ËÂ¡(2)
+CLONE_NEW=(-c cl clone)
+    # Æô¶¯(3)
+START_NEW=(-s start)
+    # Í£Ö¹(4)
+STOP_NEW=(stop)
+    # ×´Ì¬(5)
+STATUS_NEW=(-st st status check)
+    # °ïÖú(6)
+HELP_NEW=(-h help)
+    # ÏêÏ¸ÐÅÏ¢
+VERBOSE_NEW=(-v verbose)
+    # ÖØÆô
+RESTART_NEW=(-r restart)
+    # UOS»·¾³ÏÂ»ñÈ¡ËùÓÐÎÄ¼þ
+GET_ALL_NEW=(tar get)
+    # ÔËÐÐ»·¾³ÏÂÓÃtop²é¿´½ø³ÌÐÅÏ¢
+UOS_TOP=(top)
+    # ¸ù¾Ý´æÔÚµÄPIDÎÄ¼þÇ¿ÖÆkillµôÏàÓ¦µÄ½ø³Ì£¬È»ºóÉ¾³ýPIDÎÄ¼þ
+UOS_FORCE_KILL_ALL=(force-kill-all)
+
+  # ÏÔÊ¾·þÎñ
+LIST_SERVICES=(-l list)
+    # Æô¶¯Ö¸¶¨serverÏÂµÄÒ»¸öAPP
+APP_START=(astart)
+    # Í£Ö¹Ö¸¶¨serverÏÂµÄÒ»¸öAPP
+APP_STOP=(astop)
+    #Ïògame.confÖÐ¼ÓÈëÐÂµÄapp·þÎñ³ÌÐò
+APP_NODE=(addapp)
+	#°Ñgame.confÖÐ¶ÔÓ¦µÄapp·þÎñ³ÌÐòÉ¾³ýµô
+DEL_APP_NODE=(delapp)
+    # ÉèÖÃÖ÷¶Ë¿Ú
+SET_MASTER=(set_master)
+    #ÉèÖÃ´Ó¶Ë¿Ú
+SET_SLAVE=(set_slave)
+
+
+    # Ó²¿½±´ÖÁ¸ùÄ¿Â¼ÏÂµÄÎÄ¼þÁÐ±í
+FILE_GLOBAL_CN=
+    # ·ûºÅÁ´½ÓÖÁ¸ùÄ¿Â¼ÏÂµÄÎÄ¼þÁÐ±í
+FILE_GLOBAL_CL="set_env.sh $(basename $0)"
+    # Ó²¿½±´ÖÁ×ÓÄ¿Â¼ÏÂµÄÎÄ¼þÁÐ±í
+FILE_SUB_CN=
+    # ·ûºÅÁ´½ÓÖÁ×ÓÄ¿Â¼ÏÂµÄÎÄ¼þÁÐ±í
+FILE_SUB_CL=
+
+    # ÐÂ»·¾³¼àÌý¶Ë¿Ú×îÐ¡Öµ£¨Ä¬ÈÏ1000£©
+#MIN_PORT=1000
+
+    # ´ò°üÄ¿±êÎÄ¼þ
+readonly TAR_FILE="eRating_logic.$VERSION.tgz"
+readonly TAR_OPTION="zcf"
+    # ¿ÉÖ´ÐÐÎÄ¼þ
+readonly GATE="gate"
+readonly ROUTER="router_logic"
+readonly UN_SVR="un_svr"
+readonly ALL_SVR="all_svr_logic"
+readonly AGIP_KEY="AGIP.key"
+readonly SET_ENV="set_env.sh"
+
+    # ÅäÖÃÎÄ¼þÃû
+readonly ERATING_CONF="eRating.conf"
+readonly ERATING_3C_CONF="eRating3C.conf"
+readonly GAME_CONF="game.conf"
+readonly APP_CONF="app.conf"
+readonly VTC_CONF="vtc.xml"
+readonly INGAMBA_CONF="ingamba.xml"
+readonly GF_CONF="gameflier.xml"
+readonly TNSNAMES_ORA="tnsnames.ora"
+
+    # Absolute path of setting-files
+readonly PATH_ERATING_CONF="router_logic/$ERATING_CONF"
+readonly PATH_ERATING_3C_CONF="config_loader/$ERATING_3C_CONF"
+readonly PATH_GAME_CONF="gate_base_logic/$GAME_CONF"
+readonly PATH_APP_CONF="gate_base_logic/$APP_CONF"
+readonly PATH_TNSNAME_FILE="gate_base_logic/$TNSNAMES_ORA"
+readonly PATH_VTC_CONF="vtc/$VTC_CONF"
+readonly PATH_INGAMBA_CONF="ingamba/$INGAMBA_CONF"
+readonly PATH_GF_CONF="gameflier/$GF_CONF"
+
+    # ÓÃÓÚ´ò°ü
+PKG_BIN=($GATE $ROUTER $UN_SVR $ALL_SVR)
+PKG_CONF=($PATH_ERATING_CONF $PATH_ERATING_3C_CONF $PATH_GAME_CONF $PATH_APP_CONF $PATH_TNSNAME_FILE $PATH_VTC_CONF $PATH_INGAMBA_CONF $PATH_GF_CONF)
+PKG_OTHER=($AGIP_KEY $SET_ENV)
+
+    # ÑÕÉ«ÉèÖÃ
+SUCCESS_COLOR="\033[01;32m"
+WARNING_COLOR="\033[01;31m"
+FAILED_COLOR="\033[01;31m"
+ERROR_COLOR="\033[41;37m"
+TIPS_COLOR="\033[01;36m"
+OPTION_COLOR="\033[01;33m"
+EXCLAMATION_COLOR="\033[01;31;5m"
+EXIST_COLOR="\033[01;32m"
+AC_3S_COLOR="\033[1m"
+MAKE_COLOR="\033[1m"
+CLONE_COLOR="\033[1m"
+
+COLOR_YELLOW="\033[01;33;46m"
+COLOR_RED="\033[01;31m"
+COLOR_GREEN="\033[01;32m"
+COLOR_END="\033[0m"
+
+    #
+REPORT_SUCCESS="${SUCCESS_COLOR}SUCCESS:$COLOR_END"
+REPORT_WARNING="${WARNING_COLOR}WARNING:$COLOR_END"
+REPORT_FAILED="${FAILED_COLOR}FAILED:$COLOR_END"
+REPORT_ERROR="${ERROR_COLOR}ERROR:$COLOR_END"
+REPORT_EXIST="${EXIST_COLOR}^$COLOR_END"
+REPORT_EXCLAMATION="${EXCLAMATION_COLOR}!$COLOR_END"
+REPORT_START="${AC_3S_COLOR}start$COLOR_END"
+REPORT_STOP="${AC_3S_COLOR}stop$COLOR_END"
+REPORT_MAKE="${MAKE_COLOR}generate$COLOR_END"
+REPORT_CLONE="${CLONE_COLOR}clone$COLOR_END"
+REPORT_CLONE_SUB="${CLONE_COLOR}clone sub$COLOR_END"
+
+    # Game ID
+readonly GAME_ID_THIRD_PURCHASE="746 753 760 761 762 763 764 911"
+readonly GAME_ID_GF="752"
+
+    # ´íÎóÂë
+readonly E_SUCESS=0
+readonly E_MISSED_ARGA=1
+readonly E_UNKNOWN_OPTION=10
+readonly E_VALUE_ARGS=11
+readonly E_COMMAND_DOUBLE=12
+readonly E_MUTEX=13
+readonly E_POSITION=14
+readonly E_MISSED_FILE=15
+readonly E_TYPE_FILE=16
+readonly E_NONE_GAME_ID=17
+readonly E_MKDIR_FAILED=18
+readonly E_NO_EXIST_DIR=19
+readonly E_START_FAILED=20
+readonly E_PORT_ERROR=21
+readonly E_SERVER_NAME_ERROR=22
+
+readonly E_UNKNOWN_ERROR=126
+### --------------------------------------------------
+
+
+#
+# ÒÔÏÂÉèÖÃÇëÎðÐÞ¸Ä
+#
+    # ËùÓÐ¿ÉÖ´ÐÐÎÄ¼þ
+BIN_ALL=($GATE $ROUTER $UN_SVR $ALL_SVR)
+    # ¸ùÄ¿Â¼Á´½ÓÎÄ¼þ£¨¿ÉÖ´ÐÐÎÄ¼þ£©
+BIN_GLOBAL_L=($GATE $ROUTER $UN_SVR)
+    # ¸ùÄ¿Â¼ÏÂÁ´½ÓÎÄ¼þ£¨·Ç¿ÉÖ´ÐÐÎÄ¼þ£©
+FILE_GLOBAL_L=(AGIP.key)
+    # ¸ùÄ¿Â¼ÏÂÆÕÍ¨ÎÄ¼þ
+FILE_GLOBAL_N=($ERATING_CONF $TNSNAMES_ORA $ERATING_3C_CONF)
+    # ×ÓÄ¿Â¼ÏÂÁ´½ÓÎÄ¼þ£¨¿ÉÖ´ÐÐÎÄ¼þ£¬¸ù¾Ý$GAME_CONF²úÉú£©
+BIN_SUB_L=()
+    # BIN_SUB_L ¶ÔÓ¦µÄappµÄ app_id
+ID_SUB_L=()
+	#$GAME_CONFÏÂËùÓÐµÄÐ­Òé±êÊ¾¼´tag
+TAG_SUB_L=()
+# ×ÓÄ¿Â¼ÏÂÁ´½ÓÎÄ¼þ£¨·Ç¿ÉÖ´ÐÐÎÄ¼þ£©
+FILE_SUB_L=($AGIP_KEY)
+    # ×ÓÄ¿Â¼ÏÂÆÕÍ¨ÎÄ¼þ
+FILE_SUB_N=($GAME_CONF $APP_CONF $INGAMBA_CONF $VTC_CONF $GF_CONF)
+
+    # Ö´ÐÐ¶¯×÷
+readonly ACTION_MAKE=0
+readonly ACTION_CLONE=$(( $ACTION_MAKE + 1 ))
+readonly ACTION_START=$(( $ACTION_MAKE + 2 ))
+readonly ACTION_STOP=$(( $ACTION_MAKE + 3 ))
+readonly ACTION_STATUS=$(( $ACTION_MAKE + 4 ))
+readonly ACTION_HELP=$(( $ACTION_MAKE + 5 ))
+readonly ACTION_VERBOSE=$(( $ACTION_MAKE + 6 ))
+readonly ACTION_RESTART=$(( $ACTION_MAKE + 7 ))
+readonly ACTION_GET_ALL=$(( $ACTION_MAKE + 8 ))
+readonly ACTION_UOS_TOP=$(( $ACTION_MAKE + 9 ))
+readonly ACTION_LIST=$(( $ACTION_MAKE + 10 ))
+readonly ACTION_APP_START=$(( $ACTION_MAKE + 11 ))
+readonly ACTION_APP_STOP=$(( $ACTION_MAKE + 12 ))
+readonly ACTION_UOS_FORCE_KILL_ALL=$(( $ACTION_MAKE + 13 ))
+readonly ACTION_ADD_APP_NODE=$(( $ACTION_MAKE + 14 ))
+readonly ACTION_DEL_APP_NODE=$(( $ACTION_MAKE + 15 ))
+readonly ACTION_SET_MASTER=$(( $ACTION_MAKE + 16 ))
+readonly ACTION_SET_SLAVE=$(( $ACTION_MAKE + 17 ))
+
+ARG_ARR[${#ARG_ARR[@]}]=${MAKE_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${CLONE_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${START_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${STOP_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${STATUS_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${HELP_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${VERBOSE_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${RESTART_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${GET_ALL_NEW[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${UOS_TOP[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${LIST_SERVICES[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${APP_START[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${APP_STOP[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${UOS_FORCE_KILL_ALL[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${APP_NODE[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${DEL_APP_NODE[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${SET_MASTER[@]}
+ARG_ARR[${#ARG_ARR[@]}]=${SET_SLAVE[@]}
+
+
+## --------------------------------------------------
+#
+# ³õÊ¼»¯
+#
+	#ÓÃÓÚapp del ÃüÁîÖ´ÐÐ¹ý³ÌÈÕÖ¾,ÓÃÓÚµ÷ÊÔ
+CMD_LOG=command.log
+rm -f $CMD_LOG
+    # ¶Ë¿ÚºÅ
+MAX_PORT=9999
+MIN_PORT=${MIN_PORT:=1000}
+
+readonly CLONE_INIT="init"
+readonly CLONE_PORT="port"
+readonly CLONE_GAME="gameid"
+readonly CLONE_APP="appnode"
+
+exec_script=
+exec_script_action=
+
+exist_server=()
+exec_dest_port=()
+input_dest_server=()
+
+# ´æ´¢ -d ºóÃæ¸úµÄ²ÎÊý;
+input_dest_dir=()
+exec_src=
+exec_index=0
+input_src_app_name=
+input_dest_app_name=
+input_dest_app_tag=()
+exist_app_tag=()
+input_union_type=()
+input_dest_app_ex_tag=()
+input_authenex_value=
+auto_app_id=
+head=
+tails=
+master_port=
+master_ip=
+
+    #globalÏÂµÄ¿ÉÖ´ÐÐÎÄ¼þÆô¶¯
+exec_global_new=
+
+flag_verbose=false
+flag_3s_all=true
+flag_clone_sub=$CLONE_INIT
+flag_app=false
+
+readonly ARG_INIT="\b"
+
+PROGRAM=$(basename $0)
+
+export LANG=zh_CN.gbk
+
+[ -z "$1" ] && {
+    set "help"
+}
+
+
+function get_head_and_tails_of_target_svr()
+{
+    head=0
+    tails=0
+    local head_lines=()
+    local tails_lines=()
+    local index=0
+
+    echo "local file=$(pwd)/$1/$APP_CONF">>$CMD_LOG
+    local file=$(pwd)/$1/$APP_CONF
+   
+    echo "tails_lines=(`sed -n -e \"/<\/app>/=\" $file | sed "s;$; ;" | tr -d '\n'`)">>$CMD_LOG
+    tails_lines=(`sed -n -e "/<\/app>/=" $file  | sed "s;$; ;" | tr -d '\n'`)
+    echo "head_lines=(`sed -n -e \"/<app>/=\" $file | sed "s;$; ;" | tr -d '\n'`)">>$CMD_LOG
+    head_lines=(`sed -n -e "/<app>/=" $file | sed "s;$; ;" | tr -d '\n'` )
+    if [ -n "$2" ];then
+        echo "index=`sed -n -e \"/<app_name>$2<\/app_name>/=\" $file`">>$CMD_LOG
+        index=`sed -n -e "/<app_name>$2<\/app_name>/=" $file`
+    fi
+    
+    for((i=0;i<${#head_lines[@]};++i))
+    do
+        if [ $index -gt ${head_lines[$i]} -a $index -lt ${tails_lines[$i]} ];then
+            echo "head=${head_lines[$i]}">>$CMD_LOG
+            head=${head_lines[$i]}
+            echo "tails=${tails_lines[$i]}">>$CMD_LOG
+            tails=${tails_lines[$i]}
+            return
+        fi
+    done
+}
+
+#Ë¢ÐÂµ±Ç°Ö¸¶¨¶Ë¿ÚÏÂµÄ auto_app_id Öµ
+function refreshAutoAppId()
+{
+    auto_app_id=3;
+    local _port=$1;
+    local _file=$_port/app_id.pid;
+     if [ -f $_file ];then
+        local cur_max_app_id=
+        cur_max_app_id=`cat $_file`;
+        ((auto_app_id=$cur_max_app_id+1));
+    fi
+    echo $auto_app_id >$_file;
+    return 0;
+}
+
+#¸ù¾Ýµ±Ç°¶Ë¿ÚµÄapp_id.pid À´Ë¢ÐÂÄ³¸öserverÏÂµÄapp.con $1ÎªÒªË¢ÐÂµÄapp.confËùÔÚµÄÂ·¾¶
+function refreshAppIdOfAppConf()
+{
+    local _port=$1;
+    local _server=$2;
+    local _file=$_port/$_server/$APP_CONF;
+    local _app_head_lines=()
+    local _app_tail_lines=()
+
+    _app_head_lines=(`sed -n -e "/<app>/=" $_file | sed "s;$; ;" | tr -d '\n'` );
+    _app_tail_lines=(`sed -n -e "/<\/app>/=" $_file  | sed "s;$; ;" | tr -d '\n'`)
+    if [ ${#_app_head_lines[@]} -ne ${#_app_tail_lines[@]} ];then
+        exit
+    fi
+    
+    for((i=0;i<${#_app_head_lines[@]};++i))
+    do
+        refreshAutoAppId $_port
+        sed -i "${_app_head_lines[$i]},${_app_tail_lines[$i]}s#<app_id>.*<\/app_id>#<app_id>$auto_app_id<\/app_id>#" $_file
+    done
+}
+
+
+function check0xNumber()
+{
+    echo "$1" | grep -v "[^0-9a-f]" >/dev/null && return 0;
+    return 1;
+}
+
+function checkNumber()
+{
+    echo "$1" | grep -v "[^[:digit:]]" >/dev/null && return 0
+    return 1
+}
+
+function checkIP()
+{
+    echo $1 | grep -v "^\(1[0-9]\{0,2\}\.\|25[0-5]\.\|2[0-4][1-9]\.\|[0-9]\{1,2\}\.\)\{3\}\(1[0-9]\{0,2\}\|25[0-5]\|2[0-4][1-9]\|[0-9]\{1,2\}\)$" >/dev/null && return 1 
+    return 0  
+}
+
+function checkPort()
+{
+    local portdir=`pwd`
+    portdir=`pwd | sed  -n 's:.*\/\([^0-9]*$\):\1:p'`
+    if [ -n "$portdir" ];then
+      return 1
+    fi
+    [ ! -f $AGIP_KEY ] && return 1
+    [ ! -f $ERATING_3C_CONF ] && return 1
+    [ ! -f $SET_ENV ] && return 1
+    [ ! -f $ERATING_CONF ] && return 1
+    [ ! -f $TNSNAMES_ORA ] && return 1
+    [ ! -f $GATE ] && return 1
+    [ ! -f $ROUTER ] && return 1
+    [ ! -f $UN_SVR ] && return 1
+   
+    return 0
+}
+
+function sysExit()
+{
+    [ -n "$2" ] && {
+        echo    "------------------------------------"
+        echo -e $2
+        echo    "------------------------------------"
+    }
+    [ -n "$1" ] && exit $1
+    exit $E_UNKNOWN_ERROR
+}
+
+function errExit()
+{
+    sysExit $1 "$REPORT_ERROR $2"
+}
+
+# ¸ù¾Ý APP_CONF ¸üÐÂ BIN_SUB_L
+function refresh_bin_sub_l()
+{
+    file=${1-.}/$APP_CONF
+    if [ -f $file ]; then
+        echo "BIN_SUB_L=(`cat $file | grep \"app_name\" | sed -e 's:<.*>\(.*\)<.*>:\1:g' | sed 's;^ *; ;g' | tr -d '\n' `)">>$CMD_LOG
+        BIN_SUB_L=(`cat $file | grep "app_name" | sed  "s:<.*>\(.*\)<.*>:\1:g" | sed 's;^ *; ;g' | tr -d '\n' `)
+    fi
+}
+
+# ¸ù¾Ý pid ÎÄ¼þ¸üÐÂ BIN_SUB_L
+function refresh_bin_sub_l_by_pid()
+{
+    BIN_SUB_L=(`ls *.pid|sed -e "s:\.pid::g"`)
+}
+
+# »ñÈ¡ BIN_SUB_L ÖÐ app ¶ÔÓ¦µÄapp_id
+function refresh_id_sub_l()
+{
+    if [ -z $1 ]; then
+        file=$(pwd)/$APP_CONF
+    else
+        file=$(pwd)/$1/$APP_CONF
+    fi
+
+    if ! [ -f $file ]; then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} Î´ÕÒµ½ÅäÖÃÎÄ¼þ: ${OPTION_COLOR}$file$COLOR_END"
+        exit $E_VALUE_ARGS
+    fi
+
+    for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+    do
+        app_svr=(`cat $file | grep "\<${BIN_SUB_L[$i]}\>" -1 | grep "app_name\|app_id" | sed -e "s:<.*>\(.*\)<.*>:\1:g" -e "s:\s\+::g" `)
+        if [ -z $app_svr ]; then
+            echo -e "${ERROR_COLOR}Error:${COLOR_END} $file ÖÐÎ´ÕÒµ½ ${OPTION_COLOR}${BIN_SUB_L[$i]}$COLOR_END"
+            exit $E_VALUE_ARGS
+        fi
+        echo "ID_SUB_L[${#ID_SUB_L[@]}]=${app_svr[1]}">>$CMD_LOG
+        ID_SUB_L[${#ID_SUB_L[@]}]=${app_svr[1]}
+    done
+}
+
+# ´òÓ¡ BIN_SUB_L
+function display_bin_sub_l()
+{
+    for ((i=0; i<${#BIN_SUB_L[@]};))
+    do
+        echo ${BIN_SUB_L[$i]} ${BIN_SUB_L[i+1]}
+        ((i+=2))
+    done
+}
+
+function exec_result_report()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÈë"}
+    echo    "------------------------------------"
+    echo -e "$@"
+    echo    "------------------------------------"
+}
+
+    # ²ÎÊý½ÏÑé
+function ActionMakeParamExistQuery()
+{
+    input_dest_dir=${input_dest_dir:=.}
+    if $flag_verbose; then
+        exec_result_report "$COLOR_GREEN$PROGRAM ${MAKE_NEW[0]} port: ${exec_dest_port[@]} server: ${input_dest_server[@]} directory: ${input_dest_dir[@]}$COLOR_END"
+    fi
+    
+    local server=
+    for((j=0; j<${#input_dest_server[@]};++j ))
+    do
+        echo "server=${input_dest_server[$i]};">>$CMD_LOG
+        server=${input_dest_server[$i]}; 
+        for (( i=0; i<${#ARG_ARR[@]}; ++i ))
+        do
+            for arg1 in ${ARG_ARR[$i][@]}
+            do
+                if [ "$server" = "$arg1" ]; then
+                    errExit $E_SERVER_NAME_ERROR "server Ãû×Ö·Ç·¨£¬²»ÄÜÊÇÃüÁî¹Ø¼ü×Ö- '$server'"
+                fi
+            done
+        done
+    done
+
+    [ -z "$exec_dest_port" ] && errExit $E_MISSED_ARGA "È±ÉÙÄ¿±ê¶Ë¿Ú"
+    [ -z "$input_dest_server" ] && errExit $E_MISSED_ARGA "È±ÉÙÄ¿±êserver"
+}
+
+function exec_arg_clone_check()
+{
+    if [ $flag_clone_sub = $CLONE_GAME ]; then
+        input_dest_dir=${input_dest_dir:=.}
+
+        exec_src=${input_dest_server[0]};
+        [ -z $exec_src ] && errExit $E_MISSED_ARGA "È±ÉÙÔ´server"
+        input_dest_server[0]=
+        if $flag_verbose; then
+            exec_result_report "$COLOR_GREEN$PROGRAM ${CLONE_NEW[0]} sub src_server: $exec_src dest_server:${input_dest_server[@]} directory: ${input_dest_dir[@]}$COLOR_END"
+        fi
+
+        [ ! -d $exec_src ] && errExit $E_VALUE_ARGS "´íÎóµÄÔ´server£¬µ±Ç°»·¾³Î´´¦Àí¸Ãserver - '$exec_src'"
+
+        [ -z "${input_dest_server[*]}" ] && errExit $E_MISSED_ARGA "È±ÉÙÄ¿±êserver"
+
+    else
+        input_dest_dir=${input_dest_dir:=..}
+        if $flag_verbose; then
+            exec_result_report "$COLOR_GREEN$PROGRAM ${CLONE_NEW[0]} port: ${exec_dest_port[@]} directory: ${input_dest_dir[@]}$COLOR_END"
+        fi
+
+        [ -z "$exec_dest_port" ] && errExit $E_MISSED_ARGA "È±ÉÙÄ¿±ê¶Ë¿Ú"
+
+    fi
+}
+
+    # »ñÈ¡µ±Ç°»·¾³ server_dir_name
+function get_exist_server()
+{
+
+    exist_server=()
+    local id=
+    for id in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v '^log$' | grep -v '^logs$')
+    do
+        exist_server[${#exist_server[@]}]=$id
+    done
+
+    [ -z "${exist_server[*]}" ] && errExit $E_NONE_GAME_ID "µ±Ç°»·¾³Î´´¦ÀíÈÎºÎserver"
+}
+
+# ÅÐ¶ÏÊÇ·ñÎªÍ¬VTCºÏ×÷µÄserver
+function is_third_purchase_game()
+{
+    echo $GAME_ID_THIRD_PURCHASE | grep -q "\b$1\b"
+    return $?
+}
+
+# ÅÐ¶ÏÊÇ·ñÎªÍ¬ÖÇ¹ÚºÏ×÷µÄserver
+function is_gf_game()
+{
+    echo $GAME_ID_GF | grep -q "\b$1\b"
+    return $?
+}
+
+    # ÎÄ¼þ¼ì²â
+function FileExistQury()
+{
+    [ ! -f $1 ] && errExit $E_MISSED_FILE "È±ÉÙ±ØÒªÎÄ¼þ - '$1'"
+}
+
+function exec_exist_sub_check()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÈë"}
+    for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+    do
+        if [ "x$VTC_CONF" = "x$_file" ] ; then
+            if is_third_purchase_game $1 ; then
+                FileExistQury $1/$_file
+            fi
+        elif [ "x$GF_CONF" = "x$_file" ] ; then
+            if is_gf_game $1 ; then
+                FileExistQury $1/$_file
+            fi
+        elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+            if is_third_purchase_game $1 ; then
+                FileExistQury $1/$_file
+            fi
+        else
+            FileExistQury $1/$_file
+        fi
+    done
+
+    refresh_bin_sub_l $1
+    for _file in $FILE_SUB_CL ${FILE_SUB_L[@]} ${BIN_SUB_L[@]}
+    do
+        FileExistQury $1/$_file
+        [ ! -h $1/$_file ] && errExit $E_TYPE_FILE "ÎÄ¼þÀàÐÍ´íÎó£¬¸ÃÎÄ¼þ±ØÐëÎªÁ´½Ó - '$_file'"
+    done
+}
+
+function exec_exist_global_check()
+{
+    for _file in $FILE_GLOBAL_CN ${FILE_GLOBAL_N[@]}
+    do
+        FileExistQury $_file
+    done
+
+    for _file in $FILE_GLOBAL_CL ${BIN_GLOBAL_L[@]} ${FILE_GLOBAL_L[@]}
+    do
+        FileExistQury $_file
+        [ ! -h $_file ] && {
+            [ -n "$1" ] && { echo "$_file"; return ; }
+            errExit $E_TYPE_FILE "ÎÄ¼þÀàÐÍ´íÎó£¬¸ÃÎÄ¼þ±ØÐëÎªÁ´½Ó - '$_file'"
+        }
+    done
+}
+
+function ActionMakeFileExistQuery()
+{
+    for _file in $FILE_GLOBAL_CN $FILE_SUB_CN ${FILE_GLOBAL_N[@]} ${FILE_SUB_N[@]}
+    do
+        FileExistQury $_file
+    done
+
+    for _file in $FILE_GLOBAL_CL $FILE_SUB_CL \
+        ${BIN_ALL[@]} ${FILE_GLOBAL_L[@]} ${FILE_SUB_L[@]} ${FILE_SUB_N[@]}
+    do
+        FileExistQury $_file
+        [ -h $_file ] && errExit $E_TYPE_FILE "ÎÄ¼þÀàÐÍ´íÎó£¬¸ÃÎÄ¼þ²»ÄÜÎªÁ´½Ó - '$_file'"
+    done
+
+    for _file in ${BIN_ALL[@]}
+    do
+        [ ! -x $_file ] && chmod ${CHMOD_PERM:=u+x} $_file
+    done
+}
+
+function exec_exist_clone_check()
+{
+    if [ $flag_clone_sub = $CLONE_GAME ]; then
+        exec_exist_sub_check $exec_src
+    else
+        get_exist_server
+        exec_exist_global_check
+        for game_dir in ${exist_server[@]}
+        do
+            exec_exist_sub_check $game_dir
+        done
+    fi
+}
+
+function showHelpAndExit()
+{
+    printf "$COLOR_RED$PROGRAM$COLOR_END - ÅäÖÃ»¯¸Ä½øµÄeRatingServer»·¾³¿ØÖÆ¹¤¾ß
+  @author : $AUTHOR
+  @version: $VERSION
+  @contact: $FEEDBACK
+${COLOR_RED}Format$COLOR_END:
+  ./$PROGRAM $(echo ${MAKE_NEW[@]} | sed 's/ /|/g') -p port1 [-p port2 ...] -s server1 [-s server2 ...] -d directory1 [-d directory2 ...]
+  ./$PROGRAM $(echo ${CLONE_NEW[@]} | sed 's/ /|/g') dest-port1 [dest-port2 ...]
+  ./$PROGRAM $(echo ${CLONE_NEW[@]} | sed 's/ /|/g') sub src_server dest_server1 [dest_server2 ...]
+  ./$PROGRAM $(echo ${CLONE_NEW[@]} | sed 's/ /|/g') app [-s server1 -s server2 ...] src-app_name dest-app_name
+  ./$PROGRAM $(echo ${START_NEW[@]} | sed 's/ /|/g') [all] | server1 [server2 ...]
+  ./$PROGRAM $(echo ${STOP_NEW[@]} | sed 's/ /|/g') [all]|server1 [server2 ...]
+  ./$PROGRAM $(echo ${RESTART_NEW[@]} | sed 's/ /|/g') [all]|server1 [server2 ...][-a|--app app_svr1 [app_svr2 ...]]
+  ./$PROGRAM $(echo ${STATUS_NEW[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${GET_ALL_NEW[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${UOS_TOP[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${LIST_SERVICES[@]} | sed 's/ /|/g') [all] | server1 [server ...]
+  ./$PROGRAM $(echo ${APP_START[@]} | sed 's/ /|/g') server app_name1 [app_name2 ...]
+  ./$PROGRAM $(echo ${APP_STOP[@]} | sed 's/ /|/g') server app_name1 [app_name2 ...]
+  ./$PROGRAM $(echo ${HELP_NEW[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${UOS_FORCE_KILL_ALL[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${APP_NODE[@]} | sed 's/ /|/g') [-s server1 -s server2 ...] app_name [-inc cmd1 -inc cmd2 ...] [-ex cmd1 -ex cmd2 ...] [-j authenex_value [name1 name2 ...] ]
+  ./$PROGRAM $(echo ${DEL_APP_NODE[@]} | sed 's/ /|/g') [-s server1 -s server2 ...] app_name
+  ./$PROGRAM $(echo ${SET_MASTER[@]} | sed 's/ /|/g')
+  ./$PROGRAM $(echo ${SET_SLAVE[@]} | sed 's/ /|/g') -master_port prot_value  -master_ip ip_value
+${COLOR_RED}Option$COLOR_END:
+  $OPTION_COLOR$(echo ${MAKE_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            ´ÓÈ«¾ÖÄ¿Â¼ÖÐÐÂ½¨Ò»Ì×eRatingServer»·¾³
+  $OPTION_COLOR$(echo ${CLONE_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            ´Óµ±Ç°»·¾³¿ËÂ¡Ò»Ì×ÍêÈ«Ò»ÑùµÄeRatingServer»·¾³
+            sub£¬ÔÚµ±Ç°»·¾³ÖÐ¿ËÂ¡server
+  $OPTION_COLOR$(echo ${START_NEW[@]} | sed 's/ /|/g'),$(echo ${STOP_NEW[@]} | sed 's/ /|/g'),$(echo ${RESTART_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            Æô¶¯¡¢Í£Ö¹¡¢ÖØÆôµ±Ç°»·¾³
+            all£¬µ±Ç°»·¾³£»server[s]£¬Õë¶ÔÖ¸¶¨µÄserver
+  $OPTION_COLOR$(echo ${STATUS_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            ²é¿´µ±Ç°»·¾³ÔËÐÐ×´Ì¬
+  $OPTION_COLOR$(echo ${GET_ALL_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            UOS»·¾³ÏÂ´ò°üËùÓÐÏà¹ØÎÄ¼þ
+  $OPTION_COLOR$(echo ${UOS_TOP[@]} | sed 's/ /|/g')$COLOR_END
+            ²é¿´µ±Ç°½ø³ÌÐÅÏ¢
+  $OPTION_COLOR$(echo ${LIST_SERVICES[@]} | sed 's/ /|/g')$COLOR_END
+            ÏÔÊ¾µ±Ç°»·¾³µÄ·þÎñ
+            all£¬µ±Ç°»·¾³£»server[s]£¬Õë¶ÔÖ¸¶¨µÄserver
+  $OPTION_COLOR$(echo ${APP_START[@]} | sed 's/ /|/g')$COLOR_END
+            Æô¶¯Ö¸¶¨server µÄÖ¸¶¨app
+  $OPTION_COLOR$(echo ${APP_STOP[@]} | sed 's/ /|/g')$COLOR_END
+            Í£Ö¹Ö¸¶¨server µÄÖ¸¶¨app
+  $OPTION_COLOR$(echo ${HELP_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            ÏÔÊ¾µ±Ç°°ïÖúÐÅÏ¢
+  $OPTION_COLOR$(echo ${VERBOSE_NEW[@]} | sed 's/ /|/g')$COLOR_END
+            ÏÔÊ¾ÏêÏ¸µÄÖ´ÐÐ¹ý³Ì
+  $OPTION_COLOR$(echo ${UOS_FORCE_KILL_ALL[@]} | sed 's/ /|/g')$COLOR_END
+            É±µôpidÎÄ¼þ¶ÔÓ¦µÄ½ø³Ì²¢É¾³ýpidÎÄ¼þ
+  $OPTION_COLOR$(echo ${APP_NODE[@]} | sed 's/ /|/g')$COLOR_END
+            ÏòÄ³¸öserverÏÂÌí¼Ó´¦ÀíÖ¸¶¨Ð­ÒéµÄ·þÎñ
+  $OPTION_COLOR$(echo ${DEL_APP_NODE[@]} | sed 's/ /|/g')$COLOR_END
+            É¾³ýÄ³¸öserverÏÂÖ¸¶¨³ÌÐòÃûµÄ·þÎñ
+  $OPTION_COLOR$(echo ${SET_MASTER[@]} | sed 's/ /|/g')$COLOR_END
+            ÉèÖÃÎªÖ÷¶Ë¿Ú
+  $OPTION_COLOR$(echo ${SET_SLAVE[@]} | sed 's/ /|/g')$COLOR_END
+            ÉèÖÃÎª´Ó¶Ë¿Ú
+"
+
+    sysExit 0
+}
+
+function checkUOSEnvAndCopy()
+{
+    if [ -z $UOS_BASE ]; then
+        if [ ! -f ../export.sh ]; then
+            exec_result_report $REPORT_ERROR "±ØÐëÔÚuos»·¾³ÖÐ²Å¿ÉÒÔÖ´ÐÐ´ò°üÈÎÎñ£¨³¢ÊÔÏÈ£ºexport UOS_BASE='/path/to/uos'£©"
+            sysExit $E_MISS_FILE
+        else
+            export UOS_BASE=$(dirname $(pwd))
+        fi
+    fi
+
+    for file_bin in ${PKG_BIN[@]}
+    do
+        _file=$UOS_BASE/$file_bin/$file_bin
+        if ! [ -f "$_file" -a -h "$_file" ]; then
+            make -C $(dirname $_file)
+        fi
+
+        if [ -f "$_file" -a -h "$_file" ]; then
+            cp -L -v $_file .
+            if $flag_verbose; then
+                exec_result_report $REPORT_SUCCESS "Õý´ò¼ì²â²¢¸´ÖÆÎÄ¼þ - '$file_bin'"
+            fi
+        else
+            errExit $E_MISS_FILE "²»´æÔÚÎÄ¼þ - '$_file'"
+        fi
+    done
+
+    for file_other in ${PKG_CONF[@]} ${PKG_OTHER[@]}
+    do
+        _file=$UOS_BASE/$file_other
+        if [ -f $_file ]; then
+            cp -L -v $_file .
+        else
+            errExit $E_MISSED_FILE "no such file '$(basename $_file)' in $(dirname $_file)"
+        fi
+    done
+
+    [ -f $UOS_BASE/set_env.sh ] && cp -L $UOS_BASE/set_env.sh .
+
+    cp -L $UOS_BASE/AGIP.key .
+}
+
+function getAllFileAndExit()
+{
+    checkUOSEnvAndCopy
+
+    if [ -f $TAR_FILE ]; then
+        rm $TAR_FILE
+    fi
+
+    tar $TAR_OPTION $TAR_FILE * --exclude="*.tgz" --exclude="erating"
+
+    exec_result_report $REPORT_SUCCESS "eRatingServerÏµÍ³ÎÄ¼þ´ò°ü³É¹¦ - '$COLOR_GREEN$TAR_FILE$COLOR_END'"
+
+    rm -rf `ls | grep -E -v "erating|$TAR_FILE"`
+
+    sysExit 0
+}
+
+function exec_is_start()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÈë"}
+    [ -f $1.pid ] && ps x | grep "$(cat $1.pid)" | grep -v grep >/dev/null && return 0
+    return 1
+}
+
+function exec_port_get()
+{
+    port=$(sed -n "s:.*<port>\(.*\)</.*:\1:p" $1/$ERATING_CONF)
+}
+
+function showTopAndExit()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    pids=`pgrep -d, "_svr|gate|router"`
+    top -c -d 10 -p $pids
+    sysExit 0
+}
+
+function forceKillAndRemovePIDFile()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    for pid_file in `find . -name "*.pid" `; do
+        pid=`cat $pid_file`;
+        echo "Killing $pid_file : $pid";
+        kill -9 $pid;
+        echo "Removed file \'$pid_file\'";
+        rm -f $pid_file;
+    done
+    echo "Done.";
+    sysExit 0
+}
+
+function showStatus()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    if $flag_verbose; then
+        result="µÇÂ¼ÓÃ»§Ãû£º$(whoami)"
+        result="$result\n¾ø¶ÔÂ·¾¶£º$(pwd)"
+
+        echo    "------------------------------------"
+        printf "$result\n"
+        echo    "------------------------------------"
+    fi
+
+    # Ïà¹ØÐÅÏ¢
+    exec_port_get .
+    port_path=$(basename $(pwd))
+    if checkNumber $port_path; then
+        if [ "$port" -eq "$port_path" ]; then
+            exec_result_report $REPORT_SUCCESS "Ä¿Â¼Ãû£º$port_path ¶Ë¿ÚºÅ£º$port"
+        else
+            exec_result_report $REPORT_FAILED "Ä¿Â¼Ãû£º$port_path ¶Ë¿ÚºÅ£º$port"
+        fi
+    else
+         exec_result_report $REPORT_FAILED "eRatingServer²¿Êð»·¾³Ä¿Â¼ÃûÍÆ¼öÊ¹ÓÃ¶Ë¿ÚºÅ - '$port'"
+    fi
+
+    # ÎÄ¼þ¼ì²â
+    exec_exist_clone_check
+    exec_result_report $REPORT_SUCCESS "ËùÓÐÎÄ¼þÀàÐÍÕý³£"
+
+    # µ±Ç°»·¾³µÄserver
+    get_exist_server
+
+    # Ö´ÐÐ¼ì²â
+    # ¸ùÄ¿Â¼ÎÄ¼þ
+    arga=$ARG_INIT
+    bool_start=true
+    bool_start_2=false
+    for bin_global in ${BIN_GLOBAL_L[@]}
+    do
+        if exec_is_start $bin_global; then
+            bool_start_2=true
+            arga="$arga $bin_global[$REPORT_EXIST$(cat $bin_global.pid)]"
+        else
+            bool_start=false
+            arga="$arga $bin_global$REPORT_EXCLAMATION"
+        fi
+    done
+
+    if $bool_start; then
+        exec_result_report "$REPORT_SUCCESS" "Ö÷ÎÄ¼þ×´Ì¬Õý³£ $arga"
+    else
+        if $bool_start_2; then
+            exec_result_report "$REPORT_FAILED" "Ö÷ÎÄ¼þ×´Ì¬Òì³£ $arga"
+        else
+            exec_result_report "$REPORT_SUCCESS" "Ö÷ÎÄ¼þÎ´Æô¶¯$REPORT_EXCLAMATION"
+        fi
+    fi
+
+    # ×ÓÄ¿Â¼ÎÄ¼þ
+    arga=$ARG_INIT
+    bool_start_sub=true
+    bool_start_sub_2=false
+    for server_dir in ${exist_server[@]}
+    do
+        (
+            cd $server_dir
+            flag=false;
+            refresh_bin_sub_l
+            for _file in ${BIN_SUB_L[@]}
+            do
+                if exec_is_start $_file; then
+                    bool_start_sub_2=true
+                    arga="$arga $_file[$REPORT_EXIST$(cat $_file.pid)]"
+                else
+                    bool_start_sub=false
+                    arga="$arga $_file[$REPORT_EXCLAMATION]"
+                fi
+            done
+
+            if $bool_start; then
+                if $bool_start_sub; then
+                    result="$result\n$REPORT_SUCCESS $server_dir ·þÎñ×´Ì¬Õý³£\n\t$arga"
+                else
+                    result="$result\n$REPORT_FAILED $server_dir ·þÎñ×´Ì¬Òì³£\n\t$arga"
+                fi
+            else
+                if $bool_start_sub_2; then
+                    result="$result\n$REPORT_FAILED $server_dir Ö÷·þÎñÒÑÍêÈ«Í£Ö¹£¬server·þÎñ½ø³Ì½©ËÀ\n\r$arga"
+                else
+                    result="$result\n$REPORT_SUCCESS $server_dir ·þÎñÒÑÍêÈ«Í£Ö¹"
+                fi
+            fi
+
+            echo    "------------------------------------"
+            printf "$result\n"
+            echo    "------------------------------------"
+        )
+    done
+
+    sysExit 0
+}
+
+function createDir()
+{
+    mkdir -p $1 2>/dev/null || errExit $E_MKDIR_FAILED "Ä¿Â¼´´½¨Ê§°Ü - '$1'"
+}
+
+function existDir()
+{
+    exec_result_report $REPORT_WARNING "Ä¿Â¼ÒÑ´æÔÚ - '$1'"
+
+    if $flag_verbose; then
+        echo -n -e "  ÊÇ·ñÖØÐ´¸ÃÄ¿Â¼ÏàÓ¦ÎÄ¼þ[Y/N]? ${COLOR_RED}y${COLOR_END}"
+        read result
+        if ! [ -z "$result" -o X$result = Xy -o X$result = XY ]; then
+            sysExit 0
+        fi
+    else
+        sysExit 0
+    fi
+}
+
+function dest_path_check()
+{
+    if [ -d $1 ]; then
+        existDir $1
+    else
+        createDir $1
+    fi
+
+    return 0
+}
+
+    # ÅäÖÃÎÄ¼þÐÞ¸Ä
+function exec_erating_conf_modify()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÓÃ"}
+    TMP=${2:?"Î´Öª²ÎÊýÒýÓÃ"}
+    # $1=port, $2=path
+    exec_port_get $(pwd)
+    sed -i "/<port/s:$port:$1:" $2/$ERATING_CONF
+}
+
+    # Ö´ÐÐ
+function ExecMakeRun()
+{
+    refresh_bin_sub_l
+    for dest_dir in ${input_dest_dir[@]}
+    do
+        [ ! -d $dest_dir ] && createDir $dest_dir
+
+        for dest_port in ${exec_dest_port[@]}
+        do
+            dest_path=$dest_dir/$dest_port
+            dest_path_check $dest_path
+
+            for _file in $FILE_GLOBAL_CN ${FILE_GLOBAL_N[@]}
+            do
+                cp -L $_file $dest_path/$_file
+            done
+
+            exec_erating_conf_modify $dest_port $dest_path
+
+            for _file in $FILE_GLOBAL_CL ${BIN_GLOBAL_L[@]} ${FILE_GLOBAL_L[@]}
+            do
+                ln -sf $(pwd)/$_file $dest_path/$_file
+            done
+
+            for dest_game in ${input_dest_server[@]}
+            do
+                dest_game_path=$dest_path/$dest_game
+                dest_path_check $dest_game_path
+
+                for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+                do
+                    if [ "x$VTC_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $_file $dest_game_path/$_file
+                        fi
+                    elif [ "x$GF_CONF" = "x$_file" ] ; then
+                        if is_gf_game $dest_game ; then
+                            cp -L $_file $dest_game_path/$_file
+                        fi
+                    elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $_file $dest_game_path/$_file
+                        fi
+                    else
+                        cp -L $_file $dest_game_path/$_file
+                        if [ "x$APP_CONF" = "x$_file" ];then
+                            refreshAppIdOfAppConf $dest_path $dest_game
+                        fi
+                    fi
+                done
+
+                for _file in $FILE_SUB_CL ${FILE_SUB_L[@]}
+                do
+                    ln -sf $(pwd)/$_file $dest_game_path/$_file
+                done
+                
+                for _file in ${BIN_SUB_L[@]}
+                do
+                    ln -sf $(pwd)/$ALL_SVR $dest_game_path/$_file
+                done
+            done
+                
+            exec_result_report $REPORT_SUCCESS "$REPORT_MAKE $dest_path"
+        done
+    done
+}
+
+function ExecCloneRun()
+{
+    if [ $flag_clone_sub = $CLONE_APP ];then
+      echo "exec_clone_app_param_analyze $*">>$CMD_LOG
+      exec_clone_app_param_analyze $*
+
+      echo "ExecCloneAppRun $*">>$CMD_LOG
+      ExecCloneAppRun $*
+      exit 0
+    fi
+
+    echo "exec_arg_clone_check">>$CMD_LOG
+    exec_arg_clone_check
+
+    echo "exec_exist_clone_check">>$CMD_LOG
+    exec_exist_clone_check
+    
+    
+    if [ $flag_clone_sub = $CLONE_GAME ]; then
+        
+        for dest_dir in ${input_dest_dir[@]}
+        do
+            [ ! -d $dest_dir ] && errExit $E_NO_EXIST_DIR "clone subÊ±Ä¿Â¼±ØÐë´æÔÚ"
+
+            for dest_game in ${input_dest_server[@]}
+            do
+                dest_path=$dest_dir/$dest_game
+                dest_path_check $dest_path
+
+                for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+                do
+                    if [ "x$VTC_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $exec_src/$_file $dest_path/$_file
+                        fi
+                    elif [ "x$GF_CONF" = "x$_file" ] ; then
+                        if is_gf_game $dest_game ; then
+                            cp -L $exec_src/$_file $dest_path/$_file
+                        fi
+                    elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+                        if is_third_purchase_game $dest_game ; then
+                            cp -L $exec_src/$_file $dest_path/$_file
+                        fi
+                    else
+                        cp -L $exec_src/$_file $dest_path/$_file
+                        if [ "x$APP_CONF" = "x$_file" ];then
+                            refreshAppIdOfAppConf $dest_dir $dest_game
+                        fi
+                    fi
+                done
+
+                refresh_bin_sub_l $exec_src
+
+                for _file in $FILE_SUB_CL ${FILE_SUB_L[@]} ${BIN_SUB_L[@]}
+                do
+                    cp -d $exec_src/$_file $dest_path/$_file
+                done
+
+                exec_result_report $REPORT_SUCCESS "$REPORT_CLONE_SUB $dest_path"
+            done
+        done
+    else
+        get_exist_server
+
+        for dest_dir in ${input_dest_dir[@]}
+        do
+            [ ! -d $dest_dir ] && createDir $dest_dir
+
+            for dest_port in ${exec_dest_port[@]}
+            do
+                dest_path=$dest_dir/$dest_port
+                dest_path_check $dest_path
+
+                for _file in $FILE_GLOBAL_CN ${FILE_GLOBAL_N[@]}
+                do
+                    cp -L $_file $dest_path/$_file
+                done
+
+                exec_erating_conf_modify $dest_port $dest_path
+
+                for _file in $FILE_GLOBAL_CL ${BIN_GLOBAL_L[@]} ${FILE_GLOBAL_L[@]}
+                do
+                    cp -d $(pwd)/$_file $dest_path/$_file
+                done
+
+                for server_dir in ${exist_server[@]}
+                do
+                    dest_sub_path=$dest_path/$server_dir
+                    dest_path_check $dest_sub_path
+
+                    for _file in $FILE_SUB_CN ${FILE_SUB_N[@]}
+                    do
+                        if [ "x$VTC_CONF" = "x$_file" ] ; then
+                            if is_third_purchase_game $server_dir ; then
+                                cp -L $server_dir/$_file $dest_sub_path/$_file
+                            fi
+                        elif [ "x$GF_CONF" = "x$_file" ] ; then
+                            if is_gf_game $server_dir ; then
+                                cp -L $server_dir/$_file $dest_sub_path/$_file
+                            fi
+                        elif [ "x$INGAMBA_CONF" = "x$_file" ] ; then
+                            if is_third_purchase_game $server_dir ; then
+                                cp -L $server_dir/$_file $dest_sub_path/$_file
+                            fi
+                        else
+                            cp -L $server_dir/$_file $dest_sub_path/$_file
+                            if [ "x$APP_CONF" = "x$_file" ];then
+                                refreshAppIdOfAppConf $dest_path $server_dir
+                            fi
+                        fi
+                    done
+
+                    refresh_bin_sub_l
+                    for _file in $FILE_SUB_CL ${FILE_SUB_L[@]} ${BIN_SUB_L[@]}
+                    do
+                        cp -d $server_dir/$_file $dest_sub_path/$_file
+                    done
+                done
+            done
+
+            exec_result_report $REPORT_SUCCESS "$REPORT_CLONE $dest_path"
+        done
+    fi
+}
+
+function exec_stop_global()
+{
+    arga=$ARG_INIT
+    bool_start=false
+    bool_stop_ok=true
+    for (( i=${#BIN_GLOBAL_L[@]}; i>0; --i ))
+    do
+        bin_global=${BIN_GLOBAL_L[$i-1]}
+        if [ -f $bin_global.pid ]; then
+            bool_start=true
+            if kill $(cat $bin_global.pid) 2>/dev/null; then
+                arga="$arga $bin_global"
+                sleep 1
+            else
+                bool_stop_ok=false
+                arga="$arga $bin_global[${REPORT_EXCLAMATION}$(cat $bin_global.pid)]"
+            fi
+        fi
+    done
+
+    $bool_start && {
+        if $bool_stop_ok; then
+            exec_result_report "$REPORT_SUCCESS" "$REPORT_STOP $arga"
+        else
+            exec_result_report "$REPORT_FAILED" "$REPORT_STOP $arga"
+        fi
+    }
+}
+
+function exec_stop_1()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÈë"}
+    (
+        cd $1
+        arga=$ARG_INIT
+        bool_start=false
+        if ! $flag_app; then
+            refresh_bin_sub_l_by_pid
+        fi
+        
+        for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+        do
+            _file=${BIN_SUB_L[$i]}
+            
+            app_list[${#app_list[@]}]=$_file
+            if [ -f $_file.pid ]; then
+                bool_start=true
+                if kill -9 $2 $(cat $_file.pid) 2>/dev/null; then
+                    sleep 1
+                else
+                    arga="$arga $_file[${REPORT_EXCLAMATION}$(cat $_file.pid)]"
+                fi
+            fi
+        done
+
+        if $bool_start; then
+            if [ X"$arga" = X"$ARG_INIT" ]; then
+                exec_result_report "$REPORT_SUCCESS" "$REPORT_STOP $1 ${app_list[*]}"
+            else
+                exec_result_report "$REPORT_FAILED" "$REPORT_STOP $1 | $arga"
+            fi
+        else
+            exec_result_report "$REPORT_SUCCESS" "$REPORT_STOP $1 ${app_list[*]} ${WARNING_COLOR}not run$COLOR_END"
+        fi
+    )
+}
+
+function checkSetEnvSH()
+{
+    if [ ! -f set_env.sh ]; then
+        [ -z $LD_LIBRARY_PATH ] && errExit $REPORT_ERROR "µ±Ç°Ä¿Â¼Ã»ÓÐ.set_env.shÎÄ¼þ£¬²¢ÇÒÃ»ÓÐÉèÖÃ»·¾³±äÁ¿ - 'LD_LIBRARY_PATH'"
+    else
+        . set_env.sh
+    fi
+}
+
+function exec_port_check()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÈë"}
+    if netstat -an | grep "0\.0\.0\.0:$1" >/dev/null; then
+        exec_result_report $REPORT_WARNING "[$EXIST_COLOR$1$COLOR_END]¶Ë¿Ú±»¼àÌý£¬Çë¼ì²â¸÷»·¾³ÅäÖÃ"
+        sysExit $E_PORT_ERROR
+    fi
+}
+
+function exec_start_global()
+{
+    result=$(exec_exist_global_check XX)
+    if [ -n "$result" ]; then
+        errExit $E_MISSED_FILE "ÎÄ¼þÀàÐÍÓÐÎó[$result]£¬ÇëÎñ±ØÔÚeRatingServer»·¾³ÖÐÊ¹ÓÃstartÃüÁî"
+    fi
+
+    checkSetEnvSH
+    exec_port_get .
+
+    arga=$ARG_INIT
+    bool_start=true
+    exec_global_new=false
+    bool_port_listen=false
+    for bin_global in ${BIN_GLOBAL_L[@]}
+    do
+        if exec_is_start $bin_global; then
+            arga="$arga $bin_global[$REPORT_EXIST$(cat $bin_global.pid)]"
+        else
+            if ! $bool_port_listen && [ "$bin_global" != "un_svr" ]; then
+                exec_port_check $port
+                bool_port_listen=true
+            fi
+
+            if [ "$bin_global" == "un_svr" ]; then
+                ./$bin_global -a 2 $port 1>/dev/null 2>&1
+            else
+                ./$bin_global $port 1>/dev/null 2>&1;
+            fi
+            sleep 1
+            
+            if [ -f $bin_global.pid ] && ps xuf | grep "\b$(cat $bin_global.pid)\b" | grep -v grep >/dev/null; then
+                exec_global_new=true
+                arga="$arga $bin_global"
+            else
+                arga="$arga $bin_global[$REPORT_EXCLAMATION]"
+                bool_start=false
+                break
+            fi
+        fi
+    done
+    
+    if $bool_start; then
+        exec_result_report "$REPORT_SUCCESS" "$REPORT_START $arga"
+    else
+        exec_result_report "$REPORT_FAILED" "$REPORT_START $arga"
+        errExit $E_START_FAILED "Æô¶¯Ê§°Ü"
+    fi
+}
+
+function exec_start_1()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÈë"}
+    (
+        cd $1
+        arga=$ARG_INIT
+        bool_start=false
+        if ! $flag_app; then
+            refresh_bin_sub_l
+        fi
+        
+        refresh_id_sub_l
+
+        for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+        do
+            _file=${BIN_SUB_L[$i]}
+            _app_id=${ID_SUB_L[$i]}
+            # ×Ô¶¯´´½¨Á¬½Ó
+            if ! [ -f $_file ]; then
+                _all_svr=$(dirname $(dirname $PWD))/all_svr_logic
+                if ! [ -f $_all_svr ]; then
+                    exec_result_report "$REPORT_FAILED" "Î´ÕÒµ½:$_all_svr"
+                    errExit $E_START_FAILED "Æô¶¯Ê§°Ü"
+                fi
+                ln -svf $_all_svr ./$_file
+            fi
+            app_list[${#app_list[@]}]=$_file
+            if exec_is_start $_file; then
+                if $exec_global_new; then
+                    kill -9 $(cat $_file.pid) && sleep 1
+                else
+                    continue
+                fi
+            fi
+
+            ./$_file -a $_app_id -u $1 $port 1>/dev/null 2>&1
+            sleep 1
+
+            if [ -f $_file.pid ] && ps xuf | grep "\b$(cat $_file.pid)\b" | grep -v grep >/dev/null; then
+                :;
+            else
+                arga="$arga $_file[$REPORT_EXCLAMATION]"
+                bool_start=true
+            fi
+        done
+
+        if ! $bool_start; then
+            exec_result_report "$REPORT_SUCCESS" "$REPORT_START $1 ${app_list[*]}"
+        else
+            exec_result_report "$REPORT_FAILED" "$REPORT_START $1 | $arga"
+        fi
+    )
+}
+
+function exec_start_all()
+{
+    get_exist_server
+
+    exec_start_global
+    for server in ${exist_server[@]}
+    do
+        exec_start_1 $server
+    done
+}
+
+function exec_start_false()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    exec_start_global
+    for server in ${input_dest_server[@]}
+    do
+        exec_start_1 $server
+    done
+}
+
+function exec_stop_all()
+{
+    get_exist_server
+    for server in ${exist_server[@]}
+    do
+        exec_stop_1 $server
+    done
+
+    exec_stop_global
+}
+
+function exec_stop_false()
+{
+    if ! checkPort;then 
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    for server in ${input_dest_server[@]}
+    do
+        exec_stop_1 $server
+    done
+}
+
+function exec_start_run()
+{
+    if ! checkPort;then     
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    if $flag_3s_all; then
+        exec_start_all
+    else
+        exec_start_false
+    fi
+}
+
+function ExecStopRun()
+{
+    if ! checkPort;then     
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    if $flag_3s_all; then
+        exec_stop_all
+    else
+        exec_stop_false
+    fi
+}
+
+function ExecRestartRun()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    if $flag_3s_all; then
+        exec_stop_all
+        exec_start_all
+    else
+        exec_stop_false
+        exec_start_false
+    fi
+}
+
+function exec_list_1()
+{
+    TMP=${1:?"Î´Öª²ÎÊýÒýÈë"}
+    (
+        echo $1
+        refresh_bin_sub_l $1
+        for ((i=0; i<${#BIN_SUB_L[@]}; i++))
+        do
+            echo "    "${BIN_SUB_L[$i]}
+        done
+    )
+}
+
+function exec_list_all()
+{
+    get_exist_server
+    for server in ${exist_server[@]}
+    do
+        exec_list_1 $server
+    done
+}
+
+function exec_list_select()
+{
+    get_exist_server
+    for server in ${input_dest_server[@]}
+    do
+        exec_list_1 $server
+    done
+}
+
+function ExecListRun()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    if $flag_3s_all; then
+        exec_list_all
+    else
+        exec_list_select
+    fi
+}
+
+function ActionAppStartOrStopAnalyzeParam()
+{
+    [ -z $1 ] && {
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ ${OPTION_COLOR}server$COLOR_END"
+        exit $E_VALUE_ARGS
+    }
+        
+    [ ! -d $1 ] && errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦ÀíserverÎª'$1'µÄserver"
+    input_dest_server[${#input_dest_server[@]}]=$1
+    shift
+    [ -z $1 ] && {
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ ${OPTION_COLOR}·þÎñÃû$COLOR_END"
+        exit $E_VALUE_ARGS
+    }
+
+    BIN_SUB_L=($*)
+    refresh_id_sub_l ${input_dest_server[0]}
+
+    flag_app=true
+}
+
+function ActionAddAppNodeAnalyzeParam()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+	echo "input_dest_server=()">>$CMD_LOG
+	input_dest_server=()
+	while [ -n "$1" ]
+	do
+		case $1 in
+			-s)
+				[ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©server.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©server."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+
+				shift
+				
+				[ ! -d $1 ] && echo "errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦ÀíserverÎª'$1'µÄserver"">>$CMD_LOG
+				[ ! -d $1 ] && errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦ÀíserverÎª'$1'µÄserver"
+						
+				echo "input_dest_server[${#input_dest_server[@]}]=$1">>$CMD_LOG
+				input_dest_server[${#input_dest_server[@]}]=$1
+				shift
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+	
+	[ -z "$1" ] && {
+		 echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ ${OPTION_COLOR}app_name$COLOR_END"
+		 exit $E_VALUE_ARGS
+	}
+	
+	echo "input_dest_app_name=$1">>$CMD_LOG
+	input_dest_app_name=$1
+	
+	shift
+
+	echo "input_dest_app_tag=()">>$CMD_LOG
+	input_dest_app_tag=()
+    local authenex_already_full=false
+	while [ -n "$1" ]
+	do
+        case $1 in
+            -ex)
+                [ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬-exºó±ØÐëÌá¹©Ð­Òé.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£-exºó±ØÐëÌá¹©Ð­Òé"
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+                shift
+                input_dest_app_ex_tag[${#input_dest_app_ex_tag[@]}]=$1
+                shift
+                ;;
+            -inc)
+                [ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý.-incºó±ØÐëÌá¹©Ð­Òé\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬-incºó±ØÐëÌá¹©Ð­Òé."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+                shift
+		        echo "input_dest_app_tag[${#input_dest_app_tag[@]}]=$1">>$CMD_LOG
+		        input_dest_app_tag[${#input_dest_app_tag[@]}]=$1 
+		        shift
+                ;;
+              -j)
+                if $authenex_already_full;then
+                {
+                    echo "²ÎÊý¶àÓà, Ö»ÄÜÌá¹©Ò»¸ö-j">>$CMD_LOG
+                    echo -e "${ERROR_COLOR}Error:${COLOR_END} ²ÎÊý¶àÓà, Ö»ÄÜÌá¹©Ò»¸ö-j."
+
+                    echo "exit $E_MISSED_ARGA">>$CMD_LOG
+                    exit $E_MISSED_ARGA
+                }
+                fi
+
+				[ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬-jºó±ØÐëÌá¹©authenexÖµ.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬-jºó±ØÐëÌá¹©authenexÖµ."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+
+				shift
+				if checkNumber $1; then
+					if [ $1 -eq 1 -o $1 -eq 0 ];then
+                        echo "input_authenex_value=$1">>$CMD_LOG
+						input_authenex_value=$1
+                        authenex_already_full=true
+					else
+						echo -e "${ERROR_COLOR}Error:${COLOR_END} ´íÎóµÄ²ÎÊýÖµ£¬authenexÖµ±ØÐëÔÚ[0,1]ÖÐ - ${OPTION_COLOR}'$1'$COLOR_END"	
+						echo "exit $E_VALUE_ARGS">>$CMD_LOG
+						exit $E_VALUE_ARGS
+					fi
+				else
+					echo "errExit $E_VALUE_ARGS \"´íÎóµÄ²ÎÊýÖµ£¬authenex±ØÐëÎªÊý×Ö - '$1'\"">>$CMD_LOG
+					errExit $E_VALUE_ARGS "´íÎóµÄ²ÎÊýÖµ£¬authenex±ØÐëÎªÊý×Ö - '$1'"
+				fi
+                shift
+                ;;
+               *)
+                break
+                ;;
+        esac
+	done
+
+    input_union_type=()
+    while [ -n "$1" ]
+    do
+        input_union_type[${#input_union_type[@]}]=$1
+        shift
+    done
+
+	
+}
+
+function ActionDelAppNodeAnalyzeParam()
+{
+
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+	echo "input_dest_server=()">>$CMD_LOG
+	input_dest_server=()
+	while [ -n "$1" ]
+	do
+		case $1 in
+			-s)
+				[ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©server.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©server."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+
+				shift
+				
+					
+				[ ! -d $1 ] && echo "errExit $E_VALUE_ARGS \"µ±Ç°»·¾³²»´¦ÀíserverÎª'$1'µÄserver.\"">>$CMD_LOG
+				[ ! -d $1 ] && errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦ÀíserverÎª'$1'µÄserver."
+						
+				echo "input_dest_server[${#input_dest_server[@]}]=$1">>$CMD_LOG
+				input_dest_server[${#input_dest_server[@]}]=$1
+				
+				shift
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+	
+	[ -z $1 ] && {
+		 echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©ÒªÉ¾³ýµÄ·þÎñÃûapp_name\"">>$CMD_LOG
+		 echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©ÒªÉ¾³ýµÄ·þÎñÃûapp_name"
+		 
+		 echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		 exit $E_VALUE_ARGS
+	}
+	echo "input_dest_app_name=$1">>$CMD_LOG
+	input_dest_app_name=$1
+	shift
+	[ -n "$1" ] && {
+		 echo -e "${ERROR_COLOR}Error:${COLOR_END} ²ÎÊý¶àÓà: ${OPTION_COLOR}$*$COLOR_END"
+		 exit $E_VALUE_ARGS
+	}
+}
+
+function refresh_tag_sub_l()
+{
+	if [ -z $1 ]; then
+        file=$(pwd)/$APP_CONF
+    else
+        file=$(pwd)/$1/$APP_CONF
+    fi
+    if [ -f $file ]; then
+        echo "TAG_SUB_L=(`sed -n '/<\/svr>/,/<\/xxx_svr>/p' $file  | sed -n '/<cmd .*<\/cmd>/p' | sed  's;<cmd tag=\"\(.*\)\">.*<\/cmd>;\1;g' | tr -d '\n'`)">>$CMD_LOG
+        TAG_SUB_L=(`sed -n  '/<\/svr>/,/<\/xxx_svr>/p'  $file | sed -n '/<cmd .*<\/cmd>/p' | sed  's;<cmd tag=\"\(.*\)\">.*<\/cmd>;\1;g' | tr -d '\n'`)
+	else
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} Î´ÕÒµ½ÅäÖÃÎÄ¼þ: ${OPTION_COLOR}$file$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} Î´ÕÒµ½ÅäÖÃÎÄ¼þ: ${OPTION_COLOR}$file$COLOR_END"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+        exit $E_VALUE_ARGS
+    fi	
+}
+
+function getTagAndTagNumberAccordingToInputDestTag()
+{
+    echo  "local file=$(pwd)/$1/$APP_CONF">>$CMD_LOG
+    local file=$(pwd)/$1/$APP_CONF
+    local i=
+    local whole_cmd=
+    local tag_name=
+    for((i=0;i<${#input_dest_app_tag[@]};++i))
+    do
+        tag_name=${input_dest_app_tag[$i]};
+        whole_cmd=`sed -n  '/<\/svr>/,/<\/xxx_svr>/p'  $file | grep "<cmd tag=\"$tag_name\">.*<\/cmd>" | sed  's#^ *##'` 
+        echo "input_dest_app_tag[$i]=$whole_cmd">>$CMD_LOG
+        input_dest_app_tag[$i]=$whole_cmd
+    done
+    
+    whole_cmd=
+    for((i=0;i<${#input_dest_app_ex_tag[@]};++i))
+    do
+        tag_name=${input_dest_app_ex_tag[@]};
+        whole_cmd=`sed -n  '/<\/svr>/,/<\/xxx_svr>/p'  $file | sed -n "/<cmd tag=\"${input_dest_app_ex_tag[$i]}\">.*<\/cmd>/p" | sed  's;^ *;;'`
+        echo "input_dest_app_ex_tag[$i]=$whole_cmd">>$CMD_LOG
+        input_dest_app_ex_tag[$i]=$whole_cmd
+    done
+}
+
+
+function check_id_name_tag_is_exist()
+{
+	echo "local i">>$CMD_LOG
+	local i
+	for ((i=0; i<${#BIN_SUB_L[@]};))
+    do
+		echo "local app_name=${BIN_SUB_L[$i]}">>$CMD_LOG
+		local app_name=${BIN_SUB_L[$i]}
+		
+        if [ "$input_dest_app_name"x = "$app_name"x ];then
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂ·þÎñ³ÌÐò$app_nameÒÑ¾­´æÔÚ: ${OPTION_COLOR}$input_dest_app_name$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂ·þÎñ³ÌÐò$app_nameÒÑ¾­´æÔÚ: ${OPTION_COLOR}$input_dest_app_name$COLOR_END"
+			
+			echo "return $E_VALUE_ARGS">>$CMD_LOG
+			return $E_VALUE_ARGS
+		fi
+        ((i+=1))
+    done
+	
+	local j
+	for((j=0;j<${#input_dest_app_tag[@]};++j))
+	do	
+		echo "local tag_exist_flag=false" >>$CMD_LOG
+		local tag_exist_flag=false
+		for ((i=0; i<${#TAG_SUB_L[@]};))
+		do
+			echo "local tag=${TAG_SUB_L[$i]}">>$CMD_LOG
+			local tag=${TAG_SUB_L[$i]}
+			
+			if [ ${input_dest_app_tag[$j]} = $tag ];then
+				echo "tag_exist_flag=true">>$CMD_LOG
+				tag_exist_flag=true
+				
+				echo "break">>$CMD_LOG
+				break
+			fi
+			((i+=1))
+		done
+		if ! $tag_exist_flag; then
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂÐ­Òé²»´æÔÚ: ${OPTION_COLOR}${input_dest_app_tag[$j]}$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂÐ­Òé²»´æÔÚ: ${OPTION_COLOR}${input_dest_app_tag[$j]}$COLOR_END"
+			
+			echo "return $E_VALUE_ARGS">>$CMD_LOG
+			return $E_VALUE_ARGS
+		fi
+	done
+
+	for((j=0;j<${#input_dest_app_ex_tag[@]};++j))
+	do	
+		echo "ex_local tag_exist_flag=false" >>$CMD_LOG
+		local ex_tag_exist_flag=false
+		for ((i=0; i<${#TAG_SUB_L[@]};))
+		do
+			echo "local ex_tag=${TAG_SUB_L[$i]}">>$CMD_LOG
+			local ex_tag=${TAG_SUB_L[$i]}
+			
+			if [ ${input_dest_app_ex_tag[$j]} = $ex_tag ];then
+				echo "ex_tag_exist_flag=true">>$CMD_LOG
+				ex_tag_exist_flag=true
+				
+				echo "break">>$CMD_LOG
+				break
+			fi
+			((i+=1))
+		done
+		if ! $ex_tag_exist_flag; then
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂÐ­Òé²»´æÔÚ: ${OPTION_COLOR}${input_dest_app_ex_tag[$j]}$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂÐ­Òé²»´æÔÚ: ${OPTION_COLOR}${input_dest_app_ex_tag[$j]}$COLOR_END"
+			
+			echo "return $E_VALUE_ARGS">>$CMD_LOG
+			return $E_VALUE_ARGS
+		fi
+	done
+
+	echo "return $E_SUCESS">>$CMD_LOG
+	return $E_SUCESS
+	
+}
+function check_name_is_exist()
+{
+	echo "app_name_exist_flag=true">>$CMD_LOG
+	app_name_exist_flag=true
+	
+	for ((i=0; i<${#BIN_SUB_L[@]};++i))
+    do
+		echo "app_name=${BIN_SUB_L[$i]}">>$CMD_LOG
+		app_name=${BIN_SUB_L[$i]}
+		
+        if [ $2 = $app_name ];then
+			echo "app_name_exist_flag=false">>$CMD_LOG
+			app_name_exist_flag=false
+			
+			echo "break">>$CMD_LOG
+			break
+		fi
+    done
+	if $app_name_exist_flag ;then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂapp_name²»´æÔÚ: ${OPTION_COLOR}$2$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} server $1ÏÂapp_name²»´æÔÚ: ${OPTION_COLOR}$2$COLOR_END"
+		
+		echo "return $E_VALUE_ARGS">>$CMD_LOG
+		return $E_VALUE_ARGS
+	fi
+	echo "return $E_SUCESS">>$CMD_LOG
+	return $E_SUCESS
+}
+function add_new_app_node_into_app_conf()
+{
+	
+	echo "file=$(pwd)/$1/$APP_CONF">>$CMD_LOG
+    local file=$(pwd)/$1/$APP_CONF
+	
+	echo "local server=$1">>$CMD_LOG
+	local server=$1
+	
+	
+	echo "local dest_path=$(pwd)/$1">>$CMD_LOG
+    local dest_path=$(pwd)/$1
+	
+	echo "local src_file=$(dirname $PWD)/all_svr_logic">>$CMD_LOG
+    local src_file=$(dirname $PWD)/all_svr_logic
+
+    sed -i "/<\/svr>/i\\\t\t<app>" $file
+
+
+    sed -i "/<\/svr>/i\\\t\t\t<app_name>$input_dest_app_name<\/app_name>" $file
+
+    refreshAutoAppId $(pwd)
+    sed -i "/<\/svr>/i\\\t\t\t<app_id>$auto_app_id<\/app_id>" $file
+    
+
+    sed -i "/<\/svr>/i\\\t\t\t<include>" $file
+    local j
+    for((j=0;j<${#input_dest_app_tag[@]};++j))
+    do
+        sed -i "/<\/svr>/i\\\t\t\t\t${input_dest_app_tag[$j]}" $file
+    done
+    sed -i "/<\/svr>/i\\\t\t\t<\/include>" $file
+
+
+    sed -i "/<\/svr>/i\\\t\t\t<exclude>" $file
+    for((j=0;j<${#input_dest_app_ex_tag[@]};++j))
+    do
+        sed -i "/<\/svr>/i\\\t\t\t\t${input_dest_app_ex_tag[$j]}" $file
+    done
+    sed -i "/<\/svr>/i\\\t\t\t<\/exclude>" $file
+    
+    if [ -z "$input_authenex_value" ];then
+        input_authenex_value=0
+    fi
+    sed -i "/<\/svr>/i\\\t\t\t<authenex>$input_authenex_value<\/authenex>" $file
+    
+    if [ $input_authenex_value -eq 1 -a ${#input_union_type[@]} -eq 0 ];then
+        echo "input_union_type[ ${#input_union_type[@]} ]=all">>$CMD_LOG
+        input_union_type[ ${#input_union_type[@]} ]=all
+    fi
+    sed -i "/<\/svr>/i\\\t\t\t<union_auth_type_list>" $file
+    for((j=0;j<${#input_union_type[@]};++j))
+    do
+        sed -i "/<\/svr>/i\\\t\t\t\t<auth_name>${input_union_type[$j]}<\/auth_name>" $file
+    done
+    sed -i "/<\/svr>/i\\\t\t\t<\/union_auth_type_list>" $file
+    
+
+    sed -i "/<\/svr>/i\\\t\t<\/app>" $file
+	
+	echo "exec_result_report $REPORT_SUCCESS \"server $server ÏÂ·þÎñ³ÌÐò $input_dest_app_nameÌí¼Ó³É¹¦!\"">>$CMD_LOG
+	exec_result_report $REPORT_SUCCESS "server $server ÏÂ·þÎñ³ÌÐò $input_dest_app_nameÌí¼Ó³É¹¦!"
+	
+    if ! [ -f $src_file ]; then
+		echo "exec_result_report \"$REPORT_FAILED\" \"Î´ÕÒµ½:$src_file\"">>$CMD_LOG
+        exec_result_report "$REPORT_FAILED" "Î´ÕÒµ½:$src_file"
+		
+		echo "errExit $E_UNKNOWN_ERROR  \"´´½¨Á¬½ÓÊ§°Ü\"">>$CMD_LOG
+        errExit $E_UNKNOWN_ERROR  "´´½¨Á¬½ÓÊ§°Ü"
+    fi
+	echo "ln -sf $src_file $dest_path/$input_dest_app_name">>$CMD_LOG
+    ln -sf $src_file $dest_path/$input_dest_app_name
+	
+	echo "exec_result_report $REPORT_SUCCESS \"´´½¨$dest_path/$input_dest_app_nameÁ¬½Ó³É¹¦!\"">>$CMD_LOG
+    exec_result_report $REPORT_SUCCESS "´´½¨$dest_path/$input_dest_app_nameÁ¬½Ó³É¹¦!"
+}
+
+function ExecAddAppNodeRun()
+{
+	
+	
+	if [ ${#input_dest_server[@]} -eq 0 ]; then
+	
+		for id in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v '^log$' | grep -v '^logs$')
+		do
+			echo "input_dest_server[${#input_dest_server[@]}]=$id">>$CMD_LOG
+			input_dest_server[${#input_dest_server[@]}]=$id
+		done
+		
+		[ -z "${input_dest_server[*]}" ] && echo "errExit $E_NONE_GAME_ID \"µ±Ç°»·¾³Î´´¦ÀíÈÎºÎserver.\"">>$CMD_LOG
+		[ -z "${input_dest_server[*]}" ] && errExit $E_NONE_GAME_ID "µ±Ç°»·¾³Î´´¦ÀíÈÎºÎserver."	
+	fi
+	
+	echo "local k">>$CMD_LOG
+	local k	
+	for (( k=0;k<${#input_dest_server[@]};++k))
+	do
+        echo "">>$CMD_LOG
+        echo "k=$k">>$CMD_LOG
+		echo "local server=${input_dest_server[k]}">>$CMD_LOG
+		local server=${input_dest_server[k]}
+		
+		echo "BIN_SUB_L=()">>$CMD_LOG
+		BIN_SUB_L=()
+		echo "refresh_bin_sub_l $server">>$CMD_LOG
+		refresh_bin_sub_l $server		
+		
+		echo "ID_SUB_L=()">>$CMD_LOG
+		ID_SUB_L=()
+		echo "refresh_id_sub_l $server">>$CMD_LOG
+        refresh_id_sub_l $server
+			
+		echo "TAG_SUB_L=()">>$CMD_LOG
+		TAG_SUB_L=()
+		echo "refresh_tag_sub_l $server">>$CMD_LOG
+        refresh_tag_sub_l $server
+		
+		echo "check_id_name_tag_is_exist $server">>$CMD_LOG
+        check_id_name_tag_is_exist $server
+		
+		local return_value=$?
+		echo "local return_value=$return_value">>$CMD_LOG
+		
+		if [ $return_value -eq $E_SUCESS ];then
+            echo "getTagAndTagNumberAccordingToInputDestTag $server">>$CMD_LOG
+            getTagAndTagNumberAccordingToInputDestTag $server
+            echo "add_new_app_node_into_app_conf $server">>$CMD_LOG
+            add_new_app_node_into_app_conf $server
+		fi
+	done
+	
+	
+}
+
+function del_app_node()
+{
+    
+    local file=$(pwd)/$1/$APP_CONF
+    
+    echo "get_head_and_tails_of_target_svr $*">>$CMD_LOG
+    get_head_and_tails_of_target_svr $*
+
+    echo "sed -i \"$head,$tails d\" $file">>$CMD_LOG
+    sed -i "$head,$tails d" $file
+
+}
+
+function exec_delapp_run()
+{
+	
+	if [ ${#input_dest_server[@]} -eq 0 ]; then
+	
+		for id in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v '^log$' | grep -v '^logs$')
+		do
+			echo "input_dest_server[${#input_dest_server[@]}]=$id">>$CMD_LOG
+			input_dest_server[${#input_dest_server[@]}]=$id
+		done
+		
+		[ -z "${input_dest_server[*]}" ] && echo "errExit $E_NONE_GAME_ID \"µ±Ç°»·¾³Î´´¦ÀíÈÎºÎserver.\"">>$CMD_LOG
+		[ -z "${input_dest_server[*]}" ] && errExit $E_NONE_GAME_ID "µ±Ç°»·¾³Î´´¦ÀíÈÎºÎserver."	
+	fi
+	
+	echo "local k">>$CMD_LOG
+	local k	
+	for (( k=0;k<${#input_dest_server[@]};++k))
+	do
+		echo "local server=${input_dest_server[k]}">>$CMD_LOG
+		local server=${input_dest_server[k]}
+		
+		echo "refresh_bin_sub_l $server">>$CMD_LOG
+		refresh_bin_sub_l $server
+		
+		echo "check_name_is_exist $server $input_dest_app_name">>$CMD_LOG
+		check_name_is_exist $server $input_dest_app_name
+		
+		
+		local return_value=$?
+		echo  "local return_value=$return_value" >>$CMD_LOG
+		
+		if [ $return_value -eq $E_SUCESS ];then
+			echo "del_app_node $server $input_dest_app_name">>$CMD_LOG
+			del_app_node $server $input_dest_app_name
+            exec_result_report $REPORT_SUCCESS "server $serverÏÂ·þÎñ³ÌÐò$input_dest_app_name É¾³ý³É¹¦£¡"
+		fi
+	done
+}
+
+function exec_clone_app_param_analyze()
+{
+	echo "input_dest_server=()">>$CMD_LOG
+	input_dest_server=()
+	while [ -n "$1" ]
+	do
+		case $1 in
+			-s)
+				[ -z "$2" ] && {
+					echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©serverÃû×Ö.\"">>$CMD_LOG
+					echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©serverÃû×Ö."
+					
+					echo "exit $E_MISSED_ARGA">>$CMD_LOG
+					exit $E_MISSED_ARGA
+				}
+
+				shift
+					
+				[ ! -d $1 ] && echo "errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦ÀíserverÎª'$1'µÄserver"">>$CMD_LOG
+				[ ! -d $1 ] && errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦ÀíserverÎª'$1'µÄserver"
+						
+				echo "input_dest_server[${#input_dest_server[@]}]=$1">>$CMD_LOG
+				input_dest_server[${#input_dest_server[@]}]=$1
+				
+				shift
+				;;
+			*)
+				break
+				;;
+		esac
+	done
+	
+	if [ -z "$1" ];then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©Ô´·þÎñÃû. \"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©Ô´·þÎñÃû."
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+	echo "input_src_app_name=$1">>$CMD_LOG
+	input_src_app_name=$1
+	
+	if [ -z "$2" ];then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©Ä¿µÄ·þÎñÃû. \"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©Ä¿µÄ·þÎñÃû."
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+	echo "input_dest_app_name=$2">>$CMD_LOG
+	input_dest_app_name=$2
+	
+	if [ $1 = $2 ];then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} Ô´·þÎñÃûºÍÄ¿µÄ·þÎñÃû²»ÄÜÏàÍ¬:${OPTION_COLOR}$1 $2 $COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} Ô´·þÎñÃûºÍÄ¿µÄ·þÎñÃû²»ÄÜÏàÍ¬:${OPTION_COLOR}$1 $2 $COLOR_END"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+
+	if [ -n "$3" ];then
+		shift 2
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} ¶àÓàµÄ²ÎÊý - ${OPTION_COLOR}'$*'$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} ¶àÓàµÄ²ÎÊý- ${OPTION_COLOR}'$*'$COLOR_END"
+		
+		echo "exit $E_VALUE_ARGS">>$CMD_LOG
+		exit $E_VALUE_ARGS
+	fi
+}
+
+#´Óµ±Ç°serverÏÂµÄapp.confÎÄ¼þÏÂ copy Ò»¸öapp½Úµã µ½µ±Ç°serverÏÂµÄapp.confÖÐ,²»Ö§³Ö´ÓÆäËûserverµÄapp.confÖÐcopy Ä³¸öapp½Úµãµ½µ±Ç°serverÏÂµÄapp.confÖÐ
+function copy_app_node_from_app_conf()
+{
+    
+	echo "server=$1">>$CMD_LOG
+	local server=$1
+	
+	echo "src_app_name=$2">>$CMD_LOG
+	local src_app_name=$2
+	
+	echo "dest_app_name=$3">>$CMD_LOG
+	local dest_app_name=$3
+	
+	
+	echo "BIN_SUB_L=()">>$CMD_LOG
+	BIN_SUB_L=()
+	echo "refresh_bin_sub_l $*">>$CMD_LOG
+	refresh_bin_sub_l $*
+	
+	echo "ID_SUB_L=()">>$CMD_LOG
+	ID_SUB_L=()
+	echo "refresh_id_sub_l $*">>$CMD_LOG
+	refresh_id_sub_l $*
+	
+	echo "arg_correct=true">>$CMD_LOG
+	local arg_correct=true
+	
+	echo "src_name_ill=true">>$CMD_LOG
+	local src_name_ill=true
+	
+	echo "dest_name_ill=false">>$CMD_LOG
+	local dest_name_ill=false
+	
+	
+	echo "local i">>$CMD_LOG
+	local i
+	for((i=0;i<${#BIN_SUB_L[@]};++i))
+	do
+		if [ $src_app_name = ${BIN_SUB_L[$i]} ];then
+			echo "src_name_ill=false">>$CMD_LOG
+			src_name_ill=false
+		fi
+	done
+	if $src_name_ill;then
+		echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} server $serverÏÂ²»´æÔÚsrc-app_nameÖµ:${OPTION_COLOR}'$src_app_name'$COLOR_END\"">>$CMD_LOG
+		echo -e "${ERROR_COLOR}Error:${COLOR_END} server $serverÏÂ²»´æÔÚsrc-app_nameÖµ:${OPTION_COLOR}'$src_app_name'$COLOR_END"	
+		
+		echo "arg_correct=false">>$CMD_LOG
+		arg_correct=false
+	fi
+	for((i=0;i<${#BIN_SUB_L[@]};++i))
+	do
+		if [ $dest_app_name = ${BIN_SUB_L[$i]} ];then
+			echo "dest_name_ill=true">>$CMD_LOG
+			dest_name_ill=true
+			
+			echo "echo -e \"${ERROR_COLOR}Error:${COLOR_END} server $serverÏÂÒÑ´æÔÚdest-app_nameÖµ:${OPTION_COLOR}'$dest_app_name'$COLOR_END\"">>$CMD_LOG
+			echo -e "${ERROR_COLOR}Error:${COLOR_END} server $serverÏÂÒÑ´æÔÚdest-app_nameÖµ:${OPTION_COLOR}'$dest_app_name'$COLOR_END"
+		
+			echo "arg_correct=false">>$CMD_LOG
+			arg_correct=false
+			echo "break">>$CMD_LOG
+			break
+		fi
+	done
+	
+    local file=$(pwd)/$server/$APP_CONF
+	if $arg_correct;then
+	    
+        echo "get_head_and_tails_of_target_svr $server $src_app_name">>$CMD_LOG
+		get_head_and_tails_of_target_svr $server $src_app_name
+        echo "refreshAutoAppId $(pwd)">>$CMD_LOG
+        refreshAutoAppId $(pwd)
+
+        sed -n "$head,$tails p" $file | sed  "s;<app_name>.*</app_name>;<app_name>$dest_app_name</app_name>;"| sed "s;<app_id>.*</app_id>;<app_id>$auto_app_id</app_id>;" | sed -n "w .TmpCopy"
+        sed -i "$tails r .TmpCopy" $file
+        rm -f .TmpCopy
+
+
+	    echo "exec_result_report $REPORT_SUCCESS \"server $serverÏÂ·þÎñ³ÌÐò$dest_app_nameÌí¼Ó³É¹¦!\"">>$CMD_LOG
+	    exec_result_report $REPORT_SUCCESS "server $serverÏÂ·þÎñ³ÌÐò$dest_app_nameÌí¼Ó³É¹¦!"
+	    
+        local src_file=$(dirname $PWD)/all_svr_logic
+        if ! [ -f $src_file ]; then
+		    echo "exec_result_report \"$REPORT_FAILED\" \"Î´ÕÒµ½:$src_file\"">>$CMD_LOG
+            exec_result_report "$REPORT_FAILED" "Î´ÕÒµ½:$src_file"
+		
+		    echo "errExit $E_UNKNOWN_ERROR  \"´´½¨Á¬½ÓÊ§°Ü\"">>$CMD_LOG
+            errExit $E_UNKNOWN_ERROR  "´´½¨Á¬½ÓÊ§°Ü"
+        fi
+	    echo "ln -sf $src_file $server/$dest_app_name">>$CMD_LOG
+        ln -sf $src_file $server/$dest_app_name 
+	
+	    echo "exec_result_report $REPORT_SUCCESS \"´´½¨$server/$dest_app_nameÁ¬½Ó³É¹¦!\"">>$CMD_LOG
+        exec_result_report $REPORT_SUCCESS "´´½¨$server/$dest_app_nameÁ¬½Ó³É¹¦!"
+
+		echo "echo -e \"${SUCCESS_COLOR}SUCCESS:${COLOR_END} server $serverÏÂÍê³É¿ËÂ¡$src_app_name\"">>$CMD_LOG
+		echo -e "${SUCCESS_COLOR}SUCCESS:${COLOR_END} server $serverÏÂÍê³É¿ËÂ¡$src_app_name"
+	fi
+	
+}
+
+function ExecCloneAppRun()
+{
+
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+	if [ ${#input_dest_server[@]} -eq 0 ]; then
+	
+		for server in $(ls -l | grep ^d | IFS=' ': awk '{print $NF}' | grep -v '^log$' | grep -v '^logs$')
+		do
+			echo "input_dest_server[${#input_dest_server[@]}]=$server">>$CMD_LOG
+			input_dest_server[${#input_dest_server[@]}]=$server
+		done
+		
+		[ -z "${input_dest_server[*]}" ] && echo "errExit $E_NONE_GAME_ID \"µ±Ç°»·¾³Î´´¦ÀíÈÎºÎserver.\"">>$CMD_LOG
+		[ -z "${input_dest_server[*]}" ] && errExit $E_NONE_GAME_ID "µ±Ç°»·¾³Î´´¦ÀíÈÎºÎserver."	
+	fi
+	echo "local k">>$CMD_LOG
+	local k	
+	for (( k=0;k<${#input_dest_server[@]};++k))
+	do
+		echo "server=${input_dest_server[k]}">>$CMD_LOG
+		server=${input_dest_server[k]}
+		
+		echo "copy_app_node_from_app_conf $server $input_src_app_name $input_dest_app_name">>$CMD_LOG
+		copy_app_node_from_app_conf $server $input_src_app_name $input_dest_app_name
+    done
+}
+
+function ExecSetMasterRun()
+{ 
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    
+    sed -i "s/<master_flag>.*<\/master_flag>/<master_flag>master<\/master_flag>/" $ERATING_CONF
+    
+    exec_result_report $REPORT_SUCCESS "ÉèÖÃÖ÷¶Ë¿Ú³É¹¦!"
+}
+
+function ActionSetSlaveParamAnalyze()
+{
+    master_port=
+    master_ip=
+    while [ -n "$1" ]
+    do
+        case $1 in
+            -master_port)
+                [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©¶Ë¿ÚºÅ"
+                exit $E_MISSED_ARGA
+                }
+                shift
+                if checkNumber $1; then
+                    if [ $1 -ge $MIN_PORT -a $1 -le $MAX_PORT ]; then
+                        master_port=$1
+                        shift
+                    else
+                        echo -e "${ERROR_COLOR}Error:${COLOR_END} ´íÎóµÄ²ÎÊýÖµ£¬Ä¿±ê¶Ë¿ÚºÅÔÚ·¶Î§[$MIN_PORT,$MAX_PORT]ÖÐ - ${OPTION_COLOR}'$1'$COLOR_END"
+                        exit $E_VALUE_ARGS
+                    fi
+                else
+                    errExit $E_VALUE_ARGS "´íÎóµÄ²ÎÊýÖµ£¬port±ØÐëÎªÊý×Ö - '$1'"
+                fi
+                ;;
+            -master_ip)
+                [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©IPÖµ"
+                exit $E_MISSED_ARGA
+                }
+                shift
+                if checkIP $1;then
+                    master_ip=$1
+                else
+                    errExit $E_VALUE_ARGS "´íÎóµÄIPÖµ: ${OPTION_COLOR}'$1'$COLOR_END"
+                fi
+                shift
+                ;;
+            *)
+                errExit $E_POSITION "´íÎóµÄ×ÓÃüÁî¸ñÊ½: ${OPTION_COLOR}'$1'$COLOR_END"
+                break
+                ;;
+        esac
+    done
+
+    if [ -z "$master_port" ];then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©¶Ë¿ÚºÅ"
+    fi
+
+    if [ -z "$master_ip" ];then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©IPÖµ"
+    fi
+
+}
+
+function ExecSetSlaveRun()
+{
+    
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+    sed -i "s/<master_flag>.*<\/master_flag>/<master_flag>slave<\/master_flag>/" $ERATING_CONF
+
+    sed -i "s#<master_port>.*<\/master_port>#<master_port>$master_port<\/master_port>#" $ERATING_CONF
+
+    sed -i "s#<master_ip>.*<\/master_ip>#<master_ip>$master_ip<\/master_ip>#" $ERATING_CONF
+    
+    exec_result_report $REPORT_SUCCESS "ÉèÖÃ´Ó¶Ë¿Ú³É¹¦!"
+}
+
+function AnalyzeDestServer()
+{
+    
+    while [ -n "$1" ]
+    do
+        case $1 in
+            all)
+                ! $flag_3s_all && errExit $E_MUTEX "´íÎóµÄ²ÎÊýÒýÓÃ£¬Ê¹ÓÃallÃüÁîÊ±²»ÄÜÖ¸¶¨server"
+                flag_3s_all=true
+                shift
+                break
+                ;;
+            *)
+                [ ! -d $1 ] && errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦Àíserver'$1'"
+                input_dest_server[${#input_dest_server[@]}]=$1
+                flag_3s_all=false
+                ;;
+        esac
+
+        shift
+     done
+}
+
+function ActionStartAnalyzeParam()
+{
+    AnalyzeDestServer $*
+}
+
+function ActionStopAnalyzeParam()
+{
+    AnalyzeDestServer $*
+}
+
+function ActionRestartAnalyzeParam()
+{
+    while [ -n "$1" ]
+    do
+        case $1 in
+            all)
+                ! $flag_3s_all && errExit $E_MUTEX "´íÎóµÄ²ÎÊýÒýÓÃ£¬Ê¹ÓÃallÃüÁîÊ±²»ÄÜÖ¸¶¨server"
+                flag_3s_all=true
+                shift
+                break
+                ;;
+            -a|--app)
+                shift
+                flag_app=true
+                BIN_SUB_L=($*)
+                shift $#
+                ;;
+            *)
+                [ ! -d $1 ] && errExit $E_VALUE_ARGS "µ±Ç°»·¾³²»´¦Àíserver'$1'"
+                input_dest_server[${#input_dest_server[@]}]=$1
+                flag_3s_all=false
+                ;;
+        esac
+
+        shift
+     done
+}
+
+function ActionListAnalyzeParam()
+{
+    AnalyzeDestServer $*
+}
+
+function ActionMakeAnalyzeParam()
+{
+    
+    while [ -n "$1" ]
+    do
+        case $1 in
+        -p|--port)
+            [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©¶Ë¿ÚºÅ"
+                exit $E_MISSED_ARGA
+            }
+
+            shift
+            if checkNumber $1; then
+                if [ $1 -ge $MIN_PORT -a $1 -le $MAX_PORT ]; then
+                    exec_dest_port[${#exec_dest_port[@]}]=$1
+                else
+                    echo -e "${ERROR_COLOR}Error:${COLOR_END} ´íÎóµÄ²ÎÊýÖµ£¬Ä¿±ê¶Ë¿ÚºÅÔÚ·¶Î§[$MIN_PORT,$MAX_PORT]ÖÐ - ${OPTION_COLOR}'$1'$COLOR_END"
+                    exit $E_VALUE_ARGS
+                fi
+            else
+                errExit $E_VALUE_ARGS "´íÎóµÄ²ÎÊýÖµ£¬port±ØÐëÎªÊý×Ö - '$1'"
+            fi
+            ;;
+        -s|--server)
+            [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©serverÃû"
+                exit $E_MISSED_ARGA
+            }
+
+            shift
+                input_dest_server[${#input_dest_server[@]}]=$1
+            ;;
+        -d|--directory)
+            [ -z "$2" ] && {
+                echo -e "${ERROR_COLOR}Error:${COLOR_END} È±ÉÙ±ØÒª²ÎÊý£¬±ØÐëÌá¹©Ä¿±êÄ¿Â¼"
+                exit $E_MISSED_ARGA
+            }
+
+            shift
+            input_dest_dir[${#input_dest_dir[@]}]=$1
+            ;;
+        -a|--app)
+            shift
+            flag_app=true
+            BIN_SUB_L=($*)
+            shift $#
+            ;;
+        *)
+            break
+            ;;
+        esac
+
+        shift
+    done
+
+}
+
+function ActionCloneAnalyzeParam()
+{
+    if ! checkPort;then
+        echo -e "${ERROR_COLOR}Error:${COLOR_END} ±ØÐë½øÈëeRatingServer»·¾³Ä¿Â¼ÏÂÊ¹ÓÃ¸ÃÃüÁî²ÅÓÐÐ§!"
+        exit $E_PORT_ERROR
+    fi
+
+    echo "flag_clone_sub=$CLONE_INIT">>$CMD_LOG
+    flag_clone_sub=$CLONE_INIT
+    while [ -n "$1" ]
+    do
+        case $1 in
+            sub)
+                ! [ $flag_clone_sub = "$CLONE_INIT" ] && errExit $E_POSITION "´íÎóµÄ×ÓÃüÁî¸ñÊ½ - 'sub'"
+                echo "flag_clone_sub=$CLONE_GAME">>$CMD_LOG
+                flag_clone_sub=$CLONE_GAME
+                ;;
+			app)	
+				echo "flag_clone_sub=$CLONE_APP">>$CMD_LOG
+				flag_clone_sub=$CLONE_APP
+                break;
+				;;
+            *)
+                if [ $flag_clone_sub = $CLONE_GAME ]; then
+                    echo "input_dest_server[${#input_dest_server[@]}]=$1">>$CMD_LOG
+                    input_dest_server[${#input_dest_server[@]}]=$1
+                else
+                    # ¿ËÂ¡server
+                    echo "flag_clone_sub=$CLONE_PORT">>$CMD_LOG
+                    flag_clone_sub=$CLONE_PORT
+            
+                    if checkNumber $1; then
+                        if [ $1 -ge $MIN_PORT -a $1 -le $MAX_PORT ]; then
+                            exec_dest_port[${#exec_dest_port[@]}]=$1
+                            break;
+                        else
+                            echo -e "${ERROR_COLOR}Error:${COLOR_END} ´íÎóµÄ²ÎÊýÖµ£¬Ä¿±ê¶Ë¿ÚºÅÔÚ·¶Î§[$MIN_PORT,$MAX_PORT]ÖÐ - ${OPTION_COLOR}'$1'$COLOR_END"
+                            exit $E_VALUE_ARGS
+                        fi
+                    else
+                        echo -e "${ERROR_COLOR}Error:${COLOR_END} port±ØÐëÎªÊý×Ö - ${OPTION_COLOR}'$1'$COLOR_END"
+                        exit $E_VALUE_ARGS
+                    fi
+                fi
+                ;;
+        esac
+
+        shift
+    done
+
+}
+
+function ActionTypeAnalyze()
+{
+    
+    exec_arg_check=false
+    for (( i=0; i<${#ARG_ARR[@]}; ++i ))
+    do
+        for arg1 in ${ARG_ARR[$i][@]}
+        do
+            if [ "$1" = "$arg1" ]; then
+                exec_script=$(( $ACTION_MAKE + $i ))
+                [ -n "$exec_script_action" -a \
+                    ! \( $exec_script -eq $ACTION_VERBOSE -o $exec_script -eq $ACTION_HELP \) ] && {
+                    errExit $E_COMMAND_DOUBLE "ÎÞ·¨Ö´ÐÐ¶àÖØÃüÁî - '$1'"
+                }
+
+                exec_arg_check=true
+                break 2
+            fi
+        done
+    done
+
+    ! $exec_arg_check && errExit $E_UNKNOWN_OPTION "Î´ÖªÑ¡Ïî - '$1'"
+}
+
+function ExecAppStart()
+{
+    exec_start_false
+}
+
+function ExecAppStop()
+{
+    exec_stop_false
+}
+
+umask ${UMASK:=022}
+# ¶ÁÈ¡ÃüÁîÐÐ²ÎÊý
+while [ -n "$1" ]
+do
+    echo "ActionTypeAnalyze $1">>$CMD_LOG
+    ActionTypeAnalyze $*
+    
+    shift
+   
+    case $exec_script in
+    $ACTION_GET_ALL)
+        getAllFileAndExit
+        ;;
+    $ACTION_HELP)
+        showHelpAndExit
+        ;;
+    $ACTION_STATUS)
+        showStatus
+        ;;
+    $ACTION_UOS_TOP)
+        showTopAndExit
+        ;;
+    $ACTION_UOS_FORCE_KILL_ALL)
+        forceKillAndRemovePIDFile
+        ;;
+    $ACTION_VERBOSE)
+        flag_verbose=true
+        continue
+        ;;
+    $ACTION_SET_MASTER)
+        echo "FileExistQury $ERATING_CONF">>$CMD_LOG
+        FileExistQury $ERATING_CONF
+        
+        echo "ExecSetMasterRun">>$CMD_LOG
+        ExecSetMasterRun
+        ;;
+    $ACTION_SET_SLAVE)
+        echo "FileExistQury $ERATING_CONF">>$CMD_LOG
+        FileExistQury $ERATING_CONF
+
+        echo "ActionSetSlaveParamAnalyze $*">>$CMD_LOG
+        ActionSetSlaveParamAnalyze $*
+        
+        echo "ExecSetSlaveRun $*">>$CMD_LOG
+        ExecSetSlaveRun $*
+        ;;
+    $ACTION_MAKE)
+        echo "ActionMakeAnalyzeParam $*">>$CMD_LOG
+        ActionMakeAnalyzeParam $*    
+        
+        echo "ActionMakeParamExistQuery">>$CMD_LOG
+        ActionMakeParamExistQuery
+
+        echo "ActionMakeFileExistQuery">>$CMD_LOG
+        ActionMakeFileExistQuery
+
+        echo "ExecMakeRun">>$CMD_LOG
+        ExecMakeRun
+        ;;
+    $ACTION_APP_START)
+        echo "ActionAppStartOrStopAnalyzeParam $*">>$CMD_LOG
+        ActionAppStartOrStopAnalyzeParam $*
+        
+        echo "ExecAppStart">>$CMD_LOG
+        ExecAppStart
+        ;;
+    $ACTION_APP_STOP)
+        echo "ActionAppStartOrStopAnalyzeParam $*">>$CMD_LOG
+        ActionAppStartOrStopAnalyzeParam $*
+        
+        echo "ExecAppStop">>$CMD_LOG
+        ExecAppStop
+        ;;
+    $ACTION_ADD_APP_NODE)
+	    echo "ActionAddAppNodeAnalyzeParam $*">>$CMD_LOG
+        ActionAddAppNodeAnalyzeParam $*
+        
+        echo "ExecAddAppNodeRun $*">>$CMD_LOG
+        ExecAddAppNodeRun $*
+        ;;
+    $ACTION_DEL_APP_NODE)
+	    echo "ActionDelAppNodeAnalyzeParam $*">>$CMD_LOG
+        ActionDelAppNodeAnalyzeParam $*
+	
+	    echo "exec_delapp_run $*">>$CMD_LOG
+	    exec_delapp_run $*
+        ;;
+    $ACTION_START)
+        echo "ActionStartAnalyzeParam $*">>$CMD_LOG
+        ActionStartAnalyzeParam $*
+        
+        echo "exec_start_run">>$CMD_LOG
+        exec_start_run
+        ;;
+    $ACTION_STOP)
+        echo "ActionStopAnalyzeParam $*">>$CMD_LOG
+        ActionStopAnalyzeParam $*
+        
+        echo "ExecStopRun">>$CMD_LOG
+        ExecStopRun
+        ;;
+    $ACTION_RESTART)
+        echo "ActionRestartAnalyzeParam $*">>$CMD_LOG
+        ActionRestartAnalyzeParam $*
+        
+        echo "ExecRestartRun">>$CMD_LOG
+        ExecRestartRun
+        ;;
+    $ACTION_LIST)
+        echo "ActionListAnalyzeParam $*">>$CMD_LOG
+        ActionListAnalyzeParam $*
+        
+        echo "ExecListRun">>$CMD_LOG
+        ExecListRun
+        ;;
+    $ACTION_CLONE)
+        echo "ActionCloneAnalyzeParam $*">>$CMD_LOG
+        ActionCloneAnalyzeParam $*
+		shift 
+        echo "ExecCloneRun $*">>$CMD_LOG
+		ExecCloneRun $*
+	
+        ;;
+    esac
+    exit 0;
+done
+

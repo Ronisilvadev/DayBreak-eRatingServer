@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+<appender name="XmlRpcInfo" class="org.apache.log4j.DailyRollingFileAppender">
+	<param name="File" value="../server/default/log/gm_XmlRpcInfo.log" />
+	<param name="Append" value="true" />
+	<param name="DatePattern" value="'.'yyyy-MM-dd-a"/>
+	<layout class="org.apache.log4j.PatternLayout">
+       <param name="ConversionPattern" value="%d %-5r %-5p [%c] (%t:%x) %m%n"/>
+   </layout>
+</appender>
+
+<logger name="XmlRpcInfoLog" additivity="false"> 
+	<appender-ref ref="XmlRpcInfo" />
+</logger>
+</log4j:configuration>

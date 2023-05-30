@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/showAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateCreate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/deleteActivityAwardComp" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+	    <property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreatePointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/savePointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitPointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exePointCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreatePetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/savePetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprPetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exePetCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeGoldCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeSkillCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreatePayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/savePayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitPayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exePayMoneyAllCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeAddItemCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeClearPointsCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	
+	<bean name="/showRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	
+	<bean name="/showAppredRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/batchFirstApprRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/batchSecondApprRoleCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="roleCompensateService" ref="roleCompensateService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	   <bean name="/showNewAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+	
+	   <bean name="/showNewAppredAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+       <bean name="/showNewExedAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+    <bean name="/showNewDeledAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+       <bean name="/saveNewAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+      <bean name="/newDeleteActivityAwardComp" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+          <bean name="/newValidateCreate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+    
+       <bean name="/showNewCreateAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>
+          <bean name="/newOperAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean> 
+     <bean name="/showNewEditAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean> 
+      <bean name="/createNewAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean> 
+    
+     <bean name="/submitNewAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>  
+     <bean name="/delNewAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean>  
+       <bean name="/newExeAwardCompensate" class="com.linekong.gmweb2.web.action.RoleCompensateAction">
+        <property name="playerQueryDao" ref="playerQueryDao" />
+        <property name="roleCompensateDao" ref="roleCompensateDao" />
+        <property name="roleCompensateService" ref="roleCompensateService" />
+        <property name="dictionaryDao" ref="dictionaryDao" />
+        <property name="operationService" ref="operationService" />
+        <property name="logInfoDao" ref="logInfoDao" />
+    </bean> 
+</beans>

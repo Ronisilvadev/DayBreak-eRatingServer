@@ -1,0 +1,13 @@
+2013-08-05 06:08:46,780 INFO  [STDOUT] java.lang.NullPointerException
+2013-08-05 06:08:46,781 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2013-08-05 06:08:46,781 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2013-08-05 06:08:46,781 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2013-08-05 06:08:46,781 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2013-08-05 06:08:46,781 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2013-08-05 23:51:14,070 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 10    userName = marco    chargeTime = 2013-08-06 10:51:14    chargeMoney = 25.0    chargeAmount = 25    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 137575747405867    sign = 3c167f05bbb53570fc84d5b17ef25361     )
+2013-08-05 23:58:23,288 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 11    userName = marco    chargeTime = 2013-08-06 10:58:23    chargeMoney = 25.0    chargeAmount = 25    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 137575790327537    sign = 4e0bae826e82befab9d71e1c98642461     )
+2013-08-05 23:59:09,403 ERROR [org.apache.struts.action.RequestProcessor] Invalid path was requested /getRoleListJson
+2013-08-05 23:59:26,044 ERROR [org.apache.struts.action.RequestProcessor] Invalid path was requested /getRoleListJson
+2013-08-05 23:59:26,312 ERROR [org.apache.struts.action.RequestProcessor] Invalid path was requested /getRoleListJson
+2013-08-05 23:59:34,232 ERROR [org.apache.struts.action.RequestProcessor] Invalid path was requested /getRoleListJson
+2013-08-05 23:59:58,006 ERROR [org.apache.struts.action.RequestProcessor] Invalid path was requested /getRoleListJson

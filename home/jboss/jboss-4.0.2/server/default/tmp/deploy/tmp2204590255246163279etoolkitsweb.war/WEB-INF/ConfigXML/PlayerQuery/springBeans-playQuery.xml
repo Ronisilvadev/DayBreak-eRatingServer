@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<!-- 查询帐号信息 begin -->
+	<bean name="/showQueryPlayerInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getPlayerInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>		
+	<!-- 查询帐号信息 end -->
+	<!-- 身份证查账号 begin -->
+	<bean name="/showGetPlayerInfoByIdCode" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getPlayerInfoByIdCode" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>		
+	<!-- 身份证查账号 end -->
+	<!-- 查询帐号注册信息 begin -->
+	<bean name="/showQueryPlayerResInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryPlayerResInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>		
+	<!-- 查询帐号注册信息 end -->
+	<!-- 验证玩家信息 begin -->
+	<bean name="/showValidatePlayerInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/validatePlayerInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 验证玩家信息 end -->
+	<!-- 活动物品记录 begin -->
+	<bean name="/showPlayerItems" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getPlayerItems" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 活动物品记录 end -->
+	<!-- 活动奖品日志记录查询 begin -->
+	<bean name="/showLogPlayerItems" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getLogPlayerItems" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 活动奖品日志记录查询 end -->
+	<!-- 活动奖品修改 begin -->
+	<bean name="/modifyItemName" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 活动奖品修改 end -->
+	<!-- 登入登出日志查询 begin -->
+	<bean name="/showQueryPlayerLoginOutDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getPlayerLoginOutDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 登入登出日志查询 end -->
+	<!-- 角色详细信息查询 begin -->
+	<bean name="/showQueryRoleInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRoleDetailInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/petItemDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>		
+	<!-- 角色详细信息查询 end -->
+	<!-- 冻结日志和记录数 begin -->
+	<bean name="/showSearchFreezenAcount" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref = "playerQueryDao"></property>
+		<property name="operationService" ref = "operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<bean name="/querySearchFreezenAcount" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<!-- 冻结日志和记录数 end -->
+	<!-- 道具购买明细查询 begin -->
+	<bean name="/showQueryPlayerPurchaseDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getPlayerPurchaseDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 道具购买明细查询 end -->
+	<!-- 帐户明细查询 begin -->
+	<bean name="/showQueryPlayerChargeDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getPlayerChargeDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 帐户明细查询 end -->
+	<!-- 帐户余额查询 begin -->
+	<bean name="/showQueryPlayerAccountDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getPlayerAccountDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 帐户余额查询 end -->
+	<!-- 充值订单查询 begin -->
+	<bean name="/showQueryOrderStatus" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getOrderStatus" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 充值订单查询 end -->
+	<!-- 角色模糊查询 begin -->
+	<bean name="/showSearchRole" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/searchRole" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 角色模糊查询 end -->
+	<!-- 帐号批量查询 begin -->
+	<bean name="/showPlayerNames2Ids" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/playerNames2Ids" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 帐号批量查询 end -->
+	<!-- 查询Npc信息 begin -->
+	<bean name="/showQueryNpc" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryNpc" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 查询Npc信息 end -->
+	<!-- 查询角色仓库信息 begin -->
+	<bean name="/showQueryRoleStoreGood" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRoleStoreGood" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 查询角色仓库信息 end -->
+	<!--  查询角色位置信息 begin -->
+	<bean name="/showQueryRoleLocation" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRoleLocation" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!--  查询角色位置信息 end -->
+	<!-- 激活码批量查询 begin -->
+	<bean name="/showQueryVipCard" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryVipCard" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 激活码批量查询 end -->
+	<!-- 测试期激活码统计 begin-->
+	<bean name="/showQueryTestSerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<bean name="/queryTestSerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<!-- 测试期激活码统计 end-->
+	<!-- 激活码统计查询(活动模型) begin -->
+	<bean name="/showQueryTotalSerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryTotalSerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 激活码统计查询(活动模型) end -->
+	<!-- 激活码汇总查询(活动模型) begin -->
+	<bean name="/showQuerySummarySerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/querySummarySerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 激活码汇总查询(活动模型) end -->
+	<!-- 激活码批量查询(活动模型) begin -->
+	<bean name="/showQueryBatchSerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryBatchSerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/exportAllSerialInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 激活码批量查询(活动模型) end -->
+	<!-- 角色排名统计 begin -->
+	<bean name="/showQueryRoleTopN" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryRoleTopN" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 角色排名统计 end -->
+	<!-- 查询角色社会关系信息 begin -->
+	<bean name="/showQueryRoleSocial" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryRoleSocial" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 查询角色社会关系信息 end -->
+	<!-- 各职业信息统计 begin -->
+	<bean name="/showOccuptationTotal" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/occuptationTotal" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 各职业信息统计 end -->
+	<!-- 物品移动流向查询 begin -->
+	<bean name="/showGoodsHistory" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/goodsHistory" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 物品移动流向查询 end -->
+	<!-- 指定玩家的物品的转移记录 begin -->
+	<bean name="/showOperationDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/OperationDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 指定玩家的物品的转移记录 end -->
+	<!-- NPC至玩家的物品转移记录 begin -->
+	<bean name="/showGoodsHistoryFromNPC" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/GoodsHistoryFromNPC" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- NPC至玩家的物品转移记录 end -->
+	<!-- 玩家至NPC的物品转移记录 begin -->
+	<bean name="/showGoodsHistoryToNPC" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/GoodsHistoryToNPC" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家至NPC的物品转移记录 end -->
+		<!-- 充值订单详情查询 begin -->
+	<bean name="/showQueryOrderDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getOrderDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 充值订单详情查询 end -->
+	<!-- 玩家至玩家物品移动记录 begin -->
+	<bean name="/showGoodsHistoryBetweenUsers" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/goodsHistoryBetweenUsers" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 玩家至玩家物品移动记录 end -->
+	<!-- 查询角色包裹信息 begin -->
+	<bean name="/showQueryRolePackage" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRolePackage" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 查询角色包裹信息 end -->
+	<!-- 查询角色物品信息 begin -->
+	<bean name="/getRoleItemInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 查询角色物品信息 end -->
+	<!-- 玩家技能查询 begin -->
+	<bean name="/showUserSkillInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/userSkillInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/userSkillDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家技能查询 end -->
+	<!-- 玩家身上装备查询begin -->
+	<bean name="/showUserItemOnBody" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/userItemOnBody" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 玩家身上装备查询end -->
+	<!-- 玩家的经验等级日志查询begin -->
+	<bean name="/showUserLevelInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/userLevelInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 玩家的经验等级日志查询end -->
+	<!-- 帮派查询 -->
+	<bean name="/showCorpsTotal" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/corpsTotal" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/corpsDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/corpsMember" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/showCorpsDetailNew" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/corpsDetailNew" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showCorpsStorage" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/corpsStorage" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/corpsItem" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/showCorpsMember" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getCorpsMember" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/showCorpsTotalNew" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getCorpsTotalNew" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+	</bean>
+	
+	<!-- 角色称号查询、修改 -->
+	<bean name="/showQueryRoleTitle" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/queryRoleTitle" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/showChangeRoleTitle" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/changeRoleTitle" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 登入登出记录查询 -->
+	<bean name="/showLoginInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/loginInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<!-- 实卡信息查询 -->
+	<bean name="/showRealCardInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/realCardInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 查询玩家已完成任务 -->
+	<bean name="/showFinishedTaskInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/finishedTaskInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家身上特定装备查询 -->
+	<bean name="/userItemOnBodyDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 角色仓库内特定物品查询 -->
+	<bean name="/userItemInStorage" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 角色物品查询 -->
+	<bean name="/showRoleItem" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/roleItem" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 角色物品查询 -->
+	<bean name="/showRole2Passport" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/role2Passport" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家物品日志查询 -->
+	<bean name="/showRoleItemLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/roleItemLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家金钱日志查询 -->
+	<bean name="/showRoleMoneyLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/roleMoneyLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家经验日志查询 -->
+	<bean name="/showRoleExpLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/roleExpLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家物品升级日志查询 -->
+	<bean name="/showRoleItemLevLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/roleItemLevLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 帐号激活查询 -->
+	<bean name="/showActivationLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/activationLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 玩家积分信息查询 -->
+	<bean name="/showRoleIntegration" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/roleIntegration" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 积分消耗明细查询 -->
+	<bean name="/showRoleConsume" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/roleConsume" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+
+	<!-- 角色邮件信息查询 -->
+	<bean name="/showRoleEmail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRoleEmail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<!--组织日志查询 -->
+	<bean name="/showCorpsLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getCorpsLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	<!--角色日志查询 -->
+	<bean name="/showRoleLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRoleLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	<!--角色拍卖行信息查询 -->
+	<bean name="/showRoleAuction" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRoleAuction" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	<!--卡密激活查询 -->
+	<bean name="/showInvokeCard" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+	</bean>
+	<bean name="/getInvokeCard" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	
+	<!-- 刷钱账号查询 -->
+	<bean name="/showQueryCheatAccountInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryCheatAccountInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/exportCheatAccountInfo" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<!-- 刷钱账号查询 -->
+	<!-- 充值排名 -->
+	<bean name="/showChargeRank" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<bean name="/getChargeRank" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<!-- 充值排名 -->
+	<!--联运账号查询 -->
+	<bean name="/showQueryPlayerInfoOfBaidu" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+	</bean>
+	<bean name="/queryPlayerInfoOfBaidu" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+	</bean>
+	<!--联运账号查询 -->
+	
+	<!--元宝交易日志查询 -->
+	<bean name="/showFundExchange" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+	</bean>
+	<bean name="/getFundExchange" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	
+<!-- 充值详单查询 -->
+	<bean name="/showChargeDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+	</bean>
+	<bean name="/getChargeDetail" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />		
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/exportChargeOrderData" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />	
+		<property name="dictionaryDao" ref="dictionaryDao" />	
+	</bean>
+	
+	<bean name="/showGetGameByRoleNames" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+	</bean>
+	
+	<bean name="/getGameByRoleNames" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />	
+	</bean>
+	<bean name="/exportPlayerPurchaseDetail"  class="com.linekong.gmweb2.web.action.PlayerQueryAction"> 
+		<property name="playerQueryDao" ref="playerQueryDao" />	
+	</bean>
+	<bean name="/showPlayerSerialState" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+	</bean>
+	<bean name="/playerSerialState" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />	
+	</bean>
+	<!--通过passportId来获得passportName -->
+	<bean name="/showgetPassportName" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	<bean name="/getPassportName" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+		<!--查询玩家的阅历 -->
+	<bean name="/showRoleYueli" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<bean name="/getRoleYueli" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<!-- IP反查帐号 -->
+	<bean name="/showQueryByIp" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<bean name="/queryByIp" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="playerQueryDao" ref="playerQueryDao"></property>
+		<property name="operationService" ref="operationService"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+	</bean>
+	<!--玩家行为日志查询 -->
+	<bean name="/showRoleActionOperateLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/getRoleActionOperateLog" class="com.linekong.gmweb2.web.action.PlayerQueryAction">
+		<property name="operationService" ref="operationService" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+</beans>

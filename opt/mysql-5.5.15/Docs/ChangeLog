@@ -1,0 +1,266 @@
+------------------------------------------------------------
+revno: 3459 [merge]
+tags: clone-5.5.15-build
+committer: Luis Soares <luis.soares@oracle.com>
+branch nick: mysql-5.5
+timestamp: Tue 2011-07-12 12:13:02 +0100
+message:
+  BUG#12695969
+    
+  Automerged from mysql-5.1 into mysql-5.5 (empty cset).
+    ------------------------------------------------------------
+    revno: 2661.773.10 [merge]
+    committer: Luis Soares <luis.soares@oracle.com>
+    branch nick: mysql-5.1
+    timestamp: Tue 2011-07-12 02:13:36 +0100
+    message:
+      BUG#12695969
+      
+      Manually merged from mysql-5.0 into mysql-5.1.
+      
+      conflicts
+      =========
+      
+      include/Makefile.am
+        ------------------------------------------------------------
+        revno: 1810.4004.5
+        committer: Luis Soares <luis.soares@oracle.com>
+        branch nick: mysql-5.0
+        timestamp: Tue 2011-07-12 02:10:28 +0100
+        message:
+          BUG#12695969
+          
+          Follow-up patch that adds the newly added header file to
+          Makefile.am noinst_HEADERS.
+------------------------------------------------------------
+revno: 3458 [merge]
+committer: Luis Soares <luis.soares@oracle.com>
+branch nick: mysql-5.5
+timestamp: Mon 2011-07-11 17:19:56 +0100
+message:
+  BUG#12695969
+  
+  Manually merged from mysql-5.1:
+  
+    - fixed mysqlbinlog copyright year: 2001 --> 2000
+    - fixed address in license header
+  
+  conflicts
+  =========
+  
+   - client/mysqlbinlog.cc
+   - include/welcome_copyright_notice.h
+    ------------------------------------------------------------
+    revno: 2661.773.9 [merge]
+    committer: Luis Soares <luis.soares@oracle.com>
+    branch nick: mysql-5.1
+    timestamp: Mon 2011-07-11 17:13:27 +0100
+    message:
+      BUG#12695969
+      
+      Manually merged mysql-5.0 into mysql-5.1.
+      
+      conflicts
+      =========
+      client/mysqlibinlog.cc
+        ------------------------------------------------------------
+        revno: 1810.4004.4
+        committer: Luis Soares <luis.soares@oracle.com>
+        branch nick: mysql-5.0
+        timestamp: Mon 2011-07-11 17:11:41 +0100
+        message:
+          BUG#12695969: FIX OUTDATED COPYRIGHT NOTICES IN REPLACTION
+          CLIENT TOOLS
+                
+          The fix is to backport part of revision:
+                  
+            - alexander.nozdrin@oracle.com-20101006150613-ls60rb2tq5dpyb5c
+                
+          from mysql-5.5. In detail, we add the oracle welcome notice
+          header file proposed in the original patch and include/use it
+          in client/mysqlbinlog.cc, replacing the existing and obsolete
+          notice.
+------------------------------------------------------------
+revno: 3457 [merge]
+committer: kevin.lewis@oracle.com
+branch nick: mysql-5.5
+timestamp: Fri 2011-07-08 08:16:23 -0500
+message:
+  Null Merge from mysql-5.1 with second fix for Bug#12637786
+  
+  Bug#12637786 was fixed with rb:692 by marko.  But that fix has a remaining
+  bug.  It added this assert;
+      ut_ad(ind_field->prefix_len);
+  before a section of code that assumes there is a prefix_len.  
+  
+  The patch replaced code that explicitly avoided this with a check for
+  prefix_len.  It turns out that the purge thread can get to that assert
+  without a prefix_len because it does not use a row_ext_t* .
+  When UNIV_DEBUG is not defined, the affect of this is that the purge thread
+  sets the dfield->len to zero and then cannot find the entry in the index to
+  purge.  So secondary index entries remain unpurged.
+  
+  This patch does not do the assert.  Instead, it uses
+      'if (ind_field->prefix_len) {...}'
+  around the section of code that assumes a prefix_len.  This is the way the
+  patch I provided to Marko did it.
+  
+  The test case is simply modified to do a sleep(10) in order to give the
+  purge thread a chance to run. Without the code change to row0row.c, this
+  modified testcase will assert if InnoDB was compiled with UNIV_DEBUG.
+  I tried to sleep(5), but it did not always assert.
+    ------------------------------------------------------------
+    revno: 2661.773.8
+    committer: kevin.lewis@oracle.com
+    branch nick: mysql-5.1
+    timestamp: Thu 2011-07-07 16:29:30 -0500
+    message:
+      Bug#12637786 was fixed with rb:692 by marko.  But that fix has a remaining
+      bug.  It added this assert;
+          ut_ad(ind_field->prefix_len);
+      before a section of code that assumes there is a prefix_len.  
+      
+      The patch replaced code that explicitly avoided this with a check for
+      prefix_len.  It turns out that the purge thread can get to that assert
+      without a prefix_len because it does not use a row_ext_t* .
+      When UNIV_DEBUG is not defined, the affect of this is that the purge thread
+      sets the dfield->len to zero and then cannot find the entry in the index to
+      purge.  So secondary index entries remain unpurged.
+      
+      This patch does not do the assert.  Instead, it uses
+          'if (ind_field->prefix_len) {...}'
+      around the section of code that assumes a prefix_len.  This is the way the
+      patch I provided to Marko did it.
+      
+      The test case is simply modified to do a sleep(10) in order to give the
+      purge thread a chance to run. Without the code change to row0row.c, this
+      modified testcase will assert if InnoDB was compiled with UNIV_DEBUG.
+      I tried to sleep(5), but it did not always assert.
+------------------------------------------------------------
+revno: 3456 [merge]
+committer: Joerg Bruehe <joerg.bruehe@oracle.com>
+branch nick: bug45415-5.5
+timestamp: Thu 2011-07-07 17:27:44 +0200
+message:
+  Upmerge the 45415 fix from 5.1 to 5.5
+    ------------------------------------------------------------
+    revno: 2661.773.7
+    committer: Joerg Bruehe <joerg.bruehe@oracle.com>
+    branch nick: bug45415-5.1
+    timestamp: Thu 2011-07-07 17:22:24 +0200
+    message:
+      Fix bug#45415: "rpm upgrade recreates test database"
+      
+      Let the creation of the "test" database happen only during a new
+      installation, not in an RPM upgrade.
+------------------------------------------------------------
+revno: 3455
+committer: Davi Arnaut <davi.arnaut@oracle.com>
+branch nick: mysql-5.5
+timestamp: Thu 2011-07-07 08:22:43 -0300
+message:
+  Bug#12727287: Maintainer mode compilation fails with gcc 4.6
+  
+  GCC 4.6 has new -Wunused-but-set-variable flag, which is enabled
+  by -Wall, that causes GCC to emit a warning whenever a local variable
+  is assigned to, but otherwise unused (aside from its declaration).
+  
+  Since the maintainer mode uses -Wall and -Werror, source code which
+  triggers these warnings will be rejected. That is, these warnings
+  become hard errors.
+  
+  The solution is to fix the code which triggers these specific warnings.
+  In most of the cases, this is a welcome cleanup as code which triggers
+  this warning is probably dead anyway.
+------------------------------------------------------------
+revno: 3454 [merge]
+committer: Georgi Kodinov <Georgi.Kodinov@Oracle.com>
+branch nick: merge-5.5
+timestamp: Thu 2011-07-07 12:42:14 +0300
+message:
+  merge mysql-5.1->mysql-5.5
+    ------------------------------------------------------------
+    revno: 2661.773.6 [merge]
+    committer: Georgi Kodinov <Georgi.Kodinov@Oracle.com>
+    branch nick: merge-5.1
+    timestamp: Thu 2011-07-07 11:06:59 +0300
+    message:
+      empty weave merge from mysql-5.0
+        ------------------------------------------------------------
+        revno: 1810.4004.3 [merge]
+        committer: Sunanda Menon <sunanda.menon@oracle.com>
+        branch nick: mysql-5.0
+        timestamp: Wed 2011-07-06 11:36:39 +0200
+        message:
+          Merge from mysql-5.0.94-release
+    ------------------------------------------------------------
+    revno: 2661.773.5 [merge]
+    committer: Karen Langford <karen.langford@oracle.com>
+    branch nick: mysql-5.1
+    timestamp: Wed 2011-07-06 00:56:51 +0200
+    message:
+      Merge from mysql-5.1.58-release
+        ------------------------------------------------------------
+        revno: 2661.778.6
+        tags: mysql-5.1.58
+        committer: Karen Langford <karen.langford@oracle.com>
+        branch nick: mysql-5.1.58-release
+        timestamp: Fri 2011-07-01 17:18:27 +0200
+        message:
+          Small update to Patch to fix SS #12698716
+        ------------------------------------------------------------
+        revno: 2661.778.5
+        committer: Karen Langford <karen.langford@oracle.com>
+        branch nick: mysql-5.1.58-release
+        timestamp: Fri 2011-07-01 16:15:50 +0200
+        message:
+          Patch to fix SS #12698716 : Java/ConnectorJ regression problem
+------------------------------------------------------------
+revno: 3453 [merge]
+author: hery.ramilison@oracle.com
+committer: MySQL Release Engineering <mysql-re_ww@oracle.com>
+branch nick: mysql-5.5
+timestamp: Wed 2011-07-06 01:13:50 +0200
+message:
+  Merge from mysql-5.5.14-release
+    ------------------------------------------------------------
+    revno: 3097.4.49
+    tags: mysql-5.5.14
+    committer: Alexander Nozdrin <alexander.nozdrin@oracle.com>
+    branch nick: mysql-5.5.14-release
+    timestamp: Tue 2011-06-21 19:24:44 +0400
+    message:
+      Patch for Bug 12652769 - 61470: CASE OPERATOR IN STORED ROUTINE RETAINS
+      OLD VALUE OF INPUT PARAMETER.
+      
+      The user-visible problem was that CASE-control-flow function
+      (not CASE-statement) misbehaved in stored routines under some
+      circumstances. The problem resulted in a crash or wrong data
+      returned. The error happened when expressions in CASE-function
+      were not of the same character set.
+      
+      A CASE-function should return values of the same character set
+      for all branches. Internally, that means a new Item-instance
+      for the CONVERT(... USING <some charset>)-function is added
+      to the item tree when needed. The problem was that such changes
+      were not properly recorded using THD::change_item_tree(),
+      thus dangling pointers remain in the item tree after
+      THD::rollback_item_tree_changes(), which lead to undefined
+      behavior (i.e. crash / wrong data) for subsequent executions of
+      the stored routine.
+      
+      This bug was introduced by a patch for Bug 11753363
+      (44793 - CHARACTER SETS: CASE CLAUSE, UCS2 OR UTF32, FAILURE).
+      
+      The fixed function is Item_func_case::fix_length_and_dec().
+      New CONVERT-items are added in agg_item_set_converter(),
+      which calls THD::change_item_tree().
+      
+      The problem was that an intermediate array was passed
+      to agg_item_set_converter(). Thus, THD::change_item_tree() there
+      was called on intermediate objects.
+      
+      Note: those intermediate objects are allocated on THD's
+      memory root, so it's Ok to put them into "changed item lists".
+      
+      The fix is to track changes on the correct objects.

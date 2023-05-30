@@ -1,0 +1,9 @@
+2014-04-10_14:25:40.491|I|3693|B7FB86D0|INFO|GateID=0x9999|AppID=0x2
+2014-04-10_14:25:40.494|I|3693|B7FB86D0|INFO|GateID=0x9999|APPID=0x2|GameId=0|Initializing GateClient Success!
+2014-04-10_14:25:40.494|I|3693|B7FB86D0|INFO|UNServer is running now!
+2014-04-10_14:25:40.509|I|3693|B7FB86D0|INFO|Server::refreshNetwork|1|connect Addr=(127.0.0.1:19999)
+2014-04-10_14:25:40.509|I|3693|B7FB86D0|INFO|Server::onConnectOK|1|Addr=(127.0.0.1:19999)
+2014-04-10_14:32:35.893|I|3693|B7FB86D0|INFO|unPackage|1|pdu_len=108|orig_pdu_len=108|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10000001|seq_id=1|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=56478
+2014-04-10_14:32:35.893|E|3693|B7FB86D0|ERRS|UNServer::doAppMsg|src_ip=192.168.177.92|src_port=56478|cmd_id=0x10000001|seq_id=1|game_id=1204|gw_id=104001|msg_len=108|msg:00 6c 20 00 10 00 00 01 00 00 00 01 00 00 04 b4 00 01 96 41 67 77 31 30 34 30 30 31 00 00 00 00 00 00 00 00 
+2014-04-10_14:32:56.013|I|3693|B7FB86D0|INFO|unPackage|1|pdu_len=28|orig_pdu_len=28|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10000001|seq_id=2|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=56478
+2014-04-10_14:32:56.013|E|3693|B7FB86D0|ERRS|UNServer::doAppMsg|src_ip=192.168.177.92|src_port=56478|cmd_id=0x10000002|seq_id=2|game_id=1204|gw_id=104001|msg_len=28|msg:00 1c 20 00 10 00 00 02 00 00 00 02 00 00 04 b4 00 01 96 41 00 01 96 41 00 00 f1 a4 dc 

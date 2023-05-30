@@ -1,0 +1,28 @@
+2017-11-23 06:00:00,048 INFO  [STDOUT] java.lang.NullPointerException
+2017-11-23 06:00:00,049 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-11-23 06:00:00,049 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-11-23 06:00:00,049 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-11-23 06:00:00,049 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-11-23 06:00:00,049 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-11-23 08:47:06,790 ERROR [org.jboss.invocation.pooled.server.ServerThread] Failed to initialize
+java.io.StreamCorruptedException: invalid stream header: 0300002F
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:782)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:279)
+	at org.jboss.invocation.pooled.interfaces.OptimizedObjectInputStream.<init>(OptimizedObjectInputStream.java:121)
+	at org.jboss.invocation.pooled.server.ServerThread.dorun(ServerThread.java:247)
+	at org.jboss.invocation.pooled.server.ServerThread.run(ServerThread.java:141)
+2017-11-23 11:01:18,126 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 768
+2017-11-23 11:13:25,946 INFO  [org.apache.jk.common.ChannelSocket] Error reading data after 43bytes
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:258)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:317)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2017-11-23 11:13:25,946 WARN  [org.apache.jk.common.ChannelSocket] can't read body, waited #47
+2017-11-23 11:13:25,946 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection -1

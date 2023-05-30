@@ -1,0 +1,9 @@
+2014-03-05 05:18:27,844 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/lemzsuyhcb, warUrl=file:/home/jboss/jboss-4.0.2/server/default/tmp/deploy/tmp6929559956978104488lemzsuyhcb.war/
+2014-03-05 06:13:18,543 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/yegvaikwmn, warUrl=file:/home/jboss/jboss-4.0.2/server/default/tmp/deploy/tmp284838195568456714yegvaikwmn.war/
+2014-03-05 06:46:10,784 INFO  [STDOUT] java.lang.NullPointerException
+2014-03-05 06:46:10,785 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-03-05 06:46:10,785 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-03-05 06:46:10,786 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-03-05 06:46:10,786 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-03-05 06:46:10,786 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-03-05 13:09:28,144 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/znfwsbjdel, warUrl=file:/home/jboss/jboss-4.0.2/server/default/tmp/deploy/tmp1654938401204703638znfwsbjdel.war/

@@ -1,0 +1,140 @@
+[2023-05-29T23:10:50.175Z] [ message] [vmsvc] Log caching is enabled with maxCacheEntries=4096.
+[2023-05-29T23:10:50.175Z] [ message] [vmsvc] Core dump limit set to -1
+[2023-05-29T23:10:50.187Z] [ message] [vmsvc] Log caching is enabled with maxCacheEntries=4096.
+[2023-05-29T23:10:50.187Z] [ message] [vmsvc] Core dump limit set to -1
+[2023-05-29T23:10:50.187Z] [ message] [vmtoolsd] Tools Version: 10.3.23.676 (build-16594550)
+[2023-05-29T23:10:50.187Z] [ warning] [vmsvc] SOCKET failed to create socket, error 97: Address family not supported by protocol
+[2023-05-29T23:10:50.187Z] [ warning] [vmsvc] SimpleSock: Couldn't get VMCI socket family info.
+[2023-05-29T23:10:50.256Z] [ message] [vmtoolsd] Plugin 'hgfsServer' initialized.
+[2023-05-29T23:10:50.256Z] [ message] [vix] QueryVGAuthConfig: vgauth usage is: 1
+[2023-05-29T23:10:50.256Z] [ message] [vmtoolsd] Plugin 'vix' initialized.
+[2023-05-29T23:10:50.256Z] [ message] [vmtoolsd] Plugin 'autoUpgrade' initialized.
+[2023-05-29T23:10:50.256Z] [ message] [vmtoolsd] Plugin 'deployPkg' initialized.
+[2023-05-29T23:10:50.273Z] [ message] [vmtoolsd] Plugin 'grabbitmqProxy' initialized.
+[2023-05-29T23:10:50.273Z] [ message] [vmtoolsd] Plugin 'guestInfo' initialized.
+[2023-05-29T23:10:50.273Z] [ message] [vmtoolsd] Plugin 'powerops' initialized.
+[2023-05-29T23:10:50.273Z] [ message] [vmtoolsd] Plugin 'timeSync' initialized.
+[2023-05-29T23:10:50.273Z] [ message] [vmtoolsd] Plugin 'vmbackup' initialized.
+[2023-05-29T23:10:50.273Z] [ warning] [vmtoolsd] Couldn't get vSocket family.
+[2023-05-29T23:10:50.274Z] [ warning] [vmtoolsd] Couldn't get vSocket family.
+[2023-05-29T23:10:50.275Z] [ message] [vix] VixTools_ProcessVixCommand: command 62
+[2023-05-29T23:10:50.284Z] [ message] [vix] VixTools_ProcessVixCommand: command 62
+[2023-05-29T23:10:50.284Z] [ message] [vix] ToolsDaemonTcloReceiveVixCommand: command 62, additionalError = 17
+[2023-05-29T23:11:20.276Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:11:20.276Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:11:20.276Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:11:20.276Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:11:50.276Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:11:50.276Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:11:50.276Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:11:50.276Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:12:20.276Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:12:20.276Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:12:20.276Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:12:20.276Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:12:50.277Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:12:50.277Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:12:50.277Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:12:50.277Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:13:20.279Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:13:20.279Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:13:20.279Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:13:20.279Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:13:50.280Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:13:50.280Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:13:50.280Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:13:50.280Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:14:20.281Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:14:20.281Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:14:20.281Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:14:20.281Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:14:50.282Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:14:50.282Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:14:50.282Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:14:50.282Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:15:20.283Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:15:20.283Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:15:20.283Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:15:20.283Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:15:50.283Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv4 routing table.
+[2023-05-29T23:15:50.283Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:15:50.283Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:15:50.283Z] [ warning] [guestinfo] Failed to get nic info.
+[2023-05-29T23:16:20.285Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:16:20.285Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:16:50.286Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:16:50.286Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:17:20.287Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:17:20.287Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:17:50.287Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:17:50.287Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:18:20.288Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:18:20.288Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:18:50.290Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:18:50.290Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:19:20.291Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:19:20.291Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:19:50.292Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:19:50.292Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:20:20.292Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:20:20.292Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:20:50.292Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:20:50.292Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:21:20.293Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:21:20.293Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:21:50.294Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:21:50.294Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:22:20.295Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:22:20.295Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:22:50.297Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:22:50.297Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:23:20.298Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:23:20.298Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:23:50.301Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:23:50.301Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:24:20.303Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:24:20.303Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:24:50.304Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:24:50.304Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:25:20.307Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:25:20.307Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:25:50.307Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:25:50.307Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:26:20.308Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:26:20.308Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:26:50.310Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:26:50.310Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:27:20.310Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:27:20.310Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:27:50.310Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:27:50.310Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:28:20.310Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:28:20.310Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:28:50.312Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:28:50.312Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:29:20.312Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:29:20.312Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:29:50.313Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:29:50.313Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:30:20.314Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:30:20.314Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:30:50.314Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:30:50.314Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:31:20.316Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:31:20.316Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:31:50.316Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:31:50.316Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:32:20.317Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:32:20.317Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:32:50.318Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:32:50.318Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:33:20.319Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:33:20.319Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:33:50.320Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:33:50.320Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:34:20.321Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:34:20.321Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:34:50.321Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:34:50.321Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.
+[2023-05-29T23:35:20.321Z] [ warning] [vmsvc] SlashProcNet_GetRoute6: open(/proc/net/ipv6_route): No such file or directory
+[2023-05-29T23:35:20.321Z] [ warning] [vmsvc] RecordRoutingInfo: Unable to collect IPv6 routing table.

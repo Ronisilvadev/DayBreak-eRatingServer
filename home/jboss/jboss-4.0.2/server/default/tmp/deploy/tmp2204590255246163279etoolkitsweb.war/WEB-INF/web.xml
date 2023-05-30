@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  	<!-- Standard log4 Configuration -->
+  	<context-param>
+    	<param-name>log4jConfigLocation</param-name>
+        <param-value>/WEB-INF/log4j.xml</param-value>
+	</context-param>
+	
+	<listener> 
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class> 
+	</listener> 
+	
+	
+	<listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+	<!-- Standard Action Servlet Configuration (with debugging) -->
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>ApplicationResources</param-value>
+		</init-param>
+
+		<!-- struts configs -->
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+				/WEB-INF/struts-config.xml,
+				/WEB-INF/ConfigXML/PlayerQuery/struts-config-playerQuery.xml,
+				/WEB-INF/ConfigXML/RoleOperation/struts-config-roleOperation.xml,
+				/WEB-INF/ConfigXML/DictionaryConfig/struts-config-dictionaryConfig.xml,
+				/WEB-INF/ConfigXML/WorldOperation/struts-config-worldOperation.xml,
+				/WEB-INF/ConfigXML/Purview/struts-config-purview.xml,
+				/WEB-INF/ConfigXML/RoleCompensate/struts-config-roleCompensate.xml
+			</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>0</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>0</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+  <servlet>
+    <description>GmXmlRpcServer</description>
+    <display-name>GmXmlRpcServer</display-name>
+    <servlet-name>GmXmlRpcServer</servlet-name>
+    <servlet-class>com.linekong.gmweb2.service.xmlrpc.GmXmlRpcServer</servlet-class>
+  </servlet>
+  <servlet>
+    <description>DownloadCodeFile</description>
+    <display-name>TDownloadCodeFile</display-name>
+    <servlet-name>DownloadCodeFile</servlet-name>
+    <servlet-class>com.linekong.gmweb2.web.servlet.DownloadCodeFile</servlet-class>
+  </servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+  <servlet-mapping>
+    <servlet-name>GmXmlRpcServer</servlet-name>
+    <url-pattern>/xmlRpcServer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadCodeFile</servlet-name>
+    <url-pattern>/downloadCodeFile.do</url-pattern>
+  </servlet-mapping>
+
+	<!-- Welcome File List -->
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	
+	<filter>
+		<filter-name>baseFilter</filter-name>
+		<filter-class>
+			com.linekong.gmweb2.web.filter.BaseFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>
+			com.linekong.gmweb2.web.filter.LoginFilter
+		</filter-class>
+	</filter>
+
+	
+	<filter-mapping>
+		<filter-name>baseFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>logPrintFilter</filter-name>
+		<filter-class>
+			com.linekong.gmweb2.web.filter.LogPrintFilter
+		</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>logPrintFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+
+	<session-config>     
+        <session-timeout>480</session-timeout>     
+  	</session-config>
+  	
+  	<servlet>
+    	<servlet-name>XFireServlet</servlet-name>
+    	<servlet-class>org.codehaus.xfire.transport.http.XFireConfigurableServlet</servlet-class>
+    	<load-on-startup>1</load-on-startup>
+ 	</servlet>
+  
+  	<servlet>
+	    <description>validate UID from outer request</description>
+	    <display-name>validate UID from outer request</display-name>
+	    <servlet-name>ValidateUIDServlet</servlet-name>
+	    <servlet-class>com.linekong.gmweb2.web.servlet.ValidateUIDServlet</servlet-class>
+  	</servlet>
+  	
+	<servlet>
+		<description>retrieve gateway info from gmtools</description>
+	    <display-name>retrieve gateway info from gmtools  </display-name>
+	    <servlet-name>RetrieveGatewayServlet</servlet-name>
+	    <servlet-class>com.linekong.gmweb2.web.servlet.RetrieveGatewayServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	    <description>add resource into gmtools</description>
+	    <display-name>add resource into gmtools  </display-name>
+	    <servlet-name>AddResourceServlet</servlet-name>
+	    <servlet-class>com.linekong.gmweb2.web.servlet.AddResourceServlet</servlet-class>
+	</servlet>
+	  
+	<servlet>
+	    <description>redirect servlet</description>
+	    <display-name>redirect servlet</display-name>
+	    <servlet-name>RedirectServlet</servlet-name>
+	    <servlet-class>com.linekong.gmweb2.web.servlet.RedirectServlet</servlet-class>
+	</servlet>
+
+    <servlet-mapping>
+    	<servlet-name>XFireServlet</servlet-name>
+    	<url-pattern>/services/*</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+    	<servlet-name>ValidateUIDServlet</servlet-name>
+    	<url-pattern>/validateUID</url-pattern>
+  	</servlet-mapping>
+  	
+	<servlet-mapping>
+	    <servlet-name>RetrieveGatewayServlet</servlet-name>
+		<url-pattern>/retrieveGateway</url-pattern>
+	</servlet-mapping>
+	  
+	<servlet-mapping>
+	    <servlet-name>AddResourceServlet</servlet-name>
+	    <url-pattern>/addResource</url-pattern>
+	</servlet-mapping>
+	  
+	<servlet-mapping>
+	    <servlet-name>RedirectServlet</servlet-name>
+	    <url-pattern>/redirect</url-pattern>
+	</servlet-mapping>
+  
+  	<listener>
+		<listener-class>com.linekong.gmweb2.web.servlet.SessionListener</listener-class>
+	</listener>
+</web-app>
+
+

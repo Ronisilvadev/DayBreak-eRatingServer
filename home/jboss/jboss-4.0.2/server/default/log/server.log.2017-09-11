@@ -1,0 +1,20 @@
+2017-09-11 04:00:00,009 INFO  [STDOUT] Exception in thread "Timer-3" 
+2017-09-11 04:00:00,029 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-09-11 04:00:00,030 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-09-11 04:00:00,030 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-09-11 04:00:00,030 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.QiDianTask$1.run(Unknown Source)
+2017-09-11 04:00:00,030 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-09-11 04:00:00,030 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-09-11 06:00:00,020 INFO  [STDOUT] java.lang.NullPointerException
+2017-09-11 06:00:00,020 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-09-11 06:00:00,020 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-09-11 06:00:00,020 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-09-11 06:00:00,020 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-09-11 06:00:00,020 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-09-11 10:48:00,004 INFO  [STDOUT] Exception in thread "Timer-5" 
+2017-09-11 10:48:00,005 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-09-11 10:48:00,005 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-09-11 10:48:00,005 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-09-11 10:48:00,005 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TaoBaoTask$1.run(Unknown Source)
+2017-09-11 10:48:00,005 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-09-11 10:48:00,005 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

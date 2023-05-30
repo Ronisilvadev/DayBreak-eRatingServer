@@ -1,0 +1,109 @@
+2014-02-18 05:22:32,098 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/zdfljckvhg, warUrl=file:/home/jboss/jboss-4.0.2/server/default/tmp/deploy/tmp7799525390617989714zdfljckvhg.war/
+2014-02-18 06:42:53,904 INFO  [STDOUT] java.lang.NullPointerException
+2014-02-18 06:42:53,905 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-02-18 06:42:53,905 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-02-18 06:42:53,905 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-02-18 06:42:53,905 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-02-18 06:42:53,905 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-02-18 09:03:01,717 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/ezwymsbjpt, warUrl=file:/home/jboss/jboss-4.0.2/server/default/tmp/deploy/tmp5058241807718728632ezwymsbjpt.war/
+2014-02-18 09:06:54,655 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:06:54,838 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-02-18 09:07:05,605 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=va13f&gameId=1204&method=login&passportName=globalgames1&
+2014-02-18 09:07:05,606 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:07:06,087 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showTop&
+2014-02-18 09:07:06,087 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:07:06,099 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-02-18 09:07:06,099 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:07:06,101 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-02-18 09:07:06,102 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:07:06,148 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-02-18 09:07:06,149 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:07:06,183 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showTab&
+2014-02-18 09:07:06,183 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:07:06,184 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-02-18 09:07:06,185 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-02-18 09:07:10,274 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showRoleManage.do?
+2014-02-18 09:07:12,758 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showRoleAdd.do?
+2014-02-18 09:07:26,282 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showAwardCompensate.do?
+2014-02-18 09:07:30,892 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-02-18 09:08:32,993 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showIssueSettingExp.do?
+2014-02-18 09:08:35,748 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showProduct.do?
+2014-02-18 09:08:37,364 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showIssueSettingExp.do?
+2014-02-18 09:08:39,029 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showAddSettingExp.do?
+2014-02-18 09:10:59,090 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/addSettingExp.do?booking=0&reason=Gainging Levels for testing the game.&serverId=0&endTime=2014-02-21 09:37&expRate=100&gatewayId=-1&
+2014-02-18 09:10:59,128 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2014-02-18 09:10:59,217 INFO  [org.springframework.jdbc.support.SQLErrorCodesFactory] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2014-02-18 09:10:59,222 WARN  [org.apache.struts.action.RequestProcessor] Unhandled Exception thrown: class org.springframework.dao.DataIntegrityViolationException
+2014-02-18 09:10:59,223 INFO  [STDOUT] javax.servlet.ServletException: PreparedStatementCallback; SQL [ INSERT INTO LOG_MULTI_EXP (CHANGE_ID, GAME_ID, GATEWAY_TYPE, GATEWAY_ID, SERVER_ID,  EXP_TYPE, EXP_RATE, START_TIME, END_TIME, STATE, REASON, OPERATOR_NAME, INSERT_TIME, EXP_TYPE_CODE) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,NOW(),?) ]; Column 'EXP_TYPE' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'EXP_TYPE' cannot be null
+2014-02-18 09:10:59,223 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processException(RequestProcessor.java:535)
+2014-02-18 09:10:59,223 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:433)
+2014-02-18 09:10:59,223 INFO  [STDOUT] 	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+2014-02-18 09:10:59,224 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+2014-02-18 09:10:59,224 INFO  [STDOUT] 	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+2014-02-18 09:10:59,224 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+2014-02-18 09:10:59,224 INFO  [STDOUT] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+2014-02-18 09:10:59,224 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+2014-02-18 09:10:59,224 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-02-18 09:10:59,225 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+2014-02-18 09:10:59,225 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-02-18 09:10:59,225 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-02-18 09:10:59,225 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+2014-02-18 09:10:59,225 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-02-18 09:10:59,225 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-02-18 09:10:59,226 INFO  [STDOUT] 	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+2014-02-18 09:10:59,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-02-18 09:10:59,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-02-18 09:10:59,226 INFO  [STDOUT] 	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+2014-02-18 09:10:59,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+2014-02-18 09:10:59,226 INFO  [STDOUT] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+2014-02-18 09:10:59,227 INFO  [STDOUT] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+2014-02-18 09:10:59,227 INFO  [STDOUT] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+2014-02-18 09:10:59,227 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+2014-02-18 09:10:59,227 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+2014-02-18 09:10:59,227 INFO  [STDOUT] 	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+2014-02-18 09:10:59,227 INFO  [STDOUT] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+2014-02-18 09:10:59,227 INFO  [STDOUT] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+2014-02-18 09:10:59,228 INFO  [STDOUT] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+2014-02-18 09:10:59,228 INFO  [STDOUT] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+2014-02-18 09:10:59,228 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+2014-02-18 09:10:59,228 INFO  [STDOUT] 	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+2014-02-18 09:10:59,228 INFO  [STDOUT] 	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+2014-02-18 09:10:59,228 INFO  [STDOUT] 	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+2014-02-18 09:10:59,229 INFO  [STDOUT] 	at java.lang.Thread.run(Thread.java:662)
+2014-02-18 09:10:59,229 ERROR [com.linekong.gmweb2.web.filter.BaseFilter] /addSettingExp.do
+javax.servlet.ServletException: PreparedStatementCallback; SQL [ INSERT INTO LOG_MULTI_EXP (CHANGE_ID, GAME_ID, GATEWAY_TYPE, GATEWAY_ID, SERVER_ID,  EXP_TYPE, EXP_RATE, START_TIME, END_TIME, STATE, REASON, OPERATOR_NAME, INSERT_TIME, EXP_TYPE_CODE) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,NOW(),?) ]; Column 'EXP_TYPE' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'EXP_TYPE' cannot be null
+	at org.apache.struts.action.RequestProcessor.processException(RequestProcessor.java:535)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:433)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:810)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.LogPrintFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.LoginFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at com.linekong.gmweb2.web.filter.BaseFilter.doFilter(Unknown Source)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:81)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:202)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.jboss.web.tomcat.security.CustomPrincipalValve.invoke(CustomPrincipalValve.java:39)
+	at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:153)
+	at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:59)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:856)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.processConnection(Http11Protocol.java:744)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.MasterSlaveWorkerThread.run(MasterSlaveWorkerThread.java:112)
+	at java.lang.Thread.run(Thread.java:662)

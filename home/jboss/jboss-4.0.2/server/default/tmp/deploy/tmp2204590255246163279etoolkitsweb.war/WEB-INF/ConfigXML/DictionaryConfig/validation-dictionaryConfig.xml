@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC 
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" 
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd"> 
+<form-validation>
+	<global>
+		<constant>
+			<constant-name>date</constant-name>
+			<constant-value>^\d{4}-\d{2}-\d{2}$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>date2</constant-name>
+			<constant-value>^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>gatewayUrl</constant-name>
+			<constant-value>^(\d+)\.(\d+)\.(\d+)\.(\d+):(\d+)$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>ip</constant-name>
+			<constant-value>^(\d+)\.(\d+)\.(\d+)\.(\d+)$</constant-value>
+		</constant>
+	</global>
+	<formset>
+		<!-- 配置联盟 begin -->
+		<form name="/addLeague">
+			<field property="code" depends="required">
+				<arg0 key="prompt.code"/>
+			</field>
+			<field property="name" depends="required">
+				<arg0 key="prompt.name"/>
+			</field>
+		</form>
+		<!-- 配置联盟 end -->
+		
+		<!-- 配置频道 begin -->
+		<form name="/addChannel">
+			<field property="code" depends="required">
+				<arg0 key="prompt.code"/>
+			</field>
+			<field property="name" depends="required">
+				<arg0 key="prompt.name"/>
+			</field>
+		</form>
+		<!-- 配置频道 end -->
+		
+		<!-- 配置职业 begin -->
+		<form name="/addOccupation">
+			<field property="code" depends="required">
+				<arg0 key="prompt.code"/>
+			</field>
+			<field property="name" depends="required">
+				<arg0 key="prompt.name"/>
+			</field>
+		</form>
+		<!-- 配置职业 end -->
+		
+		<!-- 配置场景 begin -->
+		<form name="/addScene">
+			<field property="code" depends="required">
+				<arg0 key="prompt.code"/>
+			</field>
+			<field property="name" depends="required">
+				<arg0 key="prompt.name"/>
+			</field>
+		</form>
+		<!-- 配置场景 end -->
+		
+		<!-- 配置经验类型 begin -->
+		<form name="/addExperienceType">
+			<field property="code" depends="required">
+				<arg0 key="prompt.code"/>
+			</field>
+			<field property="name" depends="required">
+				<arg0 key="prompt.name"/>
+			</field>
+		</form>
+		<!-- 配置经验类型 end -->
+		
+		<!-- 配置网关 begin -->
+		<form name="/addGateway">
+			<field property="gatewayId" depends="required,integer">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="gatewayProvider" depends="required,integer">
+				<arg0 key="prompt.gatewayProvider"/>
+			</field>
+			<field property="gatewayName" depends="required">
+				<arg0 key="prompt.gatewayName"/>
+			</field>
+			<field property="gatewayUrl" depends="required,mask">
+				<arg0 key="prompt.gatewayUrl"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${gatewayUrl}</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="/modifyGateway">
+			<field property="gatewayId" depends="required,integer">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="gatewayProvider" depends="required,integer">
+				<arg0 key="prompt.gatewayProvider"/>
+			</field>
+			<field property="gatewayName" depends="required">
+				<arg0 key="prompt.gatewayName"/>
+			</field>
+			<field property="gatewayUrl" depends="required,mask">
+				<arg0 key="prompt.gatewayUrl"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${gatewayUrl}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 配置网关 end -->
+
+		<!-- 配置服务器 begin -->
+		<form name="/addGameServer">
+			<field property="gatewayId" depends="required,integer">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required,integer">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="serverName" depends="required">
+				<arg0 key="prompt.serverName"/>
+			</field>
+			<field property="groupId" depends="required">
+				<arg0 key="prompt.groupId"/>
+			</field>
+			<field property="serverUrl" depends="required,mask">
+				<arg0 key="prompt.serverUrl"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${gatewayUrl}</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="/modifyGameServer">
+			<field property="gatewayId" depends="required,integer">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="serverId" depends="required,integer">
+				<arg0 key="prompt.serverId"/>
+			</field>
+			<field property="serverName" depends="required">
+				<arg0 key="prompt.serverName"/>
+			</field>
+			<field property="groupId" depends="required,integer">
+				<arg0 key="prompt.groupId"/>
+			</field>
+			<field property="serverUrl" depends="required,mask">
+				<arg0 key="prompt.serverUrl"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${gatewayUrl}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 配置服务器 end -->
+		
+		<!-- 配置托管Ip begin -->
+		<form name="/addTrusteeIp">
+			<field property="ipName" depends="required">
+				<arg0 key="prompt.ipName"/>
+			</field>
+			<field property="ip" depends="required,mask">
+				<arg0 key="prompt.ip"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${ip}</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="/modifyTrusteeIp">
+			<field property="ipName" depends="required">
+				<arg0 key="prompt.ipName"/>
+			</field>
+			<field property="ip" depends="required,mask">
+				<arg0 key="prompt.ip"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${ip}</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 配置托管Ip end -->
+		<!-- 添加游戏 begin -->
+		<form name="/addGame">
+			<field property="gameId" depends="required,integer">
+				<arg0 key="prompt.gameId"/>
+			</field>
+			<field property="gameName" depends="required">
+				<arg0 key="prompt.gameName"/>
+			</field>
+		</form>
+		
+		<form name="/addBiActivity">
+			<field property="activityId" depends="required">
+				<arg0 key="prompt.activityId"/>
+			</field>
+			<field property="activityDesc" depends="required">
+				<arg0 key="prompt.activityDesc"/>
+			</field>
+			<field property="beginTime" depends="required">
+				<arg0 key="prompt.beginTime"/>
+				
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endTime"/>
+			</field>
+		</form>
+		<!-- 添加游戏 end -->
+	</formset>
+</form-validation>
+          

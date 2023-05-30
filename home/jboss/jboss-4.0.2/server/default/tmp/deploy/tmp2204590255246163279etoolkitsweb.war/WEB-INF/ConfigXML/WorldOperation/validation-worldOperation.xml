@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC 
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" 
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd"> 
+<form-validation>
+	<formset>
+		<form name="/addActivityModel">
+			<field property="activityId" depends="required,integer">
+				<arg0 key="prompt.activityId"/>
+			</field>
+			<field property="activityName" depends="required">
+				<arg0 key="prompt.activityName"/>
+			</field>
+			<field property="activityType" depends="required,integer">
+				<arg0 key="prompt.activityType"/>
+			</field>
+			<field property="beginTime" depends="required">
+				<arg0 key="prompt.beginTime"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endTime"/>
+			</field>
+			<field property="giftEndTime" depends="required">
+				<arg0 key="prompt.giftEndTime"/>
+			</field>
+			<field property="roleBeginTime" depends="">
+				<arg0 key="prompt.roleBeginTime"/>
+			</field>
+			<field property="roleEndTime" depends="">
+				<arg0 key="prompt.roleEndTime"/>
+			</field>
+			<field property="gatewayId" depends="required,integer">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+		</form>		
+		<form name="/updateActivityModel">
+			<field property="activityId" depends="required,integer">
+				<arg0 key="prompt.activityId"/>
+			</field>
+			<field property="activityName" depends="required">
+				<arg0 key="prompt.activityName"/>
+			</field>
+			<field property="activityType" depends="required,integer">
+				<arg0 key="prompt.activityType"/>
+			</field>
+			<field property="beginTime" depends="required">
+				<arg0 key="prompt.beginTime"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endTime"/>
+			</field>
+			<field property="giftEndTime" depends="required">
+				<arg0 key="prompt.giftEndTime"/>
+			</field>
+			<field property="roleBeginTime" depends="">
+				<arg0 key="prompt.roleBeginTime"/>
+			</field>
+			<field property="roleEndTime" depends="">
+				<arg0 key="prompt.roleEndTime"/>
+			</field>
+			<field property="gatewayId" depends="">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+		</form>
+		<form name="/setPackage">
+			<!-- 
+			<field property="productCode" depends="required">
+				<arg0 key="prompt.itemCode"/>
+			</field>
+			 -->
+			<field property="lowerLimit" depends="required,integer">
+				<arg0 key="prompt.lowerLimit"/>
+			</field>
+			<field property="upperLimit" depends="required,integer">
+				<arg0 key="prompt.upperLimit"/>
+			</field>
+		</form>
+		<form name="/setPackageItem">
+			<field property="itemCode" depends="required">
+				<arg0 key="prompt.itemCode"/>
+			</field>
+			<field property="itemName" depends="required">
+				<arg0 key="prompt.itemName"/>
+			</field>
+			<field property="itemNum" depends="required,integer">
+				<arg0 key="prompt.itemNum"/>
+			</field>
+		</form>
+		<form name="/generateSerialCode">
+			<field property="mediaName" depends="required">
+				<arg0 key="prompt.mediaName"/>
+			</field>
+			<field property="useLimit" depends="required,integer">
+				<arg0 key="prompt.useLimit"/>
+			</field>
+			<field property="serialNum" depends="required,integer">
+				<arg0 key="prompt.serialNum"/>
+			</field>
+		</form>
+		<form name="/modifyActivityModelTime">
+			<field property="activityId" depends="required">
+				<arg0 key="prompt.activityId"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.beginTime"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endTime"/>
+			</field>
+		</form>
+		<form name="/addOrUpdateChargeGatewayConfig">
+			<field property="operType" depends="required">
+				<arg0 key="prompt.operType"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="gatewayType" depends="required">
+				<arg0 key="prompt.gatewayType"/>
+			</field>
+			<field property="gatewayCode" depends="required">
+				<arg0 key="prompt.gatewayCode"/>
+			</field>
+			<field property="gatewayPassword" depends="required">
+				<arg0 key="prompt.gatewayPassword"/>
+			</field>
+			<field property="gatewayIP" depends="required">
+				<arg0 key="prompt.gatewayIP"/>
+			</field>
+			<field property="gatewayPort" depends="required">
+				<arg0 key="prompt.gatewayPort"/>
+			</field>			
+		</form>
+		<form name="/addOrUpdateChargeGateway">
+			<field property="operType" depends="required">
+				<arg0 key="prompt.operType"/>
+			</field>
+			<field property="gatewayIdd" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="gatewayZone" depends="required">
+				<arg0 key="prompt.gatewayZone"/>
+			</field>
+			<field property="gatewayName" depends="required">
+				<arg0 key="prompt.gatewayName"/>
+			</field>
+			<field property="gatewayCode" depends="required">
+				<arg0 key="prompt.gatewayCode"/>
+			</field>
+			<field property="gatewayPwd" depends="required">
+				<arg0 key="prompt.gatewayPassword"/>
+			</field>
+			<field property="gatewayIP" depends="required">
+				<arg0 key="prompt.gatewayIP"/>
+			</field>
+			<field property="gatewayMac" depends="required">
+				<arg0 key="prompt.gatewayMac"/>
+			</field>
+		</form>
+		
+		
+		<form name="/worldDropRate">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="itemId" depends="required">
+				<arg0 key="prompt.itemId"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.beginTime"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endTime"/>
+			</field>
+		</form>
+	</formset>
+</form-validation>

@@ -1,0 +1,342 @@
+#!/bin/bash
+GETOSVERSIONSCRIPT=`cat <<\EOF
+
+if [ -f /etc/os-release ]; then
+    # freedesktop.org and systemd
+    . /etc/os-release
+    OS=\$NAME
+    VER=\$VERSION_ID
+elif type lsb_release >/dev/null 2>&1; then
+    # linuxbase.org
+    OS=\`lsb_release -si\`
+    VER=\`lsb_release -sr\`
+elif [ -f /etc/lsb-release ]; then
+    # For some versions of Debian/Ubuntu without lsb_release command
+    . /etc/lsb-release
+    OS=\$DISTRIB_ID
+    VER=\$DISTRIB_RELEASE
+elif [ -f /etc/debian_version ]; then
+    # Older Debian/Ubuntu/etc.
+    OS=Debian
+    VER=\$(cat /etc/debian_version)
+elif [ -f /etc/SuSe-release ]; then
+    # Older SuSE/etc.
+    echo "todo"
+    OS="Suse"
+    VER="NANI"
+elif [ -f /etc/redhat-release ]; then
+    # Older Red Hat, CentOS, etc.
+
+    OS="Redhat"
+    VER="NANI"
+
+    #nano /etc/yum.repos.d/CentOS-Base.repo
+    if (grep  -q CentOS /etc/redhat-release); then
+        OS="CentOS"
+        VER=\`cat /etc/redhat-release | awk '{print $3}'\`
+        #OS=\`cat /etc/redhat-release | awk '{print $1}'\`
+        #
+    fi
+else
+    # Fall back to uname, e.g. "Linux <version>", also works for BSD, etc.
+    OS=\$(uname -s)
+    VER=\$(uname -r)
+fi
+
+case \$(uname -m) in
+x86_64)
+    BITS=64
+    ;;
+i*86)
+    BITS=32
+    ;;
+*)
+    BITS=?
+    ;;
+esac
+
+case \$(uname -m) in
+x86_64)
+    ARCH=x64  # or AMD64 or Intel64 or whatever
+    ;;
+i*86)
+    ARCH=x86  # or IA32 or Intel32 or whatever
+    ;;
+*)
+    # leave ARCH as-is
+    ;;
+esac
+
+
+echo "OS:$OS $VER $BITS $ARCH"
+EOF
+`
+
+
+#!/bin/bash
+
+mkdir -p ~/.ssh/
+#cd ~/.ssh/
+
+# STEP 1 - Configuration
+IFS=:
+ETC_HOSTS=/etc/hosts
+# STEP 2 - List of public Servers
+declare -a publicservers=(
+"daybreak-gs01:177.54.159.202:8722"
+"daybreak-gs02:177.54.159.203:8722"
+"daybreak-gs03:177.54.159.236:22"
+#"daybreak-gs04:177.54.159.237:22"
+#"daybreak-gs05:177.54.159.238:22"
+"daybreak-union:177.54.159.204:8722"
+"daybreak-eratingsql:177.54.159.205:8722"
+"daybreak-mysql:177.54.159.206:8722"
+"daybreak-tgs01:177.54.159.242:8722"
+"daybreak-tunion:177.54.159.243:8722"
+"daybreak-tmysql:177.54.159.244:8722"
+"gg-webtest:177.54.159.225:8722"
+"gg-websites:177.54.159.229:1337"
+"gg-websystems:177.54.159.230:1337"
+"gg-mysqltest:177.54.159.220:8722"
+"gg-static:177.54.159.226:1337"
+"gg-support:177.54.159.222:8722"
+"wp-mysql:177.54.159.221:7312"
+#"ggpag-web:177.54.159.224:8722"
+"gg-vpn:177.54.159.228:64128"
+"patch1.daybreak.globalgames.com.br:107.170.100.107:8722"
+)
+
+# STEP 3 - List of private Servers
+declare -a privateservers=(
+"daybreak-gs01:192.168.34.162:8722"
+"daybreak-gs02:192.168.34.163:8722"
+"daybreak-gs03:192.168.34.236:22"
+"daybreak-gs04:192.168.34.237:22"
+"daybreak-gs05:192.168.34.238:22"
+"daybreak-union:192.168.34.168:8722"
+"daybreak-eratingsql:192.168.34.169:8722"
+"daybreak-mysql:192.168.34.167:8722"
+"daybreak-tgs01:192.168.177.92:8722"
+"daybreak-tunion:192.168.177.94:8722"
+"daybreak-tmysql:192.168.177.93:8722"
+"gg-webtest:10.10.187.234:8722"
+"gg-websites:10.10.187.235:1337"
+"gg-websystems:10.10.187.74:1337"
+"gg-mysqltest:10.10.187.243:8722"
+"gg-static:10.10.187.134:1337"
+"gg-support:10.10.187.224:8722"
+"wp-mysql:10.10.187.244:7312"
+"ggpag-web:10.10.187.75:8722"
+"ggpag-mysql:10.10.187.77:8722"
+"gg-vpn:10.10.187.228:64128"
+)
+
+# STEP 4 - Functions
+function addgghost() {
+    if [ "$#" -ne 2 ]; then
+        echo "Illegal number of parameters"
+        return
+    fi
+
+    HOSTNAME=$1
+    IP=$2
+    HOSTS_LINE="$IP\t$HOSTNAME"
+    if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
+        then
+            echo "$HOSTNAME already exists : $(grep $HOSTNAME $ETC_HOSTS)"
+        else
+            echo "Adding $HOSTNAME to your $ETC_HOSTS";
+            sudo -- sh -c -e "echo '$HOSTS_LINE' >> /etc/hosts";
+
+            if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
+                then
+                    echo "$HOSTNAME was added succesfully \n $(grep $HOSTNAME /etc/hosts)";
+                else
+                    echo "Failed to Add $HOSTNAME, Try again!";
+            fi
+    fi
+}
+
+function removegghost() {
+    if [ "$#" -ne 1 ]; then
+        echo "Wheres the host?"
+        return
+    fi
+
+    HOSTNAME=$1
+    if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
+    then
+        echo "$HOSTNAME Found in your $ETC_HOSTS, Removing now...";
+        sudo sed -i".bak" "/$HOSTNAME/d" $ETC_HOSTS
+    else
+        echo "$HOSTNAME was not found in your $ETC_HOSTS";
+    fi
+}
+
+updatefiles(){
+
+splitter=$(date +"%s")
+
+command="echo 0"
+echo "Zerando ~/.ssh/config e ~/.ssh/.gghosts"
+echo "" > ~/.ssh/config
+echo "" > ~/.ssh/.gghosts
+for s in "${publicservers[@]}"
+do
+	ary=($s)
+	host=${ary[0]}
+        ip=${ary[1]}
+	port=${ary[2]}
+	
+
+sshconfig=`cat <<EOE
+
+Host $host
+        HostName $host
+        Port $port
+        StrictHostKeyChecking no 
+        UserKnownHostsFile /dev/null
+	LogLevel QUIET
+EOE
+`
+
+echo "Instalando $ip $port..."
+removegghost $host > /dev/null
+addgghost $host $ip > /dev/null
+echo "$host:$port" >> ~/.ssh/.gghosts
+echo "$sshconfig" >> ~/.ssh/config
+
+done
+
+}
+
+
+exec_script(){
+    date=`date +%s`
+    mkdir -p /var/log/.gghosts/$date/errors/
+    mkdir -p /var/log/.gghosts/$date/output/
+    cat $1 > /var/log/.gghosts/$date/script
+    parallel-ssh \
+	-e /var/log/.gghosts/$date/errors/ \
+	-o /var/log/.gghosts/$date/output/ \
+        -h ~/.ssh/.gghosts \
+	--inline-stdout \
+	-I < $1
+
+	#find /var/log/.gghosts/$date/
+}
+
+
+
+exec_command(){
+    date=`date +%s`
+    mkdir -p /var/log/.gghosts/$date/errors/
+    mkdir -p /var/log/.gghosts/$date/output/
+    echo "$1" > /var/log/.gghosts/$date/command
+    parallel-ssh \
+	-e /var/log/.gghosts/$date/errors/ \
+	-o /var/log/.gghosts/$date/output/ \
+        -h ~/.ssh/.gghosts \
+	--inline-stdout \
+	"$1"
+
+  #find /var/log/.gghosts/$date/
+}
+
+package_installer(){
+
+    date=`date +%s`
+    mkdir -p /var/log/.gghosts/$date/errors/
+    mkdir -p /var/log/.gghosts/$date/output/
+    cat $1 > /var/log/.gghosts/$date/script
+
+    oneliner="if [ -n \"\`which apt-get\`\" ]; then echo \"apt-get install -y $1\" ; elif [ -n \"\`which yum\`\" ]; then echo \"yum -y install $1\"; fi"
+
+    echo "Oneliner = $oneliner"
+    parallel-ssh \
+	-e /var/log/.gghosts/$date/errors/ \
+	-o /var/log/.gghosts/$date/output/ \
+        -h ~/.ssh/.gghosts \
+	--inline-stdout \      
+        "$oneliner"
+	
+
+	find /var/log/.gghosts/$date/
+
+   #set -eu -o pipefail # fail on error , debug all lines
+
+    #if [ "" == "`which $1`" ]; then  echo "$1 Not Found";
+
+    #fi
+}
+
+replicate(){
+    cat $#
+}
+
+# Parse Parameters #
+for ARG in $*; do
+  case $ARG in
+    -a|--alpha)
+      A=true 
+      ;;
+    -b=*|--beta=*)
+      B=${ARG#*=} 
+      ;;
+    --help)
+      usage
+          ;;
+    update)
+        clear
+        updatefiles
+        ;;
+    exec)
+      if [ "$2" != "" ]; then
+          thecmd="${@:2}"
+          exec_command "$thecmd"
+      else
+          read -p $'\e[31mEnter command\e[0m: ' thecmd
+          exec_command "$thecmd"                
+      fi
+        # shellscript args except first
+        #	Use this:
+        #echo "${@:2}"
+        #The following syntax:
+        #echo "${*:2}"
+        #would work as well, but is not recommended, because as @Gordon already explained, that using * , it runs all of the arguments together as a single argument with spaces, while @ preserves the breaks between them (even if some of the arguments themselves contain spaces). It doesn't make the difference with echo , but it matters for many other commands.
+        #
+        #---
+        #Answer from https://stackoverflow.com/questions/9057387/process-all-arguments-except-the-first-one-in-a-bash-script
+
+        ;;
+    terminal)
+
+
+      while true; do
+          echo -e "PRESS CTRL+C TO EXIT"
+          read -p $'\e[31mEnter command\e[0m: ' thecmd
+          exec_command "$thecmd"
+      done
+
+        ;;
+        
+    distro)
+        exec_command "$GETOSVERSIONSCRIPT"
+        ;;
+    installer)
+        package_installer "${@:2}"
+        ;;
+        
+    reporter)
+        read -p $'\e[31mReport Name\e[0m: ' reportname
+        read -p $'\e[31mCommand\e[0m: ' thecmd
+        ;;
+    getosstring)
+        echo "$GETOSVERSIONSCRIPT"
+        ;;
+#    *)
+#      echo "Unknown Argument $ARG" ;;
+  esac
+done
+# Do Some Stuff #
+echo "Usage gghosts [update|exec|terminal|install|reporter|installer]"

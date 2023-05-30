@@ -1,0 +1,9 @@
+2014-05-22 06:59:47,494 INFO  [STDOUT] java.lang.NullPointerException
+2014-05-22 06:59:47,495 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-05-22 06:59:47,495 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-05-22 06:59:47,495 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-05-22 06:59:47,495 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-05-22 06:59:47,495 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-05-22 15:15:02,221 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 85    userName = pedrao01    chargeTime = 2014-05-23 02:15:02    chargeMoney = 10000.0    chargeAmount = 10000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140078250220420    sign = 7450b60bb59cab60fbda513692280fa7     )
+2014-05-22 15:16:59,899 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 86    userName = richard502    chargeTime = 2014-05-23 02:16:59    chargeMoney = 100000.0    chargeAmount = 100000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140078261988548    sign = 95609f4e4f46d27a84f0240fdb54a45d     )
+2014-05-22 17:15:49,240 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 87    userName = pedrao01    chargeTime = 2014-05-23 04:15:49    chargeMoney = 1000000.0    chargeAmount = 1000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140078974922640    sign = bfc3ea93c3a84c57936eaba610ff8418     )

@@ -1,0 +1,105 @@
+2014-07-22 14:56:17,927 INFO  [STDOUT] java.lang.NullPointerException
+2014-07-22 14:56:17,927 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-07-22 14:56:17,927 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-07-22 14:56:17,928 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-07-22 14:56:17,928 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-07-22 14:56:17,928 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-07-22 17:21:20,485 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=logout&
+2014-07-22 17:21:20,486 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:20,553 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=showLogin&
+2014-07-22 17:21:20,553 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:21,023 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-07-22 17:21:25,180 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=xaaxc&gameId=1204&method=login&passportName=spacecowboy&
+2014-07-22 17:21:25,180 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:25,530 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2014-07-22 17:21:25,530 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:25,531 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-07-22 17:21:25,532 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:25,571 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-07-22 17:21:25,571 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:25,684 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-07-22 17:21:25,684 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:25,685 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-07-22 17:21:25,685 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:25,686 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2014-07-22 17:21:25,686 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 17:21:29,296 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 17:21:45,904 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddActivityModel.do?version=new&
+2014-07-22 17:23:00,582 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/addActivityModel.do?activityId=1514072101&roleBeginTime=&roleEndTime=&beginTime=2014-07-22 17:21:45&giftBeginTime=2014-07-22 17:21:45&giftEndTime=2014-07-23 17:21:45&activityType=1&endTime=2014-07-23 17:21:45&activityName=Código Promocional&isMutex=1&gatewayId=0&version=new&
+2014-07-22 17:23:04,694 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072101&version=new&
+2014-07-22 17:23:07,518 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072101&activityType=1&version=new&
+2014-07-22 17:23:11,179 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/setPackage.do?activityId=1514072101&upperLimit=99&lowerLimit=0&activityType=1&version=new&
+2014-07-22 17:23:13,905 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackageItem.do?activityId=1514072101&packageId=4&activityType=1&version=new&
+2014-07-22 17:23:20,827 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/setPackageItem.do?itemNum=2&activityId=1514072101&itemName=10 Diamante Rosa&packageId=4&activityType=1&version=new&itemCode=1-870-0-0&
+2014-07-22 17:23:22,229 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072101&activityType=1&version=new&
+2014-07-22 17:23:23,115 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072101&version=new&
+2014-07-22 17:23:29,192 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072101&oper=1&version=new&
+2014-07-22 17:23:32,808 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 17:23:34,130 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showGenerateSerialCode.do?activityId=1514072101&version=new&
+2014-07-22 17:23:53,842 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/generateSerialCode.do?activityId=1514072101&serialType=0&useLimit=0&mediaName=Código Promocional&serialNum=5&version=new&
+2014-07-22 17:23:55,421 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/downloadCodeFile.do?logId=/home/jboss/jboss-4.0.2/activitycode1514072101_1406060633856.txt&type=1&
+2014-07-22 17:28:21,882 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 17:28:24,421 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddActivityModel.do?version=new&
+2014-07-22 17:29:01,191 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/addActivityModel.do?activityId=1514072102&roleBeginTime=2009-07-21 17:29:39&roleEndTime=2015-07-21 17:29:42&beginTime=2014-07-22 17:28:24&giftBeginTime=2014-07-22 17:28:24&giftEndTime=2014-07-23 17:28:24&activityType=3&endTime=2014-07-23 17:28:24&activityName=Código Promocional&isMutex=0&gatewayId=0&version=new&
+2014-07-22 17:29:03,128 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072102&version=new&
+2014-07-22 17:29:04,524 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072102&activityType=3&version=new&
+2014-07-22 17:29:08,412 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/setPackage.do?activityId=1514072102&upperLimit=99&lowerLimit=0&activityType=3&version=new&
+2014-07-22 17:29:09,704 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackageItem.do?activityId=1514072102&packageId=5&activityType=3&version=new&
+2014-07-22 17:29:14,538 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/setPackageItem.do?itemNum=5&activityId=1514072102&itemName=10 Diamante Rosa&packageId=5&activityType=3&version=new&itemCode=1-870-0-0&
+2014-07-22 17:29:15,821 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072102&activityType=3&version=new&
+2014-07-22 17:29:16,729 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072102&version=new&
+2014-07-22 17:29:18,471 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072102&oper=1&version=new&
+2014-07-22 17:29:59,063 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 17:30:03,994 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072101&version=new&
+2014-07-22 17:30:05,767 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072101&oper=2&version=new&
+2014-07-22 17:30:08,605 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 17:30:10,096 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072102&version=new&
+2014-07-22 17:30:11,562 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072102&oper=2&version=new&
+2014-07-22 17:30:13,034 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 17:30:15,194 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddActivityModel.do?version=new&
+2014-07-22 17:31:33,929 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/addActivityModel.do?activityId=1514072103&roleBeginTime=&roleEndTime=&beginTime=2014-07-22 17:30:15&giftBeginTime=2014-07-22 17:30:15&giftEndTime=2014-07-23 17:30:15&activityType=14&endTime=2014-07-23 17:30:15&activityName=Real-Time&isMutex=0&gatewayId=0&version=new&
+2014-07-22 17:31:36,460 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072103&version=new&
+2014-07-22 17:31:38,166 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072103&activityType=14&version=new&
+2014-07-22 17:31:52,672 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/setPackage.do?activityId=1514072103&upperLimit=3500&lowerLimit=700&activityType=14&version=new&
+2014-07-22 17:31:55,494 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackageItem.do?activityId=1514072103&packageId=6&activityType=14&version=new&
+2014-07-22 17:32:01,539 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/setPackageItem.do?itemNum=1&activityId=1514072103&itemName=10 Diamante Rosa&packageId=6&activityType=14&version=new&itemCode=1-870-0-0&
+2014-07-22 17:32:02,601 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072103&activityType=14&version=new&
+2014-07-22 17:32:03,424 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072103&version=new&
+2014-07-22 17:32:06,746 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072103&oper=1&version=new&
+2014-07-22 17:33:06,899 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 103    userName = dragao879852    chargeTime = 2014-07-23 04:33:06    chargeMoney = 1.0    chargeAmount = 1    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140606118688677    sign = 27957ab5005297190996da5c282f7faf     )
+2014-07-22 17:33:47,236 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 104    userName = dragao879852    chargeTime = 2014-07-23 04:33:47    chargeMoney = 2540.0    chargeAmount = 2540    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140606122722478    sign = 51e15a473f22320675372781978382b1     )
+2014-07-22 17:37:54,504 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072103&oper=2&version=new&
+2014-07-22 17:37:56,224 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 17:37:57,780 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddActivityModel.do?version=new&
+2014-07-22 22:54:47,252 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:54:47,965 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-07-22 22:55:07,262 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&gameId=1204&validCode=91vf5&method=login&passportName=spacecowboy&
+2014-07-22 22:55:07,262 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:55:07,879 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2014-07-22 22:55:07,879 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:55:08,195 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-07-22 22:55:08,195 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:55:08,206 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-07-22 22:55:08,206 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:55:08,532 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-07-22 22:55:08,532 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:55:08,832 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2014-07-22 22:55:08,832 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:55:08,837 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-07-22 22:55:08,837 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-07-22 22:55:13,477 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 22:55:28,341 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showGenerateSerialCode.do?activityId=1514072101&version=new&
+2014-07-22 22:55:36,572 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 22:55:38,815 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072101&version=new&
+2014-07-22 22:55:59,387 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/updateActivityModel.do?activityId=1514072101&beginTime=2014-07-22 17:23:29&giftBeginTime=2014-07-22 17:21:45&giftEndTime=2014-08-01 17:21:45&activityType=1&endTime=2014-07-31 17:30:05&activityName=Código Promocional&gatewayId=0&version=new&
+2014-07-22 22:56:03,007 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072101&activityType=1&version=new&
+2014-07-22 22:56:04,789 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackageItem.do?activityId=1514072101&packageId=4&activityType=1&version=new&
+2014-07-22 22:56:09,082 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showSetPackage.do?activityId=1514072101&activityType=1&version=new&
+2014-07-22 22:56:10,519 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072101&version=new&
+2014-07-22 22:56:14,432 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/operActivity.do?activityId=1514072101&oper=1&version=new&
+2014-07-22 22:56:17,408 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 22:56:19,509 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showGenerateSerialCode.do?activityId=1514072101&version=new&
+2014-07-22 22:56:26,631 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/generateSerialCode.do?activityId=1514072101&serialType=0&useLimit=0&mediaName=1&serialNum=1&version=new&
+2014-07-22 22:56:29,370 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/downloadCodeFile.do?logId=/home/jboss/jboss-4.0.2/activitycode1514072101_1406080586637.txt&type=1&
+2014-07-22 22:57:44,637 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-07-22 22:57:47,266 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showOperActivityModel.do?activityId=1514072101&version=new&

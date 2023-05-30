@@ -1,0 +1,26 @@
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003105
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003106
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003109
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003202
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003301
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003302
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003303
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003304
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003305
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Server::registMyService|cmd id = 0x10003306
+2013-12-03_01:43:33.651|I|32402|B7FE66E0|INFO|Service|GameID=1204
+2013-12-03_01:43:33.653|I|32402|06BF5B90|INFO|AllServer::initIPMap::getIPCount|0|
+2013-12-03_01:43:33.653|I|32402|06BF5B90|INFO|AllServer::getIPCount|1|ip_total=0|ip_size=0|TC_SORT=0|TC=2
+2013-12-03_01:43:33.658|I|32402|B7FE66E0|INFO|GateID=0x9999|APPID=0x4|GameId=4b4|Initializing GateClient Success!
+2013-12-03_01:43:33.658|I|32402|B7FE66E0|INFO|AllServer is running now!
+2013-12-03_01:43:33.667|I|32402|B7FE66E0|INFO|Server::refreshNetwork|1|connect Addr=(127.0.0.1:19999)
+2013-12-03_01:43:33.669|I|32402|B7FE66E0|INFO|Server::onConnectOK|1|Addr=(127.0.0.1:19999)
+2013-12-03_23:50:15.268|I|32402|B7FE66E0|INFO|unPackage|1|pdu_len=132|orig_pdu_len=132|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003109|seq_id=106|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:50:15.273|I|32402|B7FE66E0|INFO|RoleEnterGameEx1|1|Game_ID=1204|User_ID=1500000000|Role_ID=100001|Gateway_ID=104001|Server_ID=104001|Role_Level=1|Gender=2|Occupation_ID=4|Corps_ID=0|Community_ID=0|Client_IP=113.208.129.50|Client_Port=55871|Client_Type=1|Client_MAC=00FF41D1BE8F|Hardware_SN1=C772FAA8D2F5F2D56E31EEF050AAB84C|Hardware_SN2=|Balance_Count=0|TC=5
+2013-12-03_23:50:15.273|I|32402|B7FE66E0|INFO|package|1|SequenceID=106|toRouter
+2013-12-03_23:51:16.567|I|32402|B7FE66E0|INFO|unPackage|1|pdu_len=56|orig_pdu_len=56|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003303|seq_id=114|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:51:16.576|I|32402|B7FE66E0|INFO|UserLogout|1|Game_ID=1204|Gateway_ID=104001|User_ID=1500000000|Role_ID=100001|Role_Level=1|Money1=0|Money2=0|Experience=0|Rating_ID=104001|Logout_Flag=1|Occupation=4|RetBalanceCount=0|TC=9
+2013-12-03_23:51:16.576|I|32402|B7FE66E0|INFO|package|1|SequenceID=114|toRouter
+2013-12-03_23:54:10.269|I|32402|B7FE66E0|INFO|unPackage|1|pdu_len=132|orig_pdu_len=132|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003109|seq_id=138|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:54:10.274|I|32402|B7FE66E0|INFO|RoleEnterGameEx1|1|Game_ID=1204|User_ID=1500000000|Role_ID=100001|Gateway_ID=104001|Server_ID=104001|Role_Level=1|Gender=2|Occupation_ID=4|Corps_ID=0|Community_ID=0|Client_IP=113.208.129.50|Client_Port=58120|Client_Type=1|Client_MAC=00FF41D1BE8F|Hardware_SN1=C772FAA8D2F5F2D56E31EEF050AAB84C|Hardware_SN2=|Balance_Count=0|TC=5
+2013-12-03_23:54:10.274|I|32402|B7FE66E0|INFO|package|1|SequenceID=138|toRouter

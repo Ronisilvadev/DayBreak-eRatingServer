@@ -1,0 +1,83 @@
+2013-12-03_01:43:32.625|I|32386|B7F0C6E0|INFO|Server::registMyService|cmd id = 0x10000001
+2013-12-03_01:43:32.625|I|32386|B7F0C6E0|INFO|Server::registMyService|cmd id = 0x10000002
+2013-12-03_01:43:32.625|I|32386|B7F0C6E0|INFO|Server::registMyService|cmd id = 0x10002003
+2013-12-03_01:43:32.625|I|32386|B7F0C6E0|INFO|Server::registMyService|cmd id = 0x10004201
+2013-12-03_01:43:32.625|I|32386|B7F0C6E0|INFO|Service|GameID=1204
+2013-12-03_01:43:32.626|I|32386|0702CB90|INFO|AllServer::initIPMap::getIPCount|0|
+2013-12-03_01:43:32.626|I|32386|0702CB90|INFO|AllServer::getIPCount|1|ip_total=0|ip_size=0|TC_SORT=0|TC=1
+2013-12-03_01:43:32.631|I|32386|B7F0C6E0|INFO|GateID=0x9999|APPID=0x3|GameId=4b4|Initializing GateClient Success!
+2013-12-03_01:43:32.631|I|32386|B7F0C6E0|INFO|AllServer is running now!
+2013-12-03_01:43:32.644|I|32386|B7F0C6E0|INFO|Server::refreshNetwork|1|connect Addr=(127.0.0.1:19999)
+2013-12-03_01:43:32.645|I|32386|B7F0C6E0|INFO|Server::onConnectOK|1|Addr=(127.0.0.1:19999)
+2013-12-03_03:19:47.928|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=108|orig_pdu_len=108|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10000001|seq_id=1|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42773
+2013-12-03_03:19:47.932|I|32386|B7F0C6E0|INFO|AllServer::sendNotify|sendNotify|bindGS|game_id=1204|gw_id=104001|ip=192.168.177.92|port=42773
+2013-12-03_03:19:47.932|I|32386|B7F0C6E0|INFO|AllServer::_onBind|1|game_id=1204|gw_id=104001|zone_id=101|svr_id=104001|gw_code='gw104001'|gw_password='0xdw86898818656327ibxo6151453306'|mac='0050568061F7'|reconnflag=0|ip='192.168.177.92'|port=42773|tc=4
+2013-12-03_03:19:47.932|I|32386|B7F0C6E0|INFO|package|1|SequenceID=1|toRouter
+2013-12-03_04:59:32.973|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=28|orig_pdu_len=28|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10000002|seq_id=551|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42773
+2013-12-03_04:59:32.980|I|32386|B7F0C6E0|INFO|AllServer::sendNotify|sendNotify|unbindGS|game_id=1204|gw_id=104001|ip=192.168.177.92|port=42773
+2013-12-03_04:59:32.980|I|32386|B7F0C6E0|INFO|AllServer::_onUnbind|Unbind|1|game_id=1204|gw_id=104001|ip=192.168.177.92|port=42773|tc=7
+2013-12-03_04:59:32.980|I|32386|B7F0C6E0|INFO|package|1|SequenceID=551|toRouter
+2013-12-03_23:31:42.275|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=108|orig_pdu_len=108|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10000001|seq_id=1|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:31:42.279|I|32386|B7F0C6E0|INFO|AllServer::sendNotify|sendNotify|bindGS|game_id=1204|gw_id=104001|ip=192.168.177.92|port=42813
+2013-12-03_23:31:42.279|I|32386|B7F0C6E0|INFO|AllServer::_onBind|1|game_id=1204|gw_id=104001|zone_id=101|svr_id=104001|gw_code='gw104001'|gw_password='0xdw86898818656327ibxo6151453306'|mac='0050568061F7'|reconnflag=0|ip='192.168.177.92'|port=42813|tc=4
+2013-12-03_23:31:42.279|I|32386|B7F0C6E0|INFO|package|1|SequenceID=1|toRouter
+2013-12-03_23:50:20.556|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=107|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:50:20.558|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:50:20.558|I|32386|B7F0C6E0|INFO|package|1|SequenceID=107|toRouter
+2013-12-03_23:50:50.556|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=111|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:50:50.558|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:50:50.558|I|32386|B7F0C6E0|INFO|package|1|SequenceID=111|toRouter
+2013-12-03_23:51:20.555|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=116|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:51:20.557|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:51:20.557|I|32386|B7F0C6E0|INFO|package|1|SequenceID=116|toRouter
+2013-12-03_23:51:51.554|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=119|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:51:51.556|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:51:51.556|I|32386|B7F0C6E0|INFO|package|1|SequenceID=119|toRouter
+2013-12-03_23:52:22.554|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=123|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:52:22.556|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:52:22.556|I|32386|B7F0C6E0|INFO|package|1|SequenceID=123|toRouter
+2013-12-03_23:52:53.553|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=127|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:52:53.555|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:52:53.555|I|32386|B7F0C6E0|INFO|package|1|SequenceID=127|toRouter
+2013-12-03_23:53:23.556|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=132|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:53:23.558|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:53:23.558|I|32386|B7F0C6E0|INFO|package|1|SequenceID=132|toRouter
+2013-12-03_23:53:53.554|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=136|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:53:53.556|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:53:53.556|I|32386|B7F0C6E0|INFO|package|1|SequenceID=136|toRouter
+2013-12-03_23:54:23.553|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=140|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:54:23.556|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=3
+2013-12-03_23:54:23.556|I|32386|B7F0C6E0|INFO|package|1|SequenceID=140|toRouter
+2013-12-03_23:54:53.552|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=145|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:54:53.554|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=2|TC=2
+2013-12-03_23:54:53.554|I|32386|B7F0C6E0|INFO|package|1|SequenceID=145|toRouter
+2013-12-03_23:55:24.550|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=149|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:55:24.553|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=3
+2013-12-03_23:55:24.553|I|32386|B7F0C6E0|INFO|package|1|SequenceID=149|toRouter
+2013-12-03_23:55:54.553|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=153|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:55:54.555|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:55:54.555|I|32386|B7F0C6E0|INFO|package|1|SequenceID=153|toRouter
+2013-12-03_23:56:24.551|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=156|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:56:24.554|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:56:24.554|I|32386|B7F0C6E0|INFO|package|1|SequenceID=156|toRouter
+2013-12-03_23:56:54.550|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=160|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:56:54.552|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:56:54.552|I|32386|B7F0C6E0|INFO|package|1|SequenceID=160|toRouter
+2013-12-03_23:57:25.554|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=164|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:57:25.556|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:57:25.556|I|32386|B7F0C6E0|INFO|package|1|SequenceID=164|toRouter
+2013-12-03_23:57:56.552|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=168|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:57:56.554|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:57:56.554|I|32386|B7F0C6E0|INFO|package|1|SequenceID=168|toRouter
+2013-12-03_23:58:26.549|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=171|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:58:26.551|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:58:26.551|I|32386|B7F0C6E0|INFO|package|1|SequenceID=171|toRouter
+2013-12-03_23:58:57.549|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=175|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:58:57.550|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=1
+2013-12-03_23:58:57.550|I|32386|B7F0C6E0|INFO|package|1|SequenceID=175|toRouter
+2013-12-03_23:59:27.550|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=180|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:59:27.556|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=3|TC=6
+2013-12-03_23:59:27.556|I|32386|B7F0C6E0|INFO|package|1|SequenceID=180|toRouter
+2013-12-03_23:59:58.550|I|32386|B7F0C6E0|INFO|unPackage|1|pdu_len=40|orig_pdu_len=40|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10002003|seq_id=184|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42813
+2013-12-03_23:59:58.552|I|32386|B7F0C6E0|INFO|GWDataReport|1|Game_ID=1204|Gateway_ID=104001|Server_ID=104001|Data_Count=1|DataType[0]=1|DataValue[0]=1|TC=2
+2013-12-03_23:59:58.552|I|32386|B7F0C6E0|INFO|package|1|SequenceID=184|toRouter

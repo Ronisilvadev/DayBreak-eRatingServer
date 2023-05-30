@@ -1,0 +1,41 @@
+2015-06-14 17:24:49,175 INFO  [STDOUT] java.lang.NullPointerException
+2015-06-14 17:24:49,175 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2015-06-14 17:24:49,176 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2015-06-14 17:24:49,176 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2015-06-14 17:24:49,176 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2015-06-14 17:24:49,176 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2015-06-14 19:30:45,833 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2015-06-14 19:30:45,834 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2015-06-14 19:30:46,215 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 5635
+2015-06-14 19:30:46,215 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection 0
+2015-06-14 19:30:46,599 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 32926
+2015-06-14 19:30:51,596 WARN  [org.apache.jk.common.ChannelSocket] can't read body, waited #259
+2015-06-14 19:30:51,596 WARN  [org.apache.jk.common.ChannelSocket] Closing ajp connection -1
+2015-06-14 19:30:51,756 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2015-06-14 19:30:51,756 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2015-06-14 19:40:46,855 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2015-06-14 19:40:46,855 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)

@@ -1,0 +1,19 @@
+2014-03-20 06:49:27,658 INFO  [STDOUT] java.lang.NullPointerException
+2014-03-20 06:49:27,658 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-03-20 06:49:27,659 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-03-20 06:49:27,659 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-03-20 06:49:27,659 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-03-20 06:49:27,659 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-03-20 07:34:24,058 ERROR [org.apache.jk.common.MsgAjp] BAD packet signature 18245
+2014-03-20 07:34:24,058 ERROR [org.apache.jk.common.ChannelSocket] Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:310)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:601)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:557)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:666)
+	at org.apache.jk.common.SocketConnection.runIt(ChannelSocket.java:871)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:662)
+2014-03-20 09:48:44,159 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 53    userName = polaris13    chargeTime = 2014-03-20 20:48:44    chargeMoney = 1.5E8    chargeAmount = 150000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 139531972414472    sign = 48179beaa4151974c94e1459e8bab2e6     )
+2014-03-20 09:48:58,314 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 54    userName = garrote    chargeTime = 2014-03-20 20:48:58    chargeMoney = 1.5E7    chargeAmount = 15000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 139531973829640    sign = b7dece22c9b8aece461181802d60d333     )
+2014-03-20 09:49:17,686 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 55    userName = andersongg    chargeTime = 2014-03-20 20:49:17    chargeMoney = 1.5E8    chargeAmount = 150000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 139531975766928    sign = 1eb8ccc162695eb1d760aaa8a1017c30     )

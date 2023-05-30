@@ -1,0 +1,55 @@
+2016-05-30 04:00:07,131 INFO  [STDOUT] Exception in thread "Timer-3" 
+2016-05-30 04:00:07,131 INFO  [STDOUT] java.lang.NumberFormatException: null
+2016-05-30 04:00:07,132 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2016-05-30 04:00:07,132 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2016-05-30 04:00:07,132 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.QiDianTask$1.run(Unknown Source)
+2016-05-30 04:00:07,132 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2016-05-30 04:00:07,132 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2016-05-30 06:00:08,376 INFO  [STDOUT] java.lang.NullPointerException
+2016-05-30 06:00:08,376 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2016-05-30 06:00:08,376 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2016-05-30 06:00:08,376 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2016-05-30 06:00:08,376 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2016-05-30 06:00:08,376 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2016-05-30 10:48:11,329 INFO  [STDOUT] Exception in thread "Timer-5" 
+2016-05-30 10:48:11,330 INFO  [STDOUT] java.lang.NumberFormatException: null
+2016-05-30 10:48:11,330 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2016-05-30 10:48:11,330 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2016-05-30 10:48:11,330 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TaoBaoTask$1.run(Unknown Source)
+2016-05-30 10:48:11,330 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2016-05-30 10:48:11,330 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2016-05-30 13:13:45,383 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2016-05-30 13:13:45,389 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:13:45,403 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:13:46,897 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2016-05-30 13:13:55,541 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=p2p5v&gameId=1204&method=login&passportName=spacecowboy&
+2016-05-30 13:13:55,542 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:13:55,563 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:13:55,907 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2016-05-30 13:14:02,894 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=y7296&gameId=1204&method=login&passportName=spacecowboy&
+2016-05-30 13:14:02,894 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:14:03,573 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2016-05-30 13:14:03,573 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2016-05-30 13:14:03,573 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:14:03,573 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:14:03,582 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2016-05-30 13:14:03,582 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:14:03,745 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2016-05-30 13:14:03,746 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:14:03,750 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2016-05-30 13:14:03,751 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:14:03,760 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2016-05-30 13:14:03,760 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:14:10,904 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerInfo.do?
+2016-05-30 13:14:14,120 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/getPlayerInfo.do?playerName=&search=Submit&playerId=&roleName=Nicole&gatewayId=0&roleId=&
+2016-05-30 13:17:13,307 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerInfo.do?
+2016-05-30 13:17:15,230 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/getPlayerInfo.do?playerName=andersongg&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2016-05-30 13:20:48,624 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?
+2016-05-30 13:20:50,818 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerLoginOutDetail.do?
+2016-05-30 13:20:52,051 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showLogPlayerItems.do?
+2016-05-30 13:20:53,465 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showPlayerItems.do?
+2016-05-30 13:20:54,729 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerInfo.do?
+2016-05-30 13:20:56,313 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/logManage.do?method=showLog&
+2016-05-30 13:20:56,313 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2016-05-30 13:22:55,538 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 152    userName = andersongg    chargeTime = 2016-05-31 00:22:55    chargeMoney = 900.0    chargeAmount = 900    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 146462537551888    sign = 688094362c50ebd9509ae85c96523c18     )
+2016-05-30 13:23:09,026 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 153    userName = andersongg    chargeTime = 2016-05-31 00:23:09    chargeMoney = 900.0    chargeAmount = 900    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 146462538901040    sign = 1f3baf1aba9e1b295abe8bc035826509     )

@@ -1,0 +1,21 @@
+2014-04-11 04:00:08,599 INFO  [STDOUT] Exception in thread "Timer-3" 
+2014-04-11 04:00:08,611 INFO  [STDOUT] java.lang.NumberFormatException: null
+2014-04-11 04:00:08,611 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2014-04-11 04:00:08,611 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2014-04-11 04:00:08,611 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.QiDianTask$1.run(Unknown Source)
+2014-04-11 04:00:08,612 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-04-11 04:00:08,612 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-04-11 06:00:10,073 INFO  [STDOUT] java.lang.NullPointerException
+2014-04-11 06:00:10,073 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-04-11 06:00:10,073 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-04-11 06:00:10,074 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-04-11 06:00:10,074 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-04-11 06:00:10,074 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-04-11 10:48:13,575 INFO  [STDOUT] Exception in thread "Timer-5" 
+2014-04-11 10:48:13,575 INFO  [STDOUT] java.lang.NumberFormatException: null
+2014-04-11 10:48:13,575 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2014-04-11 10:48:13,575 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2014-04-11 10:48:13,575 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TaoBaoTask$1.run(Unknown Source)
+2014-04-11 10:48:13,576 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-04-11 10:48:13,576 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-04-11 16:21:14,825 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 79    userName = anneclaire    chargeTime = 2014-04-12 03:21:14    chargeMoney = 1.0E8    chargeAmount = 100000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 139724407480837    sign = 9054ea5c0938c8a256b1507927d9ce92     )

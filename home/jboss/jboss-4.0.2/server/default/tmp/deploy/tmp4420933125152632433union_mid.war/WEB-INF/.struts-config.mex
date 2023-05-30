@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/charging.do" location="650,250" dimension="430,84" />
+  <StrutsActivity path="/offlinePay.do" location="50,1850" dimension="444,88" />
+  <StrutsActivity path="/yyCharging.do" location="1250,50" dimension="400,84" />
+  <StrutsActivity path="/getRoleCount.do" location="50,50" dimension="412,84" />
+  <StrutsActivity path="/getOnlineCount.do" location="650,50" dimension="412,84" />
+  <StrutsActivity path="/queryOrder.do" location="50,250" dimension="442,84" />
+  <StrutsActivity path="/giveItem.do" location="50,450" dimension="370,84" />
+  <StrutsActivity path="/queryGiveItem.do" location="650,450" dimension="352,84" />
+  <StrutsActivity path="/spread.do" location="50,650" dimension="382,84" />
+  <StrutsActivity path="/queryRoleRank.do" location="50,850" dimension="352,84" />
+  <StrutsActivity path="/getLevelTopN.do" location="50,1450" dimension="409,88" />
+  <StrutsActivity path="/getMoneyTopN.do" location="650,1450" dimension="409,88" />
+  <StrutsActivity path="/getChargeDetail.do" location="50,1650" dimension="409,88" />
+  <StrutsActivity path="/getChargeDetailByTime.do" location="950,2050" dimension="409,88" />
+  <StrutsActivity path="/getChargeDetailByOrder.do" location="50,2150" dimension="409,88" />
+  <StrutsActivity path="/getRoleLevel.do" location="650,2250" dimension="409,88" />
+  <StrutsActivity path="/getUserAmount.do" location="50,2350" dimension="409,88" />
+  <StrutsActivity path="/getRoleList.do" location="650,650" dimension="352,84" />
+  <StrutsActivity path="/getRoleNewList.do" location="650,1650" dimension="458,88" />
+  <StrutsActivity path="/resetGamePropertyPWD.do" location="50,1050" dimension="418,84" />
+  <StrutsActivity path="/checkCharge.do" location="650,1050" dimension="370,84" />
+  <StrutsActivity path="/activityUser.do" location="1250,450" dimension="346,84" />
+  <StrutsActivity path="/baidu/xyj/charging.do" location="650,850" dimension="424,84" />
+  <StrutsActivity path="/baidu/xyj/resetGamePropertyPWD.do" location="50,1250" dimension="466,84" />
+  <StrutsActivity path="/baidu/xyj/getRoleList.do" location="650,1250" dimension="436,84" />
+  <StrutsActivity path="/getRegisterList.do" location="1250,650" dimension="412,84" />
+  <StrutsActivity path="/getAllRoleList.do" location="1250,850" dimension="406,84" />
+  <StrutsActivity path="/getOnlineCountQuery.do" location="1250,1050" dimension="352,84" />
+  <StrutsActivity path="/getOnlineCountQueryEx.do" location="650,2650" dimension="352,84" />
+  <StrutsActivity path="/getNewRoleNumCount.do" location="1250,2650" dimension="352,84" />
+  <StrutsActivity path="/queryOrderInfo.do" location="1250,1250" dimension="406,84" />
+  <StrutsActivity path="/gameStatAnalytics.do" location="1250,1450" dimension="370,84" />
+  <StrutsActivity path="/onlinesOneTime.do" location="1250,2450" dimension="370,84" />
+  <StrutsActivity path="/test/login.do" location="650,1850" dimension="298,84" />
+  <StrutsActivity path="/test/doLogin.do" location="1250,1850" dimension="298,84" />
+  <StrutsActivity path="/test/autoTest.do" location="1550,2050" dimension="298,84" />
+  <StrutsActivity path="/test/doAutoTest.do" location="650,2450" dimension="364,84" />
+  <StrutsActivity path="/test/testHistory.do" location="50,2550" dimension="334,84" />
+  <StrutsActivity path="/taobao/doCheckCharge.do" location="1250,1650" dimension="436,84" />
+  <StrutsActivity path="/WEB-INF/test/noPrivlege.jsp" location="650,2150" dimension="208,48" />
+  <StrutsActivity path="/WEB-INF/jsp/test/login.jsp" location="1250,2250" dimension="202,48" />
+  <StrutsActivity path="/WEB-INF/jsp/test/error.jsp" location="1550,2250" dimension="202,48" />
+  <StrutsActivity path="/WEB-INF/jsp/test/success.jsp" location="1250,2350" dimension="214,48" />
+  <StrutsActivity path="/WEB-INF/jsp/test/autoTest.jsp" location="1550,2350" dimension="220,48" />
+  <StrutsActivity path="/WEB-INF/jsp/test/testHistory.jsp" location="50,2050" dimension="238,48" />
+  <StrutsActivity path="/getUserInfo.do" />
+  <StrutsTransition id="/test/login.do,noPrivlege,/WEB-INF/test/noPrivlege.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="799,1934" />
+      <AbsolutePoint location="799,2150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test/autoTest.do,success,/WEB-INF/jsp/test/autoTest.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1767,2134" />
+      <AbsolutePoint location="1767,2350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test/testHistory.do,success,/WEB-INF/jsp/test/testHistory.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,2592" />
+      <AbsolutePoint location="-25,2592" />
+      <AbsolutePoint location="-25,2074" />
+      <AbsolutePoint location="50,2074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test/login.do,success,/WEB-INF/jsp/test/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,1934" />
+      <AbsolutePoint location="829,1983" />
+      <AbsolutePoint location="1374,1983" />
+      <AbsolutePoint location="1374,2250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test/doLogin.do,error,/WEB-INF/jsp/test/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1509,1934" />
+      <AbsolutePoint location="1509,2274" />
+      <AbsolutePoint location="1550,2274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/test/doLogin.do,success,/WEB-INF/jsp/test/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1479,1934" />
+      <AbsolutePoint location="1479,2374" />
+      <AbsolutePoint location="1464,2374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

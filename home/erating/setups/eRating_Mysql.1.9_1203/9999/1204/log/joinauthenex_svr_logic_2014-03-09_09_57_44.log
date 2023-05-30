@@ -1,0 +1,26 @@
+2014-03-09_09:57:44.009|I|32450|B7F7B6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=64102|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42550
+2014-03-09_09:57:44.012|I|32450|B7F7B6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=edmatheus&password=b5fc621938ac94229540de8d0f6e9a9cf439de066592155434237aec4a1d6806&sign=95E630393B489BDC8DC67A176B484A5D
+2014-03-09_09:57:44.158|I|32450|B7F7B6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 128
+Content-Type: text/html; charset=utf-8
+Date: Sun, 09 Mar 2014 13:13:48 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>-1812</result><adult>1</adult><userName>edmatheus</userName></response>
+2014-03-09_09:57:44.158|I|32450|B7F7B6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|-1812|0|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=edmatheus|Password=22c6a0d80faa1abf63e619495146cfa5|Send3rdPassword=b5fc621938ac94229540de8d0f6e9a9cf439de066592155434237aec4a1d6806|UserID_Union=|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=0|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.24.107.188|User_Port=56588|Client_MAC=6CF049F9CAEF|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=149|TC2=0|TC=149
+2014-03-09_09:57:44.158|I|32450|B7F7B6E0|INFO|package|1|SequenceID=64102|toRouter
+2014-03-09_09:58:02.809|I|32450|B7F7B6E0|INFO|unPackage|1|pdu_len=165|orig_pdu_len=165|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=64106|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=42550
+2014-03-09_09:58:02.809|I|32450|B7F7B6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=edmatheus&password=89502b12ff3e9b1bf619ad9aba5c32b6ea70269eb566c74dadbe02924b2d497e&sign=93C791156B4FF89C5407B617E93A8982
+2014-03-09_09:58:02.836|I|32450|B7F7B6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 128
+Content-Type: text/html; charset=utf-8
+Date: Sun, 09 Mar 2014 13:14:07 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>-1812</result><adult>1</adult><userName>edmatheus</userName></response>
+2014-03-09_09:58:02.836|I|32450|B7F7B6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|-1812|0|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=edmatheus|Password=b1ace50b70655b751dd71ca5c997c784|Send3rdPassword=89502b12ff3e9b1bf619ad9aba5c32b6ea70269eb566c74dadbe02924b2d497e|UserID_Union=|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=0|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=189.24.107.188|User_Port=56608|Client_MAC=6CF049F9CAEF|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=27|TC2=0|TC=27
+2014-03-09_09:58:02.836|I|32450|B7F7B6E0|INFO|package|1|SequenceID=64106|toRouter

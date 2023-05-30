@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/showIssueBulletin" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showHistoryBulletin" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddBulletin" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addBulletin" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operBulletin" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelBulletin" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showIssueSettingExp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showHistorySettingExp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddSettingExp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addSettingExp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operSettingExp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/stopSettingExp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showIssueActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showHistoryActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showActivityDetail" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/modifyActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddActivityPoint" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateActivityPoint" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addActivityPoint" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddActivityPackage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateActivityPackage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addActivityPackage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showActivityPackageDetail" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/validateActivityPackageItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addActivityPackageItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showIssueNews" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showHistoryNews" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddNews" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addNews" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operNews" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelNews" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showProductInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/productInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/productDetail" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	
+	<bean name="/showModifyProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/modifyProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	
+	
+	
+	<bean name="/showSynchronizationProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/synchronizationProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showStartProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/startProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEndProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/endProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showProductPrice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/productPriceDetail" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddProductPrice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addProductPrice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEndProductPrice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/endProductPrice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showProductSort" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/sortProduct" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showChargingGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showChargingGiveItemDetail" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delChargingGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddChargingGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addChargingGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyChargingGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/modifyChargingGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showOnlineGm" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showOnlineGmAdd" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showOnlineGmModify" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addOnlineGm" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	<bean name="/modifyOnlineGm" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delOnlineGm" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyOnlineGmIp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/modifyOnlineGmIp" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showActivityCode" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showActivityCodeGenerate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/generateActivityCode" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showUpdateSerialMedia" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/updateSerialMedia" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyOrderStatus" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/modifyOrderStatus" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showPassportGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddPassportGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyPassportGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/opPassportGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSetIbLocation" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/setIbLocation" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showActivityInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showOpActivityInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addActivityInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/synchronizationActivityInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delActivityInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/planActivityInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/opActivityInfoServer" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showQueryCurActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/queryCurActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/queryActivitySetting" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showOperActivitySetting" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operActivitySetting" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSetActivitySetting" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/setActivitySetting" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSendProductPrice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/sendProductPrice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSetIbMark" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/setIbMark" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSetShopNotice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/setShopNotice" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSendGoldByLevelStage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/sendGoldByLevelStage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showItemAddByLevelStage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/itemAddByLevelStage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyUnionGatewayId" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/modifyUnionGatewayId" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAddActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/addActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSetPackage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/setPackage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSetPackageItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/setPackageItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showGenerateSerialCode" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/generateSerialCode" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>	
+	<bean name="/showOperActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>
+	<bean name="/updateActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>
+	<bean name="/showMute1ActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>
+	<bean name="/mute1ActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>
+	<bean name="/showMute2ActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>
+	<bean name="/mute2ActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>
+	
+	
+	<bean name="/showIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeIssueBulletinCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showFirstApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSecondApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showAppredIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showExedIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDeledIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showCreateIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/saveIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/operIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showEditIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/cancelIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2FirstApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchFirstApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/firstApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/show2SecondApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/batchSecondApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/secondApprIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/submitIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeIssueSettingExpCompensate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delActivityModel" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delActivityModelPackage" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delActivityModelPackageItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showModifyActivityModelTime" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/modifyActivityModelTime" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="worldOperationService" ref="worldOperationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSetIbBag" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/setIbBag" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showDirtyWord" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/operateDirtyWord" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />
+	</bean>
+	
+	
+	
+	
+	<bean name="/showQueryGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/queryAllGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">		
+		<property name="operationService" ref="operationService" />		
+		<property name="dictionaryDao" ref="dictionaryDao" />		
+	</bean>
+	<bean name="/querySpecificGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />		
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>		
+	<bean name="/showAddGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">		
+	</bean>
+	<bean name="/addGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">		
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delAllGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/delOneGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/openGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />				
+	</bean>
+	<bean name="/showUpdateGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />		
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/updateGroupMsg" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="operationService" ref="operationService" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/showDynamicToken" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+	</bean>
+	<bean name="/queryDynamicToken" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+	</bean>
+	<bean name="/operateDynamicToken" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+	</bean>
+	
+	
+	<bean name="/showChargeGatewayList" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />		
+	</bean>
+	<bean name="/searchChargeGatewayByName" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />		
+	</bean>
+	<bean name="/openChargeGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">	
+		<property name="worldOperationDao" ref="worldOperationDao" />		
+	</bean>
+	<bean name="/freezeOrUnfreezeChargeGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">	
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+	</bean>
+	<bean name="/showAddOrUpdateChargeGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">	
+		<property name="worldOperationDao" ref="worldOperationDao" />	
+	</bean>
+	<bean name="/addOrUpdateChargeGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">		
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showChargeGatewayConfigList" class="com.linekong.gmweb2.web.action.WorldOperationAction">		
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/openChargeGatewayConfig" class="com.linekong.gmweb2.web.action.WorldOperationAction">	
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />	
+	</bean>
+	<bean name="/freezeOrUnfreezeChargeGatewayConfig" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />		
+	</bean>
+	<bean name="/showAddOrUpdateChargeGatewayConfig" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />		
+	</bean>
+	<bean name="/addOrUpdateChargeGatewayConfig" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+		<property name="dictionaryDao" ref="dictionaryDao" />	
+	</bean>
+	<!-- 同步充值活动 -->
+	<bean name="/showSynchronizationActivityGames" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />	
+		<property name="dictionaryDao" ref="dictionaryDao" />	
+	</bean>
+	<bean name="/showSynchronizationActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />		
+	</bean>
+	<bean name="/synchronizationActivity" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />		
+	</bean>
+	<!-- 同步充值活动 -->
+	
+	<!-- 同步网站活动 -->
+	<bean name="/showSynChargeGiveItemGames" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />		
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/showSynChargeGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />		
+	</bean>
+	<bean name="/synChargeGiveItem" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />		
+	</bean>
+	<!-- 同步网站活动 -->
+	
+	<bean name="/synPassport" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/showSynPassport" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	
+	
+	<!-- 合服网关 -->
+	<bean name="/showUnionGatewayPlanList" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/showAddUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/addUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	
+	<bean name="/showOperUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/bakeUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/exeUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/stopUnionGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+	</bean>
+	<bean name="/sychronousUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+	</bean>	
+	<bean name="/deleteUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+	<bean name="/showModifyOperUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/modifyUnionGatewayPlan" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+
+	
+	<bean name="/showUnionGatewayList" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/showAddUnionGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>		
+	<bean name="/addUnionGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />			
+	</bean>
+	<bean name="/openUnionGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>	
+	<bean name="/showOperUnionGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/delUnionGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	<bean name="/shutOldGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	<bean name="/exeUnionGateway" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+	</bean>
+	
+	<bean name="/worldDropRate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/showWorldDropRate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		
+	</bean>
+	<bean name="/showCancelWorldDropRate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="operationService" ref="operationService" />
+	</bean>
+	<bean name="/cancelWorldDropRate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+		<bean name="/showCanCancelRate" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="logInfoDao" ref="logInfoDao" />
+		<property name="operationService" ref="operationService" />
+	</bean>	
+	<bean name="/synchronizGame" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+		<property name="operationService" ref="operationService"></property>
+	</bean>
+	<bean name="/ShowImportTxTFile" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+		<property name="operationService" ref="operationService"></property>
+	</bean>
+	<bean name="/ImportTxTFile" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+	    <property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+		<property name="operationService" ref="operationService"></property>
+	</bean>
+	<bean name="/ShowKuafuInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+		<property name="operationService" ref="operationService"></property>
+	</bean>
+	<bean name="/SelectKuafuInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+		<property name="operationService" ref="operationService"></property>
+	</bean>
+	<bean name="/showDeleteKuafuInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+		<property name="operationService" ref="operationService"></property>
+	</bean>
+	<bean name="/deleteKuafuInfo" class="com.linekong.gmweb2.web.action.WorldOperationAction">
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+		<property name="dictionaryDao" ref="dictionaryDao"></property>
+		<property name="logInfoDao" ref="logInfoDao"></property>
+		<property name="operationService" ref="operationService"></property>
+	</bean>
+</beans>

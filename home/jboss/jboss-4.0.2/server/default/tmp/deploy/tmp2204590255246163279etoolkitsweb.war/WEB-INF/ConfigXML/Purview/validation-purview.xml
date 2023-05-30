@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC 
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" 
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd"> 
+<form-validation>
+	<formset>
+		<!-- 资源管理 begin -->
+		<form name="/addResource">
+			<field property="resName" depends="required">
+				<arg0 key="prompt.resName"/>
+			</field>
+			<field property="resDesc" depends="required">
+				<arg0 key="prompt.resDesc"/>
+			</field>
+			<field property="resType" depends="required">
+				<arg0 key="prompt.resType"/>
+			</field>
+		</form>
+		<form name="/modifyResource">
+			<field property="resName" depends="required">
+				<arg0 key="prompt.resName"/>
+			</field>
+			<field property="resDesc" depends="required">
+				<arg0 key="prompt.resDesc"/>
+			</field>
+			<field property="resType" depends="required">
+				<arg0 key="prompt.resType"/>
+			</field>
+		</form>
+		<!-- 资源管理 end -->
+		
+		<!-- 角色管理 begin -->
+		<form name="/addRole">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="roleDesc" depends="required">
+				<arg0 key="prompt.roleDesc"/>
+			</field>
+		</form>
+		<form name="/modifyRole">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="roleDesc" depends="required">
+				<arg0 key="prompt.roleDesc"/>
+			</field>
+		</form>
+		<!-- 角色管理 end -->
+
+		<!-- 用户管理 begin -->
+		<form name="/addUser">
+			<field property="passportName" depends="required">
+				<arg0 key="prompt.passportName"/>
+			</field>
+			<field property="realName" depends="required">
+				<arg0 key="prompt.realName"/>
+			</field>
+			<field property="email" depends="required">
+				<arg0 key="prompt.email"/>
+			</field>
+		</form>
+		<!-- 修改密码 -->
+		<form name="/modifyUserPwd">
+			<field property="oldPassword" depends="required">
+				<arg0 key="prompt.oldPassword"/>
+			</field>
+			<field property="newPassword" depends="required">
+				<arg0 key="prompt.newPassword"/>
+			</field>
+			<field property="newPasswordAgain" depends="required">
+				<arg0 key="prompt.newPasswordAgain"/>
+			</field>
+		</form>
+		
+		<form name="/addAdmin">
+			<field property="passportName" depends="required">
+				<arg0 key="prompt.passportName"/>
+			</field>
+			<field property="realName" depends="required">
+				<arg0 key="prompt.realName"/>
+			</field>
+			<field property="email" depends="required">
+				<arg0 key="prompt.email"/>
+			</field>
+			<field property="gameId" depends="required,integer">
+				<arg0 key="prompt.gameId"/>
+			</field>
+		</form>
+		<!-- 用户管理 end -->
+	</formset>
+</form-validation>
+          

@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<form-beans>
+	<!-- 查询帐号信息FORM begin -->
+		<form-bean name="getPlayerInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+			<form-property name="playerId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="roleId" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 查询帐号信息FORM end -->
+	<!-- 身份证查账号FORM begin -->
+		<form-bean name="getPlayerInfoByIdCodeForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="idCode" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 身份证查账号FORM end -->
+	<!-- 查询帐号注册信息FORM begin -->
+		<form-bean name="queryPlayerResInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 查询帐号注册信息FORM end -->
+	<!-- 验证玩家信息FORM begin -->
+		<form-bean name="validatePlayerInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="passportName" type="java.lang.String"></form-property>
+			<form-property name="idCode" type="java.lang.String"></form-property>
+			<form-property name="realName" type="java.lang.String"></form-property>
+			<form-property name="easyValidate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 验证玩家信息FORM end -->
+	<!-- 活动物品记录FORM begin -->
+		<form-bean name="getPlayerItemsForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+			<form-property name="itemCode" type="java.lang.String"></form-property>
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 活动物品记录FORM end -->
+	<!-- 活动奖品日志记录查询FORM begin -->
+		<form-bean name="getLogPlayerItemsForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+			<form-property name="itemCode" type="java.lang.String"></form-property>
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 活动奖品日志记录查询FORM end -->
+	<!-- 活动奖品修改FORM begin -->
+		<form-bean name="modifyItemNameForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="itemName" type="java.lang.String"></form-property>
+			<form-property name="playerItemCode" type="java.lang.String"></form-property>
+			<form-property name="comeFromAction" type="java.lang.String"></form-property>
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+			<form-property name="playerName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 活动奖品修改FORM end -->
+	<!-- 登入登出日志查询 FORM begin -->
+		<form-bean name="getPlayerLoginOutDetailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 登入登出日志查询 FORM end -->
+	<!-- 角色详细信息查询FORM begin -->
+		<form-bean name="getRoleDetailInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="roleAttr" type="java.lang.String"></form-property>
+			<form-property name="resistAttr" type="java.lang.String"></form-property>
+			<form-property name="reputationAttr" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 角色详细信息查询FORM end -->		
+	<!-- 道具购买明细查询FORM begin -->
+		<form-bean name="getPlayerPurchaseDetailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 道具购买明细查询FORM end -->
+	<!-- 帐户明细查询FORM begin -->
+		<form-bean name="getPlayerChargeDetailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 帐户明细查询FORM end -->
+	<!-- 帐户余额查询FORM begin -->
+		<form-bean name="getPlayerAccountDetailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 帐户余额查询FORM end -->
+	<!-- 充值订单查询FORM begin -->
+		<form-bean name="getOrderStatusForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="orderId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 充值订单查询FORM end -->	
+	<!-- 角色模糊查询FORM begin -->
+		<form-bean name="searchRoleForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 角色模糊查询FORM end -->
+	<!--  帐号批量查询FORM begin -->
+		<form-bean name="playerNames2IdsForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="playerNames" type="java.lang.String"></form-property>
+		</form-bean>
+	<!--  帐号批量查询FORM end -->
+	<!--  查询Npc信息FORM begin -->
+		<form-bean name="queryNpcForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="npcName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!--  查询Npc信息FORM end -->
+	<!--  查询角色仓库信息FORM begin -->
+		<form-bean name="getRoleStoreGoodForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!--  查询角色仓库信息FORM end -->	
+	<!-- 查询角色位置信息FORM begin -->
+		<form-bean name="getRoleLocationForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 查询角色位置信息FORM end -->
+	<!-- 激活码批量查询FORM begin -->
+		<form-bean name="queryVipCardForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="vipCards" type="java.lang.String"></form-property>
+			<form-property name="cardType" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 激活码批量查询FORM end -->
+	<!-- 测试期激活码统计 FORM begin -->
+		<form-bean name="queryTestSerialInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 测试期激活码统计 FORM end -->
+	<!-- 激活码统计汇查询(活动模型)FORM begin -->
+		<form-bean name="queryTotalSerialInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="activityBeginTime" type="java.lang.String"></form-property>
+			<form-property name="activityEndTime" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 激活码统计查询(活动模型)FORM end -->
+	<!-- 激活码汇总查询(活动模型)FORM begin -->
+		<form-bean name="querySummarySerialInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="activityId" type="java.lang.String"></form-property>
+			<form-property name="activityBeginTime" type="java.lang.String"></form-property>
+			<form-property name="activityEndTime" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 激活码汇总查询(活动模型)FORM end -->
+	<!-- 激活码批量查询(活动模型)FORM begin -->
+		<form-bean name="queryBatchSerialInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="queryType" type="java.lang.String"></form-property>
+			<form-property name="condition" type="java.lang.String"></form-property>
+			<form-property name="activityId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 激活码批量查询(活动模型)FORM end -->
+	<!-- 冻结记录和详单 begin -->
+	<form-bean name="querySearchFreezenAcountForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="beginDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+	</form-bean>
+	<!-- 冻结记录和详单 end -->
+	<!-- 角色排名统计Form begin -->
+		<form-bean name="queryRoleTopNForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="orderType" type="java.lang.String"></form-property>
+			<form-property name="occupaction" type="java.lang.String"></form-property>
+			<form-property name="topN" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 角色排名统计Form end -->
+	<!-- 查询角色社会关系信息FORM begin -->
+		<form-bean name="queryRoleSocialForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 查询角色社会关系信息FORM END -->
+	<!-- 各职业信息统计FORM begin -->
+		<form-bean name="occuptationTotalForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="startDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 各职业信息统计FORM end -->
+	<!-- 物品移动流向查询FORM begin -->
+		<form-bean name="goodsHistoryForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="startDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 物品移动流向查询FORM end -->
+	<!-- 指定玩家的物品的转移记录FORM begin -->
+		<form-bean name="OperationDetailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="startDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 指定玩家的物品的转移记录FORM end -->
+	<!-- NPC至玩家的物品转移记录 FORM begin -->
+		<form-bean name="GoodsHistoryFromNPCForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="npcName" type="java.lang.String"></form-property>
+			<form-property name="startDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- NPC至玩家的物品转移记录 FORM end -->
+	<!-- 玩家至NPC的物品转移记录FORM begin -->
+		<form-bean name="GoodsHistoryToNPCForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="npcName" type="java.lang.String"></form-property>
+			<form-property name="startDate" type="java.lang.String"></form-property>
+			<form-property name="endDate" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家至NPC的物品转移记录FORM end -->
+	<!-- 充值订单详情查询FORM begin -->
+		<form-bean name="getOrderDetailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="orderId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 充值订单详情查询FORM end -->	
+	<!-- 玩家至玩家物品移动记录FORM begin -->	
+		<form-bean name="goodsHistoryBetweenUsersForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName1" type="java.lang.String"></form-property>
+			<form-property name="roleName2" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家至玩家物品移动记录FORM end -->	
+	<!--  查询角色包裹信息FORM begin -->
+		<form-bean name="getRolePackageForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!--  查询角色包裹信息FORM end -->
+	<!-- 玩家技能查询FORM begin -->	
+		<form-bean name="userSkillInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家技能查询FORM end -->
+	<!-- 玩家身上装备查询FORM begin -->	
+		<form-bean name="userItemOnBodyForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家身上装备查询FORM end -->	
+	<!-- 角色物品查询FORM begin -->
+		<form-bean name="getRoleItemInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="serverId" type="java.lang.String"></form-property>
+			<form-property name="roleId" type="java.lang.String"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 角色详细信息查询FORM end -->
+	<!-- 玩家的经验等级日志查询FORM begin -->
+		<form-bean name="userLevelInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+		</form-bean>	
+	<!-- 玩家的经验等级日志查询FORM end -->
+	<!-- 角色称号查询、修改 -->
+		<form-bean name="queryRoleTitleForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="changeRoleTitleForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="titleType" type="java.lang.String"></form-property>
+			<form-property name="level" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 登入登出记录查询FORM -->	
+		<form-bean name="loginInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="userName" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 查询玩家已完成任务 -->	
+		<form-bean name="finishedTaskInfoForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 角色物品查询 -->
+		<form-bean name="roleItemForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="type" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 角色帐号查询 -->
+		<form-bean name="role2PassportForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roles" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家物品日志查询 -->
+		<form-bean name="roleItemLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="loggatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="opType" type="java.lang.String"></form-property>
+			<form-property name="itemType" type="java.lang.String"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="curPage" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家金钱日志查询 -->
+		<form-bean name="roleMoneyLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="loggatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="opType" type="java.lang.String"></form-property>
+			<form-property name="itemType" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="curPage" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家经验日志查询 -->
+		<form-bean name="roleExpLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="loggatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="opType" type="java.lang.String"></form-property>
+			<form-property name="expType" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="curPage" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 玩家物品升级日志查询 -->
+		<form-bean name="roleItemLevLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="loggatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="itemType" type="java.lang.String"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+			<form-property name="curPage" type="java.lang.String"></form-property>
+		</form-bean>
+	<!-- 帐号激活查询 -->
+		<form-bean name="activationLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="passport" type="java.lang.String"></form-property>
+		</form-bean>
+		<!--  组织详细信息查询 -->
+		<form-bean name="corpsDetailNewForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="corpsName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="corpsType" type="java.lang.String"></form-property>
+		</form-bean>
+		<!--  组织总数信息查询 -->
+		<form-bean name="corpsTotalForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="corpsType" type="java.lang.String"></form-property>
+		</form-bean>		
+		<!-- 查询玩家邮件信息 -->	
+		<form-bean name="roleEmailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="curPage" type="java.lang.String"></form-property>
+		</form-bean>
+		<!-- 组织日志查询 -->	
+		<form-bean name="corpsLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="corpsName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="corpsType" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+		<!-- 角色日志查询 -->	
+		<form-bean name="roleLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>			
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+		<!-- 角色拍卖行信息查询 -->	
+		<form-bean name="roleAuctionForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>			
+		</form-bean>
+		<!-- 卡密激活查询 -->	
+		<form-bean name="cardInvokeForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="passportName" type="java.lang.String"></form-property>
+		</form-bean>
+		<!-- 元宝交易日志查询 -->	
+		<form-bean name="fundExchangeForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="passportName" type="java.lang.String"></form-property>
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+		<!-- 充值详单查询 -->
+		<form-bean name="chargeDetailForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="beginTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+		<!-- 玩家行为日志查询 -->	
+		<form-bean name="roleActionOperateLogForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="gatewayId" type="java.lang.String"></form-property>			
+			<form-property name="startTime" type="java.lang.String"></form-property>
+			<form-property name="endTime" type="java.lang.String"></form-property>
+		</form-bean>
+
+	</form-beans>
+	<global-forwards>
+		<forward name="chargeDetail" path="/WEB-INF/jsp/playerQuery/getGameByRoleNames.jsp"></forward>
+	</global-forwards>
+	<action-mappings>
+	<!-- /playerQuery new action begin -->
+		<!-- 查询帐号信息 begin -->
+		<action path="/showQueryPlayerInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryPlayerInfo" scope="request">
+			<forward name="playerInfo" path="/WEB-INF/jsp/playerQuery/playerInfo.jsp" />
+		</action>
+		<action path="/getPlayerInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPlayerInfo" scope="request" name="getPlayerInfoForm" validate="true" input="/showQueryPlayerInfo.do">
+			<forward name="playerInfo" path="/WEB-INF/jsp/playerQuery/playerInfo.jsp" />
+		</action>
+		<!-- 查询帐号信息 end -->
+		<!-- 身份证查账号 begin -->
+		<action path="/showGetPlayerInfoByIdCode" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGetPlayerInfoByIdCode" scope="request">
+			<forward name="getPlayerInfoByIdCode" path="/WEB-INF/jsp/playerQuery/playerInfoOfIdCode.jsp" />
+		</action>
+		<action path="/getPlayerInfoByIdCode" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPlayerInfoByIdCode" scope="request" name="getPlayerInfoByIdCodeForm" validate="true" input="/showGetPlayerInfoByIdCode.do">
+			<forward name="getPlayerInfoByIdCode" path="/WEB-INF/jsp/playerQuery/playerInfoOfIdCode.jsp" />
+		</action>
+		<!-- 身份证查账号 end -->
+		<!-- 查询帐号注册信息 begin -->
+		<action path="/showQueryPlayerResInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryPlayerResInfo" scope="request">
+			<forward name="queryPlayerResInfo" path="/WEB-INF/jsp/playerQuery/playerResInfo.jsp" />
+		</action>
+		<action path="/queryPlayerResInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryPlayerResInfo" scope="request" name="queryPlayerResInfoForm" validate="true" input="/showQueryPlayerResInfo.do">
+			<forward name="queryPlayerResInfo" path="/WEB-INF/jsp/playerQuery/playerResInfo.jsp" />
+		</action>
+		<!-- 查询帐号注册信息 end -->
+		<!-- 验证玩家信息 begin -->
+		<action path="/showValidatePlayerInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showValidatePlayerInfo" scope="request">
+			<forward name="validatePlayerInfo" path="/WEB-INF/jsp/playerQuery/validatePlayerInfo.jsp" />
+		</action>
+		<action path="/validatePlayerInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validatePlayerInfo" scope="request" name="validatePlayerInfoForm" validate="true" input="/showValidatePlayerInfo.do">
+			<forward name="validatePlayerInfo" path="/WEB-INF/jsp/playerQuery/validatePlayerInfo.jsp" />
+		</action>
+		<!-- 验证玩家信息 end -->
+		<!-- 活动物品记录 begin -->
+		<action path="/showPlayerItems" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showPlayerItems" scope="request">
+			<forward name="playerItem" path="/WEB-INF/jsp/playerQuery/playerItem.jsp" />
+		</action>
+		<action path="/getPlayerItems" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPlayerItems" scope="request" name="getPlayerItemsForm" validate="true" input="/showPlayerItems.do">
+			<forward name="playerItem" path="/WEB-INF/jsp/playerQuery/playerItem.jsp" />
+		</action>
+		<!-- 活动物品记录 end -->
+		<!-- 活动奖品日志记录查询 begin -->
+		<action path="/showLogPlayerItems" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showLogPlayerItems" scope="request">
+			<forward name="playerItemLog" path="/WEB-INF/jsp/playerQuery/playerItemLog.jsp" />
+		</action>
+		<action path="/getLogPlayerItems" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getLogPlayerItems" scope="request" name="getLogPlayerItemsForm" validate="true" input="/showLogPlayerItems.do">
+			<forward name="playerItemLog" path="/WEB-INF/jsp/playerQuery/playerItemLog.jsp" />
+		</action>
+		<!-- 活动奖品日志记录查询 end -->
+		<!-- 活动奖品修改 begin -->
+		<action path="/modifyItemName" type="org.springframework.web.struts.DelegatingActionProxy" parameter="modifyItemName" scope="request" name="modifyItemNameForm" validate="true" input="/getLogPlayerItems.do"></action>
+		<!-- 活动奖品修改 end -->
+		<!-- 登入登出日志查询 begin -->
+		<action path="/showQueryPlayerLoginOutDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryPlayerLoginOutDetail" scope="request">
+			<forward name="playerLoginOutDetail" path="/WEB-INF/jsp/playerQuery/playerLoginOutDetail.jsp" />
+		</action>
+		<action path="/getPlayerLoginOutDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPlayerLoginOutDetail" scope="request" name="getPlayerLoginOutDetailForm" validate="true" input="/showQueryPlayerLoginOutDetail.do">
+			<forward name="playerLoginOutDetail" path="/WEB-INF/jsp/playerQuery/playerLoginOutDetail.jsp" />
+		</action>
+		<!-- 登入登出日志查询 end -->
+		<!-- 角色详细信息查询 begin -->
+		<action path="/showQueryRoleInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRoleInfo" scope="request">
+			<forward name="roleInfo" path="/WEB-INF/jsp/playerQuery/roleInfo.jsp" />
+		</action>
+		<action path="/getRoleDetailInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleDetailInfo" scope="request" name="getRoleDetailInfoForm" validate="true" input="/showQueryRoleInfo.do">
+			<forward name="roleInfo" path="/WEB-INF/jsp/playerQuery/roleInfo.jsp" />
+		</action>
+		<action path="/petItemDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="petItemDetail" scope="request">
+			<forward name="petItemDetail" path="/WEB-INF/jsp/playerQuery/petItemDetail.jsp"></forward>
+		</action>
+		<!-- 角色详细信息查询 end --> 
+		<!-- 冻结日志和记录数 begin -->
+		<action path="/showSearchFreezenAcount" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSearchFreezenAcount" scope="request">
+			<forward name="searchFreezenAcount" path="/WEB-INF/jsp/playerQuery/searchFreezenAcount.jsp"></forward>
+		</action>
+		<action path="/querySearchFreezenAcount" type="org.springframework.web.struts.DelegatingActionProxy" parameter = "querySearchFreezenAcount" scope="request" name="querySearchFreezenAcountForm" validate="true" input="/showSearchFreezenAcount.do">
+			<forward name="searchFreezenAcount" path="/WEB-INF/jsp/playerQuery/searchFreezenAcount.jsp"></forward>
+		</action>
+		<!-- 冻结日志和记录数 end-->
+		<!-- 道具购买明细查询 begin -->
+		<action path="/showQueryPlayerPurchaseDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryPlayerPurchaseDetail" scope="request">
+			<forward name="playerPurchaseDetail" path="/WEB-INF/jsp/playerQuery/playerPurchaseDetail.jsp" />
+		</action>
+		<action path="/getPlayerPurchaseDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPlayerPurchaseDetail" scope="request" name="getPlayerPurchaseDetailForm" validate="true" input="/showQueryPlayerPurchaseDetail.do">
+			<forward name="playerPurchaseDetail" path="/WEB-INF/jsp/playerQuery/playerPurchaseDetail.jsp" />
+		</action>
+		<!-- 道具购买明细查询 end -->
+		<!-- 帐户明细查询 begin -->
+		<action path="/showQueryPlayerChargeDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryPlayerChargeDetail" scope="request">
+			<forward name="playerChargeDetail" path="/WEB-INF/jsp/playerQuery/playerChargeDetail.jsp" />
+		</action>
+		<action path="/getPlayerChargeDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPlayerChargeDetail" scope="request" name="getPlayerChargeDetailForm" validate="true" input="/showQueryPlayerChargeDetail.do">
+			<forward name="playerChargeDetail" path="/WEB-INF/jsp/playerQuery/playerChargeDetail.jsp" />
+		</action>
+		<!-- 帐户明细查询 end -->
+		<!-- 帐户余额查询 begin -->
+		<action path="/showQueryPlayerAccountDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryPlayerAccountDetail" scope="request">
+			<forward name="playerAccountDetail" path="/WEB-INF/jsp/playerQuery/playerAccountDetail.jsp" />
+		</action>
+		<action path="/getPlayerAccountDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPlayerAccountDetail" scope="request" name="getPlayerAccountDetailForm" validate="true" input="/showQueryPlayerAccountDetail.do">
+			<forward name="playerAccountDetail" path="/WEB-INF/jsp/playerQuery/playerAccountDetail.jsp" />
+		</action>
+		<!-- 帐户余额查询 end -->
+		<!-- 充值订单查询 begin -->
+		<action path="/showQueryOrderStatus" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryOrderStatus" scope="request">
+			<forward name="orderStatus" path="/WEB-INF/jsp/playerQuery/orderStatus.jsp" />
+		</action>
+		<action path="/getOrderStatus" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getOrderStatus" scope="request" name="getOrderStatusForm" validate="true" input="/showQueryOrderStatus.do">
+			<forward name="orderStatus" path="/WEB-INF/jsp/playerQuery/orderStatus.jsp" />
+		</action>
+		<!-- 充值订单查询 end -->
+		<!-- 角色模糊查询 begin -->
+		<action path="/showSearchRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSearchRole" scope="request">
+			<forward name="roleSearch" path="/WEB-INF/jsp/playerQuery/roleSearch.jsp" />
+		</action>
+		<action path="/searchRole" type="org.springframework.web.struts.DelegatingActionProxy" parameter="searchRole" scope="request" name="searchRoleForm" validate="true" input="/showSearchRole.do">
+			<forward name="roleSearch" path="/WEB-INF/jsp/playerQuery/roleSearch.jsp" />
+		</action>
+		<!-- 角色模糊查询 end -->
+		<!-- 帐号批量查询 begin -->
+		<action path="/showPlayerNames2Ids" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showPlayerNames2Ids" scope="request">
+			<forward name="playerNames2Ids" path="/WEB-INF/jsp/playerQuery/playerNames2Ids.jsp" />
+		</action>
+		<action path="/playerNames2Ids" type="org.springframework.web.struts.DelegatingActionProxy" parameter="playerNames2Ids" scope="request" name="playerNames2IdsForm" validate="true" input="/showPlayerNames2Ids.do">
+			<forward name="playerNames2Ids" path="/WEB-INF/jsp/playerQuery/playerNames2Ids.jsp" />
+		</action>
+		<!-- 帐号批量查询 end -->
+		<!-- 查询Npc信息 begin -->
+		<action path="/showQueryNpc" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryNpc" scope="request">
+			<forward name="npcQuery" path="/WEB-INF/jsp/playerQuery/npcQuery.jsp" />
+		</action>
+		<action path="/queryNpc" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryNpc" scope="request" name="queryNpcForm" validate="true" input="/showQueryNpc.do">
+			<forward name="npcQuery" path="/WEB-INF/jsp/playerQuery/npcQuery.jsp" /> 
+		</action>
+		<!-- 查询Npc信息 end -->
+		<!-- 查询角色仓库信息 begin -->
+		<action path="/showQueryRoleStoreGood" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRoleStoreGood" scope="request">
+			<forward name="roleStoreGood" path="/WEB-INF/jsp/playerQuery/roleStoreGood.jsp" />
+		</action>
+		<action path="/getRoleStoreGood" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleStoreGood" scope="request" name="getRoleStoreGoodForm" validate="true" input="/showQueryRoleStoreGood.do">
+			<forward name="roleStoreGood" path="/WEB-INF/jsp/playerQuery/roleStoreGood.jsp" />
+		</action>
+		<!-- 查询角色仓库信息 end -->
+		<!--  查询角色位置信息 begin -->
+		<action path="/showQueryRoleLocation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRoleLocation" scope="request">
+			<forward name="roleLocation" path="/WEB-INF/jsp/playerQuery/roleLocation.jsp" />
+		</action>
+		<action path="/getRoleLocation" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleLocation" scope="request" name="getRoleLocationForm" validate="true" input="/showQueryRoleLocation.do">
+			<forward name="roleLocation" path="/WEB-INF/jsp/playerQuery/roleLocation.jsp" />
+		</action>
+		<!--  查询角色位置信息 end -->
+		<!-- 激活码批量查询 begin -->
+		<action path="/showQueryVipCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryVipCard" scope="request">
+			<forward name="vipCardInfo" path="/WEB-INF/jsp/playerQuery/vipCardInfo.jsp" />
+		</action>
+		<action path="/queryVipCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryVipCard" scope="request" name="queryVipCardForm" validate="true" input="/showQueryVipCard.do" >
+			<forward name="vipCardInfo" path="/WEB-INF/jsp/playerQuery/vipCardInfo.jsp" />
+		</action>
+		<!-- 激活码批量查询 end -->
+		<!-- 激活码统计查询(活动模型) begin -->
+		<action path="/showQueryTotalSerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryTotalSerialInfo" scope="request">
+			<forward name="serialTotal" path="/WEB-INF/jsp/playerQuery/serialTotal.jsp" />
+		</action>
+		<action path="/queryTotalSerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryTotalSerialInfo" scope="request" name="queryTotalSerialInfoForm" validate="true" input="/showQueryTotalSerialInfo.do" >
+			<forward name="serialTotal" path="/WEB-INF/jsp/playerQuery/serialTotal.jsp" />
+		</action>
+		<!-- 激活码统计查询(活动模型) end -->
+		<!-- 测试期激活码统计 begin-->
+		<action path="/showQueryTestSerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryTestSerialInfo" scope="request">
+			<forward name="testSerialTotal" path="/WEB-INF/jsp/playerQuery/testSerialTotal.jsp"></forward>
+		</action>
+		<action path="/queryTestSerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryTestSerialInfo" scope="request" name="queryTestSerialInfoForm" validate="true" input="/showQueryTestSerialInfo">
+			<forward name="testSerialTotal" path="/WEB-INF/jsp/playerQuery/testSerialTotal.jsp"></forward>
+		</action>
+		<!-- 测试期激活码统计 end -->
+		<!-- 激活码汇总查询(活动模型) begin -->
+		<action path="/showQuerySummarySerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQuerySummarySerialInfo" scope="request">
+			<forward name="serialSummary" path="/WEB-INF/jsp/playerQuery/serialSummary.jsp" />
+		</action>
+		<action path="/querySummarySerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="querySummarySerialInfo" scope="request" name="querySummarySerialInfoForm" validate="true" input="/showQuerySummarySerialInfo.do" >
+			<forward name="serialSummary" path="/WEB-INF/jsp/playerQuery/serialSummary.jsp" />
+		</action>
+		<!-- 激活码汇总查询(活动模型) end -->
+		<!-- 激活码批量查询(活动模型) begin -->
+		<action path="/showQueryBatchSerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryBatchSerialInfo" scope="request">
+			<forward name="serialInfo" path="/WEB-INF/jsp/playerQuery/serialInfo.jsp" />
+		</action>
+		<action path="/queryBatchSerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryBatchSerialInfo" scope="request" name="queryBatchSerialInfoForm" validate="true" input="/showQueryBatchSerialInfo.do" >
+			<forward name="serialInfo" path="/WEB-INF/jsp/playerQuery/serialInfo.jsp" />
+		</action>
+		
+		<action path="/exportAllSerialInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exportAllSerialInfo" scope="request" name="queryBatchSerialInfoForm" validate="true" input="/showQueryBatchSerialInfo.do" >
+		</action>
+		<!-- 激活码批量查询(活动模型) end -->
+		<!-- 角色排名统计 begin -->
+		<action path="/showQueryRoleTopN" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRoleTopN" scope="request">
+			<forward name="roleTopN" path="/WEB-INF/jsp/playerQuery/roleTopN.jsp" />
+		</action>
+		<action path="/queryRoleTopN" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryRoleTopN" scope="request" name="queryRoleTopNForm" validate="true" input="/showQueryRoleTopN.do" >
+			<forward name="roleTopN" path="/WEB-INF/jsp/playerQuery/roleTopN.jsp" />
+		</action>
+		<!-- 角色排名统计 end -->
+		<!-- 查询角色社会关系信息 begin -->
+		<action path="/showQueryRoleSocial" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRoleSocial" scope="request">
+			<forward name="roleSocial" path="/WEB-INF/jsp/playerQuery/roleSocial.jsp" />
+		</action>
+		<action path="/queryRoleSocial" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryRoleSocial" scope="request" name="queryRoleSocialForm" validate="true" input="/showQueryRoleSocial.do">
+			<forward name="roleSocial" path="/WEB-INF/jsp/playerQuery/roleSocial.jsp" />
+		</action>
+		<!-- 查询角色社会关系信息 end -->
+		<!-- 各职业信息统计 begin -->
+		<action path="/showOccuptationTotal" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOccuptationTotal" scope="request">
+			<forward name="showOccuptationTotal" path="/WEB-INF/jsp/playerQuery/showOccuptationTotal.jsp" />
+		</action>
+		<action path="/occuptationTotal" type="org.springframework.web.struts.DelegatingActionProxy" parameter="occuptationTotal" scope="request" name="occuptationTotalForm" validate="true" input="/showOccuptationTotal.do" >
+			<forward name="occuptationTotal" path="/WEB-INF/jsp/playerQuery/occuptationTotal.jsp"></forward>
+		</action>
+		<!-- 各职业信息统计 end -->
+		<!-- 物品移动流向查询 begin -->
+		<action path="/showGoodsHistory" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGoodsHistory" scope="request">
+			<forward name="showGoodsHistory" path="/WEB-INF/jsp/playerQuery/showGoodsHistory.jsp"></forward>
+		</action>
+		<action path="/goodsHistory" type="org.springframework.web.struts.DelegatingActionProxy" parameter="goodsHistory" scope="request" name="goodsHistoryForm" validate="true" input="/showGoodsHistory.do">
+			<forward name="goodsHistory" path="/WEB-INF/jsp/playerQuery/goodsHistory.jsp"></forward>
+		</action>
+		<!-- 物品移动流向查询 end -->
+		<!-- 指定玩家的物品的转移记录 begin -->
+		<action path="/showOperationDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showOperationDetail" scope="request">
+			<forward name="showOperationDetail" path="/WEB-INF/jsp/playerQuery/showOperationDetail.jsp"></forward>
+		</action>
+		<action path="/OperationDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="OperationDetail" scope="request" name="OperationDetailForm" validate="true" input="/showOperationDetail.do">
+			<forward name="operationDetail" path="/WEB-INF/jsp/playerQuery/operationDetail.jsp"></forward>
+			<forward name="showOperationDetail" path="/WEB-INF/jsp/playerQuery/showOperationDetail.jsp"></forward>
+		</action>
+		<!-- 指定玩家的物品的转移记录 end -->
+		<!-- NPC至玩家的物品转移记录 begin -->
+		<action path="/showGoodsHistoryFromNPC" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGoodsHistoryFromNPC" scope="request">
+			<forward name="showGoodsHistoryFromNPC" path="/WEB-INF/jsp/playerQuery/showGoodsHistoryFromNPC.jsp"></forward>
+		</action>
+		<action path="/GoodsHistoryFromNPC" type="org.springframework.web.struts.DelegatingActionProxy" parameter="GoodsHistoryFromNPC" scope="request" name="GoodsHistoryFromNPCForm" validate="true" input="/showGoodsHistoryFromNPC.do">
+			<forward name="goodsHistoryFromNPC" path="/WEB-INF/jsp/playerQuery/goodsHistoryFromNPC.jsp"></forward>
+			<forward name="showGoodsHistoryFromNPC" path="/WEB-INF/jsp/playerQuery/showGoodsHistoryFromNPC.jsp"></forward>
+		</action>
+		<!-- NPC至玩家的物品转移记录 end -->
+		<!-- 玩家至NPC的物品转移记录 begin -->
+		<action path="/showGoodsHistoryToNPC" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGoodsHistoryToNPC" scope="request">
+			<forward name="showGoodsHistoryToNPC" path="/WEB-INF/jsp/playerQuery/showGoodsHistoryToNPC.jsp"></forward>
+		</action>
+		<action path="/GoodsHistoryToNPC" type="org.springframework.web.struts.DelegatingActionProxy" parameter="GoodsHistoryToNPC" scope="request" name="GoodsHistoryToNPCForm" validate="true" input="/showGoodsHistoryToNPC.do">
+			<forward name="goodsHistoryToNPC" path="/WEB-INF/jsp/playerQuery/goodsHistoryToNPC.jsp"></forward>
+			<forward name="showGoodsHistoryToNPC" path="/WEB-INF/jsp/playerQuery/showGoodsHistoryToNPC.jsp"></forward>
+		</action>
+		<!-- 玩家至NPC的物品转移记录 end -->
+		<!-- 充值订单详情查询 begin -->
+		<action path="/showQueryOrderDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryOrderDetail" scope="request">
+			<forward name="orderDetail" path="/WEB-INF/jsp/playerQuery/orderDetail.jsp" />
+		</action>
+		<action path="/getOrderDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getOrderDetail" scope="request" name="getOrderDetailForm" validate="true" input="/showQueryOrderDetail.do">
+			<forward name="orderDetail" path="/WEB-INF/jsp/playerQuery/orderDetail.jsp" />
+		</action>
+		<!-- 充值订单详情查询 end -->
+		<!-- 显示玩家至玩家物品移动记录 begin -->
+		<action path="/showGoodsHistoryBetweenUsers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGoodsHistoryBetweenUsers" scope="request">
+			<forward name="goodsHistoryBetweenUsers" path="/WEB-INF/jsp/playerQuery/goodsHistoryBetweenUsers.jsp"></forward>
+		</action>
+		<!-- 显示玩家至玩家物品移动记录 end -->
+		<!-- 玩家至玩家物品移动记录 begin -->
+		<action path="/goodsHistoryBetweenUsers" type="org.springframework.web.struts.DelegatingActionProxy" parameter="goodsHistoryBetweenUsers" scope="request" name="goodsHistoryBetweenUsersForm" validate="true" input="/showGoodsHistoryBetweenUsers.do">
+			<forward name="goodsHistoryBetweenUsers" path="/WEB-INF/jsp/playerQuery/goodsHistoryBetweenUsers.jsp"></forward>
+		</action>
+		<!-- 玩家至玩家物品移动记录 end -->
+		<!-- 查询角色包裹信息 begin -->
+		<action path="/showQueryRolePackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRolePackage" scope="request">
+			<forward name="rolePackage" path="/WEB-INF/jsp/playerQuery/rolePackage.jsp" />
+		</action>
+		<action path="/getRolePackage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRolePackage" scope="request" name="getRolePackageForm" validate="true" input="/showQueryRolePackage.do">
+			<forward name="rolePackage" path="/WEB-INF/jsp/playerQuery/rolePackage.jsp" />
+		</action>
+		<!-- 查询角色包裹信息 end -->
+		<!-- 查询角色物品信息 begin -->
+		<action path="/getRoleItemInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleItemInfo" scope="request" name="getRoleItemInfoForm" validate="true" input="/getRolePackage.do">
+			<forward name="itemInfo" path="/WEB-INF/jsp/playerQuery/itemInfo.jsp" />
+		</action>
+		<!-- 查询角色物品信息 end -->
+		<!-- 玩家技能查询 begin -->
+		<action path="/showUserSkillInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserSkillInfo" scope="request">
+			<forward name="userSkillInfo" path="/WEB-INF/jsp/playerQuery/userSkillInfo.jsp" />
+		</action>
+		<action path="/userSkillInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="userSkillInfo" scope="request" name="userSkillInfoForm" validate="true" input="/showUserSkillInfo.do">
+			<forward name="userSkillInfo" path="/WEB-INF/jsp/playerQuery/userSkillInfo.jsp" />
+		</action>
+		<action path="/userSkillDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="userSkillDetail" scope="request">
+			<forward name="userSkillDetail" path="/WEB-INF/jsp/playerQuery/userSkillDetail.jsp"></forward>
+		</action>
+		<!-- 玩家技能查询 end -->
+		<!-- 玩家身上装备查询begin -->
+		<action path="/showUserItemOnBody" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserItemOnBody" scope="request">
+			<forward name="userItemOnBody" path="/WEB-INF/jsp/playerQuery/userItemOnBody.jsp"></forward>
+		</action>
+		<action path="/userItemOnBody" type="org.springframework.web.struts.DelegatingActionProxy" parameter="userItemOnBody" scope="request" name="userItemOnBodyForm" validate="true" input="/showUserItemOnBody.do">
+			<forward name="userItemOnBody" path="/WEB-INF/jsp/playerQuery/userItemOnBody.jsp"></forward>
+		</action>
+		<!-- 玩家身上装备查询end -->
+		<!-- 玩家的经验等级日志查询begin -->
+		<action path="/showUserLevelInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showUserLevelInfo" scope="request">
+			<forward name="userLevelInfo" path="/WEB-INF/jsp/playerQuery/userLevelInfo.jsp"></forward>
+		</action>
+		<action path="/userLevelInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="userLevelInfo" scope="request" name="userLevelInfoForm" validate="true" input="/showUserLevelInfo.do">
+			<forward name="userLevelInfo" path="/WEB-INF/jsp/playerQuery/userLevelInfo.jsp"></forward>
+		</action>
+		<!-- 玩家的经验等级日志查询end -->
+		<!-- 帮派查询 -->
+		<action path="/showCorpsTotal" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCorpsTotal" scope="request">
+			<forward name="corpsTotal" path="/WEB-INF/jsp/playerQuery/corpsTotal.jsp"></forward>
+		</action>
+		<action path="/corpsTotal" type="org.springframework.web.struts.DelegatingActionProxy" parameter="corpsTotal" scope="request">
+			<forward name="corpsTotal" path="/WEB-INF/jsp/playerQuery/corpsTotal.jsp"></forward>
+		</action>
+		<action path="/corpsDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="corpsDetail" scope="request">
+			<forward name="corpsTotal" path="/WEB-INF/jsp/playerQuery/corpsTotal.jsp"></forward>
+		</action>
+		<action path="/corpsMember" type="org.springframework.web.struts.DelegatingActionProxy" parameter="corpsMember" scope="request">
+			<forward name="corpsTotal" path="/WEB-INF/jsp/playerQuery/corpsTotal.jsp"></forward>
+		</action>
+		<action path="/showCorpsDetailNew" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCorpsDetailNew" scope="request">
+			<forward name="corpsDetailNew" path="/WEB-INF/jsp/playerQuery/corpsDetailNew.jsp"></forward>
+		</action>
+		<action path="/corpsDetailNew" type="org.springframework.web.struts.DelegatingActionProxy" parameter="corpsDetailNew" scope="request" name="corpsDetailNewForm" validate="true" input="/showCorpsDetailNew.do">
+			<forward name="corpsDetailNew" path="/WEB-INF/jsp/playerQuery/corpsDetailNew.jsp"></forward>
+		</action>
+		<action path="/showCorpsStorage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCorpsStorage" scope="request">
+			<forward name="corpsStorage" path="/WEB-INF/jsp/playerQuery/corpsStorage.jsp"></forward>
+		</action>
+		<action path="/corpsStorage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="corpsStorage" scope="request" name="corpsDetailNewForm" validate="true" input="/showCorpsStorage.do">
+			<forward name="corpsStorage" path="/WEB-INF/jsp/playerQuery/corpsStorage.jsp"></forward>
+		</action>
+		<action path="/corpsItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="corpsItem" scope="request">
+			<forward name="corpsItem" path="/WEB-INF/jsp/playerQuery/corpsItem.jsp"></forward>
+		</action>		
+		<action path="/showCorpsMember" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCorpsMember" scope="request">
+			<forward name="corpsMember" path="/WEB-INF/jsp/playerQuery/corpsMember.jsp"></forward>
+		</action>
+		<action path="/getCorpsMember" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getCorpsMember" scope="request" name="corpsDetailNewForm" validate="true" input="/showCorpsMember.do">
+			<forward name="corpsMember" path="/WEB-INF/jsp/playerQuery/corpsMember.jsp"></forward>
+		</action>		
+		<action path="/showCorpsTotalNew" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCorpsTotalNew" scope="request">
+			<forward name="corpsTotalNew" path="/WEB-INF/jsp/playerQuery/corpsTotalNew.jsp"></forward>
+		</action>
+		<action path="/getCorpsTotalNew" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getCorpsTotalNew" scope="request" name="corpsTotalForm" validate="true" input="/showCorpsTotalNew.do">
+			<forward name="corpsTotalNew" path="/WEB-INF/jsp/playerQuery/corpsTotalNew.jsp"></forward>
+		</action>
+		
+		<!-- 角色称号查询、修改 -->
+		<action path="/showQueryRoleTitle" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryRoleTitle" scope="request">
+			<forward name="roleTitle" path="/WEB-INF/jsp/playerQuery/roleTitle.jsp"></forward>
+		</action>
+		<action path="/queryRoleTitle" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryRoleTitle" scope="request" name="queryRoleTitleForm" validate="true" input="/showQueryRoleTitle.do">
+			<forward name="roleTitle" path="/WEB-INF/jsp/playerQuery/roleTitle.jsp"></forward>
+		</action>
+		<action path="/showChangeRoleTitle" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showChangeRoleTitle" scope="request">
+			<forward name="roleTitle" path="/WEB-INF/jsp/playerQuery/roleTitle.jsp"></forward>
+		</action>
+		<action path="/changeRoleTitle" type="org.springframework.web.struts.DelegatingActionProxy" parameter="changeRoleTitle" scope="request" name="changeRoleTitleForm" validate="true" input="/showQueryRoleTitle.do">
+			<forward name="roleTitle" path="/WEB-INF/jsp/playerQuery/roleTitle.jsp"></forward>
+		</action>
+		<!-- 登入登出记录查询 -->
+		<action path="/showLoginInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showLoginInfo" scope="request">
+			<forward name="loginInfo" path="/WEB-INF/jsp/playerQuery/loginInfo.jsp"></forward>
+		</action>
+		<action path="/loginInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="loginInfo" scope="request" name="loginInfoForm" validate="true" input="/showLoginInfo.do">
+			<forward name="loginInfo" path="/WEB-INF/jsp/playerQuery/loginInfo.jsp"></forward>
+		</action>
+		
+		<!-- 实卡信息查询 -->
+		<action path="/showRealCardInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRealCardInfo" scope="request">
+			<forward name="realCardInfo" path="/WEB-INF/jsp/playerQuery/realCardInfo.jsp"></forward>
+		</action>
+		<action path="/realCardInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="realCardInfo" scope="request">
+			<forward name="realCardInfo" path="/WEB-INF/jsp/playerQuery/realCardInfo.jsp"></forward>
+		</action>
+		
+		<!-- 查询玩家已完成任务 -->
+		<action path="/showFinishedTaskInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFinishedTaskInfo" scope="request">
+			<forward name="finishedTaskInfo" path="/WEB-INF/jsp/playerQuery/finishedTaskInfo.jsp"></forward>
+		</action>
+		<action path="/finishedTaskInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="finishedTaskInfo" scope="request" name="finishedTaskInfoForm" validate="true" input="/showFinishedTaskInfo.do">
+			<forward name="finishedTaskInfo" path="/WEB-INF/jsp/playerQuery/finishedTaskInfo.jsp"></forward>
+		</action>
+		<!-- 玩家身上特定装备查询 -->
+		<action path="/userItemOnBodyDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="userItemOnBodyDetail" scope="request">
+			<forward name="userItemOnBodyDetail" path="/WEB-INF/jsp/playerQuery/userItemOnBodyDetail.jsp"></forward>
+		</action>
+		<!-- 角色仓库内特定物品查询 -->
+		<action path="/userItemInStorage" type="org.springframework.web.struts.DelegatingActionProxy" parameter="userItemInStorage" scope="request">
+			<forward name="userItemInStorage" path="/WEB-INF/jsp/playerQuery/userItemInStorage.jsp"></forward>
+		</action>
+		<!-- 角色物品查询 -->
+		<action path="/showRoleItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleItem" scope="request">
+			<forward name="roleItem" path="/WEB-INF/jsp/playerQuery/roleItem.jsp"></forward>
+		</action>
+		<action path="/roleItem" type="org.springframework.web.struts.DelegatingActionProxy" parameter="roleItem" scope="request" name="roleItemForm" validate="true" input="/showRoleItem.do">
+			<forward name="roleItem" path="/WEB-INF/jsp/playerQuery/roleItem.jsp"></forward>
+		</action>
+		<!-- 角色帐号查询 -->
+		<action path="/showRole2Passport" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRole2Passport" scope="request">
+			<forward name="role2Passport" path="/WEB-INF/jsp/playerQuery/role2Passport.jsp"></forward>
+		</action>
+		<action path="/role2Passport" type="org.springframework.web.struts.DelegatingActionProxy" parameter="role2Passport" scope="request" name="role2PassportForm" validate="true" input="/showRole2Passport.do">
+			<forward name="role2Passport" path="/WEB-INF/jsp/playerQuery/role2Passport.jsp"></forward>
+		</action>
+		<!-- 玩家物品日志查询 -->
+		<action path="/showRoleItemLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleItemLog" scope="request">
+			<forward name="roleItemOperate" path="/WEB-INF/jsp/playerQuery/roleItemOperate.jsp"></forward>
+		</action>
+		<action path="/roleItemLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="roleItemLog" scope="request" name="roleItemLogForm" validate="true" input="/showRoleItemLog.do">
+			<forward name="roleItemOperate" path="/WEB-INF/jsp/playerQuery/roleItemOperate.jsp"></forward>
+		</action>
+		<!-- 玩家金钱日志查询 -->
+		<action path="/showRoleMoneyLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleMoneyLog" scope="request">
+			<forward name="roleMoneyOperate" path="/WEB-INF/jsp/playerQuery/roleMoneyOperate.jsp"></forward>
+		</action>
+		<action path="/roleMoneyLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="roleMoneyLog" scope="request" name="roleMoneyLogForm" validate="true" input="/showRoleMoneyLog.do">
+			<forward name="roleMoneyOperate" path="/WEB-INF/jsp/playerQuery/roleMoneyOperate.jsp"></forward>
+		</action>
+		<!-- 玩家经验日志查询 -->
+		<action path="/showRoleExpLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleExpLog" scope="request">
+			<forward name="roleExpOperate" path="/WEB-INF/jsp/playerQuery/roleExpOperate.jsp"></forward>
+		</action>
+		<action path="/roleExpLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="roleExpLog" scope="request" name="roleExpLogForm" validate="true" input="/showRoleExpLog.do">
+			<forward name="roleExpOperate" path="/WEB-INF/jsp/playerQuery/roleExpOperate.jsp"></forward>
+		</action>
+		<!-- 玩家物品升级日志查询 -->
+		<action path="/showRoleItemLevLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleItemLevLog" scope="request">
+			<forward name="roleItemLevOperate" path="/WEB-INF/jsp/playerQuery/roleItemLevOperate.jsp"></forward>
+		</action>
+		<action path="/roleItemLevLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="roleItemLevLog" scope="request" name="roleItemLevLogForm" validate="true" input="/showRoleItemLevLog.do">
+			<forward name="roleItemLevOperate" path="/WEB-INF/jsp/playerQuery/roleItemLevOperate.jsp"></forward>
+		</action>
+		<!-- 帐号激活查询 -->
+		<action path="/showActivationLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showActivationLog" scope="request">
+			<forward name="activationLog" path="/WEB-INF/jsp/playerQuery/activationLog.jsp"></forward>
+		</action>
+		<action path="/activationLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="activationLog" scope="request" name="activationLogForm" validate="true" input="/showActivationLog.do">
+			<forward name="activationLog" path="/WEB-INF/jsp/playerQuery/activationLog.jsp"></forward>
+		</action>
+		<!-- 玩家积分信息查询 -->
+		<action path="/showRoleIntegration" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleIntegration" scope="request">
+			<forward name="showRoleIntegration" path="/WEB-INF/jsp/playerQuery/showRoleIntegration.jsp"></forward>
+		</action>
+		<action path="/roleIntegration" type="org.springframework.web.struts.DelegatingActionProxy" parameter="roleIntegration" scope="request">
+			<forward name="roleIntegration" path="/WEB-INF/jsp/playerQuery/roleIntegration.jsp"></forward>
+		</action>
+		<!-- 积分消耗明细查询 -->
+		<action path="/showRoleConsume" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleConsume" scope="request">
+			<forward name="showRoleConsume" path="/WEB-INF/jsp/playerQuery/showRoleConsume.jsp"></forward>
+		</action>
+		<action path="/roleConsume" type="org.springframework.web.struts.DelegatingActionProxy" parameter="roleConsume" scope="request">
+			<forward name="roleConsume" path="/WEB-INF/jsp/playerQuery/roleConsume.jsp"></forward>
+		</action>
+
+		<!-- 角色邮件信息查询 -->
+		<action path="/showRoleEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleEmail" scope="request">
+			<forward name="roleEmail" path="/WEB-INF/jsp/playerQuery/roleEmail.jsp"></forward>
+		</action>
+		<action path="/getRoleEmail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleEmail" scope="request" name="roleEmailForm" validate="true" input="/showRoleEmail.do">
+			<forward name="roleEmail" path="/WEB-INF/jsp/playerQuery/roleEmail.jsp"></forward>
+		</action>
+		<!-- 组织日志查询 -->
+		<action path="/showCorpsLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCorpsLog" scope="request">
+			<forward name="corpsLog" path="/WEB-INF/jsp/playerQuery/corpsLog.jsp"></forward>
+		</action>
+		<action path="/getCorpsLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getCorpsLog" scope="request" name="corpsLogForm" validate="true" input="/showCorpsLog.do">
+			<forward name="corpsLog" path="/WEB-INF/jsp/playerQuery/corpsLog.jsp"></forward>
+		</action>
+		<!-- 角色日志查询 -->
+		<action path="/showRoleLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleLog" scope="request">
+			<forward name="roleLog" path="/WEB-INF/jsp/playerQuery/roleLog.jsp"></forward>
+		</action>
+		<action path="/getRoleLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleLog" scope="request" name="roleLogForm" validate="true" input="/showRoleLog.do">
+			<forward name="roleLog" path="/WEB-INF/jsp/playerQuery/roleLog.jsp"></forward>
+		</action>
+		<!-- 角色拍卖行信息查询 -->
+		<action path="/showRoleAuction" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleAuction" scope="request">
+			<forward name="roleAuction" path="/WEB-INF/jsp/playerQuery/roleAuction.jsp"></forward>
+		</action>
+		<action path="/getRoleAuction" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleAuction" scope="request" name="roleAuctionForm" validate="true" input="/showRoleAuction.do">
+			<forward name="roleAuction" path="/WEB-INF/jsp/playerQuery/roleAuction.jsp"></forward>
+		</action>
+		<!-- 卡密激活查询 -->
+		<action path="/showInvokeCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showInvokeCard" scope="request">
+			<forward name="cardInvoke" path="/WEB-INF/jsp/playerQuery/cardInvoke.jsp"></forward>
+		</action>
+		<action path="/getInvokeCard" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getInvokeCard" scope="request" name="cardInvokeForm" validate="true" input="/showInvokeCard.do">
+			<forward name="cardInvoke" path="/WEB-INF/jsp/playerQuery/cardInvoke.jsp"></forward>
+		</action>
+		<!-- 卡密激活查询 -->
+		
+		<!-- 刷钱账号查询 -->
+		<action path="/showQueryCheatAccountInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryCheatAccountInfo" scope="request">
+			<forward name="queryCheatAccountInfo" path="/WEB-INF/jsp/playerQuery/cheatAccountInfo.jsp"></forward>
+		</action>
+		<action path="/queryCheatAccountInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryCheatAccountInfo" scope="request">
+			<forward name="queryCheatAccountInfo" path="/WEB-INF/jsp/playerQuery/cheatAccountInfo.jsp"></forward>
+		</action>
+		<action path="/exportCheatAccountInfo" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exportCheatAccountInfo" scope="request">
+		</action>
+		<!-- 刷钱账号查询 -->
+		
+		<!--联运账号查询 -->
+		<action path="/showQueryPlayerInfoOfBaidu" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryPlayerInfoOfBaidu" scope="request">
+			<forward name="queryPlayerInfoOfBaidu" path="/WEB-INF/jsp/playerQuery/unionPlayerInfo.jsp"></forward>
+		</action>
+		<action path="/queryPlayerInfoOfBaidu" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryPlayerInfoOfBaidu" scope="request">
+			<forward name="queryPlayerInfoOfBaidu" path="/WEB-INF/jsp/playerQuery/unionPlayerInfo.jsp"></forward>
+		</action>
+		<!--联运账号查询 -->
+		
+		<!-- 元宝交易日志查询 -->
+		<action path="/showFundExchange" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFundExchange" scope="request">
+			<forward name="fundExchange" path="/WEB-INF/jsp/playerQuery/fundExchange.jsp"></forward>
+		</action>
+		<action path="/getFundExchange" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getFundExchange" scope="request" name="fundExchangeForm" validate="true" input="/showFundExchange.do">
+			<forward name="fundExchange" path="/WEB-INF/jsp/playerQuery/fundExchange.jsp"></forward>
+		</action>
+			<!-- 充值详单查询 -->
+		<action path="/showChargeDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showChargeDetail" scope="request">
+			<forward name="chargeDetail" path="/WEB-INF/jsp/playerQuery/chargeDetail.jsp"></forward>
+		</action>
+		<action path="/getChargeDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getChargeDetail" scope="request" name="chargeDetailForm" validate="true" input="/showChargeDetail.do">
+			<forward name="chargeDetail" path="/WEB-INF/jsp/playerQuery/chargeDetail.jsp"></forward>
+		</action>
+		<action path="/exportChargeOrderData" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exportChargeOrderData" scope="request">
+		</action>
+		
+		<action path="/showGetGameByRoleNames" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showGetGameByRoleNames"></action>
+		
+		<action path="/getGameByRoleNames" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getGameByRoleNames"></action>
+		
+		<action path="/exportPlayerPurchaseDetail" type="org.springframework.web.struts.DelegatingActionProxy" parameter="exportPlayerPurchaseDetail"></action>
+		
+		<action path="/showPlayerSerialState" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showPlayerSerialState">
+			<forward name="playerSerial" path="/WEB-INF/jsp/playerQuery/playerSerialState.jsp"></forward>
+		</action>
+		
+		<action path="/playerSerialState" type="org.springframework.web.struts.DelegatingActionProxy" parameter="playerSerialState">
+			<forward name="playerSerial" path="/WEB-INF/jsp/playerQuery/playerSerialState.jsp"></forward>
+		</action>
+		<!-- /playerQuery new action end -->
+		<!-- 充值排名 -->
+		<action path="/showChargeRank" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showChargeRank" scope="request">
+			<forward name="showChargeRank" path="/WEB-INF/jsp/playerQuery/showChargeRank.jsp"></forward>		
+		</action>
+		<action path="/getChargeRank" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getChargeRank" scope="request">
+			<forward name="showChargeRank" path="/WEB-INF/jsp/playerQuery/showChargeRank.jsp"></forward>
+		</action>
+		<!-- 通过passportId获得passportName -->
+		<action path="/showgetPassportName" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showgetPassportName" scope="request">
+		     <forward name="showgetPassportName" path="/WEB-INF/jsp/playerQuery/showPassportName.jsp"></forward>
+		</action>
+		<action path="/getPassportName" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getPassportName" scope="request">
+			<forward name="showgetPassportName" path="/WEB-INF/jsp/playerQuery/showPassportName.jsp"></forward>
+		</action>
+		<!-- 查询玩家的阅历 -->
+		<action path="/showRoleYueli" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleYueli" scope="request">
+			<forward name="roleYueli" path="/WEB-INF/jsp/playerQuery/roleYueli.jsp"></forward>
+		</action>
+		<action path="/getRoleYueli" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleYueli" scope="request">
+		    <forward name="roleYueli" path="/WEB-INF/jsp/playerQuery/roleYueli.jsp"></forward>
+		</action>
+		<!-- IP反查帐号 -->
+		<action path="/showQueryByIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showQueryByIp" scope="request">
+			<forward name="queryByIp" path="/WEB-INF/jsp/playerQuery/queryByIp.jsp"></forward>
+		</action>
+		<action path="/queryByIp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="queryByIp" scope="request">
+		    <forward name="queryByIp" path="/WEB-INF/jsp/playerQuery/queryByIp.jsp"></forward>
+		</action>
+		<!-- 玩家行为日志查询 -->
+		<action path="/showRoleActionOperateLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showRoleActionOperateLog" scope="request">
+			<forward name="roleActionOperateLog" path="/WEB-INF/jsp/playerQuery/roleActionOperateLog.jsp"></forward>
+		</action>
+		<action path="/getRoleActionOperateLog" type="org.springframework.web.struts.DelegatingActionProxy" parameter="getRoleActionOperateLog" scope="request" name="roleActionOperateLogForm" validate="true" input="/showRoleActionOperateLog.do">
+			<forward name="roleActionOperateLog" path="/WEB-INF/jsp/playerQuery/roleActionOperateLog.jsp"></forward>
+		</action>
+	</action-mappings>
+	
+</struts-config>

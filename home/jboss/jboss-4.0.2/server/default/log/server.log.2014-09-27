@@ -1,0 +1,14 @@
+2014-09-27 06:17:52,854 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-09-27 06:17:52,855 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-27 06:17:52,855 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-27 06:17:53,353 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-27 06:18:47,583 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&gameId=1204&validCode=sfhuy&method=login&passportName=GLOBALgames03&
+2014-09-27 06:18:47,583 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-27 06:18:47,584 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-27 06:18:47,738 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-27 14:08:13,615 INFO  [STDOUT] java.lang.NullPointerException
+2014-09-27 14:08:13,615 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-09-27 14:08:13,615 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-09-27 14:08:13,616 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-09-27 14:08:13,616 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-09-27 14:08:13,616 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

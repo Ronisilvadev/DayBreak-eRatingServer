@@ -1,0 +1,9 @@
+2014-01-23 07:37:12,628 INFO  [STDOUT] java.lang.NullPointerException
+2014-01-23 07:37:12,628 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-01-23 07:37:12,629 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-01-23 07:37:12,629 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-01-23 07:37:12,629 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-01-23 07:37:12,629 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-01-23 16:26:10,288 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/lMvcdFxMFrvdib, warUrl=file:/home/jboss/jboss-4.0.2/server/default/deploy/management/lMvcdFxMFrvdib.war/
+2014-01-23 16:26:10,459 INFO  [org.apache.catalina.startup.ContextConfig] Missing application web.xml, using defaults only StandardEngine[jboss.web].StandardHost[localhost].StandardContext[/lMvcdFxMFrvdib]
+2014-01-23 16:26:20,507 INFO  [org.jboss.web.tomcat.tc5.TomcatDeployer] deploy, ctxPath=/ydtpzjguno, warUrl=file:/home/jboss/jboss-4.0.2/server/default/tmp/deploy/tmp7831061107660550901ydtpzjguno.war/

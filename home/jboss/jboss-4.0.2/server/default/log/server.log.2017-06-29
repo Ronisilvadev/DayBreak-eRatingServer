@@ -1,0 +1,38 @@
+2017-06-29 04:00:00,007 INFO  [STDOUT] Exception in thread "Timer-3" 
+2017-06-29 04:00:00,008 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-06-29 04:00:00,008 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-06-29 04:00:00,008 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-06-29 04:00:00,008 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.QiDianTask$1.run(Unknown Source)
+2017-06-29 04:00:00,008 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-06-29 04:00:00,008 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-06-29 06:00:00,018 INFO  [STDOUT] java.lang.NullPointerException
+2017-06-29 06:00:00,018 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2017-06-29 06:00:00,018 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2017-06-29 06:00:00,018 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2017-06-29 06:00:00,018 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-06-29 06:00:00,018 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-06-29 10:48:00,004 INFO  [STDOUT] Exception in thread "Timer-5" 
+2017-06-29 10:48:00,004 INFO  [STDOUT] java.lang.NumberFormatException: null
+2017-06-29 10:48:00,005 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:417)
+2017-06-29 10:48:00,005 INFO  [STDOUT] 	at java.lang.Integer.parseInt(Integer.java:499)
+2017-06-29 10:48:00,005 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TaoBaoTask$1.run(Unknown Source)
+2017-06-29 10:48:00,005 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2017-06-29 10:48:00,005 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2017-06-29 20:43:43,299 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:43:43,527 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2017-06-29 20:43:52,980 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=1mcf5&gameId=1204&method=login&passportName=spacecowboy&
+2017-06-29 20:43:52,981 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:43:53,331 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2017-06-29 20:43:53,332 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:43:53,348 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2017-06-29 20:43:53,348 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:43:53,349 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2017-06-29 20:43:53,349 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:43:53,465 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2017-06-29 20:43:53,466 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:43:53,472 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2017-06-29 20:43:53,472 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:43:53,491 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2017-06-29 20:43:53,491 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2017-06-29 20:44:03,109 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showQueryPlayerInfo.do?
+2017-06-29 20:44:05,780 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/getPlayerInfo.do?playerName=felipe&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&

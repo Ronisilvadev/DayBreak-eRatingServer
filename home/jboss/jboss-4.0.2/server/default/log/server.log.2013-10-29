@@ -1,0 +1,22 @@
+2013-10-29 04:04:44,435 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:04:50,029 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:04:50,924 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2013-10-29 04:04:53,952 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2013-10-29 04:14:37,401 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=xah21&gameId=1204&method=login&passportName=test&
+2013-10-29 04:14:37,401 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:14:37,404 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:14:38,106 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2013-10-29 04:14:55,655 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=x8tjb&gameId=1204&method=login&passportName=test&
+2013-10-29 04:14:55,656 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:14:55,661 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:14:56,360 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2013-10-29 04:15:16,368 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=0&validCode=j8d1c&gameId=1204&method=login&passportName=test&
+2013-10-29 04:15:16,368 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:15:16,369 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2013-10-29 04:15:17,085 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2013-10-29 07:18:23,816 INFO  [STDOUT] java.lang.NullPointerException
+2013-10-29 07:18:23,816 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2013-10-29 07:18:23,816 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2013-10-29 07:18:23,816 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2013-10-29 07:18:23,816 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2013-10-29 07:18:23,816 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK" ?>
+
+<ingamba>
+    <connection>
+        <EndPoint>http://10.33.161.181:11666/integration/paidservicesV3</EndPoint>
+        <time_out>10</time_out>
+    </connection>
+
+    <soap>
+        <EnvelopeTag>s:Envelope</EnvelopeTag>
+        <BodyTag>s:Body</BodyTag>
+    </soap>
+
+    <purchase>
+        <ResponseTag>BuyGameItemResponse</ResponseTag>
+        <ResultTag>BuyGameItemResult</ResultTag>
+        <ResultCodeTag>a:Result</ResultCodeTag>
+        <ErrorMsgTag>a:ErrorMessage</ErrorMsgTag>
+    </purchase>
+    
+    <auth>
+        <ResponseTag>AuthenticateUserResponse</ResponseTag>
+        <ResultTag>AuthenticateUserResult</ResultTag>
+        <ResultCodeTag>a:Result</ResultCodeTag>
+        <ErrorMsgTag>a:ErrorMessage</ErrorMsgTag>
+        <UserIDTag>a:UserId</UserIDTag>
+    </auth>
+    
+    <balance>
+        <ResponseTag>GetMoneyBalanceResponse</ResponseTag>
+        <ResultTag>GetMoneyBalanceResult</ResultTag>
+        <ResultCodeTag>a:Result</ResultCodeTag>
+        <ErrorMsgTag>a:ErrorMessage</ErrorMsgTag>
+        <BalanceTag>a:Balance</BalanceTag>
+    </balance>
+</ingamba>

@@ -1,0 +1,13 @@
+2013-12-14_03:36:07.163|I|32450|B7F7B6E0|INFO|unPackage|1|pdu_len=161|orig_pdu_len=161|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10003802|seq_id=6801|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=45015
+2013-12-14_03:36:07.165|I|32450|B7F7B6E0|INFO|HttpAuth::userAuth|Host=daybreak.globalgames.com.br|Port=80|Request=userAccount=marco&password=bd3fcf3abf740894caaf2db02a640128d2d1619dee4daf881d142385ab586dff&sign=B24058260F0FCBBD378A9900D46F2E66
+2013-12-14_03:36:07.487|I|32450|B7F7B6E0|INFO|HttpAuth::userAuth|Response=HTTP/1.1 200 OK
+Connection: close
+Content-Length: 124
+Content-Type: text/html; charset=utf-8
+Date: Sat, 14 Dec 2013 05:48:17 GMT
+Server: Apache
+Vary: Accept-Encoding
+
+<?xml version="1.0" encoding="utf-8" ?><response><result>-1812</result><adult>1</adult><userName>marco</userName></response>
+2013-12-14_03:36:07.487|I|32450|B7F7B6E0|INFO|0|104001|AllServer::_onJointAuthenExHttpAES|-1812|0|0|GMID=1204|GWID=104001|URI=http://daybreak.globalgames.com.br/auth/|UserName=marco|Password=241c4231a7397852e0af7a4bc673b779|Send3rdPassword=bd3fcf3abf740894caaf2db02a640128d2d1619dee4daf881d142385ab586dff|UserID_Union=|Lower=1|User_Flag=0|User_Type=0|Adult_Flag=0|User_Class=0|User_Point=0|Appendix1=0|Appendix2=0|Promoter_ID=0|User_IP=177.47.22.70|User_Port=53963|Client_MAC=00FF8F2070B3|AD_ID=''|Hardware_SN1=''|Hardware_SN2=''|ClientType=full|NeedCheckPwd=1|TC1=323|TC2=0|TC=323
+2013-12-14_03:36:07.487|I|32450|B7F7B6E0|INFO|package|1|SequenceID=6801|toRouter

@@ -1,0 +1,8 @@
+2014-08-17_19:14:25.021|I|4081|B7F726E0|INFO|unPackage|1|pdu_len=28|orig_pdu_len=28|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10000002|seq_id=7890|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=44604
+2014-08-17_19:14:25.024|I|4081|B7F726E0|INFO|AllServer::sendNotify|sendNotify|unbindGS|game_id=1204|gw_id=104001|ip=192.168.177.92|port=44604
+2014-08-17_19:14:25.024|I|4081|B7F726E0|INFO|AllServer::_onUnbind|Unbind|1|game_id=1204|gw_id=104001|ip=192.168.177.92|port=44604|tc=3
+2014-08-17_19:14:25.024|I|4081|B7F726E0|INFO|package|1|SequenceID=7890|toRouter
+2014-08-17_19:14:58.925|I|4081|B7F726E0|INFO|unPackage|1|pdu_len=108|orig_pdu_len=108|curr_agip_version=0x20|orig_agip_version=0x20|is_yt_version='no'|command_id=0x10000001|seq_id=1|game_id=1204|gateway_id=104001|src_ip=192.168.177.92|src_port=44616
+2014-08-17_19:14:58.931|I|4081|B7F726E0|INFO|AllServer::sendNotify|sendNotify|bindGS|game_id=1204|gw_id=104001|ip=192.168.177.92|port=44616
+2014-08-17_19:14:58.931|I|4081|B7F726E0|INFO|AllServer::_onBind|1|game_id=1204|gw_id=104001|zone_id=101|svr_id=104001|gw_code='gw104001'|gw_password='0xdw86898818656327ibxo6151453306'|mac='0050568061F7'|reconnflag=0|ip='192.168.177.92'|port=44616|tc=6
+2014-08-17_19:14:58.931|I|4081|B7F726E0|INFO|package|1|SequenceID=1|toRouter

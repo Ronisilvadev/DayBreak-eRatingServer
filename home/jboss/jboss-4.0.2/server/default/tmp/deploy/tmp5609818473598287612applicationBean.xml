@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<!-- 以AspectJ方式 定义 AOP-->
+	<aop:config proxy-target-class="false">
+		<aop:advisor pointcut="execution(* com.linekong.gmweb2.dao.impl.mysql.*.*(..))" advice-ref="txAdvice" />
+	</aop:config>
+	
+	<!-- 基本事务定义-->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<!--jdbc TransactionManager-->
+	<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager" />
+	
+	<!-- 其他Bean定义 -->
+	<bean id="basicDao" class="com.linekong.gmweb2.dao.BasicDao" abstract="true" />
+	<bean id="userManageDao" class="com.linekong.gmweb2.dao.impl.mysql.UserManageDaoImpl" />
+	<bean id="playerQueryDao" class="com.linekong.gmweb2.dao.impl.mysql.PlayerQueryDaoImpl"/>
+	<bean id="roleOperationDao" class="com.linekong.gmweb2.dao.impl.mysql.RoleOperationDaoImpl"/>
+	<bean id="roleCompensateDao" class="com.linekong.gmweb2.dao.impl.mysql.RoleCompensateDaoImpl"/>
+	<bean id="worldOperationDao" class="com.linekong.gmweb2.dao.impl.mysql.WorldOperationDaoImpl"/>
+	<bean id="dictionaryDao" class="com.linekong.gmweb2.dao.impl.mysql.DictionaryDaoImpl"/>
+	<bean id="logInfoDao" class="com.linekong.gmweb2.dao.impl.mysql.LogInfoDaoImpl"/>
+	<bean id="resourceManageDao" class="com.linekong.gmweb2.dao.impl.mysql.ResourceManageDaoImpl"/>
+	<bean id="roleManageDao" class="com.linekong.gmweb2.dao.impl.mysql.RoleManageDaoImpl"/>
+	<bean id="encryptDao" class="com.linekong.gmweb2.dao.impl.mysql.EncryptDaoImpl"/>
+
+	
+	<bean id="loginService" class="com.linekong.gmweb2.service.TWLoginService" >		
+	</bean>
+		
+	<bean id="roleOperationService" class="com.linekong.gmweb2.service.RoleOperationService" >
+		<property name="roleOperationDao" ref="roleOperationDao" />
+	</bean>
+	
+	<bean id="roleCompensateService" class="com.linekong.gmweb2.service.RoleCompensateService">
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+	</bean>
+	
+	<bean id="worldOperationService" class="com.linekong.gmweb2.service.WorldOperationService">
+		<property name="worldOperationDao" ref="worldOperationDao" />
+	</bean>
+	
+	<bean id="roleManageService" class="com.linekong.gmweb2.service.RoleManageService" >
+		<property name="roleManageDao" ref="roleManageDao" />
+	</bean>
+	
+	<bean id="resourceManageService" class="com.linekong.gmweb2.service.ResourceManageService" >
+		<property name="resourceManageDao" ref="resourceManageDao" />
+	</bean>
+	
+	<bean id="userManageParentService" class="com.linekong.gmweb2.service.UserManageService">
+		<property name="userManageDao" ref="userManageDao" />
+	</bean>
+
+	<bean id="userManageService" class="com.linekong.gmweb2.service.TWUserManageService" parent="userManageParentService" >	</bean>
+	
+	<bean id="dictionaryService" class="com.linekong.gmweb2.service.DictionaryService" >
+		<property name="dictionaryDao" ref="dictionaryDao" />
+	</bean>
+	
+    <bean id="operationService" class="com.linekong.gmweb2.service.GMWebOperationService" >
+    	<property name="dictionaryDao" ref="dictionaryDao" />
+    	<property name="encryptDao" ref="encryptDao" />
+	</bean>
+
+	<bean id="gmXmlRpcService" class="com.linekong.gmweb2.service.xmlrpc.GmXmlRpcService">
+		<property name="roleCompensateDao" ref="roleCompensateDao" />
+		<property name="playerQueryDao" ref="playerQueryDao" />
+		<property name="dictionaryDao" ref="dictionaryDao" />
+		<property name="operationService" ref="operationService" />
+		<property name="worldOperationDao" ref="worldOperationDao"></property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,98 @@
+2014-01-08 07:33:55,742 INFO  [STDOUT] java.lang.NullPointerException
+2014-01-08 07:33:55,743 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-01-08 07:33:55,743 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-01-08 07:33:55,743 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-01-08 07:33:55,743 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-01-08 07:33:55,743 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-01-08 15:50:53,760 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-01-08 15:50:53,761 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:50:53,761 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:50:53,861 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-01-08 15:51:10,789 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=k8hm0&gameId=1204&method=login&passportName=globalgames1&
+2014-01-08 15:51:10,789 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:51:11,235 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showTop&
+2014-01-08 15:51:11,235 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:51:11,238 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-01-08 15:51:11,238 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:51:11,240 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-01-08 15:51:11,240 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:51:11,261 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-01-08 15:51:11,261 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:51:11,262 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showTab&
+2014-01-08 15:51:11,262 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:51:11,263 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-01-08 15:51:11,264 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:51:38,469 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryRoleTopN.do?
+2014-01-08 15:51:41,248 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-01-08 15:52:17,900 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/getPlayerInfo.do?playerName=teste112&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2014-01-08 15:52:39,909 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showAwardCompensate.do?
+2014-01-08 15:52:43,645 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-01-08 15:52:52,602 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showPlayerItems.do?
+2014-01-08 15:53:01,565 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/getPlayerItems.do?playerName=teste112&search=Submit&endDate=2014-01-08&beginDate=2013-12-08&itemCode=&
+2014-01-08 15:53:08,937 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?
+2014-01-08 15:53:16,163 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/getPlayerPurchaseDetail.do?playerName=teste112&search=Submit&endDate=2014-01-08&beginDate=2013-12-08&
+2014-01-08 15:53:16,170 INFO  [STDOUT] select  c.purchase_id,       c.role_id,       c.role_name,            c.product_code,       d.product_name,        c.product_num,       c.purchase_time,       c.subject_id,       c.cost_amount from(select a.product_id ,a.purchase_id,       a.role_id,       b.role_name,       a.purchase_ip,       a.product_code,       a.product_num,       a.purchase_time,       a.subject_id,       a.cost_amount from UMS_USER_PURCHASE_DETAIL a,     UMS_ROLE b where a.game_id = b.game_id and   a.role_id = b.role_id and   a.user_id =1500000047 and   a.game_id =1204 and a.purchase_time >= DATE_FORMAT('2013-12-08', '%Y-%m-%d') and a.purchase_time < DATE_FORMAT('2014-01-08', '%Y-%m-%d') order by a.purchase_time desc ) c left join(select product_name, product_code,product_id from   SYS_PRODUCT) d on c.product_code = d.product_code
+2014-01-08 15:53:37,550 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showUserManage.do?
+2014-01-08 15:53:50,472 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showRoleManage.do?
+2014-01-08 15:54:02,835 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/delGMRole.do?page=1&keyWord=teste112&
+2014-01-08 15:54:13,248 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showRoleManage.do?page=1&keyWord=teste112&
+2014-01-08 15:54:17,269 INFO  [LogPrintFilter] operator:globalgames1: /etoolkitsweb/showRoleModify.do?roleId=1&
+2014-01-08 15:58:15,668 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-01-08 15:58:15,670 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:58:15,670 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:58:15,981 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-01-08 15:58:16,629 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-01-08 15:58:42,354 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-01-08 15:58:47,693 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=pgcgfq&gameId=1204&method=login&passportName=braziltest2&
+2014-01-08 15:58:47,694 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:58:47,694 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:58:47,873 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-01-08 15:59:02,946 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=tdbps&gameId=1204&method=login&passportName=braziltest2&
+2014-01-08 15:59:02,947 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:59:03,455 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFrame.do?method=showTop&
+2014-01-08 15:59:03,455 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:59:03,465 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-01-08 15:59:03,465 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:59:03,466 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-01-08 15:59:03,466 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:59:03,632 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-01-08 15:59:03,632 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:59:03,633 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFrame.do?method=showTab&
+2014-01-08 15:59:03,633 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:59:03,642 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-01-08 15:59:03,642 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 15:59:31,022 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryPlayerLoginOutDetail.do?
+2014-01-08 15:59:44,298 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/getPlayerLoginOutDetail.do?playerName=dragao879852&search=Submit&endDate=2014-01-08&beginDate=2013-12-01&qurType=1&
+2014-01-08 15:59:48,646 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-01-08 16:00:02,744 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/getPlayerInfo.do?playerName=pedrao6&search=Submit&playerId=&roleName=&gatewayId=0&roleId=&
+2014-01-08 16:00:25,852 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryPlayerChargeDetail.do?
+2014-01-08 16:00:36,813 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?
+2014-01-08 16:00:43,738 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showAwardCompensate.do?
+2014-01-08 16:00:46,402 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFirstApprAwardCompensate.do?
+2014-01-08 16:00:48,092 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showAwardCompensate.do?
+2014-01-08 16:00:49,854 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-01-08 16:01:01,116 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showIssueSettingExp.do?
+2014-01-08 16:01:09,543 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showUserManage.do?
+2014-01-08 16:01:15,809 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showUserManage.do?searchType=realName&keyWord=double&
+2014-01-08 16:01:20,226 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showUserManage.do?searchType=realName&keyWord=znavi&
+2014-01-08 16:01:25,203 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showUserManage.do?searchType=realName&keyWord=pedrao6&
+2014-01-08 16:01:37,113 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showUserAdd.do?
+2014-01-08 16:01:51,510 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showRoleAdd.do?
+2014-01-08 16:01:52,688 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showRoleManage.do?
+2014-01-08 16:03:36,467 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryPlayerInfo.do?
+2014-01-08 16:06:32,030 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showPlayerNames2Ids.do?
+2014-01-08 16:06:33,188 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryRoleTopN.do?
+2014-01-08 16:08:43,760 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showAwardCompensate.do?
+2014-01-08 16:08:47,893 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showFirstApprAwardCompensate.do?
+2014-01-08 16:08:53,501 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showAwardCompensate.do?
+2014-01-08 16:08:54,503 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-01-08 16:10:39,962 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showRoleManage.do?
+2014-01-08 16:10:48,229 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/logManage.do?method=showLog&
+2014-01-08 16:10:48,229 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-01-08 16:11:00,150 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryPlayerPurchaseDetail.do?
+2014-01-08 16:11:09,613 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/getPlayerPurchaseDetail.do?playerName=pedrao6&search=Submit&endDate=2014-01-08&beginDate=2013-12-01&
+2014-01-08 16:11:09,620 INFO  [STDOUT] select  c.purchase_id,       c.role_id,       c.role_name,            c.product_code,       d.product_name,        c.product_num,       c.purchase_time,       c.subject_id,       c.cost_amount from(select a.product_id ,a.purchase_id,       a.role_id,       b.role_name,       a.purchase_ip,       a.product_code,       a.product_num,       a.purchase_time,       a.subject_id,       a.cost_amount from UMS_USER_PURCHASE_DETAIL a,     UMS_ROLE b where a.game_id = b.game_id and   a.role_id = b.role_id and   a.user_id =1500000027 and   a.game_id =1204 and a.purchase_time >= DATE_FORMAT('2013-12-01', '%Y-%m-%d') and a.purchase_time < DATE_FORMAT('2014-01-08', '%Y-%m-%d') order by a.purchase_time desc ) c left join(select product_name, product_code,product_id from   SYS_PRODUCT) d on c.product_code = d.product_code
+2014-01-08 16:11:14,479 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showSearchRole.do?
+2014-01-08 16:11:22,207 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showQueryRoleTopN.do?
+2014-01-08 16:11:28,924 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/showChargeDetail.do?
+2014-01-08 16:11:31,947 INFO  [LogPrintFilter] operator:braziltest2: /etoolkitsweb/getChargeDetail.do?search=Submit&beginTime=2014-01-07&endTime=2014-01-08&

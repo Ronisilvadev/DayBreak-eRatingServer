@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd>
+<keyword>Activity</keyword>
+<input_param>
+<info type="INT">name</info>
+<info type="INT">op</info>
+<info type="INT">param</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ActivityAdd</keyword>
+<input_param>
+<info type="INT">name</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">start_cmd</info>
+<info type="INT">end_cmd</info>
+<info type="INT">circleday</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ActivityEnable</keyword>
+<input_param>
+<info type="INT">id</info>
+<info type="INT">enable</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ActivityRemove</keyword>
+<input_param>
+<info type="INT">id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ActivityInfo</keyword>
+<input_param>
+<info type="INT">today</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>AddTask</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">task_id</info>
+<info type="INT">task_state</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>AddItem</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_id</info>
+<info type="INT">item_num</info>
+<info type="INT">star</info>
+<info type="INT">level</info>
+<info type="INT">bind</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>AddPet</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">base_type</info>
+<info type="INT">pet_type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>AttrChangeHistory</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ShutUp</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">channel</info>
+<info type="INT">period</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CancelShutUp</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">channel</info>
+<info type="INT">period</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CancelMultiExp</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+<info type="INT">item_id</info>
+<info type="INT">item_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangeBindMoney</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">change_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangeItem</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_code</info>
+<info type="INT">item_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangeSkillLevel</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">skill_id</info>
+<info type="INT">level</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangeMoney</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">change_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangeExp</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">change_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangeItem</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_code</info>
+<info type="INT">item_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangeAttr</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">num</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ChangePetAttr</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">pet_xing</info>
+<info type="INT">pullu_tili</info>
+<info type="INT">pet_nickName</info>
+<info type="INT">zhaoshi_id</info>
+<info type="INT">pullu_neili</info>
+<info type="INT">pet_amity</info>
+<info type="INT">base_type</info>
+<info type="INT">jy1_id</info>
+<info type="INT">pet_outer</info>
+<info type="INT">pet_type</info>
+<info type="INT">pet_life</info>
+<info type="INT">pet_style</info>
+<info type="INT">pet_name</info>
+<info type="INT">pet_portrait</info>
+<info type="INT">pet_shen</info>
+<info type="INT">pullu_outer</info>
+<info type="INT">pet_ex</info>
+<info type="INT">pullu_inner</info>
+<info type="INT">pet_jing</info>
+<info type="INT">base_grade</info>
+<info type="INT">pet_inner</info>
+<info type="INT">jy2_id</info>
+<info type="INT">pet_yuan</info>
+<info type="INT">pet_fame</info>
+<info type="INT">jy_list</info>
+<info type="INT">pet_faith</info>
+<info type="INT">pet_grade</info>
+<info type="INT">pullu_qishi</info>
+<info type="INT">pet_qi</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ClearPackage</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ClearStorage</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ClearItem</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_id</info>
+<info type="INT">item_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsInfo</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+<info type="INT">type</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsTotal</keyword>
+<input_param>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsTotal2</keyword>
+<input_param>
+<info type="INT">type</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsDetail</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsDetail2</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsStorage</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsItem</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+<info type="INT">item_id</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ClearCorpsStorage</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsMember</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CorpsMember2</keyword>
+<input_param>
+<info type="INT">corps_name</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>CurActivityQuery</keyword>
+<input_param>
+</input_param>
+</cmd>
+<cmd>
+<keyword>DeleteRole</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>PayMoneyAll</keyword>
+<input_param>
+<info type="INT">type</info>
+<info type="INT">num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>KickRole</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>FreezeAccount</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UnfreezeAccount</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>TrusteeUser</keyword>
+<input_param>
+<info type="INT">user_id</info>
+<info type="INT">password</info>
+<info type="INT">allow_ip</info>
+<info type="INT">trustee_type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UnTrusteeUser</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>MoveRole</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+<info type="INT">target_location</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>EndTask</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">task_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>OccuptationTotal</keyword>
+<input_param>
+</input_param>
+</cmd>
+<cmd>
+<keyword>OperationDetail</keyword>
+<input_param>
+<info type="INT">role_name</info>
+<info type="INT">role_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>OnlineTime</keyword>
+<input_param>
+<info type="INT">user_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>QueryRoleTitle</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleDetail</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+<info type="INT">role_attr</info>
+<info type="INT">resist_attr</info>
+<info type="INT">reputation_attr</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleItem</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleMail</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ResetRoleStoragePassword</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RecoverRole</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RecoverRoleItem</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+<info type="INT">item_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ResetRoleAttr</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleLocation</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleAuction</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+<info type="INT">item_type</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleItemOperate</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">op_type</info>
+<info type="INT">item_type</info>
+<info type="INT">item_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleMoneyOperate</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">op_type</info>
+<info type="INT">item_type</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleExp</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">op_type</info>
+<info type="INT">exp_type</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>RoleItemLevelUp</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_type</info>
+<info type="INT">item_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>SetOLGMAccount</keyword>
+<input_param>
+<info type="INT">user_id</info>
+<info type="INT">password</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>SetShopNotice</keyword>
+<input_param>
+<info type="INT">msg</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>SetIbPrice</keyword>
+<input_param>
+<info type="INT">item_id</info>
+<info type="INT">price</info>
+<info type="INT">time</info>
+<info type="INT">limit_num</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>StartActivity</keyword>
+<input_param>
+<info type="INT">id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>StopActivity</keyword>
+<input_param>
+<info type="INT">id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UnbindMatrix</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserItemOnBody</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserItemOnBody</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserPetInfoDetails</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserPackInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserItemInPack</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserItemInStorage</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserSkillInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserSkillDetail</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">skill_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserStorageInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserLevelInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserSocialInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserInfoByIp</keyword>
+<input_param>
+<info type="INT">ip</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>UserItemOnBodyDetail</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>MultiExp</keyword>
+<input_param>
+<info type="INT">gateway_id</info>
+<info type="INT">exp_type</info>
+<info type="INT">multi_num</info>
+<info type="INT">reason</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>EndFight</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>IbInfo</keyword>
+<input_param>
+<info type="INT">item_id</info>
+<info type="INT">item_name</info>
+</input_param>
+</cmd>	
+<cmd>
+<keyword>IbOnSale</keyword>
+<input_param>
+<info type="INT">item_id</info>
+<info type="INT">pos</info>
+</input_param>
+</cmd>	
+<cmd>
+<keyword>IbNotSale</keyword>
+<input_param>
+<info type="INT">item_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>IbDescript</keyword>
+<input_param>
+<info type="INT">item_id</info>
+<info type="INT">description</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>IpBind</keyword>
+<input_param>
+<info type="INT">player_id</info>
+<info type="INT">user_id</info>
+<info type="INT">ip</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>IpInfo</keyword>
+<input_param>
+<info type="INT">user_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>ItemDetail</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">item_id</info>
+<info type="INT">type</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>GoodsHistoryToNPC</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">npc_name</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>GoodsHistoryFromNPC</keyword>
+<input_param>
+<info type="INT">role_id</info>
+<info type="INT">npc_name</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>GoodsHistoryBetweenUsers</keyword>
+<input_param>
+<info type="INT">role_id1</info>
+<info type="INT">role_id2</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+<info type="INT">page</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>GoodsHistory</keyword>
+<input_param>
+<info type="INT">item_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>GoodsDropLog</keyword>
+<input_param>
+<info type="INT">goods_id</info>
+<info type="INT">map_name</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>PetHistory</keyword>
+<input_param>
+<info type="INT">role_name</info>
+<info type="INT">pet_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>NPCDetail</keyword>
+<input_param>
+<info type="INT">npc_name</info>
+</input_param>
+</cmd>
+
+<cmd>
+<keyword>TaskInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>FinishedTaskInfo</keyword>
+<input_param>
+<info type="INT">role_id</info>
+</input_param>
+</cmd>
+<cmd>
+<keyword>LoginInfo</keyword>
+<input_param>
+<info type="INT">user_id</info>
+<info type="INT">start_time</info>
+<info type="INT">end_time</info>
+</input_param>
+</cmd>
+
+
+

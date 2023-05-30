@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC 
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" 
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd"> 
+<form-validation>
+	<formset>
+		<form name="/getFreezePlayerInfo">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+		</form>
+		<form name="/addTask">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="taskId" depends="required">
+				<arg0 key="prompt.taskId"/>
+			</field>
+			<field property="taskState" depends="required">
+				<arg0 key="prompt.taskState"/>
+			</field>
+		</form>
+		<form name="/resetRoleAttr">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<form name="/clearItem">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="itemId" depends="required">
+				<arg0 key="prompt.itemId"/>
+			</field>
+			<field property="itemNum" depends="required,integer">
+				<arg0 key="prompt.itemNum"/>
+			</field>
+		</form>
+		<form name="/clearStorage">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+		</form>
+		<form name="/clearCorpsItem">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="corpsName" depends="required">
+				<arg0 key="prompt.corpsName"/>
+			</field>
+			<field property="itemId" depends="required">
+				<arg0 key="prompt.itemId"/>
+			</field>
+			<field property="itemNum" depends="required,integer">
+				<arg0 key="prompt.itemNum"/>
+			</field>
+		</form>
+		<form name="/simuLogin">
+			<field property="userName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+			<field property="serverId" depends="required"> 
+				<arg0 key="prompt.serverId"/>
+			</field>
+		</form>
+		<form name="/renameRole">
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="roleName" depends="required"> 
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="rename" depends="required"> 
+				<arg0 key="prompt.rename"/>
+			</field>
+		</form>
+		<form name="/kickOutUser">
+			<field property="playerName" depends="required">
+				<arg0 key="prompt.playerNames"/>
+			</field>
+		</form>
+		<!-- 清空组织仓库 -->
+		<form name="/clearCorpsStorage">
+			<field property="corpsName" depends="required">
+				<arg0 key="prompt.corpsName"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+		</form>
+		<!-- 恢复角色物品 -->
+		<form name="/recoverRoleItem">
+			<field property="roleName" depends="required">
+				<arg0 key="prompt.roleName"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="prompt.gatewayId"/>
+			</field>
+			<field property="itemId" depends="required">
+				<arg0 key="prompt.itemId"/>
+			</field>
+			<field property="startTime" depends="required">
+				<arg0 key="prompt.startDate"/>
+			</field>
+			<field property="endTime" depends="required">
+				<arg0 key="prompt.endDate"/>
+			</field>
+		</form>
+		<form name="/sendEmail">
+			<field property="title" depends="required">
+				<arg0 key="errors.action.sendEmail.titleIsNull"/>
+			</field>
+			<field property="gatewayId" depends="required">
+				<arg0 key="errors.action.sendEmail.gatewayIsNotSelected"/>
+			</field>
+			<field property="body" depends="required">
+				<arg0 key="errors.action.sendEmail.bodyIsNull"/>
+			</field>
+			<field property="roleName" depends="required">
+				<arg0 key="errors.action.sendEmail.roleNameIsNull"/>
+			</field>
+			<field property="type" depends="required">
+				<arg0 key="errors.action.sendEmail.typeIsNull"/>
+			</field>
+		</form>
+	</formset>
+</form-validation>

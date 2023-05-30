@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="addItemCompensateForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="gatewayId" type="java.lang.String"></form-property>
+			<form-property name="roleName" type="java.lang.String"></form-property>
+			<form-property name="itemId" type="java.lang.String"></form-property>
+			<form-property name="itemNum" type="java.lang.String"></form-property>
+			<form-property name="star" type="java.lang.String"></form-property>
+			<form-property name="level" type="java.lang.String"></form-property>
+			<form-property name="bind" type="java.lang.String"></form-property>
+			<form-property name="reason" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="ClearPointsCompensateForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="pointType" type="java.lang.String"></form-property>
+			<form-property name="reason" type="java.lang.String"></form-property>
+		</form-bean>
+	</form-beans>
+
+	<global-forwards>
+		<forward name="awardCompensate" path="/WEB-INF/jsp/roleCompensate/awardCompensate.jsp" />
+		<forward name="createAwardCompensate" path="/WEB-INF/jsp/roleCompensate/createAwardCompensate.jsp" />
+		<forward name="validateCreate" path="/WEB-INF/jsp/roleCompensate/validateCreate.jsp" />
+		<forward name="operAwardCompensate" path="/WEB-INF/jsp/roleCompensate/operAwardCompensate.jsp" />
+		<forward name="apprAwardCompensate" path="/WEB-INF/jsp/roleCompensate/apprAwardCompensate.jsp" />
+		<forward name="batchApprAwardCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprAwardCompensate.jsp" />
+		<forward name="pointCompensate" path="/WEB-INF/jsp/roleCompensate/pointCompensate.jsp" />
+		<forward name="createPointCompensate" path="/WEB-INF/jsp/roleCompensate/createPointCompensate.jsp" />
+		<forward name="operPointCompensate" path="/WEB-INF/jsp/roleCompensate/operPointCompensate.jsp" />
+		<forward name="apprPointCompensate" path="/WEB-INF/jsp/roleCompensate/apprPointCompensate.jsp" />
+		<forward name="batchApprPointCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprPointCompensate.jsp" />
+		<forward name="petCompensate" path="/WEB-INF/jsp/roleCompensate/petCompensate.jsp" />
+		<forward name="createPetCompensate" path="/WEB-INF/jsp/roleCompensate/createPetCompensate.jsp" />
+		<forward name="operPetCompensate" path="/WEB-INF/jsp/roleCompensate/operPetCompensate.jsp" />
+		<forward name="apprPetCompensate" path="/WEB-INF/jsp/roleCompensate/apprPetCompensate.jsp" />
+		<forward name="batchApprPetCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprPetCompensate.jsp" />
+		<forward name="goldCompensate" path="/WEB-INF/jsp/roleCompensate/goldCompensate.jsp" />
+		<forward name="createGoldCompensate" path="/WEB-INF/jsp/roleCompensate/createGoldCompensate.jsp" />
+		<forward name="validateGoldCompensate" path="/WEB-INF/jsp/roleCompensate/validateGoldCompensate.jsp" />
+		<forward name="operGoldCompensate" path="/WEB-INF/jsp/roleCompensate/operGoldCompensate.jsp" />
+		<forward name="apprGoldCompensate" path="/WEB-INF/jsp/roleCompensate/apprGoldCompensate.jsp" />
+		<forward name="batchApprGoldCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprGoldCompensate.jsp" />
+		<forward name="skillCompensate" path="/WEB-INF/jsp/roleCompensate/skillCompensate.jsp" />
+		<forward name="createSkillCompensate" path="/WEB-INF/jsp/roleCompensate/createSkillCompensate.jsp" />
+		<forward name="operSkillCompensate" path="/WEB-INF/jsp/roleCompensate/operSkillCompensate.jsp" />
+		<forward name="apprSkillCompensate" path="/WEB-INF/jsp/roleCompensate/apprSkillCompensate.jsp" />
+		<forward name="batchApprSkillCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprSkillCompensate.jsp" />
+		<forward name="PayMoneyAllCompensate" path="/WEB-INF/jsp/roleCompensate/PayMoneyAllCompensate.jsp" />
+		<forward name="createPayMoneyAllCompensate" path="/WEB-INF/jsp/roleCompensate/createPayMoneyAllCompensate.jsp" />
+		<forward name="operPayMoneyAllCompensate" path="/WEB-INF/jsp/roleCompensate/operPayMoneyAllCompensate.jsp" />
+		<forward name="apprPayMoneyAllCompensate" path="/WEB-INF/jsp/roleCompensate/apprPayMoneyAllCompensate.jsp" />
+		<forward name="batchApprPayMoneyAllCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprPayMoneyAllCompensate.jsp" />
+		<forward name="AddItemCompensate" path="/WEB-INF/jsp/roleCompensate/AddItemCompensate.jsp" />
+		<forward name="createAddItemCompensate" path="/WEB-INF/jsp/roleCompensate/createAddItemCompensate.jsp" />
+		<forward name="operAddItemCompensate" path="/WEB-INF/jsp/roleCompensate/operAddItemCompensate.jsp" />
+		<forward name="apprAddItemCompensate" path="/WEB-INF/jsp/roleCompensate/apprAddItemCompensate.jsp" />
+		<forward name="batchApprAddItemCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprAddItemCompensate.jsp" />
+		<forward name="clearPointsCompensate" path="/WEB-INF/jsp/roleCompensate/clearPointsCompensate.jsp" />
+		<forward name="createClearPointsCompensate" path="/WEB-INF/jsp/roleCompensate/createClearPointsCompensate.jsp" />
+		<forward name="operClearPointsCompensate" path="/WEB-INF/jsp/roleCompensate/operClearPointsCompensate.jsp" />
+		<forward name="apprClearPointsCompensate" path="/WEB-INF/jsp/roleCompensate/apprClearPointsCompensate.jsp" />
+		<forward name="batchApprClearPointsCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprClearPointsCompensate.jsp" />
+		
+		<forward name="roleCompensate" path="/WEB-INF/jsp/roleCompensate/roleCompensate.jsp" />
+		<forward name="createRoleCompensate" path="/WEB-INF/jsp/roleCompensate/createRoleCompensate.jsp" />
+		<forward name="operRoleCompensate" path="/WEB-INF/jsp/roleCompensate/operRoleCompensate.jsp" />
+		<forward name="apprRoleCompensate" path="/WEB-INF/jsp/roleCompensate/apprRoleCompensate.jsp" />		
+		<forward name="batchApprRoleCompensate" path="/WEB-INF/jsp/roleCompensate/batchApprRoleCompensate.jsp" />
+		
+	   
+	   
+	   
+	   
+	   <forward name="newAwardCompensate" path="/WEB-INF/jsp/roleCompensate/newAwardCompensate.jsp" />
+	   <forward name="createNewAwardCompensate" path="/WEB-INF/jsp/roleCompensate/createNewAwardCompensate.jsp" />	   
+	    <forward name="newValidateCreate" path="/WEB-INF/jsp/roleCompensate/newValidateCreate.jsp" />
+		
+		  <forward name="newOperAwardCompensate" path="/WEB-INF/jsp/roleCompensate/newOperAwardCompensate.jsp" />
+	</global-forwards>
+	
+	<action-mappings>
+		<action path="/showAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAwardCompensate" scope="request"></action>
+		<action path="/showFirstApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showFirstApprAwardCompensate" scope="request"></action>
+		<action path="/showSecondApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showSecondApprAwardCompensate" scope="request"></action>
+		<action path="/showAppredAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showAppredAwardCompensate" scope="request"></action>
+		<action path="/showExedAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showExedAwardCompensate" scope="request"></action>
+		<action path="/showDeledAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showDeledAwardCompensate" scope="request"></action>
+		<action path="/showCreateAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showCreateAwardCompensate" scope="request"></action>
+		<action path="/validateCreate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="validateCreate" scope="request"></action>
+		<action path="/saveAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="saveAwardCompensate" scope="request"></action>
+		<action path="/operAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="operAwardCompensate" scope="request"></action>
+		<action path="/showEditAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="showEditAwardCompensate" scope="request"></action>
+		<action path="/submitAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="submitAwardCompensate" scope="request"></action>
+		<action path="/delAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="delAwardCompensate" scope="request"></action>
+		<action path="/cancelAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="cancelAwardCompensate" scope="request"></action>
+		<action path="/deleteActivityAwardComp" type="org.springframework.web.struts.DelegatingActionProxy" parameter="deleteActivityAwardComp" scope="request"></action>
+		<action path="/show2FirstApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="show2FirstApprAwardCompensate" scope="request"></action>
+		<action path="/batchFirstApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" parameter="batchFirstApprAwardCompensate" scope="request"></action>
+		<action path="/firstApprAwardCompensate" parameter="firstApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprAwardCompensate" parameter="show2SecondApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprAwardCompensate" parameter="batchSecondApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprAwardCompensate" parameter="secondApprAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeAwardCompensate" parameter="exeAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showPointCompensate" parameter="showPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprPointCompensate" parameter="showFirstApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprPointCompensate" parameter="showSecondApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredPointCompensate" parameter="showAppredPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedPointCompensate" parameter="showExedPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledPointCompensate" parameter="showDeledPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreatePointCompensate" parameter="showCreatePointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/savePointCompensate" parameter="savePointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operPointCompensate" parameter="operPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditPointCompensate" parameter="showEditPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelPointCompensate" parameter="cancelPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delPointCompensate" parameter="delPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprPointCompensate" parameter="show2FirstApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprPointCompensate" parameter="batchFirstApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprPointCompensate" parameter="firstApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprPointCompensate" parameter="show2SecondApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprPointCompensate" parameter="batchSecondApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprPointCompensate" parameter="secondApprPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitPointCompensate" parameter="submitPointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exePointCompensate" parameter="exePointCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showPetCompensate" parameter="showPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprPetCompensate" parameter="showFirstApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprPetCompensate" parameter="showSecondApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredPetCompensate" parameter="showAppredPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedPetCompensate" parameter="showExedPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledPetCompensate" parameter="showDeledPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreatePetCompensate" parameter="showCreatePetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/savePetCompensate" parameter="savePetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operPetCompensate" parameter="operPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditPetCompensate" parameter="showEditPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitPetCompensate" parameter="submitPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delPetCompensate" parameter="delPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelPetCompensate" parameter="cancelPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprPetCompensate" parameter="show2FirstApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprPetCompensate" parameter="batchFirstApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprPetCompensate" parameter="firstApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprPetCompensate" parameter="show2SecondApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprPetCompensate" parameter="batchSecondApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprPetCompensate" parameter="secondApprPetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exePetCompensate" parameter="exePetCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showGoldCompensate" parameter="showGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprGoldCompensate" parameter="showFirstApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprGoldCompensate" parameter="showSecondApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredGoldCompensate" parameter="showAppredGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedGoldCompensate" parameter="showExedGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledGoldCompensate" parameter="showDeledGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreateGoldCompensate" parameter="showCreateGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/validateGoldCompensate" parameter="validateGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/saveGoldCompensate" parameter="saveGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operGoldCompensate" parameter="operGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditGoldCompensate" parameter="showEditGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitGoldCompensate" parameter="submitGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delGoldCompensate" parameter="delGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelGoldCompensate" parameter="cancelGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprGoldCompensate" parameter="batchFirstApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprGoldCompensate" parameter="batchFirstApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprGoldCompensate" parameter="batchSecondApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprGoldCompensate" parameter="firstApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprGoldCompensate" parameter="batchSecondApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprGoldCompensate" parameter="secondApprGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeGoldCompensate" parameter="exeGoldCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSkillCompensate" parameter="showSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprSkillCompensate" parameter="showFirstApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprSkillCompensate" parameter="showSecondApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredSkillCompensate" parameter="showAppredSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedSkillCompensate" parameter="showExedSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledSkillCompensate" parameter="showDeledSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreateSkillCompensate" parameter="showCreateSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/saveSkillCompensate" parameter="saveSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operSkillCompensate" parameter="operSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditSkillCompensate" parameter="showEditSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelSkillCompensate" parameter="cancelSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delSkillCompensate" parameter="delSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprSkillCompensate" parameter="show2FirstApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprSkillCompensate" parameter="batchFirstApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprSkillCompensate" parameter="firstApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprSkillCompensate" parameter="show2SecondApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprSkillCompensate" parameter="batchSecondApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprSkillCompensate" parameter="secondApprSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitSkillCompensate" parameter="submitSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeSkillCompensate" parameter="exeSkillCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showPayMoneyAllCompensate" parameter="showPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprPayMoneyAllCompensate" parameter="showFirstApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprPayMoneyAllCompensate" parameter="showSecondApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredPayMoneyAllCompensate" parameter="showAppredPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedPayMoneyAllCompensate" parameter="showExedPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledPayMoneyAllCompensate" parameter="showDeledPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreatePayMoneyAllCompensate" parameter="showCreatePayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/savePayMoneyAllCompensate" parameter="savePayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operPayMoneyAllCompensate" parameter="operPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditPayMoneyAllCompensate" parameter="showEditPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelPayMoneyAllCompensate" parameter="cancelPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delPayMoneyAllCompensate" parameter="delPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprPayMoneyAllCompensate" parameter="show2FirstApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprPayMoneyAllCompensate" parameter="batchFirstApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprPayMoneyAllCompensate" parameter="firstApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprPayMoneyAllCompensate" parameter="show2SecondApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprPayMoneyAllCompensate" parameter="batchSecondApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprPayMoneyAllCompensate" parameter="secondApprPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitPayMoneyAllCompensate" parameter="submitPayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exePayMoneyAllCompensate" parameter="exePayMoneyAllCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAddItemCompensate" parameter="showAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprAddItemCompensate" parameter="showFirstApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprAddItemCompensate" parameter="showSecondApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredAddItemCompensate" parameter="showAppredAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedAddItemCompensate" parameter="showExedAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledAddItemCompensate" parameter="showDeledAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreateAddItemCompensate" parameter="showCreateAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/saveAddItemCompensate" parameter="saveAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request" name="addItemCompensateForm" validate="true" input="/showAddItemCompensate.do"></action>
+		<action path="/operAddItemCompensate" parameter="operAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditAddItemCompensate" parameter="showEditAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelAddItemCompensate" parameter="cancelAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delAddItemCompensate" parameter="delAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprAddItemCompensate" parameter="show2FirstApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprAddItemCompensate" parameter="batchFirstApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprAddItemCompensate" parameter="firstApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprAddItemCompensate" parameter="show2SecondApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprAddItemCompensate" parameter="batchSecondApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprAddItemCompensate" parameter="secondApprAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitAddItemCompensate" parameter="submitAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeAddItemCompensate" parameter="exeAddItemCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showClearPointsCompensate" parameter="showClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprClearPointsCompensate" parameter="showFirstApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprClearPointsCompensate" parameter="showSecondApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showAppredClearPointsCompensate" parameter="showAppredClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedClearPointsCompensate" parameter="showExedClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledClearPointsCompensate" parameter="showDeledClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreateClearPointsCompensate" parameter="showCreateClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/saveClearPointsCompensate" parameter="saveClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request" name="ClearPointsCompensateForm" validate="true" input="/showClearPointsCompensate.do"></action>
+		<action path="/operClearPointsCompensate" parameter="operClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditClearPointsCompensate" parameter="showEditClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/cancelClearPointsCompensate" parameter="cancelClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delClearPointsCompensate" parameter="delClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprClearPointsCompensate" parameter="show2FirstApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchFirstApprClearPointsCompensate" parameter="batchFirstApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprClearPointsCompensate" parameter="firstApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2SecondApprClearPointsCompensate" parameter="show2SecondApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprClearPointsCompensate" parameter="batchSecondApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprClearPointsCompensate" parameter="secondApprClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitClearPointsCompensate" parameter="submitClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeClearPointsCompensate" parameter="exeClearPointsCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		
+		<action path="/showRoleCompensate" parameter="showRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showCreateRoleCompensate" parameter="showCreateRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/saveRoleCompensate" parameter="saveRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showEditRoleCompensate" parameter="showEditRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/operRoleCompensate" parameter="operRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/submitRoleCompensate" parameter="submitRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/delRoleCompensate" parameter="delRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showDeledRoleCompensate" parameter="showDeledRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>		
+		<action path="/cancelRoleCompensate" parameter="cancelRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/show2FirstApprRoleCompensate" parameter="show2FirstApprRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/firstApprRoleCompensate" parameter="firstApprRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/secondApprRoleCompensate" parameter="secondApprRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showFirstApprRoleCompensate" parameter="showFirstApprRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showSecondApprRoleCompensate" parameter="showSecondApprRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		
+		<action path="/showAppredRoleCompensate" parameter="showAppredRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/showExedRoleCompensate" parameter="showExedRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/exeRoleCompensate" parameter="exeRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		
+		<action path="/batchFirstApprRoleCompensate" parameter="batchFirstApprRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		<action path="/batchSecondApprRoleCompensate" parameter="batchSecondApprRoleCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+		
+		
+		
+	    <action path="/showNewAwardCompensate" parameter="showNewAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+	    <action path="/showNewAppredAwardCompensate" parameter="showNewAppredAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+	    <action path="/showNewExedAwardCompensate" parameter="showNewExedAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+	    <action path="/showNewDeledAwardCompensate" parameter="showNewDeledAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+       
+        <action path="/saveNewAwardCompensate" parameter="saveNewAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+        <action path="/newDeleteActivityAwardComp" parameter="newDeleteActivityAwardComp" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+       
+        <action path="/showNewCreateAwardCompensate" parameter="showNewCreateAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+        <action path="/newValidateCreate" parameter="newValidateCreate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+       
+       <action path="/newOperAwardCompensate" parameter="newOperAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+	   <action path="/showNewEditAwardCompensate" parameter="showNewEditAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+	    <action path="/submitNewAwardCompensate" parameter="submitNewAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+       <action path="/delNewAwardCompensate" parameter="delNewAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+          <action path="/newExeAwardCompensate" parameter="newExeAwardCompensate" type="org.springframework.web.struts.DelegatingActionProxy" scope="request"></action>
+         
+	
+	</action-mappings>
+</struts-config>

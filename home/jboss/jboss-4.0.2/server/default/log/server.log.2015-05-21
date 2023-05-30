@@ -1,0 +1,6 @@
+2015-05-21 17:17:45,881 INFO  [STDOUT] java.lang.NullPointerException
+2015-05-21 17:17:45,882 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2015-05-21 17:17:45,882 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2015-05-21 17:17:45,882 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2015-05-21 17:17:45,882 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2015-05-21 17:17:45,882 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

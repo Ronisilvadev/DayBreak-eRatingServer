@@ -1,0 +1,15 @@
+2014-06-08 06:59:47,527 INFO  [STDOUT] java.lang.NullPointerException
+2014-06-08 06:59:47,528 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-06-08 06:59:47,528 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-06-08 06:59:47,528 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-06-08 06:59:47,528 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-06-08 06:59:47,528 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)
+2014-06-08 11:00:22,618 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-06-08 11:00:22,859 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-06-08 11:00:47,622 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=yjt66&gameId=1204&method=login&passportName=braziltest1&
+2014-06-08 11:00:47,623 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-06-08 11:00:47,624 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-06-08 11:00:47,727 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-06-08 12:33:18,235 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 98    userName = richard3    chargeTime = 2014-06-08 23:33:18    chargeMoney = 190000.0    chargeAmount = 190000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140224159822253    sign = b401d96c06599ef728fa212c4b93dba4     )
+2014-06-08 12:34:09,817 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 99    userName = richard3    chargeTime = 2014-06-08 23:34:09    chargeMoney = 1.8E8    chargeAmount = 180000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140224164980448    sign = ef5f8788a5ea64dbee832bb74a905b87     )
+2014-06-08 12:34:42,664 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 100    userName = richard3    chargeTime = 2014-06-08 23:34:42    chargeMoney = 1000000.0    chargeAmount = 1000000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 140224168265223    sign = 1316777aebcfc670bd02bbf6edfb15ae     )

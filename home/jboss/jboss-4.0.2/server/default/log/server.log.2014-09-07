@@ -1,0 +1,29 @@
+2014-09-07 05:19:37,076 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?method=login&
+2014-09-07 05:19:37,076 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:37,077 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:37,441 INFO  [LogPrintFilter] : /etoolkitsweb/generateRandomCode.do?
+2014-09-07 05:19:42,568 INFO  [LogPrintFilter] : /etoolkitsweb/login.do?region=1&validCode=cdrng&gameId=1204&method=login&passportName=spacecowboy&
+2014-09-07 05:19:42,568 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:43,028 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTop&
+2014-09-07 05:19:43,028 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:43,035 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showMiddle&
+2014-09-07 05:19:43,035 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showBottom&
+2014-09-07 05:19:43,035 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:43,035 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:43,156 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showLeft&
+2014-09-07 05:19:43,156 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:43,244 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showTab&
+2014-09-07 05:19:43,244 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:43,245 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showFrame.do?method=showWelcome&
+2014-09-07 05:19:43,245 WARN  [org.apache.struts.util.RequestUtils] No FormBeanConfig found under ''
+2014-09-07 05:19:58,836 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAwardCompensate.do?
+2014-09-07 05:20:01,524 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showCreateAwardCompensate.do?
+2014-09-07 05:20:17,455 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showActivityModel.do?version=new&
+2014-09-07 05:20:20,789 INFO  [LogPrintFilter] operator:SpaceCowboy: /etoolkitsweb/showAddActivityModel.do?version=new&
+2014-09-07 05:58:41,985 INFO  [STDOUT] pojoChargingPOJO ( unionCode = lmzg_1204    gameId = 1204    orderId = 127    userName = richard222    chargeTime = 2014-09-07 16:58:41    chargeMoney = 900000.0    chargeAmount = 900000    gatewayId = 104001    serverIP = 192.168.177.94    clientIp = 177.47.22.70    chargeDetailId = 141008032197436    sign = be2927efe7b7beede690640113ed9ed0     )
+2014-09-07 14:02:20,866 INFO  [STDOUT] java.lang.NullPointerException
+2014-09-07 14:02:20,867 INFO  [STDOUT] 	at com.linekong.unionmid.service.oracleDao.GameServiceOracleDao.getGameService(Unknown Source)
+2014-09-07 14:02:20,867 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.TimerSysTask.checkChargeTask(Unknown Source)
+2014-09-07 14:02:20,867 INFO  [STDOUT] 	at com.linekong.unionmid.web.task.InitTask.run(Unknown Source)
+2014-09-07 14:02:20,867 INFO  [STDOUT] 	at java.util.TimerThread.mainLoop(Timer.java:512)
+2014-09-07 14:02:20,867 INFO  [STDOUT] 	at java.util.TimerThread.run(Timer.java:462)

@@ -1,0 +1,7 @@
+ActionTypeAnalyze -m
+ActionMakeAnalyzeParam -p 9999 -s 1204
+ActionMakeParamExistQuery
+server=1204;
+ActionMakeFileExistQuery
+ExecMakeRun
+BIN_SUB_L=( gateway_svr_logic auth_svr_logic dict_svr_logic dacq_svr_logic joinauthenex_svr_logic)
